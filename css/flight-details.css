@@ -6,9 +6,10 @@
 
 :root {
       --primary-color: #3A1824;
-      --secondary-color: #cec3a3;
-      --surface-color: #fbf9f8;
+      --secondary-color: #cbb573;
+      --surface-color: #f2f0ef;
       --text-color: #1F040E;
+      --tertiary-color: #4C2D38;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 .flight-details {
       display: flex;
       padding: 80px 32px;
+      gap: 48px;
 }
 
 .flight-details .left {
@@ -105,4 +107,304 @@ body {
       font-size: 16px;
       line-height: 24px;
       color: #504447;
+}
+
+.flight-details .left .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 64px;
+      width: 100%;
+      height: 32px;
+      margin-bottom: 32px;
+}
+
+.flight-details .left .features .left {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--text-color);
+}
+
+.flight-details .left .features .right {
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--text-color);
+      cursor: pointer;
+      align-self: flex-end;
+      width: auto;
+}
+
+.flight-details .left .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 24px;
+      width: 100%;
+      height: 279px;
+}
+
+.flight-details .left .cards .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-color: var(--surface-color);
+      border: black 1px solid;
+      padding: 32px;
+      height: 100%;
+}
+
+.flight-details .left .cards .suite {
+      grid-column: 1 / span 2;
+}
+
+.flight-details .left .cards .card .icon {
+      font-size: 24px;
+      color: var(--secondary-color);
+      margin-bottom: 7px;
+}
+
+.flight-details .left .cards .card .title {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--text-color);
+      margin-bottom: 7px;
+      text-wrap: wrap;
+}
+
+.flight-details .left .cards .card .small {
+      font-size: 14px;
+      color: #504447;
+}
+
+.flight-details .rules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 32px;
+      width: 100%;
+      height: 219px;
+}
+
+.flight-details .rules .baggage {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+}
+
+.flight-details .rules .baggage .title {
+      display: flex;
+      flex-direction: row;
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--text-color);
+      margin-bottom: 24px;
+}
+
+.flight-details .rules .baggage .title i {
+      position: relative;
+      margin-right: 16px;
+      color: var(--text-color);
+}
+
+.flight-details .rules .baggage .title .text {
+      color: var(--text-color);
+      font-size: 20px;
+      font-weight: bold;
+}
+
+.flight-details .rules .baggage .items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+}
+
+.flight-details .rules .baggage .items .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: #D4C2C6 1px solid;
+      height: 33px;
+      width: 100%;
+}
+
+.flight-details .rules .baggage .items .item .left {
+      color: #504447;
+      width: auto;
+}
+
+.flight-details .rules .baggage .items .item .right {
+      color: var(--text-color);
+      font-weight: bold;
+      justify-self: end;
+      width: auto;
+}
+
+.flight-details .rules .insurance {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      grid-column-start: 2;
+}
+
+.flight-details .rules .insurance .title {
+      display: flex;
+}
+
+.flight-details .rules .insurance .title i {
+      font-size: 19px;
+      color: var(--text-color);
+      margin-right: 16px;
+      position: relative;
+      top: 4px;
+}
+
+.flight-details .rules .insurance .title .text {
+      color: var(--text-color);
+      font-size: 20px;
+      font-weight: bold;
+}
+
+.flight-details .rules .insurance p {
+      height: 118.25px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-wrap: wrap;
+      background-color: #fff;
+      font-size: 16px;
+      color: var(--text-color);
+      width: 100%;
+}
+
+.flight-details .right {
+      width: 400px;
+}
+
+.flight-details .right .summary {
+      background-color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+      width: 400px;
+      height: 550.5px;
+}
+
+.flight-details .right .summary .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 32px;
+}
+
+.flight-details .right .summary .items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+.flight-details .right .summary .items .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: #fff;
+}
+
+.flight-details .right .summary .items .item .right {
+      width: auto;
+}
+
+.flight-details .right .summary .total {
+      margin-top: 16px;
+}
+
+.flight-details .right .summary .total .head {
+      font-size: 12px;
+      width: 100%;
+      text-align: right;
+      color: var(--secondary-color);
+      margin-bottom: 8px;
+}
+
+.flight-details .right .summary .total .amount {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      color: #fff;
+      font-weight: bold;
+      height: 36px;
+      width: 100%;
+      align-items: flex-end;
+      margin-bottom: 32px;
+}
+
+.flight-details .right .summary .total .amount .right {
+      width: auto;
+      font-size: 30px;
+      display: flex;
+}
+
+.flight-details .right .summary .total .amount .left {
+      display: flex;
+      align-items: flex-end;
+      width: auto;
+}
+
+.flight-details .right .summary button {
+      padding: 20px 0;
+      font-size: 16px;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      border: none;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: all .2s ease;
+}
+
+.flight-details .right .summary button:hover {
+      background-color: #9e8d5b;
+      transition: all .2s ease;
+}
+
+.flight-details .right .summary .terms {
+      font-size: 10px;
+      color: #fff;
+      opacity: 0.5;
+      width: 100%;
+      text-align: center;
+}
+
+.flight-details .right .summary .features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+}
+
+.flight-details .right .summary .features .feature {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      font-size: 16px;
+}
+
+.flight-details .right .summary .features .feature i {
+      color: var(--secondary-color);
+}
+
+.flight-details .right .summary .features .feature .text {
+      color: white;
+      opacity: 0.8;
 }
