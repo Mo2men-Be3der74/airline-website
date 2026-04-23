@@ -13,14 +13,74 @@
     <main>
         <!-- Head -->
         <section class="search-hero">
-            <h1 class="search-title">Where to next?</h1>
+            <div class="search-div-eyebrow">
+                <p class="search-eyebrow">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    Fly with Prestige
+                </p>
+            </div>
+            <h1 class="search-title">Where to <em>next?</em></h1>
             <p class="search-subtitle">Every journey is a legacy in the making. Curate your next horizon with
                 unparalleled precision</p>
         </section>
 
         <!-- search form  -->
-        <section>
+        <section class="search-section">
+            <div class="search-card">
+                <form class="search-form" action="#" method="get">
+                    <!-- row 1-->
+                    <div class="search-fields-row">
+                        <!-- from -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                From
+                            </label>
+                            <input class="search-field-input" type="text" placeholder="Departure city or airport" />
+                        </div>
+
+                        <!-- swap -->
+                        <div class="search-swap-divider">
+                            <span class="search-swap-circle">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </span>
+                        </div>
+
+                        <!-- to -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-solid fa-plane"></i>
+                                To
+                            </label>
+                            <input class="search-field-input" type="text" placeholder="Destination city or airport" />
+                        </div>
+
+
+                        <!-- Departure date -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-regular fa-calendar-days"></i>
+                                Departure
+                            </label>
+                            <input class="search-field-input" type="date" />
+                        </div>
+
+                        <!-- Rrturn data -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Return
+                                <span class="search-field__badge">Optional</span>
+                            </label>
+                            <input class="search-field-input" type="date" />
+                        </div>
+
+                    </div>
+
+                </form><!-- /search-form -->
+            </div><!-- /search-card -->
         </section>
+
     </main>
 
 </body>
