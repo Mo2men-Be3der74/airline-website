@@ -23,6 +23,21 @@ body {
     background: var(--off-white);
 }
 
+/* Label */
+.search-field-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.search-field-label i {
+    font-size: 0.74rem;
+}
+
 /* search hero */
 
 .search-hero {
@@ -112,7 +127,7 @@ body {
     width: 100%;
     padding: 28px 30px 24px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    transition: background 0.15s ease;
+    transition: all 0.15s ease;
 }
 
 
@@ -145,20 +160,6 @@ body {
     transform: rotate(360deg)
 }
 
-/* Label */
-.search-field-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--secondary);
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.search-field-label i {
-    font-size: 0.74rem;
-}
 
 /* Input */
 .search-field-input {
@@ -222,6 +223,10 @@ body {
     width: 48px;
 }
 
+.search-footer-field-input[type="number"] {
+    width: 100%;
+}
+
 /* Divider */
 .search-footer-vr {
     width: 1px;
@@ -244,8 +249,7 @@ body {
 }
 
 .search-cabin-radio {
-    /* display: none; */
-    cursor: pointer;
+    display: none;
 }
 
 .search-cabin-pill {
