@@ -535,3 +535,26 @@ body {
             font-size: 8px;
       }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+      .flight-details {
+            flex-direction: column;
+      }
+      
+      .flight-details .left .cards {
+            grid-template-columns: 1fr 1fr;
+      }
+
+      .flight-details .rules {
+            padding: 10px;
+      }
+
+      .flight-details .right, .flight-details .right .summary {
+            width: 100%;
+            height: auto;
+      }
+
+      .flight-details .right .summary {
+            padding: 40px;
+      }
+}
