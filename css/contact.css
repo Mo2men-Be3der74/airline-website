@@ -17,6 +17,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-height: 473px;
+}
+.heading{
+    max-height: 473px;
+    flex-shrink: 0;
+    margin-right: 40px;
 }
 .head-text{
     font-size: 96px;
@@ -31,17 +37,15 @@
 .head-small-text{
     margin: 20px;
     margin-top: 60px;
-    
-
 }
 .head-quote{
     margin: 20px;
     margin-top: 40px;
     max-width: 400px;
-    
 }
 .contacts{
     position: relative;
+    flex-shrink: 0;
     margin: 20px;
     width: 561px;
     height: 473px;
@@ -126,24 +130,163 @@
 .middle{
     display: flex;
     flex-direction: row;
-    gap: 250px;
+    justify-content: space-between;
 }
-.plane-box{
-    margin: 20px;
-    width: 562px;
-    height: 642px;
-    background-color: var(--tertiart);
+.form-section{
+    margin-top: 45px;
 }
-#plane{
-    padding: 15px;
-    filter: brightness(50%);
-}
-form{
+.full-name{
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-#name{
+.email-address{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.row-1{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.row-2{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.booking-reference{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.nature-of-inquiry{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.your-message{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#text-box{
     width: 304px;
     height: 49px;
+    opacity: 30%;
+    padding-left: 10px;
+}
+#message-area{
+    width: 720px;
+    height: 122px;
+    opacity: 30%;
+    padding: 10px;
+}
+.submit-button{
+    width: 247px;
+    height: 52px;
+    margin: 20px;
+    border: none;
+    background-color: var(--secondary);
+
+}
+.plane-box{
+    position: relative;
+    flex-shrink: 0;
+    margin: 20px;
+    width: 562px;
+    height: 542px;
+    border-radius: 5px;
+    background-color: var(--primary);
+}
+#plane{
+    position: absolute;
+    margin: 20px;
+    top: 250px;
+    font-size: 90px;
+    color: var(--secondary);
+}
+.standard{
+    position: absolute;
+    font-size: 30px;
+    font-style: oblique;
+    padding: 20px;
+    bottom: 100px;
+    color: var(--off-white);
+}
+.standard-small-text{
+    position: absolute;
+    font-size: 16px;
+    font-style: oblique;
+    padding: 20px;
+    bottom:50px;
+    color: var(--off-white);
+}
+@media (max-width: 768px) {
+    * {
+        
+    }
+    .top-section{
+        flex-direction: column;
+    }
+    .contacts{
+        width: 93%;
+    }
+    .middle{
+        margin-top: 500px;
+        flex-direction: column;
+    }
+    .plane-box{
+        width: 93%;
+    }
+    .form-section{
+        max-width: 95%;
+    }
+    .row-1{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .row-2{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #message-area{
+        width: 100%;
+    }
+    .head-small-text{
+        margin-top: 10px;
+    }
+    #text-box{
+        width: 105%;
+    }
+    .standard-small-text{
+        bottom: 40px;
+    }
+    .head-text{
+        font-size: 70px;
+    }
+    @media (max-width: 480px) {
+    .head-text{
+        font-size: 50px;
+    }
+    .plane-box{
+        width: 90%;
+    }
+    .contacts{
+        width: 90%;
+    }
+    .standard-small-text{
+        bottom: 10px;
+    }
+    #plane{
+    position: absolute;
+    margin: 20px;
+    top: 230px;
+    font-size: 90px;
+    color: var(--secondary);
+    }
+    .standard{
+        bottom: 110px;
+    }
+    }
 }
