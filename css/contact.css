@@ -1,6 +1,149 @@
 *{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans' ,sans-serif;
+    padding: 0%;
+    margin: 0%;
 }
-.head{
+:root {
+    --primary: #3A1824;
+    --tertiart: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+}
+.sec-form-text{
+    color: var(--tertiart);
+    font-size: 10px;
+}
+.top-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head-text{
     font-size: 96px;
+    margin: 20px;
+}
+.head-details{
+    font-size: 18px;
+    margin: 20px;
+    max-width: 700px;
+    color: var(--primary);
+}
+.head-small-text{
+    margin: 20px;
+    margin-top: 60px;
+    
+
+}
+.head-quote{
+    margin: 20px;
+    margin-top: 40px;
+    max-width: 400px;
+    
+}
+.contacts{
+    position: relative;
+    margin: 20px;
+    width: 561px;
+    height: 473px;
+    background-color: var(--secondary);
+}
+#phone-icon{
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 50px;
+}
+#priority-support{
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 50px;
+}
+#priority-support-details{
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 80px;
+    opacity: 70%;
+}
+#direct-icon{
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 150px;
+}
+#direct-support{
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 150px;
+}
+#direct-support-details{
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 180px;
+    opacity: 70%;
+}
+#facebook-icon{
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 250px;
+}
+#facebook-support{
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 250px;
+}
+#facebook-support-details{
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 280px;
+    opacity: 70%;
+}
+#instagram-icon{
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 350px;
+}
+#instagram-support{
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 350px;
+}
+#instagram-support-details{
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 380px;
+    opacity: 70%;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+}
+.plane-box{
+    margin: 20px;
+    width: 562px;
+    height: 642px;
+    background-color: var(--tertiart);
+}
+#plane{
+    padding: 15px;
+    filter: brightness(50%);
+}
+form{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#name{
+    width: 304px;
+    height: 49px;
 }
