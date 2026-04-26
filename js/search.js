@@ -96,7 +96,7 @@ function fromList()
 function toList()
 {
     const input = document.getElementById("input-to");
-    const list = document.getElementById("city-list");
+    const list = document.getElementById("city-list-to");
 
     input.addEventListener("input" , function () {
         const value = input.value.toLowerCase() ;
