@@ -5,7 +5,7 @@
 }
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-     background-image: url("photo.jpg");
+     background-image: url("../photos/background.jpg");
      height:100vh;
      display: flex;
      justify-content: center;
@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 10px;
 }
 form {
     background: #f8f3c2;
@@ -30,6 +31,7 @@ h2 {
     margin-bottom: 18px;
     color: #3A1824;
     font-weight:600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 input {
     width: 100%;padding: 10px;
@@ -79,6 +81,9 @@ input:focus {
     border-color: #978549;
     box-shadow: 0 0 5px rgba(151, 133, 73, 0.5);
 }
+input::placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 .remember {
     display: flex;
     align-items: center;
@@ -122,4 +127,30 @@ input:focus {
     justify-content: left;
     gap: 90px;
     margin-top: 5px;
+}
+@media (max-width: 768px) {
+
+    form {
+        width: 90%;
+        padding: 20px;
+        transform: scale(1.5);
+        transform-origin: center;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
