@@ -9,6 +9,11 @@
     --secondary: #cbb573;
     --off-white: #f2f0ef;
 }
+
+body
+{
+    background-color: var(--off-white);
+}
 .sec-form-text{
     color: var(--tertiart);
     font-size: 10px;

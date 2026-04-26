@@ -37,7 +37,11 @@
                                 <i class="fa-solid fa-location-dot"></i>
                                 From
                             </label>
-                            <input class="search-field-input" type="text" placeholder="Departure city or airport" />
+                            <div style="position: relative;">
+                                <input id="input-from" class="search-field-input" type="text"
+                                    placeholder="Destination city or airport" />
+                                <div id="city-list" class="city-list"></div>
+                            </div>
                         </div>
 
                         <!-- swap -->
@@ -53,7 +57,11 @@
                                 <i class="fa-solid fa-plane"></i>
                                 To
                             </label>
-                            <input class="search-field-input" type="text" placeholder="Destination city or airport" />
+                            <div style="position: relative;">
+                                <input id="input-to" class="search-field-input" type="text"
+                                    placeholder="Destination city or airport" />
+                                <div id="city-list-to" class="city-list"></div>
+                            </div>
                         </div>
 
 
@@ -139,9 +147,8 @@
                 </form>
             </div>
         </section>
-
     </main>
-    <script src="/js/search.js"></script>
+    <script src="../../js/search.js"></script>
 </body>
 
 </html>
