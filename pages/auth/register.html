@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../css/login_style.css">
+<title>Register</title>
 </head>
 <body>
-
+<h2>Register</h2>
+<form id="registerForm">
+<label for="firstName" >First Name</label><input type="text" id="firstName" required placeholder="Enter your First Name"><br>
+<label for="lastName">Last Name</label><input type="text" id="lastName" required placeholder="Enter your Last Name"><br>
+<label for="userName">User Name</label><input type="text" id="userName" required placeholder="Enter your User Name"><br>
+<label for="email" >Email</label><input type="email" id="email" required placeholder="Enter your Email"><br>
+<label for="password">Password</label><input type="password" id="password" required placeholder="Enter your password"><br>
+<label for="confirmPassword">Confirm Password</label><input type="password" id="confirmPassword" required placeholder="ReEnter your password" ><br>
+<div class="gender">
+<label>Gender</label>
+<div class="gender-options">
+<label><input type="radio" name="gender" value="male"> Male</label>
+<label><input type="radio" name="gender" value="female"> Female</label>
+</div>
+<label for="country">Country</label>
+<select id="country" required>
+<option value="" disabled selected>Select Country</option>
+<option>Egypt</option>
+<option value="saudi">Saudi Arabia</option>
+<option value="uae">UAE</option>
+</select>
+<div class="terms">
+<label for="terms">I agree to all terms</label>
+<input type="checkbox" id="terms" required>
+</div>
+<button type="submit">Register</button><br><br>
+<div class="login-link">
+<span>Already have an account !</span>
+<a href="login.html">Login</a>
+</div>
+</form>
 </body>
 </html>
