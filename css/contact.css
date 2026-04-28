@@ -228,9 +228,6 @@ body
     color: var(--off-white);
 }
 @media (max-width: 768px) {
-    * {
-        
-    }
     .top-section{
         flex-direction: column;
     }

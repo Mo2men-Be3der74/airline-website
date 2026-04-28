@@ -63,6 +63,13 @@ body {
     color: #4C2D38;
 }
 
+/* Divider */
+.search-footer-vr {
+    width: 1px;
+    height: 100px;
+    background: rgba(58, 24, 36, 0.1);
+}
+
 
 /* search hero */
 
@@ -157,34 +164,6 @@ body {
 }
 
 
-/* Swap  */
-.search-swap-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.search-swap-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(203, 181, 115, 0.55);
-    color: var(--secondary);
-    font-size: 0.72rem;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-}
-
-.search-swap-circle:hover {
-    background: var(--secondary);
-    color: var(--primary);
-    border-color: var(--secondary);
-    transform: rotate(360deg)
-}
 
 
 /* Input */
@@ -253,12 +232,6 @@ body {
     width: 100%;
 }
 
-/* Divider */
-.search-footer-vr {
-    width: 1px;
-    height: 60px;
-    background: rgba(58, 24, 36, 0.1);
-}
 
 /* Cabin */
 .search-cabin-group {

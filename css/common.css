@@ -1,15 +1,4 @@
-/*
-  Index section
-*/
 
-/* Universal */
-* {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Variables */
 :root {
     --primary:#3A1824;
     --tertiary:#4C2D38;
@@ -20,56 +9,24 @@
 
 
 }
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* 100vh = 100% of the viewport height */
-    margin: 0;
-}
-
-/* Makes any content in the main container to fill it up */
-main {
-    flex: 1;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
-
-
-}
-p {
-    color: var(--tertiary);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-
-}
 /* header container (main/center) */
 .header {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 10;
-    /* Two stacked bars   */
+
 }
 .upper-half{
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
-    /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
-    justify-content: space-between; /* Pushes Logo to left(first child), Links to right(last child) */
+    justify-content: space-between;
     padding: 1rem 2rem;
-    /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
-    the padding will change automatically to fit the padding right. this increases the accessibility for the website
-    rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
     align-items: center;
-/* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
 }
 .bottom-half{
-    /*background-color: var(--off-white); !* Slightly lighter shade *!*/
+
     background-color: color-mix(in srgb, var(--primary), black 15%);
-    /*Color-mix function to mix colors or create new ones depending on the need,
-    it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
@@ -78,7 +35,6 @@ p {
 .right-sec {
     display: flex;
     flex-direction: row;
-    /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
     align-items: flex-end;  /* pins them to the right end side of the container's hight */
     gap: 8px;               /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
@@ -96,25 +52,26 @@ p {
 .theme-switch {
     display: inline-block;
     position: relative;
-    width: 45px; /* Adjust this to make the switch wider/narrower */
+    width: 45px;
     height: 20px;
+    /* this to make the switch wider/taller */
 }
 
-/* 2. Hide the actual ugly checkbox, but keep it accessible for the script */
+/* 2. hide the actual checkbox, but keep it accessible for the script */
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* 3. The visual track (the base of the slider) */
+/* 3. track (slider base) */
 .slider {
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--off-white); /* Default Light Track Color */
-    border-radius: 30px; /* This creates the "very rounded" ends */
-    transition: background-color 0.3s ease; /* Smooth fade when the track changes color */
+    background-color: var(--off-white); /*t Light Track Color */
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
 }
 
 /* 4. The Ball (The 'before' pseudo-element of the slider) */
@@ -142,10 +99,6 @@ p {
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* -------------------------------------------------------------------------
-   STATE CHANGES: What happens when the checkbox is checked (Dark Mode)
-   ------------------------------------------------------------------------- */
-
 /* A. Change the Track color when checked */
 input:checked + .slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);; /* Dark Track Color */
@@ -153,7 +106,7 @@ input:checked + .slider {
 
 /* B. The 'Swipe Right' movement and icon/color swap */
 input:checked + .slider::before {
-    /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
+    /* MATH: width - ball  - original left offset (3px) - new right offset (3px)  */
     /*45-16-3-3*/
     transform: translateX(23px);
 
@@ -168,15 +121,12 @@ input:checked + .slider::before {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    /*sets the icon and the text on the same horizontal axis line*/
     gap: 4px;
-    /*breathing room between the icon and the text, its two childern thats why there are two containers*/
     font-size: 0.9rem;
     color: var(--off-white);
     text-decoration: none;
     padding-right: 2px;
     padding-bottom: 2.7pt;
-/*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
 .utility-link:hover {
@@ -188,17 +138,15 @@ input:checked + .slider::before {
 .auth-bttns {
     display: flex;
     gap: 12px;
-    /*   Gap between each button (There's only one for both login & registration right now) */
+
 }
 .btn {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
-    /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
-    /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
 
 }
@@ -207,7 +155,6 @@ input:checked + .slider::before {
     font-weight: 300;
     display: flex;
     align-items: center;
-/* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
 .btn-login:hover {
     color: var(--secondary);
@@ -220,8 +167,7 @@ input:checked + .slider::before {
     align-items: center;
     display: flex;
     gap: 32px;
-    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
-    list-style: none; /* removes usual dots from the list element, same likely as text-decoration:none; */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -239,47 +185,31 @@ input:checked + .slider::before {
 .nav-link:hover {
     color: var(--secondary);
     transition: color 0.3s ease;
-    /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
+
 
 }
 .active {
     color: var(--secondary);
     font-weight: 500;
-    /* Make it a bit boldy when active   */
+
 }
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
     url('../assets/index-assets/hero-img.jpg');
-    /*the linear gradiant scrim (function)
-    rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
-    rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
-
     background-size: cover;
-    /*scaling image to fit but not to be stretched or squished the browser may crop it for this point*/
     background-position: center;
-    /*make the center of the image is the focal point so if its got cut by the upper property it cuts well*/
-    /* Layout */
     display: flex;
-    /*enabling a flex engine like the usual*/
     flex-direction: column;
-    /*puts text elemetns on top of each other vertically*/
     justify-content: center;
-    /*center the text elemetns*/
     align-items: flex-start;
-    /*pinning the elements to the left*/
-    /* Sizing */
     min-height: 50vh;
-    /*how much the image should take from the page after the header, vh-> viewport height */
-    /*vh also a dynamic scaling unit, it takes 50% of whatever the user screen's height.
-    contributes to the responsiveness of the website*/
     padding-left: 80px;
-/*    bit space from the left before the text starts */
+
 }
 
 .hero-text-wrapper {
     max-width: 600px;
-    /*prevents stretching*/
     color: white;
 }
 .hero h1 {
@@ -295,11 +225,10 @@ input:checked + .slider::before {
     color: white;
     text-decoration: none;
     text-transform: capitalize;
-    /*    starts every word with the first letter capitalized*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     margin-left: 30px;
     transition: color, background-color 0.5s ease-in-out;
-/*so the ease out works, as it only works this way not just on the state of hovering on the element*/
+
 
 }
 .hero-bttn:hover {
@@ -316,7 +245,6 @@ input:checked + .slider::before {
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
-
     width: 350px;     /* more -> bigger -> wider */
     min-height: 300px;
     /*min height of the pop up*/
@@ -372,7 +300,7 @@ input:checked + .slider::before {
     /*clear the normal list style*/
     padding: 0;
     z-index: 1001;
-/*    higher than the dialog and the bottom header*/
+    /*    higher than the dialog and the bottom header*/
 }
 
 .dropdown-list li {
@@ -386,17 +314,17 @@ input:checked + .slider::before {
 
 .dropdown-list li:hover {
     background-color: #f0f0f0;
-/*    Make it grey on the selection on hovering*/
+    /*    Make it grey on the selection on hovering*/
 }
 
 /* Show class for JS */
 .dropdown-list.show {
     display: block;
-/*    when show(), change this property to block in the dropdownlist selector*/
+    /*    when show(), change this property to block in the dropdownlist selector*/
 }
 footer {
     margin-top: auto;
-/*    pushes the footer down untill doing the main section*/
+    /*    pushes the footer down untill doing the main section*/
 }
 .upper-footer{
     display: flex;
@@ -479,7 +407,7 @@ footer {
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-url("../assets/index-assets/lower-footer-pattern.png");
+    url("../assets/index-assets/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
@@ -498,6 +426,3 @@ url("../assets/index-assets/lower-footer-pattern.png");
     margin-left: 12px; /* Adds space after the pipe */
     color: #ccc;
 }
-
-
-
