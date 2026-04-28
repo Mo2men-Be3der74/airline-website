@@ -80,7 +80,7 @@ function fromList()
 
         for (let i = 0; i < result.length; i++) {
             const item = document.createElement("div");
-            item.textContent = result[i];
+            item.innerHTML = result[i];
 
             item.onclick = function () {
                 input.value = result[i];
