@@ -33,7 +33,7 @@ main {
     flex: 1;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -48,7 +48,7 @@ p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-}
+} */
 
 
 /*Index-Hero*/
