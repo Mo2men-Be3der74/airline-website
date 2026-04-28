@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../css/login_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/login_style.css">
 </head>
+
 <body>
     <h2>Register</h2>
     <form id="registerForm">
-        <label for="firstName" >First Name</label>
+        <label for="firstName">First Name</label>
         <input type="text" id="firstName" required placeholder="Enter your First Name">
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" required placeholder="Enter your Last Name">
         <label for="userName">User Name</label>
         <input type="text" id="userName" required placeholder="Enter your User Name">
-        <label for="email" >Email</label>
+        <label for="email">Email</label>
         <input type="email" id="email" required placeholder="Enter your Email">
         <label for="password">Password</label>
         <input type="password" id="password" required placeholder="Enter your password">
         <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" required placeholder="ReEnter your password" >
-            <div class="gender">
-                <label>Gender</label>
-                <div class="gender-options">
+        <input type="password" id="confirmPassword" required placeholder="ReEnter your password">
+        <div class="gender">
+            <label>Gender</label>
+            <div class="gender-options">
                 <label><input type="radio" name="gender" value="male"> Male</label>
                 <label><input type="radio" name="gender" value="female"> Female</label>
-                </div>
             </div>
+        </div>
         <label for="country">Country</label>
         <select id="country" required>
             <option value="" disabled selected>Select Country</option>
@@ -40,10 +43,12 @@
             <option value="saudi">Saudi Arabia</option>
             <option value="uae">UAE</option>
         </select>
+
             <div class="terms">
                 <label for="terms">I agree to all terms</label>
                 <input type="checkbox" id="terms" required>
             </div>
+
         <button type="submit">Register</button>
         <div class="login-link">
             <span>Already have an account !</span>
@@ -52,4 +57,5 @@
     </form>
     <script src="../../js/register_script.js"></script>
 </body>
+
 </html>

@@ -1,20 +1,22 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-     background-image: url("../photos/background.jpg");
-     height:100vh;
-     display: flex;
-     justify-content: center;
+    background-image: url("../assets/login-asset/background.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px;
 }
+
 form {
     background: #f8f3c2;
     padding: 25px;
@@ -25,35 +27,41 @@ form {
     overflow-y: auto;
     backdrop-filter: blur(5px);
 }
+
 h2 {
     text-align: center;
     font-size: 52px;
     margin-bottom: 18px;
     color: #3A1824;
-    font-weight:600;
+    font-weight: 600;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 input {
-    width: 100%;padding: 10px;
+    width: 100%;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #b1adab;
     border-radius: 5px;
-    color:#9d8c5b;
-    font-size:18px;
+    color: #9d8c5b;
+    font-size: 18px;
     font-weight: 600;
 }
+
 input[type="checkbox"] {
     width: 16px;
-    height:16px;
+    height: 16px;
     vertical-align: middle;
 }
+
 a {
     display: block;
     margin-top: 10px;
     text-decoration: none;
     color: #3A1824;
-    text-align:right;
+    text-align: right;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -65,62 +73,75 @@ button {
     transition: 0.3s ease;
     margin-top: 20px;
 }
+
 label {
     display: block;
     font-weight: 600;
 }
+
 button:hover {
     background: #978549
 }
+
 a:hover {
     color: #15090d;
     text-decoration: underline;
 }
+
 input:focus {
     outline: none;
     border-color: #978549;
     box-shadow: 0 0 5px rgba(151, 133, 73, 0.5);
 }
+
 input::placeholder {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 .remember {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: 1px;
 }
+
 .signup {
     display: flex;
     align-items: center;
     gap: 100px;
     margin-top: 10px;
-    justify-content:left;
+    justify-content: left;
 }
+
 .gender {
     margin: 10px 0;
 }
+
 .gender-options {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .gender-options label {
     display: flex;
     align-items: center;
     gap: 5px;
     font-weight: 500;
 }
+
 .terms {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 10px;
 }
+
 .terms input {
     width: 18px;
     height: 18px;
 }
+
 .login-link {
     display: flex;
     align-items: center;
@@ -128,6 +149,7 @@ input::placeholder {
     gap: 90px;
     margin-top: 5px;
 }
+
 @media (max-width: 768px) {
 
     form {
@@ -149,17 +171,20 @@ input::placeholder {
         font-size: 17px;
         padding: 12px;
     }
+
     input::placeholder {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Plus Jakarta Sans', sans-serif;
     }
+
     .login-link {
-    gap: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
     }
+
     .signup {
-    gap: 5px;
-    justify-content: center;
+        gap: 5px;
+        justify-content: center;
     }
 }

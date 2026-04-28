@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Title</title>
 </head>
+
 <body>
 
     <!-- Moataz  -->
     <header class="header">
         <div class="upper-half">
+            <!--        justify-conten:space-between.<it makes the first child to the very left and the last to the very right
+that's why I've put the util and the login in a standalone div to make sure that the property consider it last child. -->
             <div class="logo-placeholder"></div>
+            <!--        Logo div for future logo (first child)-->
             <div class="right-sec">
-                <!-- Buttons (Login & Registraion)  -->
+                <!--            Second child-->
+
                 <div class="auth-bttns">
-                    <a href="./pages/auth/login.html" class="btn btn-login">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    <!--                auth-bttns class if I decided to add any other button or element beside it-->
+                    <a href="/pages/auth/login.html" class="btn btn-login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
                         </svg>
                         <span>Login & Registration</span>
                     </a>
                 </div>
                 <div class="r-right-sec">
-                    <!-- Theme-changing button-->
+                    <!--                Theme-changing button-->
                     <label class="theme-switch" for="theme-check">
                         <input type="checkbox" id="theme-check">
 
@@ -34,23 +44,43 @@
                     </label>
                     <!--  Lang & region (Country)    -->
                     <a href="#" id="open-lang-modal" class="utility-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-globe-icon lucide-globe">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
                         <span>Egypt | EN</span>
+                        <!--                the <a> is just used for its clickability behavouir however it doesnt redirect you to
+any page by using [href"#"]. its just a link to trigger an action on this page.-->
+                        <!--<svg></svg> tag is used insted of just linking an image for better visibility & resolution independency as the tag draws the icon using math-based code                -->
                     </a>
+                    <!-- Buttons (Login & Registraion)  -->
+
                 </div>
             </div>
         </div>
-
-        <nav class="bottom-half" style="position: sticky; top:0; z-index: 1000;">
+        <!--Impt Comment: Without that upper-half div, this means trying to apply flexbox properties directly to the <header> itself,
+which would force the navigation links (the bottom half) to also participate in that layout, breaking the design.   -->
+        <!-- Nav bar ( a container in itself so it doesnt need a div as its also has just an element which is the list
+      not making it in a div improevs DOM tree rendreing and reduce nesting -->
+        <nav class="bottom-half">
+            <!--the sticky property makes the nav sticks on top on document flowing,
+        z=1000 makes sure that if the nav hit any other element while flowing it also stays on top of it.-->
             <ul class="nav-list">
-                <li><a href="index.html" class="nav-link active"> Home</a></li>
-                <li><a href=./pages/booking/search-flights.html class="nav-link" > Book</a></li>
-                <li><a href=./pages/user/profile.html id="nav-mybookings" class="nav-link"> My bookings</a></li>
-                <li><a href=./pages/contact.html class="nav-link" > Help Center</a></li>
-
+                <!-- structure: <nav> → <ul> → <li> → <a>.
+Enhances accessibility as the list can be read by screen readers
+also better for search engines and a DOM predictability-->
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/pages/booking/search-flights.html" class="nav-link">Book</a></li>
+                <li><a href="/pages/user/profile.html" id="nav-mybookings" class="nav-link">My bookings</a></li>
+                <li><a href="/pages/contact.html" class="nav-link">Help Center</a></li>
             </ul>
         </nav>
     </header>
+
+
     <dialog id="lang-modal">
         <h3>Select Country & Language</h3>
         <br>
@@ -62,7 +92,7 @@
                     <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" width="20" height="15"> Egypt
                 </div>
                 <!--            The fixed part that the user sees before any interaction with the list,
-                for example here its Egypt | EN-->
+            for example here its Egypt | EN-->
                 <!--            a ul list for the options-->
                 <ul class="dropdown-list">
                     <li data-value="egypt">
@@ -136,12 +166,6 @@
         </div>
     </dialog>
 
-
-
-
-
-
-
     <footer>
         <div class="upper-footer">
             <div>
@@ -151,7 +175,8 @@
                     by the copyright and related rights legislation<br>
                     that applies to your use. For other uses you need to obtain permission<br>
                     from the rights-holder(s).
-                    <br> © 2026 'Name' </p>
+                    <br> © 2026 'Name'
+                </p>
 
 
             </div>
@@ -159,7 +184,7 @@
                 <h1 style="text-transform: uppercase">Fly with us</h1>
                 <br>
                 <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                    <li><a href="./pages/booking/search-results.html" > Flights</a></li>
+                    <li><a href="./pages/booking/search-results.html"> Flights</a></li>
                     <li><a href="#"> Manage Booking</a></li>
                     <li><a href="#"> Trending around the globe</a></li>
 
@@ -171,9 +196,9 @@
                 <br>
                 <!--            Support part-->
                 <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                    <li><a href="index.html" > Help Center</a></li>
+                    <li><a href="index.html"> Help Center</a></li>
                     <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
-                    <li><a href=./pages/user/profile.html > Contact us</a></li>
+                    <li><a href=./pages/user/profile.html> Contact us</a></li>
                     <li><a href=./pages/contact.html> FeedBack</a></li>
 
                 </ul>
@@ -183,19 +208,20 @@
                 <br>
                 <!--                Socila links part-->
                 <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                    <li><a href="#" > @user-Facebook</a></li>
-                    <li><a href="#"> @user-Instagram</a></li>
-                    <li><a href="#"> @user-twitter</a></li>
-                    <li><a href="#"> @user-TikTok</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">TikTok</a></li>
 
                 </ul>
             </div>
+        </div>
 
         </div>
         <div class="lower-footer">
             <div class="lower-footer-img">
                 <ul class="lower-footer-ul" style="text-transform: capitalize;">
-                    <li><a href="#" > Privacy Policy</a></li>
+                    <li><a href="#"> Privacy Policy</a></li>
                     <li><a href="#"> Terms & Conditions</a></li>
                     <li><a href="#"> Travel Procedures</a></li>
                     <li><a href="#"> Cookies Settings</a></li>
@@ -204,6 +230,8 @@
             </div>
         </div>
     </footer>
+
     <script src="../../js/main.js" defer></script>
 </body>
+
 </html>

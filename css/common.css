@@ -1,14 +1,19 @@
-
 :root {
-    --primary:#3A1824;
-    --tertiary:#4C2D38;
-    --secondary:#cbb573;
-    --off-white:#f2f0ef;
-    --on-black:#000;
-    --dark-blue:#001524
-
-
+    --primary: #3A1824;
+    --tertiary: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524
 }
+
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* header container (main/center) */
 .header {
     display: flex;
@@ -17,14 +22,16 @@
     z-index: 10;
 
 }
-.upper-half{
+
+.upper-half {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     align-items: center;
 }
-.bottom-half{
+
+.bottom-half {
 
     background-color: color-mix(in srgb, var(--primary), black 15%);
     display: flex;
@@ -32,22 +39,28 @@
     align-items: center;
     justify-content: center;
 }
+
 .right-sec {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;  /* pins them to the right end side of the container's hight */
-    gap: 8px;               /* space between bttns and the util if you have 1+ elemetns it does the gap */
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
+
 .r-right-sec {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
 }
+
 /*left-header-section*/
 .logo-placeholder {
     width: 150px;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -68,8 +81,12 @@
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--off-white); /*t Light Track Color */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /*t Light Track Color */
     border-radius: 30px;
     transition: background-color 0.3s ease;
 }
@@ -77,9 +94,13 @@
 /* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
-    content: "☀️"; /* Default Light Icon (Sun) */
+    content: "☀️";
+    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
-    display: flex; align-items: center; justify-content: center; /* Center the icon in the ball */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
 
     /* Sizing the ball slightly smaller than the track height */
     height: 16px;
@@ -89,23 +110,28 @@
     left: 3px;
     bottom: 3px;
 
-    border-radius: 50%; /* Make the ball round */
+    border-radius: 50%;
+    /* Make the ball round */
 
     /* Colors (Light State) */
-    background-color: var(--off-white); /* White ball */
-    color: #333; /* Black icon */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
 
     /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 /* A. Change the Track color when checked */
-input:checked + .slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Dark Track Color */
+input:checked+.slider {
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Dark Track Color */
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
-input:checked + .slider::before {
+input:checked+.slider::before {
     /* MATH: width - ball  - original left offset (3px) - new right offset (3px)  */
     /*45-16-3-3*/
     transform: translateX(23px);
@@ -114,32 +140,37 @@ input:checked + .slider::before {
     content: "🌙";
 
     /* Color Swap (Dark State) */
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Black ball */
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Black ball */
 
 }
+
 .utility-link {
-    border-radius: 3px;
+    font-family: 'plus Jakarta Sans', sans-serif;
+    border-radius: 6px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     font-size: 0.9rem;
     color: var(--off-white);
     text-decoration: none;
-    padding-right: 2px;
-    padding-bottom: 2.7pt;
-    transition: color 0.7s ease-in-out;
+    padding: 6px 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 .utility-link:hover {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--secondary);
-    font-weight: 400;
 }
+
 /*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
 
 }
+
 .btn {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     padding: 4px 10px;
@@ -150,53 +181,78 @@ input:checked + .slider::before {
     transition: color 0.7s ease-in-out;
 
 }
+
 .btn-login {
     color: var(--off-white);
     font-weight: 300;
     display: flex;
     align-items: center;
 }
+
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
 
 }
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
+    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
     list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
 
-/* individual links  (<a>) */
 .nav-link {
     color: var(--off-white);
     text-decoration: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
-
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.2s ease;
 }
 
-/* hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
 .nav-link:hover {
     color: var(--secondary);
-    transition: color 0.3s ease;
-
-
 }
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 .active {
     color: var(--secondary);
-    font-weight: 500;
-
+    font-weight: 600;
 }
+
+.active::after {
+    width: 100%;
+    left: 0;
+}
+
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-    url('../assets/index-assets/hero-img.jpg');
+        url('../assets/index-asset/hero-img.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -212,11 +268,13 @@ input:checked + .slider::before {
     max-width: 600px;
     color: white;
 }
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: white;
 }
+
 .hero-bttn {
     display: inline-block;
     margin-top: 20px;
@@ -231,30 +289,35 @@ input:checked + .slider::before {
 
 
 }
+
 .hero-bttn:hover {
-    background-color:var(--off-white);
-    color:var(--on-black);
+    background-color: var(--off-white);
+    color: var(--on-black);
 
 }
+
 #lang-modal {
     /* positioning */
-    position: fixed !important; /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
-    width: 350px;     /* more -> bigger -> wider */
+    width: 350px;
+    /* more -> bigger -> wider */
     min-height: 300px;
     /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border:none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
     background: white;
     z-index: 1000;
 }
+
 .modal-actions {
     display: flex;
     justify-content: center;
@@ -272,6 +335,7 @@ input:checked + .slider::before {
     font-weight: 400;
     margin-top: 25px;
 }
+
 /* Container for the dropdown */
 .custom-dropdown {
     position: relative;
@@ -322,67 +386,75 @@ input:checked + .slider::before {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
+
 footer {
     margin-top: auto;
     /*    pushes the footer down untill doing the main section*/
 }
-.upper-footer{
+
+.upper-footer {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    border-top: 2px solid #EDE9E6;
-    margin-top: 12px;
-    padding: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 10px;
-
+    gap: 2rem;
+    border-top: 1px solid #ede9e6;
+    padding: 2.5rem 2rem;
 }
-.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 540;
-    padding-left: 10px;
-    font-size: large;
-    margin-top: 0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
     color: var(--primary);
 }
+
 .upper-footer p {
-    padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89
+    font-size: 0.9rem;
+    color: #6b6b67;
+    line-height: 1.6;
 }
 
 .upper-footer-ul {
-
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 0.75rem;
     list-style: none;
-    padding-left: 15px;
-
-
+    padding: 0;
+    margin: 0;
 }
+
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
     color: #8b8c89;
     text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
 }
+
 .upper-footer-ul li:hover a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
-    text-decoration: underline;
-    font-weight: 400;
+    color: var(--primary);
+    padding-left: 6px;
 }
 
 .lower-footer {
     display: flex;
     align-items: center;
-    border-top: 2px solid #EDE9E6;
-    height: 60%;
-
-
-
+    justify-content: center;
+    border-top: 1px solid #ede9e6;
+    /* padding: 1.25rem 2rem; */
+    background-color: #fafafa;
 }
+
 .lower-footer-ul {
 
     display: flex;
@@ -392,11 +464,13 @@ footer {
     padding-left: 15px;
 
 }
+
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #8b8c89;
     text-decoration: none;
 }
+
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -404,10 +478,11 @@ footer {
     font-weight: 400;
 
 }
+
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-assets/lower-footer-pattern.png");
+        url("../assets/index-asset/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
@@ -421,8 +496,11 @@ footer {
     align-items: center;
 
 }
+
 .lower-footer-ul li:not(:last-child)::after {
-    content: "|"; /* Adds a pipe character */
-    margin-left: 12px; /* Adds space after the pipe */
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
     color: #ccc;
 }
