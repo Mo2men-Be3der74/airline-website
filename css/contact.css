@@ -25,22 +25,31 @@ body
     max-height: 473px;
 }
 .heading{
-    max-height: 473px;
-    flex-shrink: 0;
-    margin-right: 40px;
+    margin: 20px;
+    animation: forwards fadeIn 1s ease-in-out;
+
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(20px);
+    }    
 }
 .head-text{
     font-size: 96px;
-    margin: 20px;
 }
 .head-details{
     font-size: 18px;
     margin: 20px;
-    max-width: 700px;
+    max-width: 600px;
     color: var(--primary);
 }
 .head-small-text{
-    margin: 20px;
+    margin: 10px;
     margin-top: 60px;
 }
 .head-quote{
@@ -52,7 +61,8 @@ body
     position: relative;
     flex-shrink: 0;
     margin: 20px;
-    width: 561px;
+    margin-top: 100px;
+    width: 661px;
     height: 473px;
     background-color: var(--secondary);
 }
@@ -61,12 +71,14 @@ body
     font-size: 30px;
     left: 50px;
     top: 50px;
+    animation: forwards fadeIn 2s ease-in-out;
 }
 #priority-support{
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 50px;
+    animation: forwards fadeIn 2s ease-in-out;
 }
 #priority-support-details{
     position: absolute;
@@ -74,18 +86,21 @@ body
     left: 90px;
     top: 80px;
     opacity: 70%;
+    animation: forwards fadeIn 2s ease-in-out;
 }
 #direct-icon{
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 150px;
+    animation: forwards fadeIn 2.5s ease-in-out;
 }
 #direct-support{
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 150px;
+    animation: forwards fadeIn 2.5s ease-in-out;
 }
 #direct-support-details{
     position: absolute;
@@ -93,18 +108,21 @@ body
     left: 90px;
     top: 180px;
     opacity: 70%;
+    animation: forwards fadeIn 2.5s ease-in-out;
 }
 #facebook-icon{
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 250px;
+    animation: forwards fadeIn 3s ease-in-out;
 }
 #facebook-support{
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 250px;
+    animation: forwards fadeIn 3s ease-in-out;
 }
 #facebook-support-details{
     position: absolute;
@@ -112,18 +130,21 @@ body
     left: 90px;
     top: 280px;
     opacity: 70%;
+    animation: forwards fadeIn 3s ease-in-out;
 }
 #instagram-icon{
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 350px;
+    animation: forwards fadeIn 3.5s ease-in-out;
 }
 #instagram-support{
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 350px;
+    animation: forwards fadeIn 3.5s ease-in-out;
 }
 #instagram-support-details{
     position: absolute;
@@ -131,6 +152,7 @@ body
     left: 90px;
     top: 380px;
     opacity: 70%;
+    animation: forwards fadeIn 3.5s ease-in-out;
 }
 .middle{
     display: flex;
@@ -138,7 +160,7 @@ body
     justify-content: space-between;
 }
 .form-section{
-    margin-top: 45px;
+    margin-top: 100px;
 }
 .full-name{
     margin: 20px;
@@ -149,17 +171,19 @@ body
     margin: 20px;
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
 }
 .row-1{
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 200px;
 }
 .row-2{
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 200px;
 }
+
 .booking-reference{
     margin: 20px;
     display: flex;
@@ -169,6 +193,7 @@ body
     margin: 20px;
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
 }
 .your-message{
     margin: 20px;
@@ -176,8 +201,14 @@ body
     flex-direction: column;
 }
 #text-box{
-    width: 304px;
+    width: 200%;
     height: 49px;
+    opacity: 30%;
+    padding-left: 10px;
+}
+#text-box2{
+    width: 240%;
+    height: 54px;
     opacity: 30%;
     padding-left: 10px;
 }
@@ -199,10 +230,10 @@ body
     position: relative;
     flex-shrink: 0;
     margin: 20px;
-    width: 562px;
+    width: 750px;
     height: 542px;
     border-radius: 5px;
-    background-color: var(--primary);
+    background-color: var(--tertiart);
 }
 #plane{
     position: absolute;
@@ -218,6 +249,7 @@ body
     padding: 20px;
     bottom: 100px;
     color: var(--off-white);
+    animation: forwards fadeIn 1.25s ease-in-out;
 }
 .standard-small-text{
     position: absolute;
@@ -226,6 +258,7 @@ body
     padding: 20px;
     bottom:50px;
     color: var(--off-white);
+    animation: forwards fadeIn 1.5s ease-in-out;
 }
 @media (max-width: 768px) {
     .top-section{
