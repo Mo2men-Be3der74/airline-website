@@ -104,13 +104,12 @@ h3 {
     flex: 0 1 350px;
 }
 .Flight-Summary {
-    color: white;
     padding: 25px;
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
-    height: 400px;
+    height: fit-content;
     width: 100%;
-    max-width:none;
+    max-width: none;
 }
 .text-summary {
     margin: 10px;
@@ -118,19 +117,46 @@ h3 {
 .text-summary h3 {
     font-size: 20px;
     font-weight: 600;
+    color: white;
+}
+.text-summary p {
+    color: white;
+}
+.checkout-btn {
+    display: block;         
+    text-align: center;     
+    text-decoration: none;
+    background-color: var(--secondary-color); 
+    color: var(--primary-color);           
+    width: 90%;                          
+    padding: 15px;                        
+    border: none;                         
+    font-size: 16px;                   
+    font-weight: 700;                     
+    letter-spacing: 2px;                  
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.checkout-btn:hover {
+    background-color: #dcc485; 
+    letter-spacing: 3px;                  
 }
 .Trust-Badge {
-    padding: 20px;
-    border: 1px solid var(--primary-color);
+    padding: 30px;
+    border: 1px solid var(--surface-color);
     background-color: var(--surface-color);
     max-width:none;
     width: 100%;
     margin-top: 20px;
 }
-.Trust-Badge h3 {
-    margin: 0;
+.header-Trust{
+    display: flex;
+    gap: 20px;
+}
+.header-Trust h3 {
+    margin:0;
     color: var(--text-color);
-    font-size: 16px;
+    font-size: 20px;
 }
 .Trust-Badge p {
     margin: 0;
@@ -147,7 +173,8 @@ h3 {
 
 .item {
     display: flex;
-    gap: 30px;
+    justify-content: space-between; 
+    align-items: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
