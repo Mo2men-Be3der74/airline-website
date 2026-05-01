@@ -404,6 +404,8 @@ input:checked + .slider::before {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
+
+
 footer {
     margin-top: 0;
     padding-top: 0;
