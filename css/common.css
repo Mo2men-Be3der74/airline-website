@@ -247,6 +247,96 @@ input:checked + .slider::before {
     /* Make it a bit boldy when active   */
 }
 
+#lang-modal {
+    /* positioning */
+    position: fixed !important; /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    top: 70px !important;
+    right: 20px !important;
+    left: auto !important;
+    /*fight any left styling that may conflict with the pop up*/
+    margin: 0 !important;
+    /* ensures no margins are pushing it */
+
+    width: 350px;     /* more -> bigger -> wider */
+    min-height: 300px;
+    /*min height of the pop up*/
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    border:none;
+    background: white;
+    z-index: 1000;
+}
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.apply-bttn {
+    background-color: var(--primary);
+    color: var(--off-white);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 25px;
+}
+/* Container for the dropdown */
+.custom-dropdown {
+    position: relative;
+    /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    /*turns the arrow into a hand icon for better visual interaction*/
+    margin-bottom: 15px;
+    background: white;
+}
+
+/* The list (hidden by default) */
+.dropdown-list {
+    display: none;
+    /*initially making this not visible untill triggered by the JS script to make it :block; (visible)*/
+    position: absolute;
+    /*fix its position when opened, not pushing everything down*/
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    /*clear the normal list style*/
+    padding: 0;
+    z-index: 1001;
+    /*    higher than the dialog and the bottom header*/
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*as usual all 3 props make the text and the image aligned well on a center horizontal axis*/
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: #f0f0f0;
+    /*    Make it grey on the selection on hovering*/
+}
+
+/* Show class for JS */
+.dropdown-list.show {
+    display: block;
+    /*    when show(), change this property to block in the dropdownlist selector*/
+}
+
+
+
 footer {
     margin-top: 0;
     padding-top: 0;
