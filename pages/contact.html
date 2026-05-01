@@ -61,25 +61,26 @@ any page by using [href"#"]. its just a link to trigger an action on this page.-
                 </div>
             </div>
         </div>
-        <!--Impt Comment: Without that upper-half div, this means trying to apply flexbox properties directly to the <header> itself,
-which would force the navigation links (the bottom half) to also participate in that layout, breaking the design.   -->
-        <!-- Nav bar ( a container in itself so it doesnt need a div as its also has just an element which is the list
-      not making it in a div improevs DOM tree rendreing and reduce nesting -->
-        <nav class="bottom-half">
-            <!--the sticky property makes the nav sticks on top on document flowing,
-        z=1000 makes sure that if the nav hit any other element while flowing it also stays on top of it.-->
-            <ul class="nav-list">
-                <!-- structure: <nav> → <ul> → <li> → <a>.
+    </header>
+    <!--Impt Comment: Without that upper-half div, this means trying to apply flexbox properties directly to the <header> itself,
+   which would force the navigation links (the bottom half) to also participate in that layout, breaking the design.   -->
+    <!-- Nav bar ( a container in itself so it doesnt need a div as its also has just an element which is the list
+  not making it in a div improevs DOM tree rendreing and reduce nesting -->
+    <nav class="bottom-half">
+        <!--the sticky property makes the nav sticks on top on document flowing,
+    z=1000 makes sure that if the nav hit any other element while flowing it also stays on top of it.-->
+        <ul class="nav-list">
+            <!-- structure: <nav> → <ul> → <li> → <a>.
 Enhances accessibility as the list can be read by screen readers
 also better for search engines and a DOM predictability-->
-                <li><a href="../index.html" class="nav-link"> Home</a></li>
-                <li><a href="../pages/booking/search-flights.html" class="nav-link"> Book</a></li>
-                <li><a href="../pages/user/profile.html" id="nav-mybookings" class="nav-link "> My bookings</a>
-                </li>
-                <li><a href="../pages/contact.html" class="nav-link "> Help Center</a></li>
-            </ul>
-        </nav>
-    </header>
+            <li><a href="../index.html" class="nav-link"> Home</a></li>
+            <li><a href="../pages/booking/search-flights.html" class="nav-link"> Book</a></li>
+            <li><a href="../pages/user/profile.html" id="nav-mybookings" class="nav-link "> My bookings</a>
+            </li>
+            <li><a href="../pages/contact.html" class="nav-link "> Help Center</a></li>
+        </ul>
+    </nav>
+
 
     <dialog id="lang-modal">
         <h3>Select Country & Language</h3>
