@@ -78,3 +78,20 @@ themeCheck.addEventListener('change', () => {
         stylesheet.setAttribute('href', 'light-theme.css');
     }
 });
+const nav = document.querySelector('.bottom-half');
+const navTop = nav.offsetTop;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= navTop) {
+        nav.classList.add('sticky');
+    } else {
+        nav.classList.remove('sticky');
+    }
+});
+
+document.querySelectorAll('.search-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active-tab'));
+        tab.classList.add('active-tab');
+    });
+});
