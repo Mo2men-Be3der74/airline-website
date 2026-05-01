@@ -1,20 +1,20 @@
 /* Variables */
 :root {
-    --primary:#3A1824;
-    --tertiary:#4C2D38;
-    --secondary:#cbb573;
-    --off-white:#f2f0ef;
-    --on-black:#000;
-    --dark-blue:#001524
-
-
+    --primary: #3A1824;
+    --tertiary: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524
 }
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100vh = 100% of the viewport height */
+    min-height: 100vh;
+    /* 100vh = 100% of the viewport height */
     margin: 0;
-
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Makes any content in the main container to fill it up */
@@ -23,19 +23,26 @@ main {
     min-height: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     color: var(--primary);
 
 
 }
+
 p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
 
 }
+
 /* header container (main/center) */
 .header {
     display: flex;
@@ -44,11 +51,13 @@ p {
     z-index: 10;
     /* Two stacked bars   */
 }
-.upper-half{
+
+.upper-half {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
-    justify-content: space-between; /* Pushes Logo to left(first child), Links to right(last child) */
+    justify-content: space-between;
+    /* Pushes Logo to left(first child), Links to right(last child) */
     padding: 1rem 2rem;
     /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
     the padding will change automatically to fit the padding right. this increases the accessibility for the website
@@ -60,7 +69,8 @@ p {
     z-index: 1000;
 
 }
-.bottom-half{
+
+.bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--primary), black 15%);
     /*Color-mix function to mix colors or create new ones depending on the need,
@@ -69,7 +79,8 @@ p {
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
-    position: sticky !important; /* default state */
+    position: sticky !important;
+    /* default state */
     z-index: 1000 !important;
     top: 0 !important;
 }
@@ -78,24 +89,30 @@ p {
     display: flex;
     flex-direction: row;
     /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
-    align-items: flex-end;  /* pins them to the right end side of the container's hight */
-    gap: 8px;               /* space between bttns and the util if you have 1+ elemetns it does the gap */
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
+
 .r-right-sec {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
 }
+
 /*left-header-section*/
 .logo-placeholder {
     width: 150px;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
     position: relative;
-    width: 45px; /* Adjust this to make the switch wider/narrower */
+    width: 45px;
+    /* Adjust this to make the switch wider/narrower */
     height: 20px;
 }
 
@@ -110,18 +127,28 @@ p {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--off-white); /* Default Light Track Color */
-    border-radius: 30px; /* This creates the "very rounded" ends */
-    transition: background-color 0.3s ease; /* Smooth fade when the track changes color */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /* Default Light Track Color */
+    border-radius: 30px;
+    /* This creates the "very rounded" ends */
+    transition: background-color 0.3s ease;
+    /* Smooth fade when the track changes color */
 }
 
 /* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
-    content: "☀️"; /* Default Light Icon (Sun) */
+    content: "☀️";
+    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
-    display: flex; align-items: center; justify-content: center; /* Center the icon in the ball */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
 
     /* Sizing the ball slightly smaller than the track height */
     height: 16px;
@@ -131,11 +158,14 @@ p {
     left: 3px;
     bottom: 3px;
 
-    border-radius: 50%; /* Make the ball round */
+    border-radius: 50%;
+    /* Make the ball round */
 
     /* Colors (Light State) */
-    background-color: var(--off-white); /* White ball */
-    color: #333; /* Black icon */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
 
     /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -146,12 +176,14 @@ p {
    ------------------------------------------------------------------------- */
 
 /* A. Change the Track color when checked */
-input:checked + .slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Dark Track Color */
+input:checked+.slider {
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Dark Track Color */
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
-input:checked + .slider::before {
+input:checked+.slider::before {
     /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
     /*45-16-3-3*/
     transform: translateX(23px);
@@ -160,9 +192,12 @@ input:checked + .slider::before {
     content: "🌙";
 
     /* Color Swap (Dark State) */
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Black ball */
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Black ball */
 
 }
+
 .utility-link {
     border-radius: 3px;
     display: flex;
@@ -178,17 +213,20 @@ input:checked + .slider::before {
     /*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
+
 .utility-link:hover {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--secondary);
     font-weight: 400;
 }
+
 /*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
     /*   Gap between each button (There's only one for both login & registration right now) */
 }
+
 .btn {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     padding: 4px 10px;
@@ -201,6 +239,7 @@ input:checked + .slider::before {
     transition: color 0.7s ease-in-out;
 
 }
+
 .btn-login {
     color: var(--off-white);
     font-weight: 300;
@@ -208,19 +247,22 @@ input:checked + .slider::before {
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
+
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
 
 }
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
     /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
-    list-style: none; /* removes usual dots from the list element, same likely as text-decoration:none; */
+    list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
@@ -241,6 +283,7 @@ input:checked + .slider::before {
     /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
 
 }
+
 .active {
     color: var(--secondary);
     font-weight: 500;
@@ -249,7 +292,8 @@ input:checked + .slider::before {
 
 #lang-modal {
     /* positioning */
-    position: fixed !important; /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
@@ -257,16 +301,18 @@ input:checked + .slider::before {
     margin: 0 !important;
     /* ensures no margins are pushing it */
 
-    width: 350px;     /* more -> bigger -> wider */
+    width: 350px;
+    /* more -> bigger -> wider */
     min-height: 300px;
     /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border:none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
     background: white;
     z-index: 1000;
 }
+
 .modal-actions {
     display: flex;
     justify-content: center;
@@ -284,6 +330,7 @@ input:checked + .slider::before {
     font-weight: 400;
     margin-top: 25px;
 }
+
 /* Container for the dropdown */
 .custom-dropdown {
     position: relative;
@@ -340,9 +387,10 @@ input:checked + .slider::before {
 footer {
     margin-top: 0;
     padding-top: 0;
+    background-color: white;
 }
 
-.upper-footer{
+.upper-footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -353,7 +401,11 @@ footer {
     padding-bottom: 10px;
 
 }
-.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 540;
     padding-left: 10px;
@@ -361,6 +413,7 @@ footer {
     margin-top: 0;
     color: var(--primary);
 }
+
 .upper-footer p {
     padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -377,11 +430,13 @@ footer {
 
 
 }
+
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #8b8c89;
     text-decoration: none;
 }
+
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -398,6 +453,7 @@ footer {
 
 
 }
+
 .lower-footer-ul {
 
     display: flex;
@@ -407,11 +463,13 @@ footer {
     padding-left: 15px;
 
 }
+
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #8b8c89;
     text-decoration: none;
 }
+
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -419,10 +477,11 @@ footer {
     font-weight: 400;
 
 }
+
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-asset/lower-footer-pattern.png");
+        url("../assets/index-asset/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
@@ -436,8 +495,11 @@ footer {
     align-items: center;
 
 }
+
 .lower-footer-ul li:not(:last-child)::after {
-    content: "|"; /* Adds a pipe character */
-    margin-left: 12px; /* Adds space after the pipe */
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
     color: #ccc;
 }
