@@ -241,6 +241,11 @@ input:checked + .slider::before {
     /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
 
 }
+.active {
+    color: var(--secondary);
+    font-weight: 500;
+    /* Make it a bit boldy when active   */
+}
 
 footer {
     margin-top: 0;
