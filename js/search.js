@@ -141,3 +141,33 @@ fromList();
 toList();
 
 
+function storgeInput()
+{
+    const from = document.getElementById("input-from").value.toLowerCase();
+    const to = document.getElementById("input-to").value.toLowerCase();
+
+    const departureDate = document.getElementById("departure-date").value;
+    const returnDate = document.getElementById("return-date").value;
+
+    let Class ;
+
+    if (document.getElementById("cabin-economy").checked) {
+        Class = "economy";
+    }
+
+    if (document.getElementById("cabin-business").checked) {
+        Class = "business";
+    }
+
+    if (document.getElementById("cabin-first-class").checked) {
+        Class = "first";
+    }
+
+    localStorage.setItem("from", from);
+    localStorage.setItem("to", to);
+    localStorage.setItem("class", Class);
+    localStorage.setItem("departureDate", departureDate);
+    localStorage.setItem("returnDate", returnDate);
+
+    window.location.href = "result.html";
+}
