@@ -7,6 +7,7 @@
 }
 body {
     margin: 0;
+    background-color: var(--surface-color);
 }
 main {
     margin: 40px auto;
@@ -61,17 +62,46 @@ h3 {
     line-height: 1.6;
     margin: 0;
 }
-
-.chair-image {
-    max-width: fit-content;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    background-color: var(--surface-color);
-    margin-top: 30px;
+.section-1 {
+    background-color: white;
 }
-
+.seats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 80px) 40px repeat(2, 80px);
+    gap: 20px;
+    justify-content: center; 
+    margin-top: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.seat {
+    width: 80px;
+    height: 80px;
+    background-color: var(--surface-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.booked {
+    background-color: var(--primary-color);
+    color: white;
+}
+.selected {
+    background-color:var(--secondary-color);
+    color: white;
+}
+.main-aisle {
+    text-align: center;
+    margin:0 ;
+    letter-spacing: 2px;
+    color: #999;
+    border-top: 1px solid #eee;
+    border-bottom:  1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .Extra-Services {
     margin-top: 60px;
 }
@@ -94,7 +124,7 @@ h3 {
     margin-top: 60px;
 }
 .card {
-    background-color: #f2f0ef;
+    background-color: white;
     width: 100%;
     height: 300px;
 }
@@ -161,7 +191,7 @@ h3 {
 .Trust-Badge {
     padding: 30px;
     border: 1px solid var(--surface-color);
-    background-color: var(--surface-color);
+    background-color: white;
     max-width:none;
     width: 100%;
     margin-top: 20px;
