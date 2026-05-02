@@ -12,7 +12,7 @@ main {
     margin: 40px auto;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     max-width: 1200px;
     width: 90%; 
 }
@@ -76,13 +76,14 @@ h3 {
     margin-top: 60px;
 }
 .services-text h3 {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--text-color);
     margin: 0;
 }
 .services-text p {
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
@@ -90,12 +91,31 @@ h3 {
 .services-icons {
     display: flex;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .card {
     background-color: #f2f0ef;
-    width: 150px;
-    height: 200px;
+    width: 100%;
+    height: 300px;
+}
+.text-card {
+    margin: 30px;
+}
+.icon-card {
+    margin-bottom: 20px;
+}
+.header-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.text-card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
 }
 .right-side {
     flex: 0 1 350px;
@@ -157,10 +177,11 @@ h3 {
     font-size: 20px;
 }
 .Trust-Badge p {
-    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
     color: var(--text-color);
-    font-size: 15px;
     line-height: 1.6;
+    margin: 0;
 }
 .summary-header p {
     font-size: 12px;
