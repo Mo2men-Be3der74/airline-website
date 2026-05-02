@@ -40,6 +40,7 @@ body {
 
 /* Makes any content in the main container to fill it up */
 main {
+    background-color:  color-mix(in srgb, var(--on-grey2), black 10%);;
     flex: 0;
     min-height: 0;
 }
@@ -51,12 +52,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 }
-p {
-    color: var(--tertiary);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
+/*p {*/
+/*    color: var(--tertiary);*/
+/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*    font-weight: 600;*/
 
-}
+/*}*/
 /* header container (main/center) */
 .header {
     display: flex;
@@ -66,7 +67,7 @@ p {
     /* Two stacked bars   */
 }
 .upper-half{
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between; /* Pushes Logo to left(first child), Links to right(last child) */
@@ -83,7 +84,7 @@ p {
 }
 .bottom-half{
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
-    background-color: color-mix(in srgb, var(--primary), black 15%);
+    background-color:  color-mix(in srgb, var(--on-grey1), black 30%);;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
@@ -168,7 +169,7 @@ p {
 
 /* A. Change the Track color when checked */
 input:checked + .slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Dark Track Color */
+    background-color: color-mix(in srgb, var(--on-grey2), black 2%);; /* Dark Track Color */
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
@@ -211,7 +212,7 @@ input:checked + .slider::before {
     /*   Gap between each button (There's only one for both login & registration right now) */
 }
 .btn {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
@@ -270,7 +271,7 @@ input:checked + .slider::before {
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-    url('../assets/index-assets/hero-img.jpg');
+    url('../../assets/index-assets/hero-img.jpg');
     /*the linear gradiant scrim (function)
     rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
     rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
@@ -336,6 +337,7 @@ input:checked + .slider::before {
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
+    color: var(--off-white);
 
     width: 350px;     /* more -> bigger -> wider */
     min-height: 300px;
@@ -344,8 +346,15 @@ input:checked + .slider::before {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     border:none;
-    background: white;
+    background: var(--on-grey1);
     z-index: 1000;
+}
+/*For dark theme*/
+h3 {
+    color: var(--off-white);
+}
+.modal-label {
+    color: var(--off-white);
 }
 .modal-actions {
     display: flex;
@@ -355,8 +364,8 @@ input:checked + .slider::before {
 }
 
 .apply-bttn {
-    background-color: var(--primary);
-    color: var(--off-white);
+    background-color: var(--secondary);
+    color: var(--on-black);
     padding: 6px 12px;
     border-radius: 6px;
     text-decoration: none;
@@ -368,13 +377,14 @@ input:checked + .slider::before {
 .custom-dropdown {
     position: relative;
     /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
-    border: 1px solid #ccc;
+    border: 1px solid var(--on-grey1);
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
-    background: white;
+    background: var(--on-grey2);
+    color: var(--off-white);
 }
 
 /* The list (hidden by default) */
@@ -386,8 +396,8 @@ input:checked + .slider::before {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: var(--on-grey2);
+    border: 1px solid var(--on-grey1);
     list-style: none;
     /*clear the normal list style*/
     padding: 0;
@@ -405,7 +415,8 @@ input:checked + .slider::before {
 }
 
 .dropdown-list li:hover {
-    background-color: #f0f0f0;
+    background-color: var(--on-grey1);
+    color: var(--off-white);
     /*    Make it grey on the selection on hovering*/
 }
 
@@ -413,112 +424,6 @@ input:checked + .slider::before {
 .dropdown-list.show {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
-}
-
-
-footer {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.upper-footer{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-top: 2px solid #EDE9E6;
-    padding: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 10px;
-
-}
-.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 540;
-    padding-left: 10px;
-    font-size: large;
-    margin-top: 0;
-    color: var(--primary);
-}
-.upper-footer p {
-    padding: 12px 15px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89
-}
-
-.upper-footer-ul {
-
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    list-style: none;
-    padding-left: 15px;
-
-
-}
-.upper-footer-ul a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
-    text-decoration: none;
-}
-.upper-footer-ul li:hover a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
-    text-decoration: underline;
-    font-weight: 400;
-}
-
-.lower-footer {
-    display: flex;
-    align-items: center;
-    border-top: 2px solid #EDE9E6;
-    height: 60%;
-
-
-
-}
-.lower-footer-ul {
-
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    list-style: none;
-    padding-left: 15px;
-
-}
-.lower-footer-ul a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
-    text-decoration: none;
-}
-.lower-footer-ul li:hover a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
-    text-decoration: underline;
-    font-weight: 400;
-
-}
-.lower-footer-img {
-
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-assets/lower-footer-pattern.png");
-
-    background-size: contain;
-    background-position: bottom center;
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 80px;
-    /* Vertical Centering (The missing piece) */
-    align-items: center;
-
-}
-.lower-footer-ul li:not(:last-child)::after {
-    content: "|"; /* Adds a pipe character */
-    margin-left: 12px; /* Adds space after the pipe */
-    color: #ccc;
 }
 
 .about-section {
@@ -546,7 +451,7 @@ footer {
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--off-white);
     margin: 0;
 
 }
@@ -570,9 +475,9 @@ video {
 
     flex: 1;
     max-width: 400px;
-
-
-
+}
+.about-text-wrapper p, h2 {
+    color: var(--off-white);
 }
 
 .trending-section {
@@ -580,7 +485,7 @@ video {
     flex-direction: column;
     align-items: center; /* Centers the whole block on the page */
     padding: 60px 20px 20px 20px;
-    background-color: #f4f4f4;
+    background-color:  color-mix(in srgb, var(--on-grey2), black 10%);;
 }
 
 .trending-wrapper {
@@ -670,8 +575,8 @@ video {
 }
 
 .view-more-cta  {
-    background: var(--primary);
-    border: 1px solid var(--primary);
+    background: var(--on-black1);
+    border: 1px solid var(--off-white);
     text-decoration: none;
     color: var(--off-white);
     padding: 12px 40px;
@@ -684,6 +589,112 @@ video {
     color: var(--primary);
 }
 
+
+footer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.upper-footer{
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid var(--on-grey2);
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+
+}
+.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 540;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 0;
+    color: var(--secondary);
+}
+.upper-footer p {
+    padding: 12px 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+}
+
+.upper-footer-ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+
+}
+.upper-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+.upper-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.lower-footer {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--on-grey2);
+    height: 60%;
+
+
+
+}
+.lower-footer-ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+}
+.lower-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+.lower-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+
+}
+.lower-footer-img {
+
+    background:
+    url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
+
+    background-size: contain;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 80px;
+    /* Vertical Centering (The missing piece) */
+    align-items: center;
+
+}
+.lower-footer-ul li:not(:last-child)::after {
+    content: "|"; /* Adds a pipe character */
+    margin-left: 12px; /* Adds space after the pipe */
+    color: #ccc;
+}
 
 /*Search CSS from Marwan's file*/
 /* Label */
@@ -705,7 +716,10 @@ video {
 
 .city-list {
     position: absolute;
-    background-color: white;
+    /**/
+    background-color: var(--on-grey2);
+    color: var(--off-white);
+    /*Edited*/
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 100;
     height: 200px;
@@ -748,7 +762,7 @@ video {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--tertiart);
+    background-color: var(--off-white);
     padding: 10px 18px;
     border-radius: 40px;
     font-size: 13px;
@@ -801,7 +815,7 @@ video {
 }
 
 .search-card {
-    background: white;
+    background: var(--on-grey1);
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border: 1px solid rgba(58, 24, 36, 0.07);
@@ -816,10 +830,11 @@ video {
 
 .search-first-row {
     display: flex;
-    border-bottom: 1px solid rgba(58, 24, 36, 0.08);
+    border-bottom: 1px solid rgba(203,181,115,0.1);
 }
 
 .search-field {
+    border-right: 1px solid rgba(203,181,115,0.1);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -833,23 +848,28 @@ video {
 
 /* Input */
 .search-field-input {
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1.08rem;
     font-weight: 500;
-    color: var(--primary);
+    color: var(--off-white);
     width: 100%;
 }
 
 .search-field-input::placeholder {
-    color: rgba(58, 24, 36, 0.28);
+    color:  color-mix(in srgb, var(--on-grey1), white 30%);;
     font-weight: 400;
 }
 
 .search-field-input[type="date"] {
-    color: var(--tertiart);
+    color: color-mix(in srgb, var(--on-grey1), white 30%);;
+    color-scheme: dark;
 }
 
+.search-field-input[type="date"]:valid {
+    color: var(--off-white);
+}
 
 /* ── row 2 */
 .search-form-footer {
@@ -884,11 +904,12 @@ video {
 }
 
 .search-footer-field-input {
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1.08rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--off-white);
     font-family: 'Plus Jakarta Sans', sans-serif;
     width: 48px;
 }
@@ -922,10 +943,10 @@ video {
     gap: 10px;
     padding: 8px 18px;
     border-radius: 40px;
-    border: 1.5px solid rgba(58, 24, 36, 0.15);
+    border: 1.5px solid rgba(242,240,239,0.15);
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--tertiart);
+    color: rgba(242,240,239,0.5);
     cursor: pointer;
     transition: all 0.15s ease;
 }
@@ -935,14 +956,15 @@ video {
 }
 
 .search-cabin-radio:checked+.search-cabin-pill {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: rgba(203,181,115,0.08);
+    border-color: var(--secondary);
     color: var(--secondary);
 }
 
 .search-cabin-pill:hover {
     border-color: var(--secondary);
-    color: var(--primary);
+    color: var(--off-white);
+/*    EDited to offwhite*/
 }
 
 
@@ -953,7 +975,7 @@ video {
     gap: 10px;
     padding: 17px 36px;
     background: var(--secondary);
-    color: var(--primary);
+    color: var(--on-grey1);
     border: none;
     border-radius: 10px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -971,6 +993,7 @@ video {
 
 .search-btn:hover {
     background: #d4c080;
+    color: var(--on-black);
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
 
