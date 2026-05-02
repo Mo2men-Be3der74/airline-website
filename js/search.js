@@ -169,5 +169,5 @@ function storgeInput()
     localStorage.setItem("departureDate", departureDate);
     localStorage.setItem("returnDate", returnDate);
 
-    window.location.href = "result.html";
+    window.location.href = "../pages/booking/search-results.html";
 }
