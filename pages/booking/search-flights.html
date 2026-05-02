@@ -202,7 +202,7 @@
                                 <i class="fa-regular fa-calendar-days"></i>
                                 Departure
                             </label>
-                            <input class="search-field-input" type="date" id="departure" />
+                            <input class="search-field-input" type="date" id="departure-date" />
                         </div>
 
                         <!-- Rrturn data -->
@@ -212,7 +212,7 @@
                                 Return
 
                             </label>
-                            <input class="search-field-input" type="date" id="return" />
+                            <input class="search-field-input" type="date" id="return-date" />
                         </div>
 
                     </div>
@@ -268,7 +268,7 @@
                         </div>
 
                         <!-- SEARCH BUTTON -->
-                        <button type="submit" class="search-btn" onclick="searchTickets()">
+                        <button type="submit" class="search-btn" onclick="storgeInput()">
                             <i class=" fa-solid fa-magnifying-glass"></i>
                             <span href="search-results.html">Search</span>
                         </button>
@@ -279,76 +279,72 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="upper-footer">
+            <div>
+                <h1 style="text-transform: uppercase">COMPANY'S COPYRIGHTS</h1>
+                <p>This Website is protected by copyright and/or related rights.<br>
+                    You are free to use this Item in any way that is permitted<br>
+                    by the copyright and related rights legislation<br>
+                    that applies to your use. For other uses you need to obtain permission<br>
+                    from the rights-holder(s).
+                    <br> © 2026 'Name'
+                </p>
+
+
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">Fly with us</h1>
+                <br>
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="./pages/booking/search-results.html"> Flights</a></li>
+                    <li><a href="#"> Manage Booking</a></li>
+                    <li><a href="#"> Trending around the globe</a></li>
+
+                </ul>
+
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">SUPPORT</h1>
+                <br>
+                <!--            Support part-->
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="index.html"> Help Center</a></li>
+                    <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
+                    <li><a href=./pages/user/profile.html> Contact us</a></li>
+                    <li><a href=./pages/contact.html> FeedBack</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">Social links</h1>
+                <br>
+                <!--                Socila links part-->
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="#"> @user-Facebook</a></li>
+                    <li><a href="#"> @user-Instagram</a></li>
+                    <li><a href="#"> @user-twitter</a></li>
+                    <li><a href="#"> @user-TikTok</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="lower-footer">
+            <div class="lower-footer-img">
+                <ul class="lower-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="#"> Privacy Policy</a></li>
+                    <li><a href="#"> Terms & Conditions</a></li>
+                    <li><a href="#"> Travel Procedures</a></li>
+                    <li><a href="#"> Cookies Settings</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
     <script src="../../js/search.js"></script>
 </body>
-
-
-
-
-
-<footer>
-    <div class="upper-footer">
-        <div>
-            <h1 style="text-transform: uppercase">COMPANY'S COPYRIGHTS</h1>
-            <p>This Website is protected by copyright and/or related rights.<br>
-                You are free to use this Item in any way that is permitted<br>
-                by the copyright and related rights legislation<br>
-                that applies to your use. For other uses you need to obtain permission<br>
-                from the rights-holder(s).
-                <br> © 2026 'Name'
-            </p>
-
-
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">Fly with us</h1>
-            <br>
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="./pages/booking/search-results.html"> Flights</a></li>
-                <li><a href="#"> Manage Booking</a></li>
-                <li><a href="#"> Trending around the globe</a></li>
-
-            </ul>
-
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">SUPPORT</h1>
-            <br>
-            <!--            Support part-->
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="index.html"> Help Center</a></li>
-                <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
-                <li><a href=./pages/user/profile.html> Contact us</a></li>
-                <li><a href=./pages/contact.html> FeedBack</a></li>
-
-            </ul>
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">Social links</h1>
-            <br>
-            <!--                Socila links part-->
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="#"> @user-Facebook</a></li>
-                <li><a href="#"> @user-Instagram</a></li>
-                <li><a href="#"> @user-twitter</a></li>
-                <li><a href="#"> @user-TikTok</a></li>
-
-            </ul>
-        </div>
-
-    </div>
-    <div class="lower-footer">
-        <div class="lower-footer-img">
-            <ul class="lower-footer-ul" style="text-transform: capitalize;">
-                <li><a href="#"> Privacy Policy</a></li>
-                <li><a href="#"> Terms & Conditions</a></li>
-                <li><a href="#"> Travel Procedures</a></li>
-                <li><a href="#"> Cookies Settings</a></li>
-            </ul>
-
-        </div>
-    </div>
-    <script src="../../js/main.js"></script>
-</footer>
 
 </html>
