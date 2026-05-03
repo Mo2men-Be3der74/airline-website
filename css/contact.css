@@ -1,9 +1,10 @@
-*{
-    font-family: 'Plus Jakarta Sans' ,sans-serif;
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 :root {
     --primary: #3A1824;
     --tertiart: #4C2D38;
@@ -11,54 +12,63 @@
     --off-white: #f2f0ef;
 }
 
-body
-{
+body {
     background-color: var(--off-white);
 }
-.sec-form-text{
+
+.sec-form-text {
     color: var(--tertiart);
     font-size: 10px;
 }
-.top-section{
+
+.top-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-height: 473px;
 }
-.heading{
+
+.heading {
     margin: 20px;
     animation: forwards fadeIn 1s ease-in-out;
 
 }
+
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(20px);
-    }    
+    }
 }
-.head-text{
+
+.head-text {
     font-size: 96px;
 }
-.head-details{
+
+.head-details {
     font-size: 18px;
     margin: 20px;
     max-width: 600px;
     color: var(--primary);
 }
-.head-small-text{
+
+.head-small-text {
     margin: 10px;
     margin-top: 60px;
 }
-.head-quote{
+
+.head-quote {
     margin: 20px;
     margin-top: 40px;
     max-width: 400px;
 }
-.contacts{
+
+.contacts {
     position: relative;
     flex-shrink: 0;
     margin: 20px;
@@ -67,21 +77,24 @@ body
     height: 473px;
     background-color: var(--secondary);
 }
-#phone-icon{
+
+#phone-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 50px;
     animation: forwards fadeIn 2s ease-in-out;
 }
-#priority-support{
+
+#priority-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 50px;
     animation: forwards fadeIn 2s ease-in-out;
 }
-#priority-support-details{
+
+#priority-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -89,21 +102,24 @@ body
     opacity: 70%;
     animation: forwards fadeIn 2s ease-in-out;
 }
-#direct-icon{
+
+#direct-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 150px;
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#direct-support{
+
+#direct-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 150px;
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#direct-support-details{
+
+#direct-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -111,21 +127,24 @@ body
     opacity: 70%;
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#facebook-icon{
+
+#facebook-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 250px;
     animation: forwards fadeIn 3s ease-in-out;
 }
-#facebook-support{
+
+#facebook-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 250px;
     animation: forwards fadeIn 3s ease-in-out;
 }
-#facebook-support-details{
+
+#facebook-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -133,21 +152,24 @@ body
     opacity: 70%;
     animation: forwards fadeIn 3s ease-in-out;
 }
-#instagram-icon{
+
+#instagram-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 350px;
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-#instagram-support{
+
+#instagram-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
     top: 350px;
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-#instagram-support-details{
+
+#instagram-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -155,71 +177,83 @@ body
     opacity: 70%;
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-.middle{
+
+.middle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.form-section{
+
+.form-section {
     margin-top: 100px;
 }
-.full-name{
+
+.full-name {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-.email-address{
+
+.email-address {
     margin: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.row-1{
-    display: flex;
-    flex-direction: row;
-    gap: 200px;
-}
-.row-2{
+
+.row-1 {
     display: flex;
     flex-direction: row;
     gap: 200px;
 }
 
-.booking-reference{
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.booking-reference {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-.nature-of-inquiry{
+
+.nature-of-inquiry {
     margin: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.your-message{
+
+.your-message {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-#text-box{
+
+#text-box {
     width: 200%;
     height: 49px;
     opacity: 30%;
     padding-left: 10px;
 }
-#text-box2{
+
+#text-box2 {
     width: 240%;
     height: 54px;
     opacity: 30%;
     padding-left: 10px;
 }
-#message-area{
+
+#message-area {
     width: 720px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
 }
-.submit-button{
+
+.submit-button {
     width: 247px;
     height: 52px;
     margin: 20px;
@@ -227,7 +261,8 @@ body
     background-color: var(--secondary);
 
 }
-.plane-box{
+
+.plane-box {
     position: relative;
     flex-shrink: 0;
     margin: 20px;
@@ -236,14 +271,16 @@ body
     border-radius: 5px;
     background-color: var(--tertiart);
 }
-#plane{
+
+#plane {
     position: absolute;
     margin: 20px;
     top: 250px;
     font-size: 90px;
     color: var(--secondary);
 }
-.standard{
+
+.standard {
     position: absolute;
     font-size: 30px;
     font-style: oblique;
@@ -252,77 +289,558 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 1.25s ease-in-out;
 }
-.standard-small-text{
+
+.standard-small-text {
     position: absolute;
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
-    bottom:50px;
+    bottom: 50px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }
+
+
+/* header container (main/center) */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    /* Two stacked bars   */
+}
+
+.upper-half {
+    background-color: color-mix(in srgb, var(--primary), black 35%);
+    display: flex;
+    /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
+    justify-content: space-between;
+    /* Pushes Logo to left(first child), Links to right(last child) */
+    padding: 1rem 2rem;
+    /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
+    the padding will change automatically to fit the padding right. this increases the accessibility for the website
+    rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
+    align-items: center;
+    /* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.bottom-half {
+    /*background-color: var(--off-white); !* Slightly lighter shade *!*/
+    background-color: color-mix(in srgb, var(--primary), black 15%);
+    /*Color-mix function to mix colors or create new ones depending on the need,
+    it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
+    display: flex;
+    padding: 15px 40px;
+    align-items: center;
+    justify-content: center;
+    position: sticky !important;
+    /* default state */
+    z-index: 1000 !important;
+    top: 0 !important;
+}
+
+.right-sec {
+    display: flex;
+    flex-direction: row;
+    /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
+}
+
+.r-right-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/*left-header-section*/
+.logo-placeholder {
+    width: 150px;
+}
+
+/* 1. The main rectangular track */
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    /* Adjust this to make the switch wider/narrower */
+    height: 20px;
+}
+
+/* 2. Hide the actual ugly checkbox, but keep it accessible for the script */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 3. The visual track (the base of the slider) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /* Default Light Track Color */
+    border-radius: 30px;
+    /* This creates the "very rounded" ends */
+    transition: background-color 0.3s ease;
+    /* Smooth fade when the track changes color */
+}
+
+/* 4. The Ball (The 'before' pseudo-element of the slider) */
+.slider::before {
+    position: absolute;
+    content: "☀️";
+    /* Default Light Icon (Sun) */
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
+
+    /* Sizing the ball slightly smaller than the track height */
+    height: 16px;
+    width: 16px;
+
+    /* Positioning (initial state = far left) */
+    left: 3px;
+    bottom: 3px;
+
+    border-radius: 50%;
+    /* Make the ball round */
+
+    /* Colors (Light State) */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
+
+    /* SWIPE ANIMATION: Only on the transform property */
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* -------------------------------------------------------------------------
+   STATE CHANGES: What happens when the checkbox is checked (Dark Mode)
+   ------------------------------------------------------------------------- */
+
+/* A. Change the Track color when checked */
+input:checked+.slider {
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Dark Track Color */
+}
+
+/* B. The 'Swipe Right' movement and icon/color swap */
+input:checked+.slider::before {
+    /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
+    /*45-16-3-3*/
+    transform: translateX(23px);
+
+    /* Content Swap: Change sun to moon */
+    content: "🌙";
+
+    /* Color Swap (Dark State) */
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Black ball */
+
+}
+
+.utility-link {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    /*sets the icon and the text on the same horizontal axis line*/
+    gap: 4px;
+    /*breathing room between the icon and the text, its two childern thats why there are two containers*/
+    font-size: 0.9rem;
+    color: var(--off-white);
+    text-decoration: none;
+    padding-right: 2px;
+    padding-bottom: 2.7pt;
+    /*    manual teak to optically allign both containers */
+    transition: color 0.7s ease-in-out;
+}
+
+.utility-link:hover {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+/*auth-bttns*/
+.auth-bttns {
+    display: flex;
+    gap: 12px;
+    /*   Gap between each button (There's only one for both login & registration right now) */
+}
+
+.btn {
+    background-color: color-mix(in srgb, var(--primary), black 35%);
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    /*removes the underline*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 3px;
+    /*gao between svg and <span>*/
+    transition: color 0.7s ease-in-out;
+
+}
+
+.btn-login {
+    color: var(--off-white);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+}
+
+.btn-login:hover {
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 0.7s ease;
+
+}
+
+/* list container (<ul>) */
+.nav-list {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
+    list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
+    margin: 0;
+    padding: 0;
+}
+
+/* individual links  (<a>) */
+.nav-link {
+    color: var(--off-white);
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+
+}
+
+/* hover */
+.nav-link:hover {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+    /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
+
+}
+
+.active {
+    color: var(--secondary);
+    font-weight: 500;
+    /* Make it a bit boldy when active   */
+}
+
+#lang-modal {
+    /* positioning */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    top: 70px !important;
+    right: 20px !important;
+    left: auto !important;
+    /*fight any left styling that may conflict with the pop up*/
+    margin: 0 !important;
+    /* ensures no margins are pushing it */
+
+    width: 350px;
+    /* more -> bigger -> wider */
+    min-height: 300px;
+    /*min height of the pop up*/
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
+    background: white;
+    z-index: 1000;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.apply-bttn {
+    background-color: var(--primary);
+    color: var(--off-white);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+/* Container for the dropdown */
+.custom-dropdown {
+    position: relative;
+    /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    /*turns the arrow into a hand icon for better visual interaction*/
+    margin-bottom: 15px;
+    background: white;
+}
+
+/* The list (hidden by default) */
+.dropdown-list {
+    display: none;
+    /*initially making this not visible untill triggered by the JS script to make it :block; (visible)*/
+    position: absolute;
+    /*fix its position when opened, not pushing everything down*/
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    /*clear the normal list style*/
+    padding: 0;
+    z-index: 1001;
+    /*    higher than the dialog and the bottom header*/
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*as usual all 3 props make the text and the image aligned well on a center horizontal axis*/
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: #f0f0f0;
+    /*    Make it grey on the selection on hovering*/
+}
+
+/* Show class for JS */
+.dropdown-list.show {
+    display: block;
+    /*    when show(), change this property to block in the dropdownlist selector*/
+}
+
+
+
+footer {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+}
+
+.upper-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid #EDE9E6;
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+
+}
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 540;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.upper-footer p {
+    padding: 12px 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #8b8c89
+}
+
+.upper-footer-ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+
+}
+
+.upper-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #8b8c89;
+    text-decoration: none;
+}
+
+.upper-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--on-black);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.lower-footer {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #EDE9E6;
+    height: 60%;
+
+
+
+}
+
+.lower-footer-ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+}
+
+.lower-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #8b8c89;
+    text-decoration: none;
+}
+
+.lower-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--on-black);
+    text-decoration: underline;
+    font-weight: 400;
+
+}
+
+.lower-footer-img {
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
+        url("../assets/index-assets/lower-footer-pattern.png");
+
+    background-size: contain;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 80px;
+    /* Vertical Centering (The missing piece) */
+    align-items: center;
+
+}
+
+.lower-footer-ul li:not(:last-child)::after {
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
+    color: #ccc;
+}
+
 @media (max-width: 768px) {
-    .top-section{
+    .top-section {
         flex-direction: column;
     }
-    .contacts{
+
+    .contacts {
         width: 93%;
     }
-    .middle{
+
+    .middle {
         margin-top: 500px;
         flex-direction: column;
     }
-    .plane-box{
+
+    .plane-box {
         width: 93%;
     }
-    .form-section{
+
+    .form-section {
         max-width: 95%;
     }
-    .row-1{
+
+    .row-1 {
         flex-direction: column;
         gap: 10px;
     }
-    .row-2{
+
+    .row-2 {
         flex-direction: column;
         gap: 10px;
     }
-    #message-area{
+
+    #message-area {
         width: 100%;
     }
-    .head-small-text{
+
+    .head-small-text {
         margin-top: 10px;
     }
-    #text-box{
+
+    #text-box {
         width: 105%;
     }
-    .standard-small-text{
+
+    .standard-small-text {
         bottom: 40px;
     }
-    .head-text{
+
+    .head-text {
         font-size: 70px;
     }
+
     @media (max-width: 480px) {
-    .head-text{
-        font-size: 50px;
-    }
-    .plane-box{
-        width: 90%;
-    }
-    .contacts{
-        width: 90%;
-    }
-    .standard-small-text{
-        bottom: 10px;
-    }
-    #plane{
-    position: absolute;
-    margin: 20px;
-    top: 230px;
-    font-size: 90px;
-    color: var(--secondary);
-    }
-    .standard{
-        bottom: 110px;
-    }
+        .head-text {
+            font-size: 50px;
+        }
+
+        .plane-box {
+            width: 90%;
+        }
+
+        .contacts {
+            width: 90%;
+        }
+
+        .standard-small-text {
+            bottom: 10px;
+        }
+
+        #plane {
+            position: absolute;
+            margin: 20px;
+            top: 230px;
+            font-size: 90px;
+            color: var(--secondary);
+        }
+
+        .standard {
+            bottom: 110px;
+        }
     }
 }
