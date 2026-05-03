@@ -173,8 +173,13 @@ function storgeInput()
     localStorage.setItem("returnDate", returnDate);
 
     sessionStorage.setItem("searched", "true");
-    window.location.href = "search-results.html";
-    window.location.href = "pages/booking/search-results.html";
+
+    // Replace the redirect line in search.js with this:
+    const resultsPath = window.location.pathname.includes("pages") ? "search-results.html" : "pages/booking/search-results.html";
+    window.location.href = resultsPath;
+
+    // window.location.href = "search-results.html";
+    // window.location.href = "pages/booking/search-results.html";
     // window.location.replace(window.location.href);
 
 }

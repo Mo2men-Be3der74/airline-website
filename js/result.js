@@ -136,10 +136,10 @@ const flightTickets = [
 
 const resultsContainer = document.getElementById("result");
 const Class = (localStorage.getItem("class") || "").toLowerCase();
-const from = localStorage.getItem("from") || " ";
-const to = localStorage.getItem("to") || " ";
-const departureDate = localStorage.getItem("departureDate") || '-';
-const returnDate = localStorage.getItem("returnDate") || '-';
+const from = localStorage.getItem("from") || "";
+const to = localStorage.getItem("to") || "";
+const departureDate = localStorage.getItem("departureDate") || "";
+const returnDate = localStorage.getItem("returnDate") || "";
 const filtered = [];
 
 // const Class = 'economy';
