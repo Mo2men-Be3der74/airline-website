@@ -1,7 +1,7 @@
 const flightTickets = [
   {
-    from: "Cairo",
-    to: "Paris",
+    from: "Cairo, Egypt (CAI)",
+    to: "Paris, France (CDG)",
     startTime: "08:30 AM",
     arriveTime: "12:45 PM",
     duration: "5h 15m",
@@ -11,8 +11,8 @@ const flightTickets = [
     price: "$320"
   },
   {
-    from: "Cairo",
-    to: "London",
+    from: "Cairo, Egypt (CAI)",
+    to: "London, UK (LHR)",
     startTime: "10:00 AM",
     arriveTime: "02:30 PM",
     duration: "5h 30m",
@@ -22,8 +22,8 @@ const flightTickets = [
     price: "$540"
   },
   {
-    from: "Dubai",
-    to: "Tokyo",
+    from: "Dubai, UAE (DXB)",
+    to: "Tokyo, Japan (NRT)",
     startTime: "01:15 PM",
     arriveTime: "03:45 AM",
     duration: "10h 30m",
@@ -33,8 +33,8 @@ const flightTickets = [
     price: "$690"
   },
   {
-    from: "New York",
-    to: "Los Angeles",
+    from: "New York, USA (JFK)",
+    to: "Los Angeles, USA (LAX)",
     startTime: "07:00 AM",
     arriveTime: "10:20 AM",
     duration: "6h 20m",
@@ -44,8 +44,8 @@ const flightTickets = [
     price: "$880"
   },
   {
-    from: "Berlin",
-    to: "Rome",
+    from: "Berlin, Germany (BER)",
+    to: "Rome, Italy (FCO)",
     startTime: "09:45 AM",
     arriveTime: "11:55 AM",
     duration: "2h 10m",
@@ -55,8 +55,8 @@ const flightTickets = [
     price: "$180"
   },
   {
-    from: "Madrid",
-    to: "Barcelona",
+    from: "Madrid, Spain (MAD)",
+    to: "Barcelona, Spain (BCN)",
     startTime: "03:20 PM",
     arriveTime: "04:35 PM",
     duration: "1h 15m",
@@ -66,8 +66,8 @@ const flightTickets = [
     price: "$140"
   },
   {
-    from: "Istanbul",
-    to: "Moscow",
+    from: "Istanbul, Turkey (IST)",
+    to: "Moscow, Russia (DME)",
     startTime: "06:10 PM",
     arriveTime: "10:25 PM",
     duration: "4h 15m",
@@ -77,8 +77,8 @@ const flightTickets = [
     price: "$260"
   },
   {
-    from: "Sydney",
-    to: "Singapore",
+    from: "Sydney, Australia (SYD)",
+    to: "Singapore, Singapore (SIN)",
     startTime: "11:00 AM",
     arriveTime: "05:10 PM",
     duration: "8h 10m",
@@ -88,8 +88,8 @@ const flightTickets = [
     price: "$730"
   },
   {
-    from: "Toronto",
-    to: "Chicago",
+    from: "Toronto, Canada (YYZ)",
+    to: "Chicago, USA (ORD)",
     startTime: "02:40 PM",
     arriveTime: "04:15 PM",
     duration: "1h 35m",
@@ -99,8 +99,8 @@ const flightTickets = [
     price: "$150"
   },
   {
-    from: "Riyadh",
-    to: "Cairo",
+    from: "Riyadh, Saudi Arabia (RUH)",
+    to: "Cairo, Egypt (CAI)",
     startTime: "05:50 AM",
     arriveTime: "08:10 AM",
     duration: "2h 20m",
@@ -110,8 +110,8 @@ const flightTickets = [
     price: "$210"
   },
   {
-    from: "Paris",
-    to: "Dubai",
+    from: "Paris, France (CDG)",
+    to: "Dubai, UAE (DXB)",
     startTime: "09:30 PM",
     arriveTime: "06:10 AM",
     duration: "6h 40m",
@@ -121,8 +121,8 @@ const flightTickets = [
     price: "$980"
   },
   {
-    from: "Bangkok",
-    to: "Seoul",
+    from: "Bangkok, Thailand (BKK)",
+    to: "Seoul, South Korea (ICN)",
     startTime: "12:00 PM",
     arriveTime: "07:15 PM",
     duration: "5h 15m",
@@ -132,4 +132,49 @@ const flightTickets = [
     price: "$340"
   }
 ];
+
+const resultContainer = document.getElementById("result");
+const Class = localStorage.getItem("Class");
+const from = localStorage.getItem("from") || "";
+const to = localStorage.getItem("to") || "";
+const departureDate = localStorage.getItem("departureDate");
+const returnDate = localStorage.getItem("returnDate");
+
+
+
+
+let filtered = [];
+
+for (let i = 0; i < flightTickets.length; i++) {
+      if (from.includes(flightTickets[i].from.toLowerCase()) &&
+      to.includes(flightTickets[i].to.toLowerCase()) &&
+      flightTickets[i].departureDate === departureDate && 
+      flightTickets[i].returnDate === returnDate && 
+      flightTickets[i].Class === Class) {
+            filtered.push(flightTickets[i]);
+      }
+}
+
+resultsContainer.innerHTML = "";
+
+if (filtered.length === 0) {
+      resultsContainer.innerHTML = "No tickets found";
+}
+
+let t;
+
+else {
+    for (let i = 0; i < filtered.length; i++) {
+        t = filtered[i];
+
+        resultsContainer.innerHTML += `
+            <div class="card">
+                <h3>${t.from} → ${t.to}</h3>
+                <p>Class: ${t.class}</p>
+                <p>Price: ${t.price} EGP</p>
+                <p>${departureDate} → ${returnDate}</p>
+            </div>
+        `;
+    }
+}
 

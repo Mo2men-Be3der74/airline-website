@@ -46,7 +46,9 @@ const CITIES = [
     "Washington DC, USA (IAD)",
     "Miami, USA (MIA)",
     "Boston, USA (BOS)",
-    "Seattle, USA (SEA)"
+    "Seattle, USA (SEA)",
+    "Moscow, Russia (DME)",
+    "Riyadh, Saudi Arabia (RUH)",
 ];
 
 function fromList() 
