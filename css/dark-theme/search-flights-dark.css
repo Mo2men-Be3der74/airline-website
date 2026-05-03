@@ -1,0 +1,792 @@
+/* Variables */
+:root {
+    /*Dark mode Colors*/
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
+}
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--on-grey2);
+}
+
+/* header container (main/center) */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    /* Two stacked bars   */
+}
+
+.upper-half {
+    background-color: var(--on-black1);
+    display: flex;
+    /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
+    justify-content: space-between;
+    /* Pushes Logo to left(first child), Links to right(last child) */
+    padding: 1rem 2rem;
+    /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
+    the padding will change automatically to fit the padding right. this increases the accessibility for the website
+    rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
+    align-items: center;
+    /* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.bottom-half {
+    /*background-color: var(--off-white); !* Slightly lighter shade *!*/
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    ;
+    /*Color-mix function to mix colors or create new ones depending on the need,
+    it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
+    display: flex;
+    padding: 15px 40px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    /* default state */
+    z-index: 1000;
+    top: 0;
+}
+
+.right-sec {
+    display: flex;
+    flex-direction: row;
+    /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
+}
+
+.r-right-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/*left-header-section*/
+.logo-placeholder {
+    width: 150px;
+}
+
+/* 1. The main rectangular track */
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    /* Adjust this to make the switch wider/narrower */
+    height: 20px;
+}
+
+/* 2. Hide the actual ugly checkbox, but keep it accessible for the script */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 3. The visual track (the base of the slider) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /* Default Light Track Color */
+    border-radius: 30px;
+    /* This creates the "very rounded" ends */
+    transition: background-color 0.3s ease;
+    /* Smooth fade when the track changes color */
+}
+
+/* 4. The Ball (The 'before' pseudo-element of the slider) */
+.slider::before {
+    position: absolute;
+    content: "☀️";
+    /* Default Light Icon (Sun) */
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
+
+    /* Sizing the ball slightly smaller than the track height */
+    height: 16px;
+    width: 16px;
+
+    /* Positioning (initial state = far left) */
+    left: 3px;
+    bottom: 3px;
+
+    border-radius: 50%;
+    /* Make the ball round */
+
+    /* Colors (Light State) */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
+
+    /* SWIPE ANIMATION: Only on the transform property */
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* -------------------------------------------------------------------------
+   STATE CHANGES: What happens when the checkbox is checked (Dark Mode)
+   ------------------------------------------------------------------------- */
+
+/* A. Change the Track color when checked */
+input:checked+.slider {
+    background-color: color-mix(in srgb, var(--on-grey2), black 2%);
+    ;
+    /* Dark Track Color */
+}
+
+/* B. The 'Swipe Right' movement and icon/color swap */
+input:checked+.slider::before {
+    /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
+    /*45-16-3-3*/
+    transform: translateX(23px);
+
+    /* Content Swap: Change sun to moon */
+    content: "🌙";
+
+    /* Color Swap (Dark State) */
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Black ball */
+
+}
+
+.utility-link {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    /*sets the icon and the text on the same horizontal axis line*/
+    gap: 4px;
+    /*breathing room between the icon and the text, its two childern thats why there are two containers*/
+    font-size: 0.9rem;
+    color: var(--off-white);
+    text-decoration: none;
+    padding-right: 2px;
+    padding-bottom: 2.7pt;
+    /*    manual teak to optically allign both containers */
+    transition: color 0.7s ease-in-out;
+}
+
+.utility-link:hover {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+/*auth-bttns*/
+.auth-bttns {
+    display: flex;
+    gap: 12px;
+    /*   Gap between each button (There's only one for both login & registration right now) */
+}
+
+.btn {
+    background-color: var(--on-black1);
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    /*removes the underline*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 3px;
+    /*gao between svg and <span>*/
+    transition: color 0.7s ease-in-out;
+
+}
+
+.btn-login {
+    color: var(--off-white);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+}
+
+.btn-login:hover {
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 0.7s ease;
+
+}
+
+/* list container (<ul>) */
+.nav-list {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
+    list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
+    margin: 0;
+    padding: 0;
+}
+
+/* individual links  (<a>) */
+.nav-link {
+    color: var(--off-white);
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+
+}
+
+/* hover */
+.nav-link:hover {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+    /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
+
+}
+
+.active {
+    color: var(--secondary);
+    font-weight: 500;
+    /* Make it a bit boldy when active   */
+}
+
+#lang-modal {
+    /* positioning */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    top: 70px !important;
+    right: 20px !important;
+    left: auto !important;
+    /*fight any left styling that may conflict with the pop up*/
+    margin: 0 !important;
+    /* ensures no margins are pushing it */
+    color: var(--off-white);
+
+    width: 350px;
+    /* more -> bigger -> wider */
+    min-height: 300px;
+    /*min height of the pop up*/
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
+    background: var(--on-grey1);
+    z-index: 1000;
+}
+
+/*For dark theme*/
+h3 {
+    color: var(--off-white);
+}
+
+.modal-label {
+    color: var(--off-white);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.apply-bttn {
+    background-color: var(--secondary);
+    color: var(--on-black);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+/* Container for the dropdown */
+.custom-dropdown {
+    position: relative;
+    /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
+    border: 1px solid var(--on-grey1);
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    /*turns the arrow into a hand icon for better visual interaction*/
+    margin-bottom: 15px;
+    background: var(--on-grey2);
+    color: var(--off-white);
+}
+
+/* The list (hidden by default) */
+.dropdown-list {
+    display: none;
+    /*initially making this not visible untill triggered by the JS script to make it :block; (visible)*/
+    position: absolute;
+    /*fix its position when opened, not pushing everything down*/
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--on-grey2);
+    border: 1px solid var(--on-grey1);
+    list-style: none;
+    /*clear the normal list style*/
+    padding: 0;
+    z-index: 1001;
+    /*    higher than the dialog and the bottom header*/
+}
+
+.dropdown-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*as usual all 3 props make the text and the image aligned well on a center horizontal axis*/
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: var(--on-grey1);
+    color: var(--off-white);
+    /*    Make it grey on the selection on hovering*/
+}
+
+/* Show class for JS */
+.dropdown-list.show {
+    display: block;
+    /*    when show(), change this property to block in the dropdownlist selector*/
+}
+
+footer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.upper-footer {
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid var(--on-grey2);
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+
+}
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 540;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 0;
+    color: var(--secondary);
+}
+
+.upper-footer p {
+    padding: 12px 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+}
+
+.upper-footer-ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+
+}
+
+.upper-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.upper-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.lower-footer {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--on-grey2);
+    height: 60%;
+
+
+
+}
+
+.lower-footer-ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+}
+
+.lower-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.lower-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+
+}
+
+.lower-footer-img {
+
+    background:
+        url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
+
+    background-size: contain;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 80px;
+    /* Vertical Centering (The missing piece) */
+    align-items: center;
+
+}
+
+.lower-footer-ul li:not(:last-child)::after {
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
+    color: #ccc;
+}
+
+
+/*Search CSS from Marwan's file*/
+/* Label */
+.search-field-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.search-field-label i {
+    font-size: 0.74rem;
+}
+
+/* city list  */
+
+.city-list {
+    position: absolute;
+    /**/
+    background-color: var(--on-grey2);
+    color: var(--off-white);
+    /*Edited*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    height: 200px;
+    overflow-y: auto;
+    width: 200px;
+    display: none;
+}
+
+.city-list div {
+    padding: 14px;
+    cursor: pointer;
+    color: var(--tertiart);
+    font-size: 0.9rem;
+}
+
+.city-list div:hover {
+    background-color: #cbb573;
+    color: #4C2D38;
+}
+
+/* Divider */
+.search-footer-vr {
+    width: 1px;
+    height: 100px;
+    background: rgba(58, 24, 36, 0.1);
+}
+
+
+
+.search-hero {
+    /* background: var(--off-white); */
+    padding: 64px 32px 0;
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+}
+
+.search-div-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tertiart);
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.search-eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.search-eyebrow i {
+    font-size: 0.7rem;
+}
+
+
+.search-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4.1rem;
+    color: #f2f0ef;
+    margin-bottom: 10px;
+}
+
+.search-title em {
+    color: #cbb573;
+}
+
+.search-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.99rem;
+    color: rgba(242, 240, 239, 0.55);
+    font-weight: 300;
+    width: 440px;
+    margin-bottom: 8px;
+}
+
+.search-section {
+    width: 1280px;
+    margin-bottom: 50px;
+    padding: 40px 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-card {
+    background: var(--on-grey1);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border: 1px solid rgba(58, 24, 36, 0.07);
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* row 1  */
+
+.search-first-row {
+    display: flex;
+    border-bottom: 1px solid rgba(203, 181, 115, 0.1);
+}
+
+.search-field {
+    border-right: 1px solid rgba(203, 181, 115, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 28px 30px 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.15s ease;
+}
+
+
+
+
+/* Input */
+.search-field-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--off-white);
+    width: 100%;
+}
+
+.search-field-input::placeholder {
+    color: color-mix(in srgb, var(--on-grey1), white 30%);
+    ;
+    font-weight: 400;
+}
+
+.search-field-input[type="date"] {
+    color: color-mix(in srgb, var(--on-grey1), white 30%);
+    ;
+    color-scheme: dark;
+}
+
+/* ── row 2 */
+.search-form-footer {
+    display: flex;
+    align-items: center;
+    padding: 24px 16px 24px 16px;
+}
+
+/* Passengers */
+.search-footer-field--passengers {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 30px;
+    min-width: 120px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.search-footer-field-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.search-footer-field-label i {
+    font-size: 0.74rem;
+}
+
+.search-footer-field-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--off-white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 48px;
+}
+
+.search-footer-field-input[type="number"] {
+    width: 100%;
+}
+
+
+/* Cabin */
+.search-cabin-group {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 30px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.search-cabin-pills {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-cabin-radio {
+    display: none;
+}
+
+.search-cabin-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 40px;
+    border: 1.5px solid rgba(242, 240, 239, 0.15);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(242, 240, 239, 0.5);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.search-cabin-pill i {
+    font-size: 0.65rem;
+}
+
+.search-cabin-radio:checked+.search-cabin-pill {
+    background: rgba(203, 181, 115, 0.08);
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.search-cabin-pill:hover {
+    border-color: var(--secondary);
+    color: var(--off-white);
+    /*    EDited to offwhite*/
+}
+
+
+/* Button */
+.search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 36px;
+    background: var(--secondary);
+    color: var(--on-grey1);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.15s ease;
+}
+
+.search-btn i {
+    font-size: 0.8rem;
+}
+
+.search-btn:hover {
+    background: #d4c080;
+    color: var(--on-black);
+    box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
+}

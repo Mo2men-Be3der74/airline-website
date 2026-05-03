@@ -1,504 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Istabraq Official Website | Book International Flight Tickets</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" id="theme-stylesheet" href="./css/index.css">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Responsiveness    -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Icon configuration     -->
 </head>
+
 <body>
-<header class="header">
-    <div class="upper-half">
-        <!--        justify-conten:space-between.<it makes the first child to the very left and the last to the very right
+    <header class="header">
+        <div class="upper-half">
+            <!--        justify-conten:space-between.<it makes the first child to the very left and the last to the very right
         that's why I've put the util and the login in a standalone div to make sure that the property consider it last child. -->
-        <div class="logo-placeholder"></div>
-        <!--        Logo div for future logo (first child)-->
-        <div class="right-sec">
-            <!--            Second child-->
+            <div class="logo-placeholder"></div>
+            <!--        Logo div for future logo (first child)-->
+            <div class="right-sec">
+                <!--            Second child-->
 
-            <div class="auth-bttns">
-                <!--                auth-bttns class if I decided to add any other button or element beside it-->
-                <a href="./pages/auth/login.html" class="btn btn-login">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                    </svg>
-                    <span>Login & Registration</span>
-                </a>
-            </div>
-            <div class="r-right-sec">
-                <!--                Theme-changing button-->
-                <label class="theme-switch" for="theme-check">
-                    <input type="checkbox" id="theme-check">
+                <div class="auth-bttns">
+                    <!--                auth-bttns class if I decided to add any other button or element beside it-->
+                    <a href="./pages/auth/login.html" class="btn btn-login">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        <span>Login & Registration</span>
+                    </a>
+                </div>
+                <div class="r-right-sec">
+                    <!--                Theme-changing button-->
+                    <label class="theme-switch" for="theme-check">
+                        <input type="checkbox" id="theme-check">
 
-                    <span class="slider"></span>
-                </label>
-                <!--  Lang & region (Country)    -->
-                <a href="#" id="open-lang-modal" class="utility-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                    <span>Egypt | EN</span>
-                    <!--                the <a> is just used for its clickability behavouir however it doesnt redirect you to
+                        <span class="slider"></span>
+                    </label>
+                    <!--  Lang & region (Country)    -->
+                    <a href="#" id="open-lang-modal" class="utility-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-globe-icon lucide-globe">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                        <span>Egypt | EN</span>
+                        <!--                the <a> is just used for its clickability behavouir however it doesnt redirect you to
                     any page by using [href"#"]. its just a link to trigger an action on this page.-->
-                    <!--<svg></svg> tag is used insted of just linking an image for better visibility & resolution independency as the tag draws the icon using math-based code                -->
-                </a>
-                <!-- Buttons (Login & Registraion)  -->
+                        <!--<svg></svg> tag is used insted of just linking an image for better visibility & resolution independency as the tag draws the icon using math-based code                -->
+                    </a>
+                    <!-- Buttons (Login & Registraion)  -->
 
+                </div>
             </div>
         </div>
-    </div>
-    <!--Impt Comment: Without that upper-half div, this means trying to apply flexbox properties directly to the <header> itself,
+        <!--Impt Comment: Without that upper-half div, this means trying to apply flexbox properties directly to the <header> itself,
     which would force the navigation links (the bottom half) to also participate in that layout, breaking the design.   -->
-    <!-- Nav bar ( a container in itself so it doesnt need a div as its also has just an element which is the list
+        <!-- Nav bar ( a container in itself so it doesnt need a div as its also has just an element which is the list
       not making it in a div improevs DOM tree rendreing and reduce nesting -->
-</header>
-<nav class="bottom-half">
-    <!--the sticky property makes the nav sticks on top on document flowing,
+    </header>
+    <nav class="bottom-half">
+        <!--the sticky property makes the nav sticks on top on document flowing,
             z=1000 makes sure that if the nav hit any other element while flowing it also stays on top of it.-->
-    <ul class="nav-list">
-        <!-- structure: <nav> → <ul> → <li> → <a>.
+        <ul class="nav-list">
+            <!-- structure: <nav> → <ul> → <li> → <a>.
         Enhances accessibility as the list can be read by screen readers
         also better for search engines and a DOM predictability-->
-        <li><a href="./" class="nav-link active"> Home</a></li>
-        <li><a href=./pages/booking/search-flights.html class="nav-link" > Book</a></li>
-        <li><a href=./pages/user/profile.html id="nav-mybookings" class="nav-link"> My bookings</a></li>
-        <li><a href=./pages/contact.html class="nav-link" > Help Center</a></li>
+            <li><a href="./" class="nav-link active"> Home</a></li>
+            <li><a href=./pages/booking/search-flights.html class="nav-link"> Book</a></li>
+            <li><a href=./pages/user/profile.html id="nav-mybookings" class="nav-link"> My bookings</a></li>
+            <li><a href=./pages/contact.html class="nav-link"> Help Center</a></li>
 
-    </ul>
-</nav>
+        </ul>
+    </nav>
 
-<!--Pop up dialog for changing coutnry and language-->
-<dialog id="lang-modal">
-    <!--    native html tag designed and structured specially for pop-up content.
+    <!--Pop up dialog for changing coutnry and language-->
+    <dialog id="lang-modal">
+        <!--    native html tag designed and structured specially for pop-up content.
     it has built in api (Javascript functions that opens/close the pop up depending on the triggered id)-->
-    <h3>Select Country & Language</h3>
-    <br>
-    <div class="open-lang-modal">
-        <!--   Country choosing div     -->
-        <label style="color: var(--tertiary); font-weight: bold;">Country*</label>
-        <div class="custom-dropdown" id="country-dropdown">
-            <div class="dropdown-const">
-                <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" width="20" height="15"> Egypt
-            </div>
-            <!--            The fixed part that the user sees before any interaction with the list,
+        <h3>Select Country & Language</h3>
+        <br>
+        <div class="open-lang-modal">
+            <!--   Country choosing div     -->
+            <label class="modal-label">Country*</label>
+            <div class="custom-dropdown" id="country-dropdown">
+                <div class="dropdown-const">
+                    <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" width="20" height="15"> Egypt
+                </div>
+                <!--            The fixed part that the user sees before any interaction with the list,
             for example here its Egypt | EN-->
-            <!--            a ul list for the options-->
-            <ul class="dropdown-list">
-                <li data-value="egypt">
-                    <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" width="20"> Egypt
-                </li>
-                <li data-value="uae">
-                    <img src="https://flagcdn.com/w40/ae.png" alt="UAE" width="20"> United Arab Emirates
-                </li>
-                <li data-value="saudi-arabia">
-                    <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" width="20"> Saudi Arabia
-                </li>
-                <li data-value="qatar">
-                    <img src="https://flagcdn.com/w40/qa.png" alt="Qatar" width="20"> Qatar
-                </li>
+                <!--            a ul list for the options-->
+                <ul class="dropdown-list">
+                    <li data-value="egypt">
+                        <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" width="20"> Egypt
+                    </li>
+                    <li data-value="uae">
+                        <img src="https://flagcdn.com/w40/ae.png" alt="UAE" width="20"> United Arab Emirates
+                    </li>
+                    <li data-value="saudi-arabia">
+                        <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia" width="20"> Saudi Arabia
+                    </li>
+                    <li data-value="qatar">
+                        <img src="https://flagcdn.com/w40/qa.png" alt="Qatar" width="20"> Qatar
+                    </li>
 
-                <li data-value="united-kingdom">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="UK" width="20"> United Kingdom
-                </li>
-                <li data-value="germany">
-                    <img src="https://flagcdn.com/w40/de.png" alt="Germany" width="20"> Germany
-                </li>
-                <li data-value="france">
-                    <img src="https://flagcdn.com/w40/fr.png" alt="France" width="20"> France
-                </li>
-                <li data-value="turkey">
-                    <img src="https://flagcdn.com/w40/tr.png" alt="Turkey" width="20"> Turkey
-                </li>
+                    <li data-value="united-kingdom">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="UK" width="20"> United Kingdom
+                    </li>
+                    <li data-value="germany">
+                        <img src="https://flagcdn.com/w40/de.png" alt="Germany" width="20"> Germany
+                    </li>
+                    <li data-value="france">
+                        <img src="https://flagcdn.com/w40/fr.png" alt="France" width="20"> France
+                    </li>
+                    <li data-value="turkey">
+                        <img src="https://flagcdn.com/w40/tr.png" alt="Turkey" width="20"> Turkey
+                    </li>
 
-                <li data-value="usa">
-                    <img src="https://flagcdn.com/w40/us.png" alt="USA" width="20"> United States
-                </li>
-                <li data-value="canada">
-                    <img src="https://flagcdn.com/w40/ca.png" alt="Canada" width="20"> Canada
-                </li>
+                    <li data-value="usa">
+                        <img src="https://flagcdn.com/w40/us.png" alt="USA" width="20"> United States
+                    </li>
+                    <li data-value="canada">
+                        <img src="https://flagcdn.com/w40/ca.png" alt="Canada" width="20"> Canada
+                    </li>
 
-                <li data-value="japan">
-                    <img src="https://flagcdn.com/w40/jp.png" alt="Japan" width="20"> Japan
-                </li>
-                <li data-value="china">
-                    <img src="https://flagcdn.com/w40/cn.png" alt="China" width="20"> China
-                </li>
-            </ul>
-            <!--            The drop down list with its options-->
+                    <li data-value="japan">
+                        <img src="https://flagcdn.com/w40/jp.png" alt="Japan" width="20"> Japan
+                    </li>
+                    <li data-value="china">
+                        <img src="https://flagcdn.com/w40/cn.png" alt="China" width="20"> China
+                    </li>
+                </ul>
+                <!--            The drop down list with its options-->
+            </div>
+            <!-- language choosing div-->
+            <label class="modal-label">Language*</label>
+            <div class="custom-dropdown" id="lang-dropdown">
+                <div class="dropdown-const">English</div>
+                <ul class="dropdown-list">
+                    <li data-value="en">English</li>
+                    <li data-value="ar">العربية (Arabic)</li>
+
+                    <li data-value="fr">Français (French)</li>
+                    <li data-value="de">Deutsch (German)</li>
+                    <li data-value="es">Español (Spanish)</li>
+                    <li data-value="it">Italiano (Italian)</li>
+                    <li data-value="ru">Русский (Russian)</li>
+
+                    <li data-value="zh">中文 (Chinese)</li>
+                    <li data-value="ja">日本語 (Japanese)</li>
+                    <li data-value="ko">한국어 (Korean)</li>
+
+                    <li data-value="pt">Português (Portuguese)</li>
+                    <li data-value="tr">Türkçe (Turkish)</li>
+                </ul>
+            </div>
+
+            <div class="modal-actions">
+                <button id="close-lang-modal" class="apply-bttn">Apply preferences</button>
+            </div>
         </div>
-        <!-- language choosing div-->
-        <label style="color: var(--tertiary); font-weight: bold;">Language*</label>
-        <div class="custom-dropdown" id="lang-dropdown">
-            <div class="dropdown-const">English</div>
-            <ul class="dropdown-list">
-                <li data-value="en">English</li>
-                <li data-value="ar">العربية (Arabic)</li>
-
-                <li data-value="fr">Français (French)</li>
-                <li data-value="de">Deutsch (German)</li>
-                <li data-value="es">Español (Spanish)</li>
-                <li data-value="it">Italiano (Italian)</li>
-                <li data-value="ru">Русский (Russian)</li>
-
-                <li data-value="zh">中文 (Chinese)</li>
-                <li data-value="ja">日本語 (Japanese)</li>
-                <li data-value="ko">한국어 (Korean)</li>
-
-                <li data-value="pt">Português (Portuguese)</li>
-                <li data-value="tr">Türkçe (Turkish)</li>
-            </ul>
-        </div>
-
-        <div class="modal-actions">
-            <button id="close-lang-modal" class="apply-bttn">Apply preferences</button>
-        </div>
-    </div>
-</dialog>
-<main>
-    <!-- Hero section    -->
-    <section class="hero">
-        <div class="hero-text-wrapper">
-            <h1>Expand Your Comfort Zone, Expand Your Horizons.</h1>
-            <p style=" font-family: 'Plus Jakarta Sans', sans-serif;
+    </dialog>
+    <main>
+        <!-- Hero section    -->
+        <section class="hero">
+            <div class="hero-text-wrapper">
+                <h1>Expand Your Comfort Zone, Expand Your Horizons.</h1>
+                <p style=" font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--off-white);
-    font-weight: 400; padding-left: 30px; ">Having a place in mind that you're wishing to visit or want to know our airline destinations?<br>Click below.</p>
-            <a href="./pages/booking/search-results.html" class="hero-bttn">Explore flights</a>
-        </div>
-    </section>
+    font-weight: 400; padding-left: 30px; ">Having a place in mind that you're wishing to visit or want to know our
+                    airline destinations?<br>Click below.</p>
+                <a href="./pages/booking/search-results.html" class="hero-bttn">Explore flights</a>
+            </div>
+        </section>
 
-    <section class="search-section">
-        <div class="search-card">
-
-            <form class="search-form" action="#" method="get">
-                <!-- row 1-->
-                <div class="search-first-row">
-                    <!-- from -->
-                    <div class="search-field">
-                        <label class="search-field-label">
-                            <i class="fa-solid fa-location-dot"></i>
-                            From
-                        </label>
-                        <div style="position: relative;">
-                            <input id="input-from" class="search-field-input" type="text"
-                                   placeholder="Destination city or airport" />
-                            <div id="city-list" class="city-list"></div>
-                        </div>
-                    </div>
-
-                    <div class="search-footer-vr"></div>
-
-
-                    <!-- to -->
-                    <div class="search-field">
-                        <label class="search-field-label">
-                            <i class="fa-solid fa-plane"></i>
-                            To
-                        </label>
-                        <div style="position: relative;">
-                            <input id="input-to" class="search-field-input" type="text"
-                                   placeholder="Destination city or airport" />
-                            <div id="city-list-to" class="city-list"></div>
-                        </div>
-                    </div>
-
-
-                    <!-- Departure date -->
-                    <div class="search-field">
-                        <label class="search-field-label">
-                            <i class="fa-regular fa-calendar-days"></i>
-                            Departure
-                        </label>
-                        <input class="search-field-input" type="date" />
-                    </div>
-
-                    <!-- Rrturn data -->
-                    <div class="search-field">
-                        <label class="search-field-label">
-                            <i class="fa-regular fa-calendar-check"></i>
-                            Return
-
-                        </label>
-                        <input class="search-field-input" type="date" />
-                    </div>
-
-                </div>
-
-                <!-- ── row 2 -->
-                <div class="search-form-footer">
-                    <!-- Passengers -->
-                    <div class="search-footer-field--passengers">
-                        <div class="search-footer-field-label">
-                            <i class="fa-solid fa-user"></i>
-                            Travellers
-                        </div>
-
-                        <input class="search-footer-field-input" type="number" value="1" min="1" max="9" />
-                    </div>
-
-                    <!-- vertical  -->
-                    <div class="search-footer-vr"></div>
-
-                    <!-- cabin class -->
-                    <div class="search-cabin-group">
-
-                        <div class="search-footer-field-label">
-                            <i class="fa-solid fa-briefcase"></i>
-                            Cabin Class
-                        </div>
-
-                        <div class="search-cabin-pills">
-                            <input type="radio" id="cabin-economy" name="cabin-class" class="search-cabin-radio" />
-
-                            <label for="cabin-economy" class="search-cabin-pill">
-                                <i class="fa-solid fa-chair"></i>
-                                Economy
+        <!-- search form  -->
+        <section class="search-section">
+            <div class="search-card">
+                <form class="search-form" action="#" method="get">
+                    <!-- row 1-->
+                    <div class="search-first-row">
+                        <!-- from -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                From
                             </label>
+                            <div style="position: relative;">
+                                <input id="input-from" class="search-field-input" type="text"
+                                    placeholder="Destination city or airport" />
+                                <div id="city-list" class="city-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="search-footer-vr"></div>
 
 
-                            <input type="radio" id="cabin-business" name="cabin-class" class="search-cabin-radio" />
+                        <!-- to -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-solid fa-plane"></i>
+                                To
+                            </label>
+                            <div style="position: relative;">
+                                <input id="input-to" class="search-field-input" type="text"
+                                    placeholder="Destination city or airport" />
+                                <div id="city-list-to" class="city-list"></div>
+                            </div>
+                        </div>
 
-                            <label for="cabin-business" class="search-cabin-pill">
+
+                        <!-- Departure date -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-regular fa-calendar-days"></i>
+                                Departure
+                            </label>
+                            <input class="search-field-input" type="date" required id="departure-date" />
+                        </div>
+
+                        <!-- Rrturn data -->
+                        <div class="search-field">
+                            <label class="search-field-label">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Return
+
+                            </label>
+                            <input class="search-field-input" type="date" required id="return-date" />
+                        </div>
+
+                    </div>
+
+                    <!-- ── row 2 -->
+                    <div class="search-form-footer">
+                        <!-- Passengers -->
+                        <div class="search-footer-field--passengers">
+                            <div class="search-footer-field-label">
+                                <i class="fa-solid fa-user"></i>
+                                Travellers
+                            </div>
+
+                            <input class="search-footer-field-input" type="number" value="1" min="1" max="9" />
+                        </div>
+
+                        <!-- vertical  -->
+                        <div class="search-footer-vr"></div>
+
+                        <!-- cabin class -->
+                        <div class="search-cabin-group">
+
+                            <div class="search-footer-field-label">
                                 <i class="fa-solid fa-briefcase"></i>
-                                Business
-                            </label>
+                                Cabin Class
+                            </div>
 
-                            <input type="radio" id="cabin-first-class" name="cabin-class"
-                                   class="search-cabin-radio" />
+                            <div class="search-cabin-pills">
+                                <input type="radio" id="cabin-economy" name="cabin-class" class="search-cabin-radio" />
 
-                            <label for="cabin-first-class" class="search-cabin-pill">
-                                <i class="fa-solid fa-star"></i>
-                                First Class
-                            </label>
+                                <label for="cabin-economy" class="search-cabin-pill">
+                                    <i class="fa-solid fa-chair"></i>
+                                    Economy
+                                </label>
 
+
+                                <input type="radio" id="cabin-business" name="cabin-class" class="search-cabin-radio" />
+
+                                <label for="cabin-business" class="search-cabin-pill">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    Business
+                                </label>
+
+                                <input type="radio" id="cabin-first-class" name="cabin-class"
+                                    class="search-cabin-radio" />
+
+                                <label for="cabin-first-class" class="search-cabin-pill">
+                                    <i class="fa-solid fa-star"></i>
+                                    First Class
+                                </label>
+
+                            </div>
                         </div>
+
+                        <!-- SEARCH BUTTON -->
+                        <button id="search-button" type="submit" class="search-btn">
+                            <i class=" fa-solid fa-magnifying-glass"></i>
+                            <span>Search</span>
+                        </button>
+
                     </div>
 
-                    <!-- SEARCH BUTTON -->
-                    <button type="submit" class="search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <span>Search</span>
-                    </button>
-
-                </div>
-
-
-            </form>
-        </div>
-        <!--Fast Card-->
-    </section>
-
-    <!--About section   -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="heading-sidebar">
-                <h3>About us</h3>
+                </form>
             </div>
-            <div class="about-vid">
-                <video autoplay loop muted playsinline width="600">
-                    <source src="./assets/index-assets/Video%20Project%20t2%20(online-video-cutter.com).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="about-text-wrapper">
-                    <h2>Experience the Skies</h2>
-                    <br>
-                    <p style=" padding-left: 12px; padding-bottom: 12px;  ">Have a seamless travel planning,<br>
-                        From exploring global routes to securing your seat, we’ve stripped away the complexity of flight booking so you can focus on the destination. <br>
-                        Your journey begins with a click,</p>
-                    <p style="padding-left: 12px;">Discover, book, and fly. We’ve modernized the reservation process to get you from search to boarding pass in seconds. <br>
-                        The world is waiting and your new horizons shall be discovered. </p>
+        </section>
+
+        <!--About section   -->
+        <section class="about-section">
+            <div class="about-container">
+                <div class="heading-sidebar">
+                    <h3>About us</h3>
+                </div>
+                <div class="about-vid">
+                    <video autoplay loop muted playsinline width="600">
+                        <source src="./assets/index-assets/Video%20Project%20t2%20(online-video-cutter.com).mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="about-text-wrapper">
+                        <h2>Experience the Skies</h2>
+                        <br>
+                        <p style=" padding-left: 12px; padding-bottom: 12px;  ">Have a seamless travel planning,<br>
+                            From exploring global routes to securing your seat, we’ve stripped away the complexity of
+                            flight booking so you can focus on the destination. <br>
+                            Your journey begins with a click,</p>
+                        <p style="padding-left: 12px;">Discover, book, and fly. We’ve modernized the reservation process
+                            to get you from search to boarding pass in seconds. <br>
+                            The world is waiting and your new horizons shall be discovered. </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Destinations'  Section   -->
+        <!-- Destinations'  Section   -->
 
-    <section class="trending-section">
-        <div class="trending-wrapper">
-            <div class="heading-sidebar">
-                <h3>Marvelous Destinations</h3>
+        <section class="trending-section">
+            <div class="trending-wrapper">
+                <div class="heading-sidebar">
+                    <h3>Marvelous Destinations</h3>
+                </div>
+
+                <div class="trending-grid">
+
+                    <div class="trending-card"
+                        style="background-image: url('assets/index-assets/Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Cairo</h4>
+                            <p>Economy</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 4,039</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Al-Quds.png');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Jerusalem</h4>
+                            <p>First Class</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 8,216</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card"
+                        style="background-image: url('assets/index-assets/Damascus_Straight_Street_and_East_Gate_8193.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Damascus</h4>
+                            <p>Business</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 2,024</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card"
+                        style="background-image: url('assets/index-assets/beirut-card-img.jpeg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Beirut</h4>
+                            <p>Economy</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 6,544</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card"
+                        style="background-image: url('assets/index-assets/Morocco_-_Rabat_(31387775324).jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Rabat</h4>
+                            <p>Economy</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 7,243</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Tunis.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Tunis</h4>
+                            <p>Economy</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 3,552</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card"
+                        style="background-image: url('assets/index-assets/Alger_Memorial-du-Martyr_IMG_1160.JPG');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Algeria</h4>
+                            <p>Economy</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 4,453</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Baghdad.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h4>Baghdad</h4>
+                            <p>First Class</p>
+                            <div class="price-box">
+                                <span class="price-accent"></span>
+                                <span>From <strong>EGP 5,673</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="view-more-container">
+                    <a href="pages/booking/search-results.html" class="view-more-cta"> VIEW MORE DESTINATIONS </a>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <div class="upper-footer">
+            <div>
+                <h1 style="text-transform: uppercase">COMPANY'S COPYRIGHTS</h1>
+                <p>This Website is protected by copyright and/or related rights.<br>
+                    You are free to use this Item in any way that is permitted<br>
+                    by the copyright and related rights legislation<br>
+                    that applies to your use. For other uses you need to obtain permission<br>
+                    from the rights-holder(s).
+                    <br> © 2026 'Name'
+                </p>
+
+
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">Fly with us</h1>
+                <br>
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="./pages/booking/search-results.html"> Flights</a></li>
+                    <li><a href="#"> Manage Booking</a></li>
+                    <li><a href="#"> Trending around the globe</a></li>
+
+                </ul>
+
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">SUPPORT</h1>
+                <br>
+                <!--            Support part-->
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="index.html"> Help Center</a></li>
+                    <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
+                    <li><a href=./pages/user/profile.html> Contact us</a></li>
+                    <li><a href=./pages/contact.html> FeedBack</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h1 style="text-transform: uppercase">Social links</h1>
+                <br>
+                <!--                Socila links part-->
+                <ul class="upper-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="#"> @user-Facebook</a></li>
+                    <li><a href="#"> @user-Instagram</a></li>
+                    <li><a href="#"> @user-twitter</a></li>
+                    <li><a href="#"> @user-TikTok</a></li>
+
+                </ul>
             </div>
 
-            <div class="trending-grid">
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Cairo</h4>
-                        <p>Economy</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 4,039</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Al-Quds.png');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Jerusalem</h4>
-                        <p>First Class</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 8,216</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Damascus_Straight_Street_and_East_Gate_8193.jpg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Damascus</h4>
-                        <p>Business</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 2,024</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/beirut-card-img.jpeg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Beirut</h4>
-                        <p>Economy</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 6,544</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Morocco_-_Rabat_(31387775324).jpg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Rabat</h4>
-                        <p>Economy</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 7,243</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Tunis.jpg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Tunis</h4>
-                        <p>Economy</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 3,552</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Alger_Memorial-du-Martyr_IMG_1160.JPG');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Algeria</h4>
-                        <p>Economy</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 4,453</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trending-card" style="background-image: url('assets/index-assets/Baghdad.jpg');">
-                    <div class="card-overlay"></div>
-                    <div class="card-content">
-                        <h4>Baghdad</h4>
-                        <p>First Class</p>
-                        <div class="price-box">
-                            <span class="price-accent"></span>
-                            <span>From <strong>EGP 5,673</strong></span>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="lower-footer">
+            <div class="lower-footer-img">
+                <ul class="lower-footer-ul" style="text-transform: capitalize;">
+                    <li><a href="#"> Privacy Policy</a></li>
+                    <li><a href="#"> Terms & Conditions</a></li>
+                    <li><a href="#"> Travel Procedures</a></li>
+                    <li><a href="#"> Cookies Settings</a></li>
+                </ul>
 
             </div>
-
-            <div class="view-more-container">
-                <a href="pages/booking/search-results.html" class="view-more-cta"> VIEW MORE DESTINATIONS </a>
-            </div>
         </div>
-    </section>
-
-
-
-</main>
-<footer>
-    <div class="upper-footer">
-        <div>
-            <h1 style="text-transform: uppercase">COMPANY'S COPYRIGHTS</h1>
-            <p>This Website is protected by copyright and/or related rights.<br>
-                You are free to use this Item in any way that is permitted<br>
-                by the copyright and related rights legislation<br>
-                that applies to your use. For other uses you need to obtain permission<br>
-                from the rights-holder(s).
-                <br> © 2026 'Name' </p>
-
-
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">Fly with us</h1>
-            <br>
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="./pages/booking/search-results.html" > Flights</a></li>
-                <li><a href="#"> Manage Booking</a></li>
-                <li><a href="#"> Trending around the globe</a></li>
-
-            </ul>
-
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">SUPPORT</h1>
-            <br>
-            <!--            Support part-->
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="index.html" > Help Center</a></li>
-                <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
-                <li><a href=./pages/user/profile.html > Contact us</a></li>
-                <li><a href=./pages/contact.html> FeedBack</a></li>
-
-            </ul>
-        </div>
-        <div>
-            <h1 style="text-transform: uppercase">Social links</h1>
-            <br>
-            <!--                Socila links part-->
-            <ul class="upper-footer-ul" style="text-transform: capitalize;">
-                <li><a href="#" > @user-Facebook</a></li>
-                <li><a href="#"> @user-Instagram</a></li>
-                <li><a href="#"> @user-twitter</a></li>
-                <li><a href="#"> @user-TikTok</a></li>
-
-            </ul>
-        </div>
-
-    </div>
-    <div class="lower-footer">
-        <div class="lower-footer-img">
-            <ul class="lower-footer-ul" style="text-transform: capitalize;">
-                <li><a href="#" > Privacy Policy</a></li>
-                <li><a href="#"> Terms & Conditions</a></li>
-                <li><a href="#"> Travel Procedures</a></li>
-                <li><a href="#"> Cookies Settings</a></li>
-            </ul>
-
-        </div>
-    </div>
-</footer>
-<script src="js/main.js" defer></script>
-<script src="js/search.js"></script>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script src="js/search.js"></script>
+    <script src="js/result.js"></script>
 </body>
+
 </html>

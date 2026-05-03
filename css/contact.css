@@ -1,8 +1,10 @@
-*{
-    font-family: 'Plus Jakarta Sans' ,sans-serif;
-    padding: 0%;
-    margin: 0%;
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 :root {
     --primary: #3A1824;
     --tertiart: #4C2D38;
@@ -10,54 +12,63 @@
     --off-white: #f2f0ef;
 }
 
-body
-{
+body {
     background-color: var(--off-white);
 }
-.sec-form-text{
+
+.sec-form-text {
     color: var(--tertiart);
     font-size: 10px;
 }
-.top-section{
+
+.top-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-height: 473px;
 }
-.heading{
+
+.heading {
     margin: 20px;
     animation: forwards fadeIn 1s ease-in-out;
 
 }
+
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(20px);
-    }    
+    }
 }
-.head-text{
+
+.head-text {
     font-size: 96px;
 }
-.head-details{
+
+.head-details {
     font-size: 18px;
     margin: 20px;
     max-width: 600px;
     color: var(--primary);
 }
-.head-small-text{
+
+.head-small-text {
     margin: 10px;
     margin-top: 60px;
 }
-.head-quote{
+
+.head-quote {
     margin: 20px;
     margin-top: 40px;
     max-width: 400px;
 }
-.contacts{
+
+.contacts {
     position: relative;
     flex-shrink: 0;
     margin: 20px;
@@ -67,14 +78,16 @@ body
     background-color: var(--tertiart);
     color: var(--secondary);
 }
-#phone-icon{
+
+#phone-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 50px;
     animation: forwards fadeIn 2s ease-in-out;
 }
-#priority-support{
+
+#priority-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
@@ -82,7 +95,8 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 2s ease-in-out;
 }
-#priority-support-details{
+
+#priority-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -91,14 +105,16 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 2s ease-in-out;
 }
-#direct-icon{
+
+#direct-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 150px;
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#direct-support{
+
+#direct-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
@@ -106,7 +122,8 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#direct-support-details{
+
+#direct-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -115,14 +132,16 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 2.5s ease-in-out;
 }
-#facebook-icon{
+
+#facebook-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 250px;
     animation: forwards fadeIn 3s ease-in-out;
 }
-#facebook-support{
+
+#facebook-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
@@ -130,7 +149,8 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 3s ease-in-out;
 }
-#facebook-support-details{
+
+#facebook-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -139,14 +159,16 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 3s ease-in-out;
 }
-#instagram-icon{
+
+#instagram-icon {
     position: absolute;
     font-size: 30px;
     left: 50px;
     top: 350px;
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-#instagram-support{
+
+#instagram-support {
     position: absolute;
     font-size: 20px;
     left: 90px;
@@ -154,7 +176,8 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-#instagram-support-details{
+
+#instagram-support-details {
     position: absolute;
     font-size: 15px;
     left: 90px;
@@ -163,73 +186,85 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 3.5s ease-in-out;
 }
-.middle{
+
+.middle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.form-section{
+
+.form-section {
     margin-top: 100px;
     margin: 0 auto;
     
 }
-.full-name{
+
+.full-name {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-.email-address{
+
+.email-address {
     margin: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.row-1{
-    display: flex;
-    flex-direction: row;
-    gap: 200px;
-}
-.row-2{
+
+.row-1 {
     display: flex;
     flex-direction: row;
     gap: 200px;
 }
 
-.booking-reference{
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.booking-reference {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-.nature-of-inquiry{
+
+.nature-of-inquiry {
     margin: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
-.your-message{
+
+.your-message {
     margin: 20px;
     display: flex;
     flex-direction: column;
 }
-#text-box{
+
+#text-box {
     width: 200%;
     height: 49px;
     opacity: 30%;
     padding-left: 10px;
 }
-#text-box2{
+
+#text-box2 {
     width: 240%;
     height: 54px;
     opacity: 30%;
     padding-left: 10px;
 }
-#message-area{
+
+#message-area {
     width: 720px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
 }
-.submit-button{
+
+.submit-button {
     width: 247px;
     height: 52px;
     margin: 20px;
@@ -237,7 +272,8 @@ body
     background-color: var(--secondary);
 
 }
-.plane-box{
+
+.plane-box {
     position: relative;
     flex-shrink: 0;
     margin: 20px;
@@ -246,14 +282,16 @@ body
     border-radius: 5px;
     background-color: var(--tertiart);
 }
-#plane{
+
+#plane {
     position: absolute;
     margin: 20px;
     top: 130px;
     font-size: 90px;
     color: var(--secondary);
 }
-.standard{
+
+.standard {
     position: absolute;
     font-size: 30px;
     font-style: oblique;
@@ -262,12 +300,13 @@ body
     color: var(--off-white);
     animation: forwards fadeIn 1.25s ease-in-out;
 }
-.standard-small-text{
+
+.standard-small-text {
     position: absolute;
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
-    bottom:50px;
+    bottom: 50px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }
@@ -304,67 +343,84 @@ body
     border: none;
 }
 @media (max-width: 768px) {
-    .top-section{
+    .top-section {
         flex-direction: column;
     }
-    .contacts{
+
+    .contacts {
         width: 93%;
     }
-    .middle{
+
+    .middle {
         margin-top: 500px;
         flex-direction: column;
     }
-    .plane-box{
+
+    .plane-box {
         width: 93%;
     }
-    .form-section{
+
+    .form-section {
         max-width: 95%;
     }
-    .row-1{
+
+    .row-1 {
         flex-direction: column;
         gap: 10px;
     }
-    .row-2{
+
+    .row-2 {
         flex-direction: column;
         gap: 10px;
     }
-    #message-area{
+
+    #message-area {
         width: 100%;
     }
-    .head-small-text{
+
+    .head-small-text {
         margin-top: 10px;
     }
-    #text-box{
+
+    #text-box {
         width: 105%;
     }
-    .standard-small-text{
+
+    .standard-small-text {
         bottom: 40px;
     }
-    .head-text{
+
+    .head-text {
         font-size: 70px;
     }
+
     @media (max-width: 480px) {
-    .head-text{
-        font-size: 50px;
-    }
-    .plane-box{
-        width: 90%;
-    }
-    .contacts{
-        width: 90%;
-    }
-    .standard-small-text{
-        bottom: 10px;
-    }
-    #plane{
-    position: absolute;
-    margin: 20px;
-    top: 230px;
-    font-size: 90px;
-    color: var(--secondary);
-    }
-    .standard{
-        bottom: 110px;
-    }
+        .head-text {
+            font-size: 50px;
+        }
+
+        .plane-box {
+            width: 90%;
+        }
+
+        .contacts {
+            width: 90%;
+        }
+
+        .standard-small-text {
+            bottom: 10px;
+        }
+
+        #plane {
+            position: absolute;
+            margin: 20px;
+            top: 230px;
+            font-size: 90px;
+            color: var(--secondary);
+        }
+
+        .standard {
+            bottom: 110px;
+        }
     }
 }

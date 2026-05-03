@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/search-flights.css">
+    <link rel="stylesheet" href="../../css/search-result.css">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <title>Istabraq Official Website | Book International Flight Tickets</title>
+    <script src="../js/search.js"></script>
 </head>
 
 <body>
@@ -165,6 +170,130 @@ also better for search engines and a DOM predictability-->
         </div>
     </dialog>
 
+    <!-- search form  -->
+    <section class="search-section">
+        <div class="search-card">
+            <form class="search-form" action="#" method="get">
+                <!-- row 1-->
+                <div class="search-first-row">
+                    <!-- from -->
+                    <div class="search-field">
+                        <label class="search-field-label">
+                            <i class="fa-solid fa-location-dot"></i>
+                            From
+                        </label>
+                        <div style="position: relative;">
+                            <input id="input-from" class="search-field-input" type="text"
+                                placeholder="Destination city or airport" />
+                            <div id="city-list" class="city-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="search-footer-vr"></div>
+
+
+                    <!-- to -->
+                    <div class="search-field">
+                        <label class="search-field-label">
+                            <i class="fa-solid fa-plane"></i>
+                            To
+                        </label>
+                        <div style="position: relative;">
+                            <input id="input-to" class="search-field-input" type="text"
+                                placeholder="Destination city or airport" />
+                            <div id="city-list-to" class="city-list"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- Departure date -->
+                    <div class="search-field">
+                        <label class="search-field-label">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            Departure
+                        </label>
+                        <input class="search-field-input" type="date" id="departure-date" />
+                    </div>
+
+                    <!-- Rrturn data -->
+                    <div class="search-field">
+                        <label class="search-field-label">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            Return
+                        </label>
+                        <input class="search-field-input" type="date" id="return-date" />
+                    </div>
+
+                </div>
+
+                <!-- ── row 2 -->
+                <div class="search-form-footer">
+                    <!-- Passengers -->
+                    <div class="search-footer-field--passengers">
+                        <div class="search-footer-field-label">
+                            <i class="fa-solid fa-user"></i>
+                            Travellers
+                        </div>
+
+                        <input class="search-footer-field-input" type="number" value="1" min="1" max="9" />
+                    </div>
+
+                    <!-- vertical  -->
+                    <div class="search-footer-vr"></div>
+
+                    <!-- cabin class -->
+                    <div class="search-cabin-group">
+
+                        <div class="search-footer-field-label">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Cabin Class
+                        </div>
+
+                        <div class="search-cabin-pills">
+                            <input type="radio" id="cabin-economy" name="cabin-class" class="search-cabin-radio" />
+
+                            <label for="cabin-economy" class="search-cabin-pill">
+                                <i class="fa-solid fa-chair"></i>
+                                Economy
+                            </label>
+
+
+                            <input type="radio" id="cabin-business" name="cabin-class" class="search-cabin-radio" />
+
+                            <label for="cabin-business" class="search-cabin-pill">
+                                <i class="fa-solid fa-briefcase"></i>
+                                Business
+                            </label>
+
+                            <input type="radio" id="cabin-first-class" name="cabin-class" class="search-cabin-radio" />
+
+                            <label for="cabin-first-class" class="search-cabin-pill">
+                                <i class="fa-solid fa-star"></i>
+                                First Class
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <!-- SEARCH BUTTON -->
+                    <button type="submit" class="search-btn" onclick="storgeInput()" id="search-button"
+                        onclick="window.location.href = window.location.pathname + '?reload=' + Math.random()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span href="search-results.html">Search</span>
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="tickets">
+        <div class="ticket-cards" id="result">
+
+        </div>
+    </section>
+
     <footer>
         <div class="upper-footer">
             <div>
@@ -230,6 +359,9 @@ also better for search engines and a DOM predictability-->
     </footer>
 
     <script src="../../js/main.js" defer></script>
+    <script src="../../js/data.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="../../js/result.js"></script>
 </body>
 
 </html>

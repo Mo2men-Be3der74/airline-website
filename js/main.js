@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
             //access the object modal and preform built in showModal function(pop-up)
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.close();
-            //perform the close() method/function on the closebtn object.
-        });
+    closeBtn.addEventListener('click', () => {
+        const countryText = document.querySelector('#country-dropdown .dropdown-const').innerText.trim();
+        const langText = document.querySelector('#lang-dropdown .dropdown-const').innerText.trim();
+
+        // update the header link text
+        document.querySelector('#open-lang-modal span').innerText = countryText + ' | ' + langText;
+
+        modal.close();
+    });
 
 
     // close when clicking outside the modal
@@ -63,21 +68,31 @@ document.querySelectorAll('.dropdown-list li').forEach(item => {
         e.target.closest('.custom-dropdown').querySelector('.dropdown-const').innerText = text;
     });
 });
-//Theme-toggling
+
+//Toggle Theme
 const themeCheck = document.getElementById('theme-check');
 const stylesheet = document.getElementById('theme-stylesheet');
 
-themeCheck.addEventListener('change', () => {
-    // We listen for 'change' (the moment it becomes checked or unchecked)
+// On every page load, check saved theme and apply it
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    themeCheck.checked = true;
+    const current = stylesheet.getAttribute('href');
+    stylesheet.setAttribute('href', current.replace('.css', '-dark.css').replace('css/', 'css/dark-theme/'));
+}
 
+// When toggle is clicked, save preference and swap
+themeCheck.addEventListener('change', () => {
+    const current = stylesheet.getAttribute('href');
     if (themeCheck.checked) {
-        // User swiped right (turned ON dark mode)
-        stylesheet.setAttribute('href', 'dark-theme.css');
+        stylesheet.setAttribute('href', current.replace('.css', '-dark.css').replace('css/', 'css/dark-theme/'));
+        localStorage.setItem('theme', 'dark');
     } else {
-        // User swiped left (turned OFF dark mode, back to light)
-        stylesheet.setAttribute('href', 'light-theme.css');
+        stylesheet.setAttribute('href', current.replace('dark-theme/', '').replace('-dark.css', '.css'));
+        localStorage.setItem('theme', 'light');
     }
 });
+
 const nav = document.querySelector('.bottom-half');
 const navTop = nav.offsetTop;
 
@@ -95,3 +110,5 @@ document.querySelectorAll('.search-tab').forEach(tab => {
         tab.classList.add('active-tab');
     });
 });
+
+

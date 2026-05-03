@@ -1,3 +1,4 @@
+
 const CITIES = [
     "Cairo, Egypt (CAI)",
     "London, UK (LHR)",
@@ -46,7 +47,9 @@ const CITIES = [
     "Washington DC, USA (IAD)",
     "Miami, USA (MIA)",
     "Boston, USA (BOS)",
-    "Seattle, USA (SEA)"
+    "Seattle, USA (SEA)",
+    "Moscow, Russia (DME)",
+    "Riyadh, Saudi Arabia (RUH)",
 ];
 
 function fromList() 
@@ -141,3 +144,48 @@ fromList();
 toList();
 
 
+function storgeInput()
+{
+    const from = document.getElementById("input-from").value.toLowerCase();
+    const to = document.getElementById("input-to").value.toLowerCase();
+
+    const departureDate = document.getElementById("departure-date").value;
+    const returnDate = document.getElementById("return-date").value;
+
+    let Class ;
+
+    if (document.getElementById("cabin-economy").checked) {
+        Class = "economy";
+    }
+
+    if (document.getElementById("cabin-business").checked) {
+        Class = "business";
+    }
+
+    if (document.getElementById("cabin-first-class").checked) {
+        Class = "first class";
+    }
+
+    localStorage.setItem("from", from);
+    localStorage.setItem("to", to);
+    localStorage.setItem("class", Class);
+    localStorage.setItem("departureDate", departureDate);
+    localStorage.setItem("returnDate", returnDate);
+
+    sessionStorage.setItem("searched", "true");
+
+    // Replace the redirect line in search.js with this:
+    const resultsPath = window.location.pathname.includes("pages") ? "search-results.html" : "pages/booking/search-results.html";
+    window.location.href = resultsPath;
+
+    // window.location.href = "search-results.html";
+    // window.location.href = "pages/booking/search-results.html";
+    // window.location.replace(window.location.href);
+
+}
+
+const button = document.getElementById("search-button");
+button.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the browser from stopping the script
+    storgeInput();
+});

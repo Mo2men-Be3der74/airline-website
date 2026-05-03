@@ -16,7 +16,17 @@
     --secondary:#cbb573;
     --off-white:#f2f0ef;
     --on-black:#000;
-    --dark-blue:#001524
+    --dark-blue:#001524;
+
+    /*Dark mode Colors*/
+    --off-white:#f2f0ef;
+    --on-black1:#000;
+    --on-black2:#0f0f0f;
+    --on-grey1:#1c1c1d;
+    --on-grey2:#252728;
+    --secondary:#cbb573;
+
+
 
 
 }
@@ -260,7 +270,7 @@ input:checked + .slider::before {
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-    url('../assets/index-asset/hero-img.jpg');
+    url('../assets/index-assets/hero-img.jpg');
     /*the linear gradiant scrim (function)
     rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
     rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
@@ -404,6 +414,8 @@ input:checked + .slider::before {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
+
+
 footer {
     margin-top: 0;
     padding-top: 0;
@@ -489,7 +501,7 @@ footer {
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-asset/lower-footer-pattern.png");
+    url("../assets/index-assets/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
