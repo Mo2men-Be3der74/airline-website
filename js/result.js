@@ -1,3 +1,4 @@
+
 const flightTickets = [
   {
     from: "Cairo, Egypt (CAI)",
@@ -134,7 +135,7 @@ const flightTickets = [
 ];
 
 const resultsContainer = document.getElementById("result");
-const Class = localStorage.getItem("class");
+const Class = (localStorage.getItem("class") || "").toLowerCase();
 const from = localStorage.getItem("from") || " ";
 const to = localStorage.getItem("to") || " ";
 const departureDate = localStorage.getItem("departureDate") || '-';
@@ -191,11 +192,12 @@ for (let i = 0; i < filtered.length; i++) {
                         </div>
                         `;
 }
+// ADD THIS AT THE VERY END OF THE FILE
+localStorage.removeItem("from");
+localStorage.removeItem("to");
+localStorage.removeItem("class");
+localStorage.removeItem("departureDate");
+localStorage.removeItem("returnDate");
 
-window.addEventListener("load", function()  {
-    localStorage.removeItem("from");
-    localStorage.removeItem("to");
-    localStorage.removeItem("class");
-    localStorage.removeItem("departureDate");
-    localStorage.removeItem("returnDate");
-});
+// This clears the data AFTER it has been used to show the flight cards
+localStorage.clear();

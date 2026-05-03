@@ -1,3 +1,4 @@
+
 const CITIES = [
     "Cairo, Egypt (CAI)",
     "London, UK (LHR)",
@@ -171,12 +172,12 @@ function storgeInput()
     localStorage.setItem("departureDate", departureDate);
     localStorage.setItem("returnDate", returnDate);
 
-    window.location.href = "../pages/booking/search-results.html";
+    sessionStorage.setItem("searched", "true");
+    window.location.replace(window.location.href);
 }
 
 const button = document.getElementById("search-button");
-
-button.addEventListener("click", function () {
-    storeInput();
-    location.reload(true);
+button.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the browser from stopping the script
+    storgeInput();
 });
