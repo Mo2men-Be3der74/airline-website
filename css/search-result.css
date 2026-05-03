@@ -88,7 +88,7 @@ body {
       font-weight: bold;
 }
 
-.tickets .ticket-cards .card .right .btn {
+.tickets .ticket-cards .card .right .btn-secondary {
       outline: none;
       border: none;
       color: var(--secondary-color);
@@ -100,7 +100,7 @@ body {
       transition: all 0.3s ease;
 }
 
-.tickets .ticket-cards .card .right .btn:hover {
+.tickets .ticket-cards .card .right .btn-secondary:hover {
       background-color: var(--secondary-color);
       color: var(--primary-color);
       transition: all 0.3s ease;
