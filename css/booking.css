@@ -62,6 +62,41 @@ h3 {
     line-height: 1.6;
     margin: 0;
 }
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+.dot.occupied {
+    background-color: var(--primary-color);
+}
+
+.dot.selected {
+    background-color: var(--secondary-color); 
+}
+
+.dot.available {
+    background-color: grey; 
+}
+
+.legend-item .text {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 1px; 
+}
 .section-1 {
     background-color: white;
 }
