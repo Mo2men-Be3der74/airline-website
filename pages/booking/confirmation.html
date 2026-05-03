@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <title>Istabraq Official Website | Book International Flight Tickets</title>
+    <link rel="stylesheet" href="../../css/common.css">
 </head>
 
-<body>
+<body>  
 
     <!-- Moataz  -->
     <header class="header">
@@ -21,7 +23,7 @@
 that's why I've put the util and the login in a standalone div to make sure that the property consider it last child. -->
             <div class="logo-placeholder"></div>
             <!--        Logo div for future logo (first child)-->
-            <div class="right-sec">
+            <div class="right-sec"> 
                 <!--            Second child-->
 
                 <div class="auth-bttns">
@@ -74,7 +76,7 @@ which would force the navigation links (the bottom half) to also participate in 
 Enhances accessibility as the list can be read by screen readers
 also better for search engines and a DOM predictability-->
             <li><a href="../../index.html" class="nav-link">Home</a></li>
-            <li><a href="../booking/search-flights.html" class="nav-link">Book</a></li>
+            <li><a href="search-flights.html" class="nav-link">Book</a></li>
             <li><a href="../user/profile.html" class="nav-link">My bookings</a></li>
             <li><a href="../contact.html" class="nav-link">Help Center</a></li>
         </ul>
@@ -165,6 +167,110 @@ also better for search engines and a DOM predictability-->
             </div>
         </div>
     </dialog>
+
+    <main>
+        <section class="passenger-info">
+            <h2><span class="number">01</span>Passenger Information</h2>
+            <div class="form-info">
+                    <div class="form">
+                        <label for="fristName">First Name</label>
+                        <input type="text" id="fname" name="fristName" placeholder="Evelyn">
+                    </div>
+                    <div class="form">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lname" name="lastName" placeholder="St.James">
+                    </div>
+                    <div class="form-full">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="evelyn@manor-curated.com">
+                    </div>
+                    <div class="form">
+                        <label for="passport">Passport Number</label>
+                        <input type="text" id="passport" name="passport" placeholder="X1234567">
+                    </div>
+                    <div class="form">
+                        <label for="frequentFlyer">Frequent Flyer Number</label>
+                        <input type="text" id="frequentFlyer" name="frequantflyer" placeholder="Optionl">
+                    </div>
+            </div>
+        </section>
+        <section class="payment-info">
+            <h2><span class="number">02</span>Secure Payment</h2>
+            <div class="method">
+                <button class="visa">
+                        <i class="fa-solid fa-credit-card"></i> Credit Card
+                </button>
+            </div>
+            <div class="pay-form">
+                <div class="form">
+                    <label for="cardholder">Cardholder Name</label>
+                    <input type="text" name="cardholder" placeholder="Evelyn St.James">
+                </div>
+                <div class="form">
+                    <label for="cardnumber">Card Number</label>
+                    <input type="text" name="cardnumber" placeholder="**** **** **** 4412" maxlength="19">
+                </div>
+                <div class="form-row">
+                    <div class="form">
+                        <label for="exipry">Exipry Date</label>
+                        <input type="text" name="exipry" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form">
+                        <label for="cvv">CVV</label>
+                        <input type="text" name="cvv" placeholder="***" maxlength="3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="journey">
+            <div class="journey-info">
+                <h3>Journey Details</h3>
+            </div>
+            <div class="route-info">
+                <div class="from">
+                    <div class="code" id="depairport">LHR</div>
+                    <div class="location" id="depcity">London,UK</div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <i class="fa-solid fa-plane-arrival"></i>   
+                </div>
+                <div class="to">
+                    <div class="code" id="arrairport">JFK</div>
+                    <div class="location" id="arrcity">New York,USA</div>
+                </div>
+            </div>
+            <div class="journey-details">
+                <div class="details">
+                    <span class="label">Data</span>
+                    <span class="value" id="travel">OCT 24 ,2024</span>
+                </div>
+                <div class="details">
+                    <span class="label">Class</span>
+                    <span class="value" id="class">First class</span>
+                </div>
+            </div>
+            <div class="price-tax">
+                    <div class="price">
+                        <span>Price</span>
+                        <span id="baseprice">1200</span>
+                    </div>
+                    <div class="price">
+                        <span>Tax</span>
+                        <span id="tax">1240</span>
+                    </div>
+                    <div class="price">
+                        <span>Concierge Service</span>
+                        <span id="concierge">850</span>
+                    </div>
+                    <div class="total-price">
+                        <div class="total">Total Price</div>
+                        <div class="total-amount" id="totalPrice">14540</div>
+                    </div>
+            </div>
+            <button class="confirm">Confirm & Pay</button>
+        </aside>
+    </main>
 
     <footer>
         <div class="upper-footer">
