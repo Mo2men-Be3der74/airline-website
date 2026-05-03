@@ -1,77 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap');
-
-
+/* Variables */
 :root {
     --primary: #3A1824;
-    --tertiart: #4C2D38;
+    --tertiary: #4C2D38;
     --secondary: #cbb573;
     --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524;
+
+    /*Dark mode Colors*/
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
 }
 
 * {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-
-a {
-    text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
-    background: var(--off-white);
+    background-color: var(--on-grey2);
 }
 
-/* Label */
-.search-field-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--secondary);
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.search-field-label i {
-    font-size: 0.74rem;
-}
-
-/* city list  */
-
-.city-list {
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    height: 200px;
-    overflow-y: auto;
-    width: 200px;
-    display: none;
-}
-
-.city-list div {
-    padding: 14px;
-    cursor: pointer;
-    color: var(--tertiart);
-    font-size: 0.9rem;
-}
-
-.city-list div:hover {
-    background-color: #cbb573;
-    color: #4C2D38;
-}
-
-/* Divider */
-.search-footer-vr {
-    width: 1px;
-    height: 100px;
-    background: rgba(58, 24, 36, 0.1);
-}
-
-/* Nav */
+/* header container (main/center) */
 .header {
     display: flex;
     flex-direction: column;
@@ -81,7 +37,7 @@ body {
 }
 
 .upper-half {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
@@ -100,17 +56,18 @@ body {
 
 .bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
-    background-color: color-mix(in srgb, var(--primary), black 15%);
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    ;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
-    position: sticky !important;
+    position: sticky;
     /* default state */
-    z-index: 1000 !important;
-    top: 0 !important;
+    z-index: 1000;
+    top: 0;
 }
 
 .right-sec {
@@ -205,7 +162,7 @@ body {
 
 /* A. Change the Track color when checked */
 input:checked+.slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);
+    background-color: color-mix(in srgb, var(--on-grey2), black 2%);
     ;
     /* Dark Track Color */
 }
@@ -256,7 +213,7 @@ input:checked+.slider::before {
 }
 
 .btn {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
@@ -328,6 +285,7 @@ input:checked+.slider::before {
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
+    color: var(--off-white);
 
     width: 350px;
     /* more -> bigger -> wider */
@@ -337,8 +295,17 @@ input:checked+.slider::before {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border: none;
-    background: white;
+    background: var(--on-grey1);
     z-index: 1000;
+}
+
+/*For dark theme*/
+h3 {
+    color: var(--off-white);
+}
+
+.modal-label {
+    color: var(--off-white);
 }
 
 .modal-actions {
@@ -349,8 +316,8 @@ input:checked+.slider::before {
 }
 
 .apply-bttn {
-    background-color: var(--primary);
-    color: var(--off-white);
+    background-color: var(--secondary);
+    color: var(--on-black);
     padding: 6px 12px;
     border-radius: 6px;
     text-decoration: none;
@@ -363,13 +330,14 @@ input:checked+.slider::before {
 .custom-dropdown {
     position: relative;
     /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
-    border: 1px solid #ccc;
+    border: 1px solid var(--on-grey1);
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
-    background: white;
+    background: var(--on-grey2);
+    color: var(--off-white);
 }
 
 /* The list (hidden by default) */
@@ -381,8 +349,8 @@ input:checked+.slider::before {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: var(--on-grey2);
+    border: 1px solid var(--on-grey1);
     list-style: none;
     /*clear the normal list style*/
     padding: 0;
@@ -400,7 +368,8 @@ input:checked+.slider::before {
 }
 
 .dropdown-list li:hover {
-    background-color: #f0f0f0;
+    background-color: var(--on-grey1);
+    color: var(--off-white);
     /*    Make it grey on the selection on hovering*/
 }
 
@@ -410,11 +379,182 @@ input:checked+.slider::before {
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
+footer {
+    margin-top: 0;
+    padding-top: 0;
+}
 
-/* search hero */
+.upper-footer {
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top: 2px solid var(--on-grey2);
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+
+}
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 540;
+    padding-left: 10px;
+    font-size: large;
+    margin-top: 0;
+    color: var(--secondary);
+}
+
+.upper-footer p {
+    padding: 12px 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+}
+
+.upper-footer-ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+
+}
+
+.upper-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.upper-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.lower-footer {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--on-grey2);
+    height: 60%;
+
+
+
+}
+
+.lower-footer-ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    list-style: none;
+    padding-left: 15px;
+
+}
+
+.lower-footer-ul a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.lower-footer-ul li:hover a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 400;
+
+}
+
+.lower-footer-img {
+
+    background:
+        url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
+
+    background-size: contain;
+    background-position: bottom center;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 80px;
+    /* Vertical Centering (The missing piece) */
+    align-items: center;
+
+}
+
+.lower-footer-ul li:not(:last-child)::after {
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
+    color: #ccc;
+}
+
+
+/*Search CSS from Marwan's file*/
+/* Label */
+.search-field-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.search-field-label i {
+    font-size: 0.74rem;
+}
+
+/* city list  */
+
+.city-list {
+    position: absolute;
+    /**/
+    background-color: var(--on-grey2);
+    color: var(--off-white);
+    /*Edited*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    height: 200px;
+    overflow-y: auto;
+    width: 200px;
+    display: none;
+}
+
+.city-list div {
+    padding: 14px;
+    cursor: pointer;
+    color: var(--tertiart);
+    font-size: 0.9rem;
+}
+
+.city-list div:hover {
+    background-color: #cbb573;
+    color: #4C2D38;
+}
+
+/* Divider */
+.search-footer-vr {
+    width: 1px;
+    height: 100px;
+    background: rgba(58, 24, 36, 0.1);
+}
+
+
 
 .search-hero {
-    background: var(--off-white);
+    /* background: var(--off-white); */
     padding: 64px 32px 0;
     max-width: 1280px;
     margin: auto;
@@ -452,18 +592,18 @@ input:checked+.slider::before {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 4.1rem;
-    color: var(--primary);
+    color: #f2f0ef;
     margin-bottom: 10px;
 }
 
 .search-title em {
-    color: var(--secondary);
+    color: #cbb573;
 }
 
 .search-subtitle {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.99rem;
-    color: var(--tertiart);
+    color: rgba(242, 240, 239, 0.55);
     font-weight: 300;
     width: 440px;
     margin-bottom: 8px;
@@ -478,7 +618,7 @@ input:checked+.slider::before {
 }
 
 .search-card {
-    background: white;
+    background: var(--on-grey1);
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border: 1px solid rgba(58, 24, 36, 0.07);
@@ -493,10 +633,11 @@ input:checked+.slider::before {
 
 .search-first-row {
     display: flex;
-    border-bottom: 1px solid rgba(58, 24, 36, 0.08);
+    border-bottom: 1px solid rgba(203, 181, 115, 0.1);
 }
 
 .search-field {
+    border-right: 1px solid rgba(203, 181, 115, 0.1);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -510,23 +651,30 @@ input:checked+.slider::before {
 
 /* Input */
 .search-field-input {
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1.08rem;
     font-weight: 500;
-    color: var(--primary);
+    color: var(--off-white);
     width: 100%;
 }
 
 .search-field-input::placeholder {
-    color: rgba(58, 24, 36, 0.28);
+    color: color-mix(in srgb, var(--on-grey1), white 30%);
+    ;
     font-weight: 400;
 }
 
 .search-field-input[type="date"] {
-    color: var(--tertiart);
+    color: color-mix(in srgb, var(--on-grey1), white 30%);
+    ;
+    color-scheme: dark;
 }
 
+.search-field-input[type="date"]:valid {
+    color: var(--off-white);
+}
 
 /* ── row 2 */
 .search-form-footer {
@@ -561,11 +709,12 @@ input:checked+.slider::before {
 }
 
 .search-footer-field-input {
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1.08rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--off-white);
     font-family: 'Plus Jakarta Sans', sans-serif;
     width: 48px;
 }
@@ -599,10 +748,10 @@ input:checked+.slider::before {
     gap: 10px;
     padding: 8px 18px;
     border-radius: 40px;
-    border: 1.5px solid rgba(58, 24, 36, 0.15);
+    border: 1.5px solid rgba(242, 240, 239, 0.15);
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--tertiart);
+    color: rgba(242, 240, 239, 0.5);
     cursor: pointer;
     transition: all 0.15s ease;
 }
@@ -612,14 +761,15 @@ input:checked+.slider::before {
 }
 
 .search-cabin-radio:checked+.search-cabin-pill {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: rgba(203, 181, 115, 0.08);
+    border-color: var(--secondary);
     color: var(--secondary);
 }
 
 .search-cabin-pill:hover {
     border-color: var(--secondary);
-    color: var(--primary);
+    color: var(--off-white);
+    /*    EDited to offwhite*/
 }
 
 
@@ -630,7 +780,7 @@ input:checked+.slider::before {
     gap: 10px;
     padding: 17px 36px;
     background: var(--secondary);
-    color: var(--primary);
+    color: var(--on-grey1);
     border: none;
     border-radius: 10px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -648,125 +798,6 @@ input:checked+.slider::before {
 
 .search-btn:hover {
     background: #d4c080;
+    color: var(--on-black);
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
-}
-
-footer {
-    margin-top: 0;
-    padding-top: 0;
-    background-color: white;
-}
-
-.upper-footer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-top: 2px solid #EDE9E6;
-    padding: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 10px;
-
-}
-
-.upper-footer h1,
-.upper-footer h2,
-.upper-footer h3,
-.upper-footer h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 540;
-    padding-left: 10px;
-    font-size: large;
-    margin-top: 0;
-    color: var(--primary);
-}
-
-.upper-footer p {
-    padding: 12px 15px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89
-}
-
-.upper-footer-ul {
-
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    list-style: none;
-    padding-left: 15px;
-
-
-}
-
-.upper-footer-ul a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
-    text-decoration: none;
-}
-
-.upper-footer-ul li:hover a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
-    text-decoration: underline;
-    font-weight: 400;
-}
-
-.lower-footer {
-    display: flex;
-    align-items: center;
-    border-top: 2px solid #EDE9E6;
-    height: 60%;
-
-
-
-}
-
-.lower-footer-ul {
-
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    list-style: none;
-    padding-left: 15px;
-
-}
-
-.lower-footer-ul a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
-    text-decoration: none;
-}
-
-.lower-footer-ul li:hover a {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
-    text-decoration: underline;
-    font-weight: 400;
-
-}
-
-.lower-footer-img {
-
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-        url("../assets/index-assets/lower-footer-pattern.png");
-
-    background-size: contain;
-    background-position: bottom center;
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 80px;
-    /* Vertical Centering (The missing piece) */
-    align-items: center;
-
-}
-
-.lower-footer-ul li:not(:last-child)::after {
-    content: "|";
-    /* Adds a pipe character */
-    margin-left: 12px;
-    /* Adds space after the pipe */
-    color: #ccc;
 }
