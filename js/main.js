@@ -68,19 +68,28 @@ document.querySelectorAll('.dropdown-list li').forEach(item => {
         e.target.closest('.custom-dropdown').querySelector('.dropdown-const').innerText = text;
     });
 });
-//Theme-toggling (T.A Aya's Way) -index page-
+
+//Toggle Theme
 const themeCheck = document.getElementById('theme-check');
 const stylesheet = document.getElementById('theme-stylesheet');
 
-themeCheck.addEventListener('change', () => {
-    // We listen for 'change' (the moment it becomes checked or unchecked)
+// On every page load, check saved theme and apply it
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    themeCheck.checked = true;
+    const current = stylesheet.getAttribute('href');
+    stylesheet.setAttribute('href', current.replace('.css', '-dark.css').replace('css/', 'css/dark-theme/'));
+}
 
+// When toggle is clicked, save preference and swap
+themeCheck.addEventListener('change', () => {
+    const current = stylesheet.getAttribute('href');
     if (themeCheck.checked) {
-        // User swiped right (turned ON dark mode)
-        stylesheet.setAttribute('href', './css/dark-theme/index-dark.css');
+        stylesheet.setAttribute('href', current.replace('.css', '-dark.css').replace('css/', 'css/dark-theme/'));
+        localStorage.setItem('theme', 'dark');
     } else {
-        // User swiped left (turned OFF dark mode, back to light)
-        stylesheet.setAttribute('href', './css/index.css');
+        stylesheet.setAttribute('href', current.replace('dark-theme/', '').replace('-dark.css', '.css'));
+        localStorage.setItem('theme', 'light');
     }
 });
 

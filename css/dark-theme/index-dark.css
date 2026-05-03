@@ -40,7 +40,7 @@ body {
 
 /* Makes any content in the main container to fill it up */
 main {
-    background-color:  color-mix(in srgb, var(--on-grey2), black 10%);;
+    background-color: color-mix(in srgb, var(--on-grey2), black 10%);;
     flex: 0;
     min-height: 0;
 }
