@@ -133,48 +133,69 @@ const flightTickets = [
   }
 ];
 
-const resultContainer = document.getElementById("result");
-const Class = localStorage.getItem("Class");
-const from = localStorage.getItem("from") || "";
-const to = localStorage.getItem("to") || "";
-const departureDate = localStorage.getItem("departureDate");
-const returnDate = localStorage.getItem("returnDate");
+const resultsContainer = document.getElementById("result");
+const Class = localStorage.getItem("class");
+const from = localStorage.getItem("from") || " ";
+const to = localStorage.getItem("to") || " ";
+const departureDate = localStorage.getItem("departureDate") || '-';
+const returnDate = localStorage.getItem("returnDate") || '-';
+const filtered = [];
 
+// const Class = 'economy';
+// const from = 'cairo, egypt (cai)';
+// const to = "paris, france (cdg)";
+// const departureDate = "2026-06-10";
+// const returnDate = "2026-06-18";
+// let filtered = [];
 
+// if (from === "" || to === "") {
+//       resultContainer.innerHTML = "Please fill all the fields";
+// }
 
-
-let filtered = [];
-
-for (let i = 0; i < flightTickets.length; i++) {
-      if (from.includes(flightTickets[i].from.toLowerCase()) &&
-      to.includes(flightTickets[i].to.toLowerCase()) &&
-      flightTickets[i].departureDate === departureDate && 
-      flightTickets[i].returnDate === returnDate && 
-      flightTickets[i].Class === Class) {
-            filtered.push(flightTickets[i]);
+if (from && to) {
+      for (let i = 0; i < flightTickets.length; i++) {
+            if (flightTickets[i].from.toLowerCase().includes(from) &&
+                flightTickets[i].to.toLowerCase().includes(to) &&
+                Class === flightTickets[i].Class.toLowerCase() &&
+                flightTickets[i].departureDate.includes(departureDate) &&
+                flightTickets[i].returnDate.includes(returnDate)) {
+                  filtered.push(flightTickets[i]);
+            }
       }
 }
 
-resultsContainer.innerHTML = "";
-
-if (filtered.length === 0) {
-      resultsContainer.innerHTML = "No tickets found";
-}
 
 let t;
 
-else {
-    for (let i = 0; i < filtered.length; i++) {
-        t = filtered[i];
+for (let i = 0; i < filtered.length; i++) {
+      t = filtered[i];
 
-        resultsContainer.innerHTML += `
-            <div class="card">
-                <h3>${t.from} → ${t.to}</h3>
-                <p>Class: ${t.class}</p>
-                <p>Price: ${t.price} EGP</p>
-                <p>${departureDate} → ${returnDate}</p>
-            </div>
-        `;
-    }
+      resultsContainer.innerHTML += `
+                        <div class="card">
+                              <div class="icon"><i class="fa-solid fa-plane"></i></div>
+                        <div class="destination">
+                            <div class="from">${t.from}</div>
+                            <div class="to">${t.to}</div>
+                        </div>
+                        <div class="time">
+                            <div class="from">${t.startTime}</div>
+                            <div class="to">${t.arriveTime}</div>
+                        </div>
+                        <div class="duration">${t.duration}</div>
+                        <div class="class">${t.Class}</div>
+                        <div class="right">
+                            <div class="price">${t.price}</div>
+                            <button class="btn">Book Now</button>
+                        </div>
+                    </div>
+                        </div>
+                        `;
 }
 
+window.addEventListener("load", function()  {
+    localStorage.removeItem("from");
+    localStorage.removeItem("to");
+    localStorage.removeItem("class");
+    localStorage.removeItem("departureDate");
+    localStorage.removeItem("returnDate");
+});

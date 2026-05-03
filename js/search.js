@@ -171,9 +171,12 @@ function storgeInput()
     localStorage.setItem("departureDate", departureDate);
     localStorage.setItem("returnDate", returnDate);
 
-<<<<<<< HEAD
     window.location.href = "../pages/booking/search-results.html";
-=======
-    window.location.href = "search-results.html";
->>>>>>> dc229392b656eec70076e44da6b38089ad008a3e
 }
+
+const button = document.getElementById("search-button");
+
+button.addEventListener("click", function () {
+    storeInput();
+    location.reload(true);
+});

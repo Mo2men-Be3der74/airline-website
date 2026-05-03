@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/search-flights.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../../css/search-result.css">
-=======
->>>>>>> dc229392b656eec70076e44da6b38089ad008a3e
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -279,7 +276,7 @@ also better for search engines and a DOM predictability-->
                     </div>
 
                     <!-- SEARCH BUTTON -->
-                    <button type="submit" class="search-btn" onclick="storgeInput()">
+                    <button type="submit" class="search-btn" onclick="storgeInput()" id="search-button" onclick="window.location.href = window.location.pathname + '?reload=' + Math.random()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span href="search-results.html">Search</span>
                     </button>
@@ -290,17 +287,11 @@ also better for search engines and a DOM predictability-->
         </div>
     </section>
 
-<<<<<<< HEAD
         <section class="tickets">
             <div class="ticket-cards" id="result">
                 
             </div>
         </section>
-=======
-    <div id="results">
-
-    </div>
->>>>>>> dc229392b656eec70076e44da6b38089ad008a3e
 
     <footer>
         <div class="upper-footer">
@@ -367,14 +358,9 @@ also better for search engines and a DOM predictability-->
     </footer>
 
     <script src="../../js/main.js" defer></script>
-<<<<<<< HEAD
     <script src="../../js/data.js"></script>
     <script src="../../js/search.js"></script>
     <script src="../../js/result.js"></script>
-=======
-    <script src="../../js/search.js"></script>
-    <script src="../../js/results.js"></script>
->>>>>>> dc229392b656eec70076e44da6b38089ad008a3e
 </body>
 
 </html>
