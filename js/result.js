@@ -187,6 +187,3 @@ localStorage.removeItem("to");
 localStorage.removeItem("class");
 localStorage.removeItem("departureDate");
 localStorage.removeItem("returnDate");
-
-// This clears the data AFTER it has been used to show the flight cards
-localStorage.clear();
