@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
             //access the object modal and preform built in showModal function(pop-up)
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.close();
-            //perform the close() method/function on the closebtn object.
-        });
+    closeBtn.addEventListener('click', () => {
+        const countryText = document.querySelector('#country-dropdown .dropdown-const').innerText.trim();
+        const langText = document.querySelector('#lang-dropdown .dropdown-const').innerText.trim();
+
+        // update the header link text
+        document.querySelector('#open-lang-modal span').innerText = countryText + ' | ' + langText;
+
+        modal.close();
+    });
 
 
     // close when clicking outside the modal
@@ -63,7 +68,7 @@ document.querySelectorAll('.dropdown-list li').forEach(item => {
         e.target.closest('.custom-dropdown').querySelector('.dropdown-const').innerText = text;
     });
 });
-//Theme-toggling
+//Theme-toggling (T.A Aya's Way) -index page-
 const themeCheck = document.getElementById('theme-check');
 const stylesheet = document.getElementById('theme-stylesheet');
 
@@ -72,12 +77,13 @@ themeCheck.addEventListener('change', () => {
 
     if (themeCheck.checked) {
         // User swiped right (turned ON dark mode)
-        stylesheet.setAttribute('href', 'dark-theme.css');
+        stylesheet.setAttribute('href', './css/dark-theme/index-dark.css');
     } else {
         // User swiped left (turned OFF dark mode, back to light)
-        stylesheet.setAttribute('href', 'light-theme.css');
+        stylesheet.setAttribute('href', './css/index.css');
     }
 });
+
 const nav = document.querySelector('.bottom-half');
 const navTop = nav.offsetTop;
 
@@ -95,3 +101,5 @@ document.querySelectorAll('.search-tab').forEach(tab => {
         tab.classList.add('active-tab');
     });
 });
+
+

@@ -32,7 +32,7 @@ h2 {
     text-align: center;
     font-size: 52px;
     margin-bottom: 18px;
-    color: #3A1824;
+    color: #1d1013;
     font-weight: 600;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -96,6 +96,9 @@ input:focus {
 
 input::placeholder {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 50%;
 }
 
 .remember {
@@ -150,30 +153,32 @@ input::placeholder {
     margin-top: 5px;
 }
 .password-box {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .password-box input {
-  width: 100%;
-  padding-right: 45px;
-  display: block;
+    width: 100%;
+    padding-right: 45px;
+    display: block;
 }
 
 .password-box button {
-  position: absolute;
-  right: 0;
-  top: -18px;
-  height: 100%;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 18px;
+    width: auto !important; 
+    position: absolute;
+    right: 10px;
+    top: 0%;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.password-box i {
+    font-size: 16px;
 }
 @media (max-width: 768px) {
 
