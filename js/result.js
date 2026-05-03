@@ -174,7 +174,7 @@ for (let i = 0; i < filtered.length; i++) {
                         <div class="class">${t.Class}</div>
                         <div class="right">
                             <div class="price">${t.price}</div>
-                            <button class="btn" onclick="window.location.href='../../pages/booking/flight-details.html'">Book Now</button>
+                            <button class="btn-secondary" onclick="window.location.href='../../pages/booking/flight-details.html'">Book Now</button>
                         </div>
                     </div>
                         </div>

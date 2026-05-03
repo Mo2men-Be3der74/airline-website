@@ -790,3 +790,95 @@ footer {
     color: var(--on-black);
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
+
+
+.tickets {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--off-white);
+}
+
+.tickets .ticket-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+}
+
+.tickets .ticket-cards .card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--on-grey1);
+    border-radius: 10px;
+    height: 150px;
+    padding: 15px;
+    margin: 30px;
+    transition: all 0.3s ease;
+    padding-left: 0;
+}
+
+.tickets .ticket-cards .card .icon {
+    width: 20px;
+}
+
+.tickets .ticket-cards .card .icon i {
+    color: #cbb573;
+    font-size: 35px;
+}
+
+.tickets .ticket-cards .card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.50);
+    transition: all 0.3s ease;
+}
+
+.tickets .ticket-cards .card .time {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tickets .ticket-cards .card .destination {
+    display: flex;
+    gap: 40px;
+}
+
+.tickets .ticket-cards .card .destination .from,
+.tickets .ticket-cards .card .destination .to {
+    color: #f2f0ef;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tickets .ticket-cards .card .right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--off-white);
+}
+
+.tickets .ticket-cards .card .right .price {
+    color: #cbb573;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tickets .ticket-cards .card .right .btn-secondary {
+    outline: none;
+    border: none;
+    color: #cbb573;
+    background-color: #3A1824;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tickets .ticket-cards .card .right .btn-secondary:hover {
+    background-color: #4C2D38;
+    color: #cbb573;
+    transition: all 0.3s ease;
+}
