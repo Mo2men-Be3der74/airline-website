@@ -64,7 +64,8 @@ body
     margin-top: 100px;
     width: 661px;
     height: 473px;
-    background-color: var(--secondary);
+    background-color: var(--tertiart);
+    color: var(--secondary);
 }
 #phone-icon{
     position: absolute;
@@ -78,6 +79,7 @@ body
     font-size: 20px;
     left: 90px;
     top: 50px;
+    color: var(--off-white);
     animation: forwards fadeIn 2s ease-in-out;
 }
 #priority-support-details{
@@ -86,6 +88,7 @@ body
     left: 90px;
     top: 80px;
     opacity: 70%;
+    color: var(--off-white);
     animation: forwards fadeIn 2s ease-in-out;
 }
 #direct-icon{
@@ -100,6 +103,7 @@ body
     font-size: 20px;
     left: 90px;
     top: 150px;
+    color: var(--off-white);
     animation: forwards fadeIn 2.5s ease-in-out;
 }
 #direct-support-details{
@@ -108,6 +112,7 @@ body
     left: 90px;
     top: 180px;
     opacity: 70%;
+    color: var(--off-white);
     animation: forwards fadeIn 2.5s ease-in-out;
 }
 #facebook-icon{
@@ -122,6 +127,7 @@ body
     font-size: 20px;
     left: 90px;
     top: 250px;
+    color: var(--off-white);
     animation: forwards fadeIn 3s ease-in-out;
 }
 #facebook-support-details{
@@ -130,6 +136,7 @@ body
     left: 90px;
     top: 280px;
     opacity: 70%;
+    color: var(--off-white);
     animation: forwards fadeIn 3s ease-in-out;
 }
 #instagram-icon{
@@ -144,6 +151,7 @@ body
     font-size: 20px;
     left: 90px;
     top: 350px;
+    color: var(--off-white);
     animation: forwards fadeIn 3.5s ease-in-out;
 }
 #instagram-support-details{
@@ -152,6 +160,7 @@ body
     left: 90px;
     top: 380px;
     opacity: 70%;
+    color: var(--off-white);
     animation: forwards fadeIn 3.5s ease-in-out;
 }
 .middle{
@@ -161,6 +170,8 @@ body
 }
 .form-section{
     margin-top: 100px;
+    margin: 0 auto;
+    
 }
 .full-name{
     margin: 20px;
@@ -231,14 +242,14 @@ body
     flex-shrink: 0;
     margin: 20px;
     width: 750px;
-    height: 542px;
+    height: auto;
     border-radius: 5px;
     background-color: var(--tertiart);
 }
 #plane{
     position: absolute;
     margin: 20px;
-    top: 250px;
+    top: 130px;
     font-size: 90px;
     color: var(--secondary);
 }
@@ -259,6 +270,38 @@ body
     bottom:50px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
+}
+.faq-section{
+    font-size: 30px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    margin: 20px;
+    padding: 2px 10px;
+}
+.faq{
+    font-size: 30px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 20px;
+    padding-bottom: 50px;
+}
+.faq-questions{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+.activee{
+   padding-left: 50px;
+   transition: padding 0.3s ease;
+}
+.question-title{
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    background-color: var(--secondary);
+    transition: padding 0.3s ease;
+    border: none;
 }
 @media (max-width: 768px) {
     .top-section{
