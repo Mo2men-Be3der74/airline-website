@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             localStorage.setItem("user", JSON.stringify(user));
 
-            alert("Registered successfully ✅");
+            alert("Registered successfully");
             window.location.href = "login.html";
         });
     }
@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (email === storedUser.email && password === storedUser.password) {
-                alert("Login successful ✅");
+                alert("Login successful");
                 window.location.href = "../../index.html";
             } else {
-                alert("❌ Wrong Email or password");
+                alert("Wrong Email or password");
             }
         });
     }
