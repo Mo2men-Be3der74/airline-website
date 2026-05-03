@@ -170,6 +170,7 @@ also better for search engines and a DOM predictability-->
     </dialog>
 
     <main class="main">
+        <div>
         <section>
             <h2><span class="number">01</span>Passenger Information</h2>
             <div class="form-info">
@@ -181,7 +182,7 @@ also better for search engines and a DOM predictability-->
                         <label for="lastName">Last Name</label>
                         <input type="text" id="lname" name="lastName" placeholder="St.James">
                     </div>
-                    <div class="form-full">
+                    <div class="form">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="evelyn@manor-curated.com">
                     </div>
@@ -193,7 +194,7 @@ also better for search engines and a DOM predictability-->
                         <label for="frequentFlyer">Frequent Flyer Number</label>
                         <input type="text" id="frequentFlyer" name="frequantflyer" placeholder="Optionl">
                     </div>
-            </div>
+            
         </section>
         <section>
             <h2><span class="number">02</span>Secure Payment</h2>
@@ -223,12 +224,13 @@ also better for search engines and a DOM predictability-->
                 </div>
             </div>
         </section>
+        </div>
         <aside class="journey">
-            <div class="journey-info">
-                <h3>Journey Details</h3>
+            <div >
+                <h3 class="journey-info">Journey Details</h3>
             </div>
             <div class="route-info">
-                <div class="from">
+                <div class="place">
                     <div class="code" id="depairport">LHR</div>
                     <div class="location" id="depcity">London,UK</div>
                 </div>
@@ -236,18 +238,18 @@ also better for search engines and a DOM predictability-->
                     <i class="fa-solid fa-plane-departure"></i>
                     <i class="fa-solid fa-plane-arrival"></i>   
                 </div>
-                <div class="to">
+                <div class="place">
                     <div class="code" id="arrairport">JFK</div>
                     <div class="location" id="arrcity">New York,USA</div>
                 </div>
             </div>
             <div class="journey-details">
                 <div class="details">
-                    <span class="label">Data</span>
+                    <span class="label">Data</span><br>
                     <span class="value" id="travel">OCT 24 ,2024</span>
                 </div>
                 <div class="details">
-                    <span class="label">Class</span>
+                    <span class="label">Class</span><br>
                     <span class="value" id="class">First class</span>
                 </div>
             </div>
@@ -265,8 +267,8 @@ also better for search engines and a DOM predictability-->
                         <span id="concierge">850</span>
                     </div>
                     <div class="total-price">
-                        <div class="total">Total Price</div>
-                        <div class="total-amount" id="totalPrice">14540</div>
+                        <div>Total Price</div>
+                        <div id="totalPrice">14540</div>
                     </div>
             </div>
             <button class="confirm">Confirm & Pay</button>

@@ -1,4 +1,3 @@
-/* Variables */
 :root {
     --primary: #3A1824;
     --tertiary: #4C2D38;
@@ -6,40 +5,17 @@
     --off-white: #f2f0ef;
     --on-black: #000;
     --dark-blue: #001524;
-}
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* 100vh = 100% of the viewport height */
-    margin: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-/* Makes any content in the main container to fill it up */
-main {
-    flex: 0;
-    min-height: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+    /*Dark mode Colors*/
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
 
 
-}
 
-p {
-    color: var(--tertiary);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
 
 }
 
@@ -53,7 +29,7 @@ p {
 }
 
 .upper-half {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
@@ -72,17 +48,18 @@ p {
 
 .bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
-    background-color: color-mix(in srgb, var(--primary), black 15%);
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    ;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
-    position: sticky !important;
+    position: sticky;
     /* default state */
-    z-index: 1000 !important;
-    top: 0 !important;
+    z-index: 1000;
+    top: 0;
 }
 
 .right-sec {
@@ -177,7 +154,7 @@ p {
 
 /* A. Change the Track color when checked */
 input:checked+.slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);
+    background-color: color-mix(in srgb, var(--on-grey2), black 2%);
     ;
     /* Dark Track Color */
 }
@@ -228,7 +205,7 @@ input:checked+.slider::before {
 }
 
 .btn {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
@@ -300,6 +277,7 @@ input:checked+.slider::before {
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
+    color: var(--off-white);
 
     width: 350px;
     /* more -> bigger -> wider */
@@ -309,8 +287,17 @@ input:checked+.slider::before {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border: none;
-    background: white;
+    background: var(--on-grey1);
     z-index: 1000;
+}
+
+/*For dark theme*/
+h3 {
+    color: var(--off-white);
+}
+
+.modal-label {
+    color: var(--off-white);
 }
 
 .modal-actions {
@@ -321,8 +308,8 @@ input:checked+.slider::before {
 }
 
 .apply-bttn {
-    background-color: var(--primary);
-    color: var(--off-white);
+    background-color: var(--secondary);
+    color: var(--on-black);
     padding: 6px 12px;
     border-radius: 6px;
     text-decoration: none;
@@ -335,13 +322,14 @@ input:checked+.slider::before {
 .custom-dropdown {
     position: relative;
     /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
-    border: 1px solid #ccc;
+    border: 1px solid var(--on-grey1);
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
-    background: white;
+    background: var(--on-grey2);
+    color: var(--off-white);
 }
 
 /* The list (hidden by default) */
@@ -353,8 +341,8 @@ input:checked+.slider::before {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: var(--on-grey2);
+    border: 1px solid var(--on-grey1);
     list-style: none;
     /*clear the normal list style*/
     padding: 0;
@@ -372,7 +360,8 @@ input:checked+.slider::before {
 }
 
 .dropdown-list li:hover {
-    background-color: #f0f0f0;
+    background-color: var(--on-grey1);
+    color: var(--off-white);
     /*    Make it grey on the selection on hovering*/
 }
 
@@ -382,19 +371,17 @@ input:checked+.slider::before {
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
-
-
 footer {
     margin-top: 0;
     padding-top: 0;
-    background-color: white;
 }
 
 .upper-footer {
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    border-top: 2px solid #EDE9E6;
+    border-top: 2px solid var(--on-grey2);
     padding: 12px;
     padding-left: 12px;
     padding-right: 12px;
@@ -411,13 +398,13 @@ footer {
     padding-left: 10px;
     font-size: large;
     margin-top: 0;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .upper-footer p {
     padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89
+    color: var(--off-white);
 }
 
 .upper-footer-ul {
@@ -433,13 +420,13 @@ footer {
 
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
+    color: var(--off-white);
     text-decoration: none;
 }
 
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 }
@@ -447,7 +434,7 @@ footer {
 .lower-footer {
     display: flex;
     align-items: center;
-    border-top: 2px solid #EDE9E6;
+    border-top: 2px solid var(--on-grey2);
     height: 60%;
 
 
@@ -466,13 +453,13 @@ footer {
 
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
+    color: var(--off-white);
     text-decoration: none;
 }
 
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 
@@ -480,8 +467,8 @@ footer {
 
 .lower-footer-img {
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-        url("../assets/index-assets/lower-footer-pattern.png");
+    background:
+        url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
 
     background-size: contain;
     background-position: bottom center;
@@ -504,279 +491,298 @@ footer {
     color: #ccc;
 }
 
-
-
-
-
-
-
-
-:root {
-      --primary-color: #3A1824;
-      --secondary-color: #cbb573;
-      --surface-color: #f2f0ef;
-      --text-color: #1F040E;
-      --tertiary-color: #4C2D38; 
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+
 body {
-    margin: 0;
-    background-color: var(--surface-color);
-}
-main {
-    margin: 40px auto;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1200px;
-    width: 90%; 
-}
-.left-side {
-    flex: 0 1 700px;
-    margin: 0;
-}
-header p {
-    margin: 0;
-    color: var(--text-color);
-    font-size: 14px;
-}
-p {
-    margin: 0;
-}
-h1 {
-    margin: 0;
-    color: var(--text-color);
-    font-size: 40px;
-    font-weight: 800;
-}
-h2 {
-    margin: 0;
-    color: var(--secondary-color);
-    font-size: 36px;
-    font-weight: 700;
-    font-family: "Playwrite IT Moderna", cursive;
-}
-h3 {
-    margin: 0;
-    font-size: 16px;
-}
-.chairs {
-    margin-top: 60px;
-}
-.text-chair h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-color);
-    margin: 0;
-}
-.text-chair p {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-}
-.legend {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
+    background-color: var(--on-grey2);
 }
 
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.dot {
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
-}
-.dot.occupied {
-    background-color: var(--primary-color);
+.sec-form-text {
+    color: var(--tertiart);
+    font-size: 10px;
 }
 
-.dot.selected {
-    background-color: var(--secondary-color); 
-}
-
-.dot.available {
-    background-color: grey; 
-}
-
-.legend-item .text {
-    font-size: 12px;
-    font-weight: bold;
-    color: #555;
-    letter-spacing: 1px; 
-}
-.section-1 {
-    background-color: white;
-}
-.seats-container {
-    display: grid;
-    grid-template-columns: repeat(2, 80px) 40px repeat(2, 80px);
-    gap: 20px;
-    justify-content: center; 
-    margin-top: 30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.seat {
-    width: 80px;
-    height: 80px;
-    background-color: var(--surface-color);
+.top-section {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-.booked {
-    background-color: var(--primary-color);
-    color: white;
-}
-.selected {
-    background-color:var(--secondary-color);
-    color: white;
-}
-.main-aisle {
-    text-align: center;
-    margin:0 ;
-    letter-spacing: 2px;
-    color: #999;
-    border-top: 1px solid #eee;
-    border-bottom:  1px solid #eee;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.Extra-Services {
-    margin-top: 60px;
-}
-.services-text h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-color);
-    margin: 0;
-}
-.services-text p {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-}
-.services-icons {
-    display: flex;
-    gap: 20px;
-    margin-top: 60px;
-}
-.card {
-    background-color: white;
-    width: 100%;
-    height: 300px;
-}
-.text-card {
-    margin: 30px;
-}
-.icon-card {
-    margin-bottom: 20px;
-}
-.header-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-.text-card p {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-}
-.footer-card {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    margin: 30px;
-}
-.right-side {
-    flex: 0 1 350px;
-}
-.Flight-Summary {
-    padding: 25px;
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
-    height: fit-content;
-    width: 100%;
-    max-width: none;
-}
-.text-summary {
-    margin: 10px;
-}
-.text-summary h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-}
-.text-summary p {
-    color: white;
-}
-.checkout-btn {
-    display: block;         
-    text-align: center;     
-    text-decoration: none;
-    background-color: var(--secondary-color); 
-    color: var(--primary-color);           
-    width: 90%;                          
-    padding: 15px;                        
-    border: none;                         
-    font-size: 16px;                   
-    font-weight: 700;                     
-    letter-spacing: 2px;                  
-    margin-top: 30px;
-    transition: 0.3s;
-}
-.checkout-btn:hover {
-    background-color: #dcc485; 
-    letter-spacing: 3px;                  
-}
-.Trust-Badge {
-    padding: 30px;
-    border: 1px solid var(--surface-color);
-    background-color: white;
-    max-width:none;
-    width: 100%;
-    margin-top: 20px;
-}
-.header-Trust{
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-.header-Trust h3 {
-    margin:0;
-    color: var(--text-color);
-    font-size: 20px;
-}
-.Trust-Badge p {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-}
-.summary-header p {
-    font-size: 12px;
-    color:var(--secondary-color);
-    line-height: 1.6;
-    margin: 0;
+    max-height: 473px;
 }
 
-.item {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+.heading {
+    margin: 20px;
+    animation: forwards fadeIn 1s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+.head-text {
+    font-size: 96px;
+}
+
+.head-details {
+    font-size: 18px;
+    margin: 20px;
+    max-width: 600px;
+    color: var(--primary);
+}
+
+.head-small-text {
+    margin: 10px;
+    margin-top: 60px;
+}
+
+.head-quote {
+    margin: 20px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    max-width: 400px;
+}
+
+.contacts {
+    position: relative;
+    flex-shrink: 0;
+    margin: 20px;
+    margin-top: 100px;
+    width: 661px;
+    height: 473px;
+    background-color: var(--secondary);
+}
+
+#phone-icon {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 50px;
+    animation: forwards fadeIn 2s ease-in-out;
+}
+
+#priority-support {
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 50px;
+    animation: forwards fadeIn 2s ease-in-out;
+}
+
+#priority-support-details {
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 80px;
+    opacity: 70%;
+    animation: forwards fadeIn 2s ease-in-out;
+}
+
+#direct-icon {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 150px;
+    animation: forwards fadeIn 2.5s ease-in-out;
+}
+
+#direct-support {
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 150px;
+    animation: forwards fadeIn 2.5s ease-in-out;
+}
+
+#direct-support-details {
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 180px;
+    opacity: 70%;
+    animation: forwards fadeIn 2.5s ease-in-out;
+}
+
+#facebook-icon {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 250px;
+    animation: forwards fadeIn 3s ease-in-out;
+}
+
+#facebook-support {
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 250px;
+    animation: forwards fadeIn 3s ease-in-out;
+}
+
+#facebook-support-details {
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 280px;
+    opacity: 70%;
+    animation: forwards fadeIn 3s ease-in-out;
+}
+
+#instagram-icon {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 350px;
+    animation: forwards fadeIn 3.5s ease-in-out;
+}
+
+#instagram-support {
+    position: absolute;
+    font-size: 20px;
+    left: 90px;
+    top: 350px;
+    animation: forwards fadeIn 3.5s ease-in-out;
+}
+
+#instagram-support-details {
+    position: absolute;
+    font-size: 15px;
+    left: 90px;
+    top: 380px;
+    opacity: 70%;
+    animation: forwards fadeIn 3.5s ease-in-out;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-section {
+    margin-top: 100px;
+}
+
+.full-name {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-address {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.row-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.row-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.booking-reference {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nature-of-inquiry {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.your-message {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#text-box {
+    width: 200%;
+    height: 49px;
+    opacity: 30%;
+    padding-left: 10px;
+}
+
+#text-box2 {
+    width: 240%;
+    height: 54px;
+    opacity: 30%;
+    padding-left: 10px;
+}
+
+#message-area {
+    width: 720px;
+    height: 122px;
+    opacity: 30%;
+    padding: 10px;
+}
+
+.submit-button {
+    width: 247px;
+    height: 52px;
+    margin: 20px;
+    border: none;
+    background-color: var(--secondary);
+
+}
+
+.plane-box {
+    position: relative;
+    flex-shrink: 0;
+    margin: 20px;
+    width: 750px;
+    height: 542px;
+    border-radius: 5px;
+    background-color: var(--tertiart);
+}
+
+#plane {
+    position: absolute;
+    margin: 20px;
+    top: 250px;
+    font-size: 90px;
+    color: var(--secondary);
+}
+
+.standard {
+    position: absolute;
+    font-size: 30px;
+    font-style: oblique;
+    padding: 20px;
+    bottom: 100px;
+    color: var(--off-white);
+    animation: forwards fadeIn 1.25s ease-in-out;
+}
+
+.standard-small-text {
+    position: absolute;
+    font-size: 16px;
+    font-style: oblique;
+    padding: 20px;
+    bottom: 50px;
+    color: var(--off-white);
+    animation: forwards fadeIn 1.5s ease-in-out;
 }

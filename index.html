@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Istabraq Official Website | Book International Flight Tickets</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet"  id="theme-stylesheet" href="./css/index.css">
+    <link rel="stylesheet" id="theme-stylesheet" href="./css/index.css">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,11 +186,9 @@
             </div>
         </section>
 
-<!--    search card section    -->
-
+        <!-- search form  -->
         <section class="search-section">
             <div class="search-card">
-
                 <form class="search-form" action="#" method="get">
                     <!-- row 1-->
                     <div class="search-first-row">
@@ -230,7 +228,7 @@
                                 <i class="fa-regular fa-calendar-days"></i>
                                 Departure
                             </label>
-                            <input class="search-field-input" type="date" required />
+                            <input class="search-field-input" type="date" required id="departure-date" />
                         </div>
 
                         <!-- Rrturn data -->
@@ -240,7 +238,7 @@
                                 Return
 
                             </label>
-                            <input class="search-field-input" type="date" required />
+                            <input class="search-field-input" type="date" required id="return-date" />
                         </div>
 
                     </div>
@@ -296,17 +294,15 @@
                         </div>
 
                         <!-- SEARCH BUTTON -->
-                        <button type="submit    " class="search-btn" onclick="storgeInput()">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <button id="search-button" type="submit" class="search-btn">
+                            <i class=" fa-solid fa-magnifying-glass"></i>
                             <span>Search</span>
                         </button>
 
                     </div>
 
-
                 </form>
             </div>
-            <!--Fast Card-->
         </section>
 
         <!--About section   -->
@@ -524,6 +520,7 @@
     </footer>
     <script src="js/main.js" defer></script>
     <script src="js/search.js"></script>
+    <script src="js/result.js"></script>
 </body>
 
 </html>

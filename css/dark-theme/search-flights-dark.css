@@ -1,12 +1,5 @@
 /* Variables */
 :root {
-    --primary: #3A1824;
-    --tertiary: #4C2D38;
-    --secondary: #cbb573;
-    --off-white: #f2f0ef;
-    --on-black: #000;
-    --dark-blue: #001524;
-
     /*Dark mode Colors*/
     --off-white: #f2f0ef;
     --on-black1: #000;
@@ -670,10 +663,6 @@ footer {
     color: color-mix(in srgb, var(--on-grey1), white 30%);
     ;
     color-scheme: dark;
-}
-
-.search-field-input[type="date"]:valid {
-    color: var(--off-white);
 }
 
 /* ── row 2 */
