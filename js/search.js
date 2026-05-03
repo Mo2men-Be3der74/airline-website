@@ -160,7 +160,7 @@ function storgeInput()
     }
 
     if (document.getElementById("cabin-first-class").checked) {
-        Class = "first";
+        Class = "first class";
     }
 
     localStorage.setItem("from", from);
@@ -169,5 +169,5 @@ function storgeInput()
     localStorage.setItem("departureDate", departureDate);
     localStorage.setItem("returnDate", returnDate);
 
-    window.location.href = "result.html";
+    window.location.href = "search-results.html";
 }
