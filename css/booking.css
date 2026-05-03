@@ -611,6 +611,7 @@ h3 {
     letter-spacing: 1px; 
 }
 .section-1 {
+    border: 1px solid black;
     background-color: white;
 }
 .seats-container {
@@ -672,6 +673,7 @@ h3 {
     margin-top: 60px;
 }
 .card {
+    border: 1px solid black;
     background-color: white;
     width: 100%;
     height: 300px;
@@ -705,7 +707,7 @@ h3 {
 }
 .Flight-Summary {
     padding: 25px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
     background-color: var(--primary-color);
     height: fit-content;
     width: 100%;
@@ -743,7 +745,7 @@ h3 {
 }
 .Trust-Badge {
     padding: 30px;
-    border: 1px solid var(--surface-color);
+    border: 1px solid black;
     background-color: white;
     max-width:none;
     width: 100%;

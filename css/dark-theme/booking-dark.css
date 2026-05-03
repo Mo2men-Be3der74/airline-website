@@ -291,6 +291,9 @@ input:checked+.slider::before {
     background: var(--on-grey1);
     z-index: 1000;
 }
+#lang-modal h3{
+    color: white;
+}
 
 /*For dark theme*/
 h3 {
@@ -630,6 +633,7 @@ h3 {
     letter-spacing: 1px; 
 }
 .section-1 {
+    border: 1px solid white;
     background-color: var(--dark-blue);
 }
 .seats-container {
@@ -691,6 +695,7 @@ h3 {
     margin-top: 60px;
 }
 .card {
+    border: 1px solid white;
     background-color: var(--dark-blue);
     width: 100%;
     height: 300px;
