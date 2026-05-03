@@ -1,4 +1,3 @@
-
 const flightTickets = [
   {
     from: "Cairo, Egypt (CAI)",
@@ -142,17 +141,6 @@ const departureDate = localStorage.getItem("departureDate") || '-';
 const returnDate = localStorage.getItem("returnDate") || '-';
 const filtered = [];
 
-// const Class = 'economy';
-// const from = 'cairo, egypt (cai)';
-// const to = "paris, france (cdg)";
-// const departureDate = "2026-06-10";
-// const returnDate = "2026-06-18";
-// let filtered = [];
-
-// if (from === "" || to === "") {
-//       resultContainer.innerHTML = "Please fill all the fields";
-// }
-
 if (from && to) {
       for (let i = 0; i < flightTickets.length; i++) {
             if (flightTickets[i].from.toLowerCase().includes(from) &&
@@ -186,12 +174,13 @@ for (let i = 0; i < filtered.length; i++) {
                         <div class="class">${t.Class}</div>
                         <div class="right">
                             <div class="price">${t.price}</div>
-                            <button class="btn">Book Now</button>
+                            <button class="btn" onclick="window.location.href='../../pages/booking/flight-details.html'">Book Now</button>
                         </div>
                     </div>
                         </div>
                         `;
 }
+
 // ADD THIS AT THE VERY END OF THE FILE
 localStorage.removeItem("from");
 localStorage.removeItem("to");
