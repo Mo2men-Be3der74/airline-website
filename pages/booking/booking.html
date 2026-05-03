@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/booking.css">
+    <link rel="stylesheet" id="theme-stylesheet" href="../../css/booking.css">
     <!-- Font Configuration    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,7 +193,7 @@ also better for search engines and a DOM predictability-->
                     <div class="seat booked">1A</div>
                     <div class="seat">1B</div>
                     <div class="aisle"></div>
-                    <div class="seat selected">1C</div>
+                    <div class="seat">1C</div>
                     <div class="seat booked">1D</div>
                     <div class="seat">2A</div>
                     <div class="seat">2B</div>
@@ -235,6 +234,13 @@ also better for search engines and a DOM predictability-->
                             </div>
                             <p>Dedicated lane access and early boarding for an effortless transition.</p>
                         </div>
+                        <div class="footer-card">
+                            <span class="price-card">$45</span>
+                            <label class="switch-card">
+                                <input type="checkbox">
+                                <span class="slider-card"></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="text-card">
@@ -246,6 +252,13 @@ also better for search engines and a DOM predictability-->
                             </div>
                             <p>Unlimited high-speed satellite link for work or cinematic leisure.</p>
                         </div>
+                        <div class="footer-card">
+                            <span class="price-card">$45</span>
+                            <label class="switch-card">
+                                <input type="checkbox">
+                                <span class="slider-card"></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="text-card">
@@ -256,6 +269,13 @@ also better for search engines and a DOM predictability-->
                                 <h3>Extended Wardrobe</h3>
                             </div>
                             <p>Additional 32kg allowance for your bespoke travel essentials.</p>
+                        </div>
+                        <div class="footer-card">
+                            <span class="price-card">$45</span>
+                            <label class="switch-card">
+                                <input type="checkbox">
+                                <span class="slider-card"></span>
+                            </label>
                         </div>
                     </div>
                 </section>
@@ -270,20 +290,20 @@ also better for search engines and a DOM predictability-->
                         <div class="item">
                          <div class="seat-bosion">
                             <p> Base Fare</p>
-                            <p> Royal suit (1C)</p>
+                            <p id="selected-seat-display">No seat selected</p>
                         </div>
                         <div class="price">
-                            <p> $1,240</p>
+                            <p> $0</p>
                         </div>
                     </div>
                     <hr>
                     <div class="item">
                         <div class="services">
                             <p> Extra Services</p>
-                            <p> 1x Extra Baggage</p>
+                            <p> not selected</p>
                         </div>
                         <div class="price">
-                            <p> $1,240</p>
+                            <p> $0</p>
                         </div>
                     </div>
                     <hr>
@@ -292,7 +312,7 @@ also better for search engines and a DOM predictability-->
                             <p>Total</p>
                         </div>
                         <div class="price">
-                            <p> $1,240</p>
+                            <p> $0</p>
                         </div>
                     </div>
                 </div>
@@ -374,6 +394,7 @@ also better for search engines and a DOM predictability-->
         </div>
     </footer>
     <script src="../../js/main.js" defer></script>
+    <script src="../../js/booking.js" ></script>
 </body>
 
 </html>

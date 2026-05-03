@@ -6,40 +6,17 @@
     --off-white: #f2f0ef;
     --on-black: #000;
     --dark-blue: #001524;
-}
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* 100vh = 100% of the viewport height */
-    margin: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-/* Makes any content in the main container to fill it up */
-main {
-    flex: 0;
-    min-height: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+    /*Dark mode Colors*/
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
 
 
-}
 
-p {
-    color: var(--tertiary);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
 
 }
 
@@ -53,7 +30,7 @@ p {
 }
 
 .upper-half {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
@@ -72,17 +49,18 @@ p {
 
 .bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
-    background-color: color-mix(in srgb, var(--primary), black 15%);
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
+    ;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
-    position: sticky !important;
+    position: sticky;
     /* default state */
-    z-index: 1000 !important;
-    top: 0 !important;
+    z-index: 1000;
+    top: 0;
 }
 
 .right-sec {
@@ -177,7 +155,7 @@ p {
 
 /* A. Change the Track color when checked */
 input:checked+.slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);
+    background-color: color-mix(in srgb, var(--on-grey2), black 2%);
     ;
     /* Dark Track Color */
 }
@@ -228,7 +206,7 @@ input:checked+.slider::before {
 }
 
 .btn {
-    background-color: color-mix(in srgb, var(--primary), black 35%);
+    background-color: var(--on-black1);
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
@@ -300,6 +278,7 @@ input:checked+.slider::before {
     /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
+    color: var(--off-white);
 
     width: 350px;
     /* more -> bigger -> wider */
@@ -309,8 +288,17 @@ input:checked+.slider::before {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border: none;
-    background: white;
+    background: var(--on-grey1);
     z-index: 1000;
+}
+
+/*For dark theme*/
+h3 {
+    color: var(--off-white);
+}
+
+.modal-label {
+    color: var(--off-white);
 }
 
 .modal-actions {
@@ -321,8 +309,8 @@ input:checked+.slider::before {
 }
 
 .apply-bttn {
-    background-color: var(--primary);
-    color: var(--off-white);
+    background-color: var(--secondary);
+    color: var(--on-black);
     padding: 6px 12px;
     border-radius: 6px;
     text-decoration: none;
@@ -335,13 +323,14 @@ input:checked+.slider::before {
 .custom-dropdown {
     position: relative;
     /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
-    border: 1px solid #ccc;
+    border: 1px solid var(--on-grey1);
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
-    background: white;
+    background: var(--on-grey2);
+    color: var(--off-white);
 }
 
 /* The list (hidden by default) */
@@ -353,8 +342,8 @@ input:checked+.slider::before {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: var(--on-grey2);
+    border: 1px solid var(--on-grey1);
     list-style: none;
     /*clear the normal list style*/
     padding: 0;
@@ -372,7 +361,8 @@ input:checked+.slider::before {
 }
 
 .dropdown-list li:hover {
-    background-color: #f0f0f0;
+    background-color: var(--on-grey1);
+    color: var(--off-white);
     /*    Make it grey on the selection on hovering*/
 }
 
@@ -382,19 +372,17 @@ input:checked+.slider::before {
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
-
-
 footer {
     margin-top: 0;
     padding-top: 0;
-    background-color: white;
 }
 
 .upper-footer {
+    background-color: color-mix(in srgb, var(--on-grey1), black 30%);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    border-top: 2px solid #EDE9E6;
+    border-top: 2px solid var(--on-grey2);
     padding: 12px;
     padding-left: 12px;
     padding-right: 12px;
@@ -411,13 +399,13 @@ footer {
     padding-left: 10px;
     font-size: large;
     margin-top: 0;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .upper-footer p {
     padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89
+    color: var(--off-white);
 }
 
 .upper-footer-ul {
@@ -433,13 +421,13 @@ footer {
 
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
+    color: var(--off-white);
     text-decoration: none;
 }
 
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 }
@@ -447,7 +435,7 @@ footer {
 .lower-footer {
     display: flex;
     align-items: center;
-    border-top: 2px solid #EDE9E6;
+    border-top: 2px solid var(--on-grey2);
     height: 60%;
 
 
@@ -466,13 +454,13 @@ footer {
 
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #8b8c89;
+    color: var(--off-white);
     text-decoration: none;
 }
 
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 
@@ -480,8 +468,8 @@ footer {
 
 .lower-footer-img {
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-        url("../assets/index-assets/lower-footer-pattern.png");
+    background:
+        url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
 
     background-size: contain;
     background-position: bottom center;
@@ -508,9 +496,40 @@ footer {
 
 
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100vh = 100% of the viewport height */
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Makes any content in the main container to fill it up */
+main {
+    flex: 0;
+    min-height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
 
 
+}
 
+p {
+    color: var(--tertiary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+
+}
 :root {
       --primary-color: #3A1824;
       --secondary-color: #cbb573;
