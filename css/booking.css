@@ -611,6 +611,7 @@ h3 {
     letter-spacing: 1px; 
 }
 .section-1 {
+    border: 1px solid black;
     background-color: white;
 }
 .seats-container {
@@ -672,6 +673,7 @@ h3 {
     margin-top: 60px;
 }
 .card {
+    border: 1px solid black;
     background-color: white;
     width: 100%;
     height: 300px;
@@ -700,12 +702,56 @@ h3 {
     justify-content: space-between;
     margin: 30px;
 }
+
+.switch-card {
+    position: relative;
+    display: inline-block;
+    width: 48px; 
+    height: 24px; 
+}
+
+.switch-card input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-card {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #E8E4E1; 
+    transition: .4s;
+    border-radius: 34px;
+}
+
+
+.slider-card:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:checked + .slider-card {
+    background-color: var(--primary); 
+}
+
+
+input:checked + .slider-card:before {
+    transform: translateX(24px);
+}
 .right-side {
     flex: 0 1 350px;
 }
 .Flight-Summary {
     padding: 25px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
     background-color: var(--primary-color);
     height: fit-content;
     width: 100%;
@@ -743,7 +789,7 @@ h3 {
 }
 .Trust-Badge {
     padding: 30px;
-    border: 1px solid var(--surface-color);
+    border: 1px solid black;
     background-color: white;
     max-width:none;
     width: 100%;

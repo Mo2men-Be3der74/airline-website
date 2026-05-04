@@ -1,6 +1,5 @@
-
 const flightTickets = [
-  {
+{
     from: "Cairo, Egypt (CAI)",
     to: "Paris, France (CDG)",
     startTime: "08:30 AM",
@@ -10,8 +9,8 @@ const flightTickets = [
     returnDate: "2026-06-18",
     Class: "Economy",
     price: "$320"
-  },
-  {
+},
+{
     from: "Cairo, Egypt (CAI)",
     to: "London, UK (LHR)",
     startTime: "10:00 AM",
@@ -21,8 +20,8 @@ const flightTickets = [
     returnDate: "2026-06-20",
     Class: "Business",
     price: "$540"
-  },
-  {
+},
+{
     from: "Dubai, UAE (DXB)",
     to: "Tokyo, Japan (NRT)",
     startTime: "01:15 PM",
@@ -32,8 +31,8 @@ const flightTickets = [
     returnDate: "2026-07-14",
     Class: "Economy",
     price: "$690"
-  },
-  {
+},
+{
     from: "New York, USA (JFK)",
     to: "Los Angeles, USA (LAX)",
     startTime: "07:00 AM",
@@ -43,8 +42,8 @@ const flightTickets = [
     returnDate: "2026-05-29",
     Class: "First Class",
     price: "$880"
-  },
-  {
+},
+{
     from: "Berlin, Germany (BER)",
     to: "Rome, Italy (FCO)",
     startTime: "09:45 AM",
@@ -54,8 +53,8 @@ const flightTickets = [
     returnDate: "2026-06-11",
     Class: "Economy",
     price: "$180"
-  },
-  {
+},
+{
     from: "Madrid, Spain (MAD)",
     to: "Barcelona, Spain (BCN)",
     startTime: "03:20 PM",
@@ -65,8 +64,8 @@ const flightTickets = [
     returnDate: "2026-05-21",
     Class: "Business",
     price: "$140"
-  },
-  {
+},
+{
     from: "Istanbul, Turkey (IST)",
     to: "Moscow, Russia (DME)",
     startTime: "06:10 PM",
@@ -76,8 +75,8 @@ const flightTickets = [
     returnDate: "2026-07-17",
     Class: "Economy",
     price: "$260"
-  },
-  {
+},
+{
     from: "Sydney, Australia (SYD)",
     to: "Singapore, Singapore (SIN)",
     startTime: "11:00 AM",
@@ -87,8 +86,8 @@ const flightTickets = [
     returnDate: "2026-08-16",
     Class: "Business",
     price: "$730"
-  },
-  {
+},
+{
     from: "Toronto, Canada (YYZ)",
     to: "Chicago, USA (ORD)",
     startTime: "02:40 PM",
@@ -98,8 +97,8 @@ const flightTickets = [
     returnDate: "2026-06-30",
     Class: "Economy",
     price: "$150"
-  },
-  {
+},
+{
     from: "Riyadh, Saudi Arabia (RUH)",
     to: "Cairo, Egypt (CAI)",
     startTime: "05:50 AM",
@@ -109,8 +108,8 @@ const flightTickets = [
     returnDate: "2026-06-02",
     Class: "Economy",
     price: "$210"
-  },
-  {
+},
+{
     from: "Paris, France (CDG)",
     to: "Dubai, UAE (DXB)",
     startTime: "09:30 PM",
@@ -120,8 +119,8 @@ const flightTickets = [
     returnDate: "2026-07-29",
     Class: "First Class",
     price: "$980"
-  },
-  {
+},
+{
     from: "Bangkok, Thailand (BKK)",
     to: "Seoul, South Korea (ICN)",
     startTime: "12:00 PM",
@@ -131,49 +130,38 @@ const flightTickets = [
     returnDate: "2026-06-23",
     Class: "Economy",
     price: "$340"
-  }
+}
 ];
 
 const resultsContainer = document.getElementById("result");
-const Class = (localStorage.getItem("class") || "").toLowerCase();
-const from = localStorage.getItem("from") || "";
-const to = localStorage.getItem("to") || "";
-const departureDate = localStorage.getItem("departureDate") || "";
-const returnDate = localStorage.getItem("returnDate") || "";
+const Class = (localStorage.getItem("class")).toLowerCase();
+const from = localStorage.getItem("from") || " ";
+const to = localStorage.getItem("to") || " ";
+const departureDate = localStorage.getItem("departureDate") || '-';
+const returnDate = localStorage.getItem("returnDate") || '-';
 const filtered = [];
 
-// const Class = 'economy';
-// const from = 'cairo, egypt (cai)';
-// const to = "paris, france (cdg)";
-// const departureDate = "2026-06-10";
-// const returnDate = "2026-06-18";
-// let filtered = [];
-
-// if (from === "" || to === "") {
-//       resultContainer.innerHTML = "Please fill all the fields";
-// }
-
 if (from && to) {
-      for (let i = 0; i < flightTickets.length; i++) {
+    for (let i = 0; i < flightTickets.length; i++) {
             if (flightTickets[i].from.toLowerCase().includes(from) &&
                 flightTickets[i].to.toLowerCase().includes(to) &&
                 Class === flightTickets[i].Class.toLowerCase() &&
                 flightTickets[i].departureDate.includes(departureDate) &&
                 flightTickets[i].returnDate.includes(returnDate)) {
-                  filtered.push(flightTickets[i]);
+                filtered.push(flightTickets[i]);
             }
-      }
+    }
 }
 
 
 let t;
 
 for (let i = 0; i < filtered.length; i++) {
-      t = filtered[i];
+    t = filtered[i];
 
-      resultsContainer.innerHTML += `
+    resultsContainer.innerHTML += `
                         <div class="card">
-                              <div class="icon"><i class="fa-solid fa-plane"></i></div>
+                        <div class="icon"><i class="fa-solid fa-plane"></i></div>
                         <div class="destination">
                             <div class="from">${t.from}</div>
                             <div class="to">${t.to}</div>
@@ -186,18 +174,16 @@ for (let i = 0; i < filtered.length; i++) {
                         <div class="class">${t.Class}</div>
                         <div class="right">
                             <div class="price">${t.price}</div>
-                            <button class="btn">Book Now</button>
+                            <button class="btn-secondary" id="ticket_${i}" onclick='bookTicket(${JSON.stringify(t)})'>Book Now</button>
                         </div>
                     </div>
                         </div>
                         `;
 }
+
 // ADD THIS AT THE VERY END OF THE FILE
 localStorage.removeItem("from");
 localStorage.removeItem("to");
 localStorage.removeItem("class");
 localStorage.removeItem("departureDate");
 localStorage.removeItem("returnDate");
-
-// This clears the data AFTER it has been used to show the flight cards
-localStorage.clear();

@@ -1,5 +1,12 @@
 /* Variables */
 :root {
+    --primary: #3A1824;
+    --tertiary: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524;
+
     /*Dark mode Colors*/
     --off-white: #f2f0ef;
     --on-black1: #000;
@@ -7,19 +14,19 @@
     --on-grey1: #1c1c1d;
     --on-grey2: #252728;
     --secondary: #cbb573;
-}
 
-* {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+
+
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--on-grey2);
 }
-
 /* header container (main/center) */
 .header {
     display: flex;
@@ -50,7 +57,6 @@ body {
 .bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--on-grey1), black 30%);
-    ;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
@@ -210,10 +216,8 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
-    /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
-    /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
 
 }
@@ -491,394 +495,133 @@ footer {
     /* Adds space after the pipe */
     color: #ccc;
 }
-
-
-/*Search CSS from Marwan's file*/
-/* Label */
-.search-field-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--secondary);
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.search-field-label i {
-    font-size: 0.74rem;
-}
-
-/* city list  */
-
-.city-list {
-    position: absolute;
-    /**/
-    background-color: var(--on-grey2);
-    color: var(--off-white);
-    /*Edited*/
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    height: 200px;
-    overflow-y: auto;
-    width: 200px;
-    display: none;
-}
-
-.city-list div {
-    padding: 14px;
-    cursor: pointer;
-    color: var(--tertiart);
-    font-size: 0.9rem;
-}
-
-.city-list div:hover {
-    background-color: #cbb573;
-    color: #4C2D38;
-}
-
-/* Divider */
-.search-footer-vr {
-    width: 1px;
-    height: 100px;
-    background: rgba(58, 24, 36, 0.1);
-}
-
-
-
-.search-hero {
-    /* background: var(--off-white); */
-    padding: 64px 32px 0;
-    max-width: 1280px;
-    margin: auto;
-    width: 100%;
-}
-
-.search-div-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--tertiart);
-    padding: 10px 18px;
-    border-radius: 40px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.search-eyebrow {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--secondary);
-}
-
-.search-eyebrow i {
-    font-size: 0.7rem;
-}
-
-
-.search-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 4.1rem;
-    color: #f2f0ef;
-    margin-bottom: 10px;
-}
-
-.search-title em {
-    color: #cbb573;
-}
-
-.search-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.99rem;
-    color: rgba(242, 240, 239, 0.55);
-    font-weight: 300;
-    width: 440px;
-    margin-bottom: 8px;
-}
-
-.search-section {
-    width: 1280px;
-    margin-bottom: 50px;
-    padding: 40px 80px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.search-card {
-    background: var(--on-grey1);
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    border: 1px solid rgba(58, 24, 36, 0.07);
-}
-
-.search-form {
-    display: flex;
-    flex-direction: column;
-}
-
-/* row 1  */
-
-.search-first-row {
-    display: flex;
-    border-bottom: 1px solid rgba(203, 181, 115, 0.1);
-}
-
-.search-field {
-    border-right: 1px solid rgba(203, 181, 115, 0.1);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 28px 30px 24px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    transition: all 0.15s ease;
-}
-
-
-
-
-/* Input */
-.search-field-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1.08rem;
-    font-weight: 500;
-    color: var(--off-white);
-    width: 100%;
-}
-
-.search-field-input::placeholder {
-    color: color-mix(in srgb, var(--on-grey1), white 30%);
-    ;
-    font-weight: 400;
-}
-
-.search-field-input[type="date"] {
-    color: color-mix(in srgb, var(--on-grey1), white 30%);
-    ;
-    color-scheme: dark;
-}
-
-/* ── row 2 */
-.search-form-footer {
-    display: flex;
-    align-items: center;
-    padding: 24px 16px 24px 16px;
-}
-
-/* Passengers */
-.search-footer-field--passengers {
-    display: flex;
-    flex-direction: column;
-    padding: 16px 30px;
-    min-width: 120px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.search-footer-field-label {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-.search-footer-field-label i {
-    font-size: 0.74rem;
-}
-
-.search-footer-field-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1.08rem;
-    font-weight: 600;
-    color: var(--off-white);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    width: 48px;
-}
-
-.search-footer-field-input[type="number"] {
-    width: 100%;
-}
-
-
-/* Cabin */
-.search-cabin-group {
-    display: flex;
-    flex-direction: column;
-    padding: 16px 30px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.search-cabin-pills {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.search-cabin-radio {
-    display: none;
-}
-
-.search-cabin-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 18px;
-    border-radius: 40px;
-    border: 1.5px solid rgba(242, 240, 239, 0.15);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: rgba(242, 240, 239, 0.5);
-    cursor: pointer;
-    transition: all 0.15s ease;
-}
-
-.search-cabin-pill i {
-    font-size: 0.65rem;
-}
-
-.search-cabin-radio:checked+.search-cabin-pill {
-    background: rgba(203, 181, 115, 0.08);
-    border-color: var(--secondary);
-    color: var(--secondary);
-}
-
-.search-cabin-pill:hover {
-    border-color: var(--secondary);
-    color: var(--off-white);
-    /*    EDited to offwhite*/
-}
-
-
-/* Button */
-.search-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 17px 36px;
-    background: var(--secondary);
-    color: var(--on-grey1);
-    border: none;
-    border-radius: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    margin-left: auto;
-    transition: all 0.15s ease;
-}
-
-.search-btn i {
-    font-size: 0.8rem;
-}
-
-.search-btn:hover {
-    background: #d4c080;
-    color: var(--on-black);
-    box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
-}
-
-
-.tickets {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: var(--off-white);
-}
-
-.tickets .ticket-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-    width: 100%;
-}
-
-.tickets .ticket-cards .card {
+.main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--on-grey1);
-    border-radius: 10px;
-    height: 150px;
-    padding: 15px;
-    margin: 30px;
-    transition: all 0.3s ease;
-    padding-left: 0;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-
-.tickets .ticket-cards .card .icon {
-    width: 20px;
+section{
+    margin-bottom: 10px;
 }
-
-.tickets .ticket-cards .card .icon i {
-    color: #cbb573;
-    font-size: 35px;
-}
-
-.tickets .ticket-cards .card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.50);
-    transition: all 0.3s ease;
-}
-
-.tickets .ticket-cards .card .time {
+section h2{
+    font-size: 28px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.tickets .ticket-cards .card .destination {
-    display: flex;
-    gap: 40px;
-}
-
-.tickets .ticket-cards .card .destination .from,
-.tickets .ticket-cards .card .destination .to {
-    color: #f2f0ef;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.tickets .ticket-cards .card .right {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
     color: var(--off-white);
 }
-
-.tickets .ticket-cards .card .right .price {
-    color: #cbb573;
-    font-size: 20px;
-    font-weight: bold;
+.number{
+    color: var(--secondary);
+    font-weight: 300;
 }
-
-.tickets .ticket-cards .card .right .btn-secondary {
-    outline: none;
+.form-info{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+.form{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.form label{
+    display: block;
+    margin-bottom: 10px;
+    color: var(--off-white);
+    font-size: 12px;
+    font-weight: 500px;
+    text-transform: uppercase;
+}
+.form input{
+    width: 86%;
+    padding: 10px;
+    border: 1px solid var(--on-black);
+    border-radius: 4px;
+    opacity: 0.4;
+    background-color: var(--on-grey1);
+    font-size: 10px;
+    color: var(--off-white);
+}
+.form-row{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+.visa{
+    background-color: var(--on-black2);
     border: none;
-    color: #cbb573;
-    background-color: #3A1824;
-    padding: 10px 15px;
-    border-radius: 5px;
-    width: 150px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    color: var(--off-white);
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
-
-.tickets .ticket-cards .card .right .btn-secondary:hover {
-    background-color: #4C2D38;
-    color: #cbb573;
-    transition: all 0.3s ease;
+.journey{
+    background-color: var(--on-black2);
+    color: var(--off-white);
+    border-radius: 5px;
+    height: fit-content;
+    width: 30%;
+    padding: 40px;
+}
+.journey-info{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    letter-spacing: 2px;
+}
+.route-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary);
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    color: var(--secondary);
+}
+.place{
+    color: var(--secondary)
+}
+.journey-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+.price-tax{
+    margin-bottom: 20px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+.confirm{
+    background-color: var(--secondary);
+    border: none;
+    color: var(--off-white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.confirm:hover{
+    background-color: #b8a564;
 }

@@ -5,9 +5,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Istabraq Official Website | Book International Flight Tickets</title>
-      <link rel="stylesheet" href="../../css/flight-details.css">
-      <!--Added -->
-      <link rel="stylesheet" href="../../css/common.css">
+      <link id="theme-stylesheet" rel="stylesheet" href="../../css/flight-details.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -252,20 +250,7 @@ also better for search engines and a DOM predictability-->
             <div class="right">
                   <div class="summary">
                         <div class="title">Fare Summary</div>
-                        <div class="items">
-                              <div class="item">
-                                    <div class="left">Base Fare</div>
-                                    <div class="right">£4,250.00</div>
-                              </div>
-                              <div class="item">
-                                    <div class="left">Taxes & Fees</div>
-                                    <div class="right">£482.50</div>
-                              </div>
-                              <div class="item">
-                                    <div class="left">Carbon Offset (Optional)</div>
-                                    <div class="ri">£45.00</div>
-                              </div>
-                        </div>
+                        
                         <div class="total">
                               <div class="head">GBP</div>
                               <div class="amount">
@@ -273,7 +258,7 @@ also better for search engines and a DOM predictability-->
                                     <div class="right">£4,777.50</div>
                               </div>
                         </div>
-                        <button class="btn">Book Now</button>
+                        <button class="btn" onclick="window.location.href='../booking/booking.html'">Book Now</button>
                         <div class="terms">By clicking book now you agree to our Terms of Carriage and Privacy Policy.
                               Cancellation fees apply after 24 hours.</div>
                         <div class="features">
@@ -353,7 +338,10 @@ also better for search engines and a DOM predictability-->
                   </div>
             </div>
       </footer>
-      <script src="/js/main.js"></script>
+      <script src="../../js/main.js"></script>
+      <script src="../../js/search.js"></script>
+      <script src="../../js/result.js"></script>
+      <script src="../../js/details.js"></script>
 </body>
 
 
