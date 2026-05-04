@@ -553,6 +553,12 @@ footer {
       margin-bottom: 16px;
 }
 
+.flight-details .left .flight-small .class {
+      color: var(--secondary-color);
+      font-size: 30px !important;
+      font-weight: bold;
+}
+
 .flight-details .left .destination {
       display: flex;
       gap: 20px;
