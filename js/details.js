@@ -25,3 +25,8 @@ if (document.querySelector(".flight-details")) {
             price.innerHTML = ticket.price;
       }
 }
+const totalSum = baseFare + extraTotal;
+const totalData = {
+    totalAmount: totalSum
+};
+localStorage.setItem('bookingTotalObj', JSON.stringify(totalData));
