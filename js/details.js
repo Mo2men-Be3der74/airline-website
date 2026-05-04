@@ -32,11 +32,11 @@ const confirmaiton = {
       to : document.querySelector(".main .journey .to"),
       departureDate : document.querySelector(".main .journey-details .value"),
       Class : document.querySelector(".main .journey-details #class"),
-      price : document.querySelector(".main .price-tax .price #baseprice"),
+      price : document.querySelector(".main .price-tax #totalPrice"),
 }
 
 confirmaiton.from.innerHTML = ticket.from;
 confirmaiton.to.innerHTML = ticket.to;
 confirmaiton.departureDate.innerHTML = ticket.departureDate;
 confirmaiton.Class.innerHTML = ticket.Class;
-confirmaiton.price.innerHTML = PRICE;
+confirmaiton.price.innerHTML = ticket.price;
