@@ -174,7 +174,7 @@ for (let i = 0; i < filtered.length; i++) {
                         <div class="class">${t.Class}</div>
                         <div class="right">
                             <div class="price">${t.price}</div>
-                            <button class="btn" id="ticket_${i}" onclick='bookTicket(${JSON.stringify(t)})'>Book Now</button>
+                            <button class="btn-secondary" id="ticket_${i}" onclick='bookTicket(${JSON.stringify(t)})'>Book Now</button>
                         </div>
                     </div>
                         </div>
