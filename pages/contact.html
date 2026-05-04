@@ -87,7 +87,7 @@ also better for search engines and a DOM predictability-->
         <br>
         <div class="open-lang-modal">
             <!--   Country choosing div     -->
-            <label style="color: var(--tertiary); font-weight: bold;">Country*</label>
+            <label class="modal-label" style="color: var(--tertiary); font-weight: bold;">Country*</label>
             <div class="custom-dropdown" id="country-dropdown">
                 <div class="dropdown-const">
                     <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" width="20" height="15"> Egypt
@@ -139,7 +139,7 @@ also better for search engines and a DOM predictability-->
                 <!--            The drop down list with its options-->
             </div>
             <!-- language choosing div-->
-            <label style="color: var(--tertiary); font-weight: bold;">Language*</label>
+            <label class="modal-label" style="color: var(--tertiary); font-weight: bold;">Language*</label>
             <div class="custom-dropdown" id="lang-dropdown">
                 <div class="dropdown-const">English</div>
                 <ul class="dropdown-list">
@@ -169,7 +169,7 @@ also better for search engines and a DOM predictability-->
 
     <!-- Mazen  -->
     <div class="content">
-        <section class="top-section">
+        <section  id="middle" class="top-section">
             <div class="heading">
                 <div class="head-details">
                     <p class="head-text">How Can We Help You ?</p>
@@ -185,70 +185,93 @@ also better for search engines and a DOM predictability-->
                     ensuring the future of flight is co-authored by you.</p>
             </div>
         </section>
-        <section class="middle">
+        <section id="middle-bottom" class="middle">
             <div class="faq-section">
-                <p class="faq">Frequently Asked Questions :</p>
                 <div class="faq-questions">
-                    <button id="booking" class="question-title">Booking</button>
+                    <p class="faq">Frequently Asked Questions :</p>
+                    <button id="booking" class="question-title , activee">Booking</button>
                     <button id="baggage" class="question-title">Baggage</button>
                     <button id="seats" class="question-title">Seats</button>
                 </div>
+                <div class="faq-answers">
+                    <p class="faq-title">What is a booking reference?</p>
+                    <p class="faq-answer">A booking reference, also known as a Passenger Name Record (PNR), is a unique identifier for your reservation. It typically consists of six alphanumeric characters (e.g., B8XYZ6) or a 12-digit numerical characters.</p>
+                    <p class="faq-title2">What is the validity of an e-ticket?</p>
+                    <p class="faq-answer2">The validity of an e-ticket depends on the fare rules associated with your booking. Typically, tickets are valid for one year from the date of issue.</p>
+                    <p class="faq-title3">How do I select my seat?</p>
+                    <p class="faq-answer3">Seat selection is subject to availability and the fare you have purchased. You can select your seat during the booking process or through your online account after booking.</p>
+                </div>
             </div>
         </section>
-        <div class="contacts">
-                <div class="support">
-                    <i id="phone-icon" class="fa-solid fa-phone"></i>
-                    <p id="priority-support">Priority Support</p>
-                    <p id="priority-support-details">Available 24/7 for Club members and active itineraries.</p>
+        <section  id="bottom">
+            <div class="contacts">
+                <div class="contact-row1">
+                    <div class="support">
+                        <i id="phone-icon" class="fa-solid fa-phone"></i>
+                        <p id="priority-support">Priority Support</p>
+                        <p id="priority-support-details">Available 24/7 for Club members and active itineraries.</p>
+                    </div>
+                    <div class="direct">
+                        <i id="direct-icon" class="fa-solid fa-envelope"></i>
+                        <p id="direct-support">Direct Correspond</p>
+                        <p id="direct-support-details">relations@example.com</p>
+                    </div>
                 </div>
-                <div class="direct">
-                    <i id="direct-icon" class="fa-solid fa-envelope"></i>
-                    <p id="direct-support">Direct Correspond</p>
-                    <p id="direct-support-details">relations@example.com</p>
-                </div>
-                <div class="facebook">
-                    <i id="facebook-icon" class="fa-brands fa-facebook"></i>
-                    <p id="facebook-support">Facebook</p>
-                    <p id="facebook-support-details">facebook.com/example</p>
-                </div>
-                <div class="instagram">
-                    <i id="instagram-icon" class="fa-brands fa-instagram"></i>
-                    <p id="instagram-support">Instagram</p>
-                    <p id="instagram-support-details">instagram.com/example</p>
+                <div class="contact-row2">
+                    <div class="facebook">
+                        <i id="facebook-icon" class="fa-brands fa-facebook"></i>
+                        <p id="facebook-support">Facebook</p>
+                        <p id="facebook-support-details">facebook.com/example</p>
+                    </div>
+                    <div class="instagram">
+                        <i id="instagram-icon" class="fa-brands fa-instagram"></i>
+                        <p id="instagram-support">Instagram</p>
+                        <p id="instagram-support-details">instagram.com/example</p>
+                    </div>
                 </div>
             </div>
-            <form class="form-section" action="/js/data.js" method="post">
-                <div class="row-1">
-                    <div class="full-name">
-                        <label class="sec-form-text">FULL NAME:</label>
-                        <input type="text" id="text-box" name="user_name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="email-address">
-                        <label class="sec-form-text">EMAIL ADDRESS:</label>
-                        <input type="text" id="text-box" name="email_address" placeholder="Enter your email" required>
-                    </div>
+        </section>
+            <div class="middle-bottom">
+                <div class="form-container">
+                    <form class="form-section" action="/js/data.js" method="post">
+                        <div class="row-1">
+                            <div class="full-name">
+                                <label class="sec-form-text">FULL NAME:</label>
+                                <input type="text" id="text-box" name="user_name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="email-address">
+                                <label class="sec-form-text">EMAIL ADDRESS:</label>
+                                <input type="text" id="text-box" name="email_address" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="row-2">
+                            <div class="booking-reference">
+                                <label class="sec-form-text">BOOKING REFERENCE:</label>
+                                <input type="text" id="text-box" name="booking" placeholder="NL-7829-X" required>
+                            </div>
+                            <div class="nature-of-inquiry">
+                                <label class="sec-form-text">NATURE OF INQUIRY:</label>
+                                <select id="text-box2" name="nature" required>
+                                    <option value="Purpose-driven">Purpose driven</option>
+                                    <option value="Evidence-based">Evidence based</option>
+                                    <option value="exploratory">Exploratory</option>
+                                    <option value="action-oriented">Action oriented</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="your-message">
+                            <label class="sec-form-text">YOUR MESSAGE:</label>
+                            <textarea id="message-area" name="message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button class="submit-button">SUBMIT FEEDBACK</button>
+                    </form>
                 </div>
-                <div class="row-2">
-                    <div class="booking-reference">
-                        <label class="sec-form-text">BOOKING REFERENCE:</label>
-                        <input type="text" id="text-box" name="booking" placeholder="NL-7829-X" required>
-                    </div>
-                    <div class="nature-of-inquiry">
-                        <label class="sec-form-text">NATURE OF INQUIRY:</label>
-                        <select id="text-box2" name="nature" required>
-                            <option value="Purpose-driven">Purpose driven</option>
-                            <option value="Evidence-based">Evidence based</option>
-                            <option value="exploratory">Exploratory</option>
-                            <option value="action-oriented">Action oriented</option>
-                        </select>
-                    </div>
+                <div class="form-image">
+                    <img id="form-image"src="https://wallpaperaccess.com/full/254381.jpg">
+                    <p class="form-image-text">Expand your horizons</p>
+                    <p class="form-image-small-text">exploring new interests, and embracing diverse experiences to enrich your life.</p>
                 </div>
-                <div class="your-message">
-                    <label class="sec-form-text">YOUR MESSAGE:</label>
-                    <textarea id="message-area" name="message" placeholder="Enter your message" required></textarea>
-                </div>
-                <button class="submit-button">SUBMIT FEEDBACK</button>
-            </form>
+            </div>
     </div>
 
     <footer>
@@ -282,9 +305,9 @@ also better for search engines and a DOM predictability-->
                 <!--            Support part-->
                 <ul class="upper-footer-ul" style="text-transform: capitalize;">
                     <li><a href="index.html"> Help Center</a></li>
-                    <li><a href=./pages/booking/search-flights.html> FAQ</a></li>
-                    <li><a href=./pages/user/profile.html> Contact us</a></li>
-                    <li><a href=./pages/contact.html> FeedBack</a></li>
+                    <li><a href="#middle"> FAQ</a></li>
+                    <li><a href="#middle-bottom"> Contact us</a></li>
+                    <li><a href="#bottom"> FeedBack</a></li>
 
                 </ul>
             </div>
