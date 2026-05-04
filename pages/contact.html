@@ -24,7 +24,7 @@ that's why I've put the util and the login in a standalone div to make sure that
             <div class="right-sec">
                 <!--            Second child-->
 
-                <div class="auth-bttns">
+                <div class="auth-bttns" id="auth-container">
                     <!--                auth-bttns class if I decided to add any other button or element beside it-->
                     <a href="/pages/auth/login.html" class="btn btn-login">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -169,7 +169,7 @@ also better for search engines and a DOM predictability-->
 
     <!-- Mazen  -->
     <div class="content">
-        <section  id="middle" class="top-section">
+        <section id="middle" class="top-section">
             <div class="heading">
                 <div class="head-details">
                     <p class="head-text">How Can We Help You ?</p>
@@ -195,15 +195,20 @@ also better for search engines and a DOM predictability-->
                 </div>
                 <div class="faq-answers">
                     <p class="faq-title">What is a booking reference?</p>
-                    <p class="faq-answer">A booking reference, also known as a Passenger Name Record (PNR), is a unique identifier for your reservation. It typically consists of six alphanumeric characters (e.g., B8XYZ6) or a 12-digit numerical characters.</p>
+                    <p class="faq-answer">A booking reference, also known as a Passenger Name Record (PNR), is a unique
+                        identifier for your reservation. It typically consists of six alphanumeric characters (e.g.,
+                        B8XYZ6) or a 12-digit numerical characters.</p>
                     <p class="faq-title2">What is the validity of an e-ticket?</p>
-                    <p class="faq-answer2">The validity of an e-ticket depends on the fare rules associated with your booking. Typically, tickets are valid for one year from the date of issue.</p>
+                    <p class="faq-answer2">The validity of an e-ticket depends on the fare rules associated with your
+                        booking. Typically, tickets are valid for one year from the date of issue.</p>
                     <p class="faq-title3">How do I select my seat?</p>
-                    <p class="faq-answer3">Seat selection is subject to availability and the fare you have purchased. You can select your seat during the booking process or through your online account after booking.</p>
+                    <p class="faq-answer3">Seat selection is subject to availability and the fare you have purchased.
+                        You can select your seat during the booking process or through your online account after
+                        booking.</p>
                 </div>
             </div>
         </section>
-        <section  id="bottom">
+        <section id="bottom">
             <div class="contacts">
                 <div class="contact-row1">
                     <div class="support">
@@ -231,47 +236,49 @@ also better for search engines and a DOM predictability-->
                 </div>
             </div>
         </section>
-            <div class="middle-bottom">
-                <div class="form-container">
-                    <form class="form-section" action="/js/data.js" method="post">
-                        <div class="row-1">
-                            <div class="full-name">
-                                <label class="sec-form-text">FULL NAME:</label>
-                                <input type="text" id="text-box" name="user_name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="email-address">
-                                <label class="sec-form-text">EMAIL ADDRESS:</label>
-                                <input type="text" id="text-box" name="email_address" placeholder="Enter your email" required>
-                            </div>
+        <div class="middle-bottom">
+            <div class="form-container">
+                <form class="form-section" action="/js/data.js" method="post">
+                    <div class="row-1">
+                        <div class="full-name">
+                            <label class="sec-form-text">FULL NAME:</label>
+                            <input type="text" id="text-box" name="user_name" placeholder="Enter your name" required>
                         </div>
-                        <div class="row-2">
-                            <div class="booking-reference">
-                                <label class="sec-form-text">BOOKING REFERENCE:</label>
-                                <input type="text" id="text-box" name="booking" placeholder="NL-7829-X" required>
-                            </div>
-                            <div class="nature-of-inquiry">
-                                <label class="sec-form-text">NATURE OF INQUIRY:</label>
-                                <select id="text-box2" name="nature" required>
-                                    <option value="Purpose-driven">Purpose driven</option>
-                                    <option value="Evidence-based">Evidence based</option>
-                                    <option value="exploratory">Exploratory</option>
-                                    <option value="action-oriented">Action oriented</option>
-                                </select>
-                            </div>
+                        <div class="email-address">
+                            <label class="sec-form-text">EMAIL ADDRESS:</label>
+                            <input type="text" id="text-box" name="email_address" placeholder="Enter your email"
+                                required>
                         </div>
-                        <div class="your-message">
-                            <label class="sec-form-text">YOUR MESSAGE:</label>
-                            <textarea id="message-area" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <div class="row-2">
+                        <div class="booking-reference">
+                            <label class="sec-form-text">BOOKING REFERENCE:</label>
+                            <input type="text" id="text-box" name="booking" placeholder="NL-7829-X" required>
                         </div>
-                        <button class="submit-button">SUBMIT FEEDBACK</button>
-                    </form>
-                </div>
-                <div class="form-image">
-                    <img id="form-image"src="https://wallpaperaccess.com/full/254381.jpg">
-                    <p class="form-image-text">Expand your horizons</p>
-                    <p class="form-image-small-text">exploring new interests, and embracing diverse experiences to enrich your life.</p>
-                </div>
+                        <div class="nature-of-inquiry">
+                            <label class="sec-form-text">NATURE OF INQUIRY:</label>
+                            <select id="text-box2" name="nature" required>
+                                <option value="Purpose-driven">Purpose driven</option>
+                                <option value="Evidence-based">Evidence based</option>
+                                <option value="exploratory">Exploratory</option>
+                                <option value="action-oriented">Action oriented</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="your-message">
+                        <label class="sec-form-text">YOUR MESSAGE:</label>
+                        <textarea id="message-area" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button class="submit-button">SUBMIT FEEDBACK</button>
+                </form>
             </div>
+            <div class="form-image">
+                <img id="form-image" src="https://wallpaperaccess.com/full/254381.jpg">
+                <p class="form-image-text">Expand your horizons</p>
+                <p class="form-image-small-text">exploring new interests, and embracing diverse experiences to enrich
+                    your life.</p>
+            </div>
+        </div>
     </div>
 
     <footer>

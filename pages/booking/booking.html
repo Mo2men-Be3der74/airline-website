@@ -23,7 +23,7 @@ that's why I've put the util and the login in a standalone div to make sure that
             <div class="right-sec">
                 <!--            Second child-->
 
-                <div class="auth-bttns">
+                <div class="auth-bttns" id="auth-container">
                     <!--                auth-bttns class if I decided to add any other button or element beside it-->
                     <a href="../../pages/auth/login.html" class="btn btn-login">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -188,41 +188,41 @@ also better for search engines and a DOM predictability-->
                         </div>
                     </div>
                 </div>
-               <div class="section-1">
-                <div class="seats-container">
-                    <div class="seat booked">1A</div>
-                    <div class="seat">1B</div>
-                    <div class="aisle"></div>
-                    <div class="seat">1C</div>
-                    <div class="seat booked">1D</div>
-                    <div class="seat">2A</div>
-                    <div class="seat">2B</div>
-                    <div class="aisle"></div>
-                    <div class="seat booked">2C</div>
-                    <div class="seat">2D</div>
+                <div class="section-1">
+                    <div class="seats-container">
+                        <div class="seat booked">1A</div>
+                        <div class="seat">1B</div>
+                        <div class="aisle"></div>
+                        <div class="seat">1C</div>
+                        <div class="seat booked">1D</div>
+                        <div class="seat">2A</div>
+                        <div class="seat">2B</div>
+                        <div class="aisle"></div>
+                        <div class="seat booked">2C</div>
+                        <div class="seat">2D</div>
+                    </div>
+                    <div class="main-aisle">
+                        MAIN SANCTUARY AISLE
+                    </div>
+                    <div class="seats-container">
+                        <div class="seat" class="booked">3A</div>
+                        <div class="seat">3B</div>
+                        <div class="aisle"></div>
+                        <div class="seat">3C</div>
+                        <div class="seat" class="booked">3D</div>
+                        <div class="seat">4A</div>
+                        <div class="seat">4B</div>
+                        <div class="aisle"></div>
+                        <div class="seat" class="booked">4C</div>
+                        <div class="seat">4D</div>
+                    </div>
                 </div>
-                <div class="main-aisle">
-                    MAIN SANCTUARY AISLE
-                </div>
-                <div class="seats-container">
-                    <div class="seat" class="booked">3A</div>
-                    <div class="seat">3B</div>
-                    <div class="aisle"></div>
-                    <div class="seat">3C</div>
-                    <div class="seat" class="booked">3D</div>
-                    <div class="seat">4A</div>
-                    <div class="seat">4B</div>
-                    <div class="aisle"></div>
-                    <div class="seat" class="booked">4C</div>
-                    <div class="seat">4D</div>
-                </div>
-               </div>
             </section>
             <section class="Extra-Services">
-                    <div class="services-text">
-                     <h3>Elevated Essentials</h3>
-                     <p>Bespoke additions to refine your journey.</p>
-                    </div>
+                <div class="services-text">
+                    <h3>Elevated Essentials</h3>
+                    <p>Bespoke additions to refine your journey.</p>
+                </div>
                 <div class="services-icons">
                     <div class="card">
                         <div class="text-card">
@@ -235,7 +235,9 @@ also better for search engines and a DOM predictability-->
                             <p>Dedicated lane access and early boarding for an effortless transition.</p>
                         </div>
                         <div class="footer-card">
-                            <span class="price-card"><p>$45</p></span>
+                            <span class="price-card">
+                                <p>$45</p>
+                            </span>
                             <label class="switch-card">
                                 <input type="checkbox">
                                 <span class="slider-card"></span>
@@ -253,7 +255,9 @@ also better for search engines and a DOM predictability-->
                             <p>Unlimited high-speed satellite link for work or cinematic leisure.</p>
                         </div>
                         <div class="footer-card">
-                            <span class="price-card"><p>$25</p></span>
+                            <span class="price-card">
+                                <p>$25</p>
+                            </span>
                             <label class="switch-card">
                                 <input type="checkbox">
                                 <span class="slider-card"></span>
@@ -271,7 +275,9 @@ also better for search engines and a DOM predictability-->
                             <p>Additional 32kg allowance for your bespoke travel essentials.</p>
                         </div>
                         <div class="footer-card">
-                            <span class="price-card"><p>$60</p></span>
+                            <span class="price-card">
+                                <p>$60</p>
+                            </span>
                             <label class="switch-card">
                                 <input type="checkbox">
                                 <span class="slider-card"></span>
@@ -394,7 +400,7 @@ also better for search engines and a DOM predictability-->
         </div>
     </footer>
     <script src="../../js/main.js" defer></script>
-    <script src="../../js/booking.js" ></script>
+    <script src="../../js/booking.js"></script>
 </body>
 
 </html>

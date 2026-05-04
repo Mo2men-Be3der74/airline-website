@@ -19,7 +19,8 @@
 
 
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,6 +28,7 @@ body{
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--on-grey2);
 }
+
 /* header container (main/center) */
 .header {
     display: flex;
@@ -235,6 +237,29 @@ input:checked+.slider::before {
     font-weight: 400;
     transition: color 0.7s ease;
 
+}
+
+.btn-logout {
+    background-color: var(--on-black1);
+    padding: 4px 10px;
+    border: none;
+    text-decoration: none;
+    /*removes the underline*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 3px;
+    /*gao between svg and <span>*/
+    transition: color 0.7s ease-in-out;
+    color: var(--off-white);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+}
+
+.btn-logout:hover {
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 0.7s ease;
 }
 
 /* list container (<ul>) */
@@ -495,17 +520,20 @@ footer {
     /* Adds space after the pipe */
     color: #ccc;
 }
-.main{
+
+.main {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
 }
-section{
+
+section {
     margin-bottom: 10px;
 }
-section h2{
+
+section h2 {
     font-size: 28px;
     margin-bottom: 20px;
     display: flex;
@@ -513,19 +541,23 @@ section h2{
     gap: 10px;
     color: var(--off-white);
 }
-.number{
+
+.number {
     color: var(--secondary);
     font-weight: 300;
 }
-.form-info{
+
+.form-info {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
 }
-.form{
+
+.form {
     margin-bottom: 10px;
     width: 100%;
 }
-.form label{
+
+.form label {
     display: block;
     margin-bottom: 10px;
     color: var(--off-white);
@@ -533,7 +565,8 @@ section h2{
     font-weight: 500px;
     text-transform: uppercase;
 }
-.form input{
+
+.form input {
     width: 86%;
     padding: 10px;
     border: 1px solid var(--on-black);
@@ -543,11 +576,13 @@ section h2{
     font-size: 10px;
     color: var(--off-white);
 }
-.form-row{
+
+.form-row {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
 }
-.visa{
+
+.visa {
     background-color: var(--on-black2);
     border: none;
     color: var(--off-white);
@@ -556,7 +591,8 @@ section h2{
     font-size: 15px;
     margin-bottom: 5px;
 }
-.journey{
+
+.journey {
     background-color: var(--on-black2);
     color: var(--off-white);
     border-radius: 5px;
@@ -564,13 +600,15 @@ section h2{
     width: 30%;
     padding: 40px;
 }
-.journey-info{
+
+.journey-info {
     font-size: 20px;
     margin-bottom: 20px;
     color: var(--secondary);
     letter-spacing: 2px;
 }
-.route-info{
+
+.route-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -578,17 +616,20 @@ section h2{
     padding: 20px 0;
     border-bottom: 1px solid var(--secondary);
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 200px;
     color: var(--secondary);
 }
-.place{
+
+.place {
     color: var(--secondary)
 }
-.journey-details{
+
+.journey-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -596,23 +637,27 @@ section h2{
     color: var(--secondary);
     margin-bottom: 10px;
 }
-.price-tax{
+
+.price-tax {
     margin-bottom: 20px;
 }
-.price{
+
+.price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
-.total-price{
+
+.total-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
     font-weight: 500;
 }
-.confirm{
+
+.confirm {
     background-color: var(--secondary);
     border: none;
     color: var(--off-white);
@@ -622,6 +667,7 @@ section h2{
     font-weight: 500;
     cursor: pointer;
 }
-.confirm:hover{
+
+.confirm:hover {
     background-color: #b8a564;
 }

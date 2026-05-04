@@ -232,6 +232,29 @@ input:checked+.slider::before {
 
 }
 
+.btn-logout {
+    background-color: var(--on-black1);
+    padding: 4px 10px;
+    border: none;
+    text-decoration: none;
+    /*removes the underline*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 3px;
+    /*gao between svg and <span>*/
+    transition: color 0.7s ease-in-out;
+    color: var(--off-white);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+}
+
+.btn-logout:hover {
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 0.7s ease;
+}
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
@@ -556,25 +579,29 @@ body {
     margin-top: 40px;
     max-width: 400px;
 }
-.middle-bottom{
+
+.middle-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 40px;
 }
-.form-image{
+
+.form-image {
     position: relative;
     width: 620px;
     background-color: var(--on-grey1);
     margin-right: 20px;
 }
-#form-image{
+
+#form-image {
     width: 580px;
     height: 500px;
     margin: 20px;
     object-fit: cover;
     filter: brightness(30%);
 }
+
 .form-image-text {
     position: absolute;
     font-size: 30px;
@@ -584,6 +611,7 @@ body {
     left: 10px;
     color: var(--off-white);
 }
+
 .form-image-small-text {
     position: absolute;
     font-size: 15px;
@@ -592,6 +620,7 @@ body {
     left: 10px;
     color: var(--off-white);
 }
+
 .contacts {
     position: relative;
     flex-shrink: 0;
@@ -603,6 +632,7 @@ body {
     background-color: var(--dark-blue);
     color: var(--secondary);
 }
+
 #phone-icon {
     position: absolute;
     font-size: 30px;
@@ -710,12 +740,14 @@ body {
     color: var(--off-white);
     animation: forwards fadeIn 3.5s ease-in-out;
 }
+
 .form-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 .form-container {
     position: relative;
     display: flex;
@@ -724,6 +756,7 @@ body {
     height: 550px;
     margin-left: 20px;
 }
+
 .full-name {
     position: absolute;
     top: 30px;
@@ -834,7 +867,7 @@ body {
     width: 750px;
     height: auto;
     background-color: var(--dark-blue);
-    
+
 }
 
 #plane {
@@ -864,7 +897,8 @@ body {
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }
-.faq-section{
+
+.faq-section {
     font-size: 30px;
     background-color: var(--on-grey1);
     margin: 20px;
@@ -873,71 +907,84 @@ body {
     flex-direction: row;
     width: 100%;
 }
+
 .middle {
     display: flex;
     flex-direction: row;
 }
 
-.faq{
+.faq {
     font-size: 30px;
     color: var(--off-white);
     background-color: var(--on-grey1);
     padding: 20px;
     padding-bottom: 60px;
 }
-.faq-questions{
+
+.faq-questions {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 10px;
     max-width: 250px;
 }
-.faq-title{
+
+.faq-title {
     font-size: 25px;
     padding-top: 60px;
     color: var(--secondary);
 }
-.faq-answer{
+
+.faq-answer {
     font-size: 15px;
     margin-left: 10px;
     color: var(--off-white);
 }
-.faq-title2{
+
+.faq-title2 {
     font-size: 25px;
     padding-top: 40px;
     color: var(--secondary);
 }
-.faq-answer2{
+
+.faq-answer2 {
     font-size: 15px;
     margin-left: 10px;
     color: var(--off-white);
 }
-.faq-title3{
+
+.faq-title3 {
     font-size: 25px;
     padding-top: 40px;
     color: var(--secondary);
 }
-.faq-answer3{
+
+.faq-answer3 {
     font-size: 15px;
     padding-bottom: 30px;
     margin-left: 10px;
     color: var(--off-white);
 }
-.activee{
-   padding-left: 50px;
-   transition: padding 0.3s ease;
-   color: var(--secondary) !important;
+
+.activee {
+    padding-left: 50px;
+    transition: padding 0.3s ease;
+    color: var(--secondary) !important;
 }
-#booking{
+
+#booking {
     margin-left: 20px;
 }
-#baggage{
+
+#baggage {
     margin-left: 20px;
 }
-#seats{
+
+#seats {
     margin-left: 20px;
 }
-.question-title{
+
+.question-title {
     font-size: 20px;
     color: var(--off-white);
     margin-bottom: 20px;
@@ -945,31 +992,34 @@ body {
     transition: padding 0.3s ease;
     border: none;
 }
+
 /* Variables */
 :root {
-    --primary:#3A1824;
-    --tertiary:#4C2D38;
-    --secondary:#cbb573;
-    --off-white:#f2f0ef;
-    --on-black:#000;
-    --dark-blue:#001524;
+    --primary: #3A1824;
+    --tertiary: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524;
 
     /*Dark mode Colors*/
-    --off-white:#f2f0ef;
-    --on-black1:#000;
-    --on-black2:#0f0f0f;
-    --on-grey1:#1c1c1d;
-    --on-grey2:#252728;
-    --secondary:#cbb573;
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
 
 
 
 
 }
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100vh = 100% of the viewport height */
+    min-height: 100vh;
+    /* 100vh = 100% of the viewport height */
     margin: 0;
 
 }
@@ -980,19 +1030,26 @@ main {
     min-height: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     color: var(--primary);
 
 
 }
+
 p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
 
 }
+
 /* header container (main/center) */
 .header {
     display: flex;
@@ -1001,28 +1058,35 @@ p {
     z-index: 10;
     /* Two stacked bars   */
 }
+
 .right-sec {
     display: flex;
     flex-direction: row;
     /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
-    align-items: flex-end;  /* pins them to the right end side of the container's hight */
-    gap: 8px;               /* space between bttns and the util if you have 1+ elemetns it does the gap */
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
+
 .r-right-sec {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
 }
+
 /*left-header-section*/
 .logo-placeholder {
     width: 150px;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
     position: relative;
-    width: 45px; /* Adjust this to make the switch wider/narrower */
+    width: 45px;
+    /* Adjust this to make the switch wider/narrower */
     height: 20px;
 }
 
@@ -1037,18 +1101,28 @@ p {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--off-white); /* Default Light Track Color */
-    border-radius: 30px; /* This creates the "very rounded" ends */
-    transition: background-color 0.3s ease; /* Smooth fade when the track changes color */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /* Default Light Track Color */
+    border-radius: 30px;
+    /* This creates the "very rounded" ends */
+    transition: background-color 0.3s ease;
+    /* Smooth fade when the track changes color */
 }
 
 /* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
-    content: "☀️"; /* Default Light Icon (Sun) */
+    content: "☀️";
+    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
-    display: flex; align-items: center; justify-content: center; /* Center the icon in the ball */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
 
     /* Sizing the ball slightly smaller than the track height */
     height: 16px;
@@ -1058,11 +1132,14 @@ p {
     left: 3px;
     bottom: 3px;
 
-    border-radius: 50%; /* Make the ball round */
+    border-radius: 50%;
+    /* Make the ball round */
 
     /* Colors (Light State) */
-    background-color: var(--off-white); /* White ball */
-    color: #333; /* Black icon */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
 
     /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -1073,12 +1150,13 @@ p {
    ------------------------------------------------------------------------- */
 
 /* A. Change the Track color when checked */
-input:checked + .slider {
-    background-color: var(--on-grey2); /* Dark Track Color */
+input:checked+.slider {
+    background-color: var(--on-grey2);
+    /* Dark Track Color */
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
-input:checked + .slider::before {
+input:checked+.slider::before {
     /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
     /*45-16-3-3*/
     transform: translateX(23px);
@@ -1087,9 +1165,11 @@ input:checked + .slider::before {
     content: "🌙";
 
     /* Color Swap (Dark State) */
-    background-color: var(--on-grey2); /* Black ball */
+    background-color: var(--on-grey2);
+    /* Black ball */
 
 }
+
 .utility-link {
     border-radius: 3px;
     display: flex;
@@ -1105,17 +1185,20 @@ input:checked + .slider::before {
     /*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
+
 .utility-link:hover {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--secondary);
     font-weight: 400;
 }
+
 /*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
     /*   Gap between each button (There's only one for both login & registration right now) */
 }
+
 .btn {
     background-color: var(--on-black1);
     padding: 4px 10px;
@@ -1128,6 +1211,7 @@ input:checked + .slider::before {
     transition: color 0.7s ease-in-out;
 
 }
+
 .btn-login {
     color: var(--off-white);
     font-weight: 300;
@@ -1135,19 +1219,22 @@ input:checked + .slider::before {
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
+
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
 
 }
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
     /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
-    list-style: none; /* removes usual dots from the list element, same likely as text-decoration:none; */
+    list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
@@ -1168,15 +1255,17 @@ input:checked + .slider::before {
     /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
 
 }
+
 .active {
     color: var(--secondary);
     font-weight: 500;
     /* Make it a bit boldy when active   */
 }
+
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-    url('../assets/index-assets/hero-img.jpg');
+        url('../assets/index-assets/hero-img.jpg');
     /*the linear gradiant scrim (function)
     rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
     rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
@@ -1208,11 +1297,13 @@ input:checked + .slider::before {
     /*prevents stretching*/
     color: white;
 }
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: white;
 }
+
 .hero-bttn {
     display: inline-block;
     margin-top: 20px;
@@ -1228,14 +1319,17 @@ input:checked + .slider::before {
     /*so the ease out works, as it only works this way not just on the state of hovering on the element*/
 
 }
+
 .hero-bttn:hover {
-    background-color:var(--off-white);
-    color:var(--on-black);
+    background-color: var(--off-white);
+    color: var(--on-black);
 
 }
+
 #lang-modal {
     /* positioning */
-    position: fixed !important; /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
@@ -1243,23 +1337,27 @@ input:checked + .slider::before {
     margin: 0 !important;
     /* ensures no margins are pushing it */
 
-    width: 350px;     /* more -> bigger -> wider */
+    width: 350px;
+    /* more -> bigger -> wider */
     min-height: 300px;
     /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border:none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
     background: var(--on-grey1);
     z-index: 1000;
 }
+
 #lang-modal h3 {
     color: var(--off-white);
     font-weight: bold;
 }
+
 .modal-label {
     color: var(--off-white) !important;
 }
+
 .modal-actions {
     display: flex;
     justify-content: center;
@@ -1277,6 +1375,7 @@ input:checked + .slider::before {
     font-weight: 400;
     margin-top: 25px;
 }
+
 /* Container for the dropdown */
 .custom-dropdown {
     position: relative;
@@ -1334,7 +1433,7 @@ footer {
     padding-top: 0;
 }
 
-.upper-footer{
+.upper-footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -1345,7 +1444,11 @@ footer {
     padding-bottom: 10px;
 
 }
-.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 540;
     padding-left: 10px;
@@ -1353,6 +1456,7 @@ footer {
     margin-top: 0;
     color: var(--secondary);
 }
+
 .upper-footer p {
     padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1369,11 +1473,13 @@ footer {
 
 
 }
+
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--off-white);
     text-decoration: none;
 }
+
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -1387,6 +1493,7 @@ footer {
     border-top: 2px solid var(--on-grey1);
     height: 60%;
 }
+
 .lower-footer-ul {
 
     display: flex;
@@ -1396,11 +1503,13 @@ footer {
     padding-left: 15px;
 
 }
+
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--off-white);
     text-decoration: none;
 }
+
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -1408,6 +1517,7 @@ footer {
     font-weight: 400;
 
 }
+
 .lower-footer-img {
 
     /* background: var(--on-black2),
@@ -1425,8 +1535,11 @@ footer {
     align-items: center;
 
 }
+
 .lower-footer-ul li:not(:last-child)::after {
-    content: "|"; /* Adds a pipe character */
-    margin-left: 12px; /* Adds space after the pipe */
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
     color: #ccc;
 }
