@@ -9,31 +9,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Variables */
 :root {
-    --primary:#3A1824;
-    --tertiary:#4C2D38;
-    --secondary:#cbb573;
-    --off-white:#f2f0ef;
-    --on-black:#000;
-    --dark-blue:#001524;
+    --primary: #3A1824;
+    --tertiary: #4C2D38;
+    --secondary: #cbb573;
+    --off-white: #f2f0ef;
+    --on-black: #000;
+    --dark-blue: #001524;
 
     /*Dark mode Colors*/
-    --off-white:#f2f0ef;
-    --on-black1:#000;
-    --on-black2:#0f0f0f;
-    --on-grey1:#1c1c1d;
-    --on-grey2:#252728;
-    --secondary:#cbb573;
+    --off-white: #f2f0ef;
+    --on-black1: #000;
+    --on-black2: #0f0f0f;
+    --on-grey1: #1c1c1d;
+    --on-grey2: #252728;
+    --secondary: #cbb573;
 
 
 
 
 }
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100vh = 100% of the viewport height */
+    min-height: 100vh;
+    /* 100vh = 100% of the viewport height */
     margin: 0;
 
 }
@@ -44,19 +47,26 @@ main {
     min-height: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     color: var(--primary);
 
 
 }
+
 p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
 
 }
+
 /* header container (main/center) */
 .header {
     display: flex;
@@ -65,11 +75,13 @@ p {
     z-index: 10;
     /* Two stacked bars   */
 }
-.upper-half{
+
+.upper-half {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
-    justify-content: space-between; /* Pushes Logo to left(first child), Links to right(last child) */
+    justify-content: space-between;
+    /* Pushes Logo to left(first child), Links to right(last child) */
     padding: 1rem 2rem;
     /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
     the padding will change automatically to fit the padding right. this increases the accessibility for the website
@@ -81,7 +93,8 @@ p {
     z-index: 1000;
 
 }
-.bottom-half{
+
+.bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--primary), black 15%);
     /*Color-mix function to mix colors or create new ones depending on the need,
@@ -90,7 +103,8 @@ p {
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
-    position: sticky; /* default state */
+    position: sticky;
+    /* default state */
     z-index: 1000;
     top: 0;
 }
@@ -99,24 +113,30 @@ p {
     display: flex;
     flex-direction: row;
     /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
-    align-items: flex-end;  /* pins them to the right end side of the container's hight */
-    gap: 8px;               /* space between bttns and the util if you have 1+ elemetns it does the gap */
+    align-items: flex-end;
+    /* pins them to the right end side of the container's hight */
+    gap: 8px;
+    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
+
 .r-right-sec {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
 }
+
 /*left-header-section*/
 .logo-placeholder {
     width: 150px;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
     position: relative;
-    width: 45px; /* Adjust this to make the switch wider/narrower */
+    width: 45px;
+    /* Adjust this to make the switch wider/narrower */
     height: 20px;
 }
 
@@ -131,18 +151,28 @@ p {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--off-white); /* Default Light Track Color */
-    border-radius: 30px; /* This creates the "very rounded" ends */
-    transition: background-color 0.3s ease; /* Smooth fade when the track changes color */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--off-white);
+    /* Default Light Track Color */
+    border-radius: 30px;
+    /* This creates the "very rounded" ends */
+    transition: background-color 0.3s ease;
+    /* Smooth fade when the track changes color */
 }
 
 /* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
-    content: "☀️"; /* Default Light Icon (Sun) */
+    content: "☀️";
+    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
-    display: flex; align-items: center; justify-content: center; /* Center the icon in the ball */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the icon in the ball */
 
     /* Sizing the ball slightly smaller than the track height */
     height: 16px;
@@ -152,11 +182,14 @@ p {
     left: 3px;
     bottom: 3px;
 
-    border-radius: 50%; /* Make the ball round */
+    border-radius: 50%;
+    /* Make the ball round */
 
     /* Colors (Light State) */
-    background-color: var(--off-white); /* White ball */
-    color: #333; /* Black icon */
+    background-color: var(--off-white);
+    /* White ball */
+    color: #333;
+    /* Black icon */
 
     /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -167,12 +200,14 @@ p {
    ------------------------------------------------------------------------- */
 
 /* A. Change the Track color when checked */
-input:checked + .slider {
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Dark Track Color */
+input:checked+.slider {
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Dark Track Color */
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
-input:checked + .slider::before {
+input:checked+.slider::before {
     /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
     /*45-16-3-3*/
     transform: translateX(23px);
@@ -181,9 +216,12 @@ input:checked + .slider::before {
     content: "🌙";
 
     /* Color Swap (Dark State) */
-    background-color: color-mix(in srgb, var(--primary), black 75%);; /* Black ball */
+    background-color: color-mix(in srgb, var(--primary), black 75%);
+    ;
+    /* Black ball */
 
 }
+
 .utility-link {
     border-radius: 3px;
     display: flex;
@@ -199,17 +237,20 @@ input:checked + .slider::before {
     /*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
+
 .utility-link:hover {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--secondary);
     font-weight: 400;
 }
+
 /*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
     /*   Gap between each button (There's only one for both login & registration right now) */
 }
+
 .btn {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     padding: 4px 10px;
@@ -220,8 +261,8 @@ input:checked + .slider::before {
     gap: 3px;
     /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
-
 }
+
 .btn-login {
     color: var(--off-white);
     font-weight: 300;
@@ -229,19 +270,45 @@ input:checked + .slider::before {
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
+
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
-
 }
+
+
+.btn-logout {
+    background-color: color-mix(in srgb, var(--primary), black 35%);
+    padding: 4px 10px;
+    border: none;
+    text-decoration: none;
+    /*removes the underline*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 3px;
+    /*gao between svg and <span>*/
+    color: var(--off-white);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+    transition: color 0.7s ease-in-out;
+}
+
+.btn-logout:hover {
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 0.7s ease;
+}
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
     /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
-    list-style: none; /* removes usual dots from the list element, same likely as text-decoration:none; */
+    list-style: none;
+    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
@@ -262,15 +329,17 @@ input:checked + .slider::before {
     /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
 
 }
+
 .active {
     color: var(--secondary);
     font-weight: 500;
     /* Make it a bit boldy when active   */
 }
+
 /*Index-Hero*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-    url('../assets/index-assets/hero-img.jpg');
+        url('../assets/index-assets/hero-img.jpg');
     /*the linear gradiant scrim (function)
     rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
     rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
@@ -302,11 +371,13 @@ input:checked + .slider::before {
     /*prevents stretching*/
     color: white;
 }
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: white;
 }
+
 .hero-bttn {
     display: inline-block;
     margin-top: 20px;
@@ -322,14 +393,17 @@ input:checked + .slider::before {
     /*so the ease out works, as it only works this way not just on the state of hovering on the element*/
 
 }
+
 .hero-bttn:hover {
-    background-color:var(--off-white);
-    color:var(--on-black);
+    background-color: var(--off-white);
+    color: var(--on-black);
 
 }
+
 #lang-modal {
     /* positioning */
-    position: fixed !important; /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
+    position: fixed !important;
+    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
@@ -337,16 +411,18 @@ input:checked + .slider::before {
     margin: 0 !important;
     /* ensures no margins are pushing it */
 
-    width: 350px;     /* more -> bigger -> wider */
+    width: 350px;
+    /* more -> bigger -> wider */
     min-height: 300px;
     /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    border:none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: none;
     background: white;
     z-index: 1000;
 }
+
 .modal-actions {
     display: flex;
     justify-content: center;
@@ -364,6 +440,7 @@ input:checked + .slider::before {
     font-weight: 400;
     margin-top: 25px;
 }
+
 /* Container for the dropdown */
 .custom-dropdown {
     position: relative;
@@ -421,7 +498,7 @@ footer {
     padding-top: 0;
 }
 
-.upper-footer{
+.upper-footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -432,7 +509,11 @@ footer {
     padding-bottom: 10px;
 
 }
-.upper-footer h1, .upper-footer h2, .upper-footer h3, .upper-footer h4 {
+
+.upper-footer h1,
+.upper-footer h2,
+.upper-footer h3,
+.upper-footer h4 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 540;
     padding-left: 10px;
@@ -440,6 +521,7 @@ footer {
     margin-top: 0;
     color: var(--primary);
 }
+
 .upper-footer p {
     padding: 12px 15px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -456,11 +538,13 @@ footer {
 
 
 }
+
 .upper-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #8b8c89;
     text-decoration: none;
 }
+
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -477,6 +561,7 @@ footer {
 
 
 }
+
 .lower-footer-ul {
 
     display: flex;
@@ -486,11 +571,13 @@ footer {
     padding-left: 15px;
 
 }
+
 .lower-footer-ul a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #8b8c89;
     text-decoration: none;
 }
+
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--on-black);
@@ -498,10 +585,11 @@ footer {
     font-weight: 400;
 
 }
+
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-assets/lower-footer-pattern.png");
+        url("../assets/index-assets/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
@@ -515,9 +603,12 @@ footer {
     align-items: center;
 
 }
+
 .lower-footer-ul li:not(:last-child)::after {
-    content: "|"; /* Adds a pipe character */
-    margin-left: 12px; /* Adds space after the pipe */
+    content: "|";
+    /* Adds a pipe character */
+    margin-left: 12px;
+    /* Adds space after the pipe */
     color: #ccc;
 }
 
@@ -527,17 +618,22 @@ footer {
     align-items: center;
     padding: 40px 0;
 }
+
 .about-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* This aligns the heading and video to the left inside the wrapper */
-    width: fit-content;      /* This ensures the wrapper is only as wide as its content, letting the parent center it */
+    align-items: flex-start;
+    /* This aligns the heading and video to the left inside the wrapper */
+    width: fit-content;
+    /* This ensures the wrapper is only as wide as its content, letting the parent center it */
 }
 
 .heading-sidebar {
 
-    border-left: 4px solid var(--secondary); /* The Orange Bar */
-    padding-left: 15px; /* Space between bar and text */
+    border-left: 4px solid var(--secondary);
+    /* The Orange Bar */
+    padding-left: 15px;
+    /* Space between bar and text */
 }
 
 .heading-sidebar h3 {
@@ -553,17 +649,24 @@ footer {
 
 .about-vid {
     display: flex;
-    justify-content: flex-start; /* Centers the whole group horizontally */
-    align-items: flex-start;     /* Aligns items vertically */
+    justify-content: flex-start;
+    /* Centers the whole group horizontally */
+    align-items: flex-start;
+    /* Aligns items vertically */
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 50px;               /* Equal spacing between video and text */
+    gap: 50px;
+    /* Equal spacing between video and text */
     padding: 20px 20px 20px 0;
-    max-width: 1200px;       /* Keeps content from stretching too wide */
-    margin: 0;          /* Centers the container on the page */
+    max-width: 1200px;
+    /* Keeps content from stretching too wide */
+    margin: 0;
+    /* Centers the container on the page */
 }
+
 video {
-    border-radius: 8px; /* Adjust the number for more or less roundness */
+    border-radius: 8px;
+    /* Adjust the number for more or less roundness */
 }
 
 .about-text-wrapper {
@@ -578,7 +681,8 @@ video {
 .trending-section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the whole block on the page */
+    align-items: center;
+    /* Centers the whole block on the page */
     padding: 60px 20px 20px 20px;
     background-color: #f4f4f4;
 }
@@ -588,12 +692,14 @@ video {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Keeps heading and grid left-aligned */
+    align-items: flex-start;
+    /* Keeps heading and grid left-aligned */
 }
 
 .trending-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns */
     gap: 10px 20px;
     width: 100%;
     margin-top: 30px;
@@ -607,13 +713,15 @@ video {
     background-position: center;
     overflow: hidden;
     display: flex;
-    align-items: flex-end; /* Puts text at the bottom */
+    align-items: flex-end;
+    /* Puts text at the bottom */
     transition: transform 0.3s ease;
     z-index: 1;
 }
 
 .trending-card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
 }
 
 /* The dark gradient at the bottom for text readability */
@@ -622,7 +730,7 @@ video {
     bottom: 0;
     width: 100%;
     height: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     z-index: 1;
 }
 
@@ -669,7 +777,7 @@ video {
     margin-top: 40px;
 }
 
-.view-more-cta  {
+.view-more-cta {
     background: var(--primary);
     border: 1px solid var(--primary);
     text-decoration: none;
@@ -976,20 +1084,27 @@ video {
 
 /* Responsiveness: Switch to 2 columns on tablets and 1 on mobile */
 @media (max-width: 1024px) {
-    .trending-grid { grid-template-columns: repeat(2, 1fr); }
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
-    .trending-grid { grid-template-columns: 1fr; }
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 @media (max-width: 768px) {
     .about-section {
-        flex-direction: column; /* Stack Heading on top */
+        flex-direction: column;
+        /* Stack Heading on top */
     }
+
     .about-vid {
-        flex-direction: row; /* Swaps from side-by-side to stacked */
+        flex-direction: row;
+        /* Swaps from side-by-side to stacked */
         text-align: center;
     }
 }
