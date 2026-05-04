@@ -14,3 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         console.warn("No registration data found. Please register first.");
     }
 });
+
+const savedData = JSON.parse(localStorage.getItem('bookingTotalObj'));
+if (savedData) {
+    console.log("السعر النهائي هو: " + savedData.totalAmount);
+}
+

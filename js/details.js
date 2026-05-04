@@ -26,12 +26,6 @@ if (document.querySelector(".flight-details")) {
 
       }
 }
-//booking data
-const totalSum = baseFare + extraTotal;
-const totalData = {
-    totalAmount: totalSum
-};
-localStorage.setItem('bookingTotalObj', JSON.stringify(totalData));
 
 const confirmaiton = {
       from : document.querySelector(".main .journey .from"),
@@ -45,4 +39,7 @@ confirmaiton.from.innerHTML = ticket.from;
 confirmaiton.to.innerHTML = ticket.to;
 confirmaiton.departureDate.innerHTML = ticket.departureDate;
 confirmaiton.Class.innerHTML = ticket.Class;
-confirmaiton.price.innerHTML = ticket.price;
+
+const priceObj = JSON.parse(localStorage.getItem("bookingTotalObj"));
+
+confirmaiton.price.innerHTML = "$" + priceObj.totalAmount;

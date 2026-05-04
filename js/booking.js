@@ -78,3 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+//booking data
+const totalSum = baseFare + extraTotal;
+const totalData = {
+      totalAmount: totalSum,
+};
+localStorage.setItem('bookingTotalObj', JSON.stringify(totalData));
+
+const confirmaiton = {
+      from : document.querySelector(".main .journey .from"),
+      to : document.querySelector(".main .journey .to"),
+      departureDate : document.querySelector(".main .journey-details .value"),
+      Class : document.querySelector(".main .journey-details #class"),
+      price : document.querySelector(".main .price-tax #totalPrice"),
+}
+
+confirmaiton.price.innerHTML = totalSum;
