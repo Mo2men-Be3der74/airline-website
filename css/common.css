@@ -23,18 +23,18 @@ main {
     min-height: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*    font-weight: 600;*/
+/*    color: var(--primary);*/
 
 
-}
+/*}*/
 
 p {
     color: var(--tertiary);
@@ -104,9 +104,12 @@ p {
 
 /*left-header-section*/
 .logo-placeholder {
-    width: 150px;
+    color: var(--off-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: auto;
 }
-
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
