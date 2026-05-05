@@ -38,8 +38,13 @@ body {
     min-height: 100vh;
     /* 100vh = 100% of the viewport height */
     margin: 0;
-
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* Makes any content in the main container to fill it up */
 main {

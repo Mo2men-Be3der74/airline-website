@@ -524,7 +524,13 @@ footer {
 
 body {
     background-color: var(--on-grey2);
+    scrollbar-width: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .sec-form-text {
     color: var(--tertiart);

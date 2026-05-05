@@ -18,7 +18,13 @@
 
 body {
     background-color: var(--on-grey2);
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* header container (main/center) */
 .header {

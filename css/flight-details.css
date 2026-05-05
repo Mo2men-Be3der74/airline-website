@@ -15,7 +15,13 @@
 body {
       font-family: "Plus Jakarta Sans", sans-serif;
       background-color: var(--surface-color);
+      overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .flight-details {
       display: flex;
