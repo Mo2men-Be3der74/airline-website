@@ -545,7 +545,7 @@ body {
 }
 
 .head-text {
-    font-size: 96px;
+    font-size: 73px;
     color: var(--off-white);
 }
 
@@ -810,7 +810,7 @@ body {
 }
 
 #text-box {
-    width: 200%;
+    width: 150%;
     height: 49px;
     opacity: 30%;
     padding-left: 10px;
@@ -819,7 +819,7 @@ body {
 }
 
 #text-box2 {
-    width: 240%;
+    width: 175%;
     height: 54px;
     opacity: 30%;
     padding-left: 10px;
@@ -828,7 +828,7 @@ body {
 }
 
 #message-area {
-    width: 650px;
+    width: 500px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
@@ -861,9 +861,9 @@ body {
 }
 
 #plane {
-    position: absolute;
+    position: relative;
     margin: 20px;
-    top: 130px;
+    top: 80px;
     font-size: 90px;
     color: var(--secondary);
 }
