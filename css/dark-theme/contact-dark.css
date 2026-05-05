@@ -87,6 +87,11 @@
     letter-spacing: 0.05em;
     width: auto;
 }
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
