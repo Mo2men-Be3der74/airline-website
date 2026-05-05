@@ -20,6 +20,10 @@
 </head>
 
 <body>
+    <audio id="music" loop>
+        <source src="assets/audio-asset/saboteurcomics-airplane-chime-466924.mp3" type="audio/mpeg">
+    </audio>
+
     <header class="header">
         <div class="upper-half">
             <!--        justify-conten:space-between.<it makes the first child to the very left and the last to the very right
@@ -323,10 +327,12 @@
                         <h2>Experience the Skies</h2>
                         <br>
                         <p style=" padding-left: 12px; padding-bottom: 12px;  ">Have a seamless travel planning,<br>
-                            From exploring global routes to securing your seat,<br> we’ve stripped away the complexity of
+                            From exploring global routes to securing your seat,<br> we’ve stripped away the complexity
+                            of
                             flight booking so you can focus on the destination. <br>
                             Your journey begins with a click,</p>
-                        <p style="padding-left: 12px;">Discover, book, and fly. <br>We’ve modernized the reservation process
+                        <p style="padding-left: 12px;">Discover, book, and fly. <br>We’ve modernized the reservation
+                            process
                             to get you from search to boarding pass in seconds. <br>
                             The world is waiting and your new horizons shall be discovered. </p>
                     </div>
@@ -346,7 +352,8 @@
                 <div class="trending-grid">
 
                     <div class="trending-card"
-                        style="background-image: url('assets/index-assets/Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg');" title="Cairo">
+                        style="background-image: url('assets/index-assets/Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg');"
+                        title="Cairo">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Cairo</h4>
@@ -358,7 +365,8 @@
                         </div>
                     </div>
 
-                    <div class="trending-card" style="background-image: url('assets/index-assets/Al-Quds.png');" title="Jerusalem">
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Al-Quds.png');"
+                        title="Jerusalem">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Jerusalem</h4>
@@ -371,7 +379,8 @@
                     </div>
 
                     <div class="trending-card"
-                        style="background-image: url('assets/index-assets/Damascus_Straight_Street_and_East_Gate_8193.jpg');" title="Damascus">
+                        style="background-image: url('assets/index-assets/Damascus_Straight_Street_and_East_Gate_8193.jpg');"
+                        title="Damascus">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Damascus</h4>
@@ -397,7 +406,8 @@
                     </div>
 
                     <div class="trending-card"
-                        style="background-image: url('assets/index-assets/Morocco_-_Rabat_(31387775324).jpg');" title="Rabat">
+                        style="background-image: url('assets/index-assets/Morocco_-_Rabat_(31387775324).jpg');"
+                        title="Rabat">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Rabat</h4>
@@ -409,7 +419,8 @@
                         </div>
                     </div>
 
-                    <div class="trending-card" style="background-image: url('assets/index-assets/Tunis.jpg');" title="Tunis">
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Tunis.jpg');"
+                        title="Tunis">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Tunis</h4>
@@ -422,7 +433,8 @@
                     </div>
 
                     <div class="trending-card"
-                        style="background-image: url('assets/index-assets/Alger_Memorial-du-Martyr_IMG_1160.JPG');" title="Algeria">
+                        style="background-image: url('assets/index-assets/Alger_Memorial-du-Martyr_IMG_1160.JPG');"
+                        title="Algeria">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Algeria</h4>
@@ -434,7 +446,8 @@
                         </div>
                     </div>
 
-                    <div class="trending-card" style="background-image: url('assets/index-assets/Baghdad.jpg');" title="Baghdad">
+                    <div class="trending-card" style="background-image: url('assets/index-assets/Baghdad.jpg');"
+                        title="Baghdad">
                         <div class="card-overlay"></div>
                         <div class="card-content">
                             <h4>Baghdad</h4>
@@ -524,6 +537,18 @@
     <script src="js/main.js" defer></script>
     <script src="js/search.js"></script>
     <script src="js/result.js"></script>
+
+    <script>
+        document.addEventListener("click", function () {
+            let audio = document.getElementById("music");
+
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
 </body>
 
 </html>
