@@ -87,6 +87,11 @@
     letter-spacing: 0.05em;
     width: auto;
 }
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -1483,7 +1488,7 @@ footer {
 
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 }
@@ -1513,7 +1518,7 @@ footer {
 
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 
