@@ -528,7 +528,13 @@ footer {
 
 body {
     background-color: var(--on-grey2);
+    scrollbar-width: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .sec-form-text {
     color: var(--tertiart);
@@ -548,20 +554,8 @@ body {
 
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(20px);
-    }
-}
-
 .head-text {
-    font-size: 96px;
+    font-size: 73px;
     color: var(--off-white);
 }
 
@@ -826,15 +820,16 @@ body {
 }
 
 #text-box {
-    width: 200%;
+    width: 150%;
     height: 49px;
     opacity: 30%;
     padding-left: 10px;
     background-color: var(--on-black1);
+    color: var(--off-white);
 }
 
 #text-box2 {
-    width: 240%;
+    width: 175%;
     height: 54px;
     opacity: 30%;
     padding-left: 10px;
@@ -843,11 +838,12 @@ body {
 }
 
 #message-area {
-    width: 450%;
+    width: 500px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
     background-color: var(--on-black1);
+    color: var(--off-white);
     resize: none;
 }
 
@@ -875,9 +871,9 @@ body {
 }
 
 #plane {
-    position: absolute;
+    position: relative;
     margin: 20px;
-    top: 130px;
+    top: 80px;
     font-size: 90px;
     color: var(--secondary);
 }
@@ -887,7 +883,7 @@ body {
     font-size: 30px;
     font-style: oblique;
     padding: 20px;
-    bottom: 100px;
+    bottom: 80px;
     color: var(--off-white);
     animation: forwards fadeIn 1.25s ease-in-out;
 }
@@ -897,7 +893,7 @@ body {
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
-    bottom: 50px;
+    bottom: 40px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }

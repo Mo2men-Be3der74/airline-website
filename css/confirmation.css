@@ -20,6 +20,11 @@ body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--surface-color);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,

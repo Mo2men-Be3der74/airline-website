@@ -15,6 +15,7 @@ body {
     /* 100vh = 100% of the viewport height */
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Makes any content in the main container to fill it up */
@@ -549,7 +550,13 @@ footer {
 body {
     margin: 0;
     background-color: var(--surface-color);
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 main {
     margin: 40px auto;

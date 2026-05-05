@@ -51,4 +51,12 @@ document.querySelector('#seats').addEventListener('click', () => {
     faqTitle3.innerText = 'Are there specific seating areas for ladies?';
     faqAnswer3.innerText = 'Yes, Istabraq provides specific designated seating areas for ladies in economy class on all domestic flights operated by Saudia, subject to availability to ensure additional comfort. This service allows female passengers to select their seats in advance during the reservation and ticketing process for an additional fee, facilitating the seating arrangement.';
 });
-
+let storedData = localStorage.getItem("user");
+let userData = JSON.parse(storedData);
+console.log(userData.firstName);
+console.log(userData.lastName);
+console.log(userData.email);
+const fullname = document.getElementsByName('user_name')[0];
+const email = document.getElementsByName('email_address')[0];
+fullname.value = userData.firstName + ' ' + userData.lastName;
+email.value = userData.email;
