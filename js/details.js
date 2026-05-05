@@ -10,41 +10,41 @@ function bookTicket(ticket) {
 
 // Only run this code on the flight-details page
 const ticket = JSON.parse(localStorage.getItem('selectedTicket'));
-if (document.querySelector(".flight-details")) {
+if ($(".flight-details").length > 0) {
       
       if (ticket) {
-            let from = document.querySelector(".flight-details .left .destination .start");
-            let to = document.querySelector(".flight-details .left .destination .end");
-            let departureDate = document.querySelector(".flight-details .left .card .start .time");
-            let returnDate = document.querySelector(".flight-details .left .card .end .time");
-            let duration = document.querySelector(".flight-details .left .card .mid .small");
-            let Class = document.querySelector(".flight-details .left .flight-small .class");
-            let price = document.querySelector(".flight-details .right .summary .total .amount .right");
+            let from = $(".flight-details .left .destination .start");
+            let to = $(".flight-details .left .destination .end");
+            let departureDate = $(".flight-details .left .card .start .time");
+            let returnDate = $(".flight-details .left .card .end .time");
+            let duration = $(".flight-details .left .card .mid .small");
+            let Class = $(".flight-details .left .flight-small .class");
+            let price = $(".flight-details .right .summary .total .amount .right");
 
-            from.innerHTML = ticket.from;
-            to.innerHTML = ticket.to;
-            departureDate.innerHTML = ticket.startTime;
-            returnDate.innerHTML = ticket.arriveTime;
-            duration.innerHTML = ticket.duration + "  duration";
-            Class.innerHTML = ticket.Class;
-            price.innerHTML = ticket.price;
+            from[0].innerHTML = ticket.from;
+            to[0].innerHTML = ticket.to;
+            departureDate[0].innerHTML = ticket.startTime;
+            returnDate[0].innerHTML = ticket.arriveTime;
+            duration[0].innerHTML = ticket.duration + "  duration";
+            Class[0].innerHTML = ticket.Class;
+            price[0].innerHTML = ticket.price;
 
       }
 }
 
-const confirmaiton = {
-      from : document.querySelector(".main .journey .from"),
-      to : document.querySelector(".main .journey .to"),
-      departureDate : document.querySelector(".main .journey-details .value"),
-      Class : document.querySelector(".main .journey-details #class"),
-      price : document.querySelector(".main .price-tax #totalPrice"),
+const confirmation = {
+      from : $(".main .journey .from"),
+      to : $(".main .journey .to"),
+      departureDate : $(".main .journey-details .value"),
+      Class : $(".main .journey-details #class"),
+      price : $(".main .price-tax #totalPrice"),
 }
 
-confirmaiton.from.innerHTML = ticket.from;
-confirmaiton.to.innerHTML = ticket.to;
-confirmaiton.departureDate.innerHTML = ticket.departureDate;
-confirmaiton.Class.innerHTML = ticket.Class;
+confirmation.from[0].innerHTML = ticket.from;
+confirmation.to[0].innerHTML = ticket.to;
+confirmation.departureDate[0].innerHTML = ticket.departureDate;
+confirmation.Class[0].innerHTML = ticket.Class;
 
 const priceObj = JSON.parse(localStorage.getItem("bookingTotalObj"));
 
-confirmaiton.price.innerHTML = "$" + priceObj.totalAmount;
+confirmation.price[0].innerHTML = "$" + priceObj.totalAmount;
