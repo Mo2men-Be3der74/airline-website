@@ -550,18 +550,6 @@ body {
 
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(20px);
-    }
-}
-
 .head-text {
     font-size: 96px;
     color: var(--off-white);
@@ -833,6 +821,7 @@ body {
     opacity: 30%;
     padding-left: 10px;
     background-color: var(--on-black1);
+    color: var(--off-white);
 }
 
 #text-box2 {
@@ -845,11 +834,12 @@ body {
 }
 
 #message-area {
-    width: 450%;
+    width: 650px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
     background-color: var(--on-black1);
+    color: var(--off-white);
     resize: none;
 }
 
@@ -889,7 +879,7 @@ body {
     font-size: 30px;
     font-style: oblique;
     padding: 20px;
-    bottom: 100px;
+    bottom: 80px;
     color: var(--off-white);
     animation: forwards fadeIn 1.25s ease-in-out;
 }
@@ -899,7 +889,7 @@ body {
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
-    bottom: 50px;
+    bottom: 40px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }

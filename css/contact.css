@@ -39,18 +39,6 @@ body {
 
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(20px);
-    }
-}
-
 .head-text {
     font-size: 96px;
 }
@@ -324,7 +312,7 @@ body {
 }
 
 #message-area {
-    width: 450%;
+    width: 650px;
     height: 122px;
     opacity: 30%;
     padding: 10px;
@@ -367,7 +355,7 @@ body {
     font-size: 30px;
     font-style: oblique;
     padding: 20px;
-    bottom: 100px;
+    bottom: 80px;
     color: var(--off-white);
     animation: forwards fadeIn 1.25s ease-in-out;
 }
@@ -377,7 +365,7 @@ body {
     font-size: 16px;
     font-style: oblique;
     padding: 20px;
-    bottom: 50px;
+    bottom: 40px;
     color: var(--off-white);
     animation: forwards fadeIn 1.5s ease-in-out;
 }
@@ -1072,87 +1060,4 @@ footer {
     margin-left: 12px;
     /* Adds space after the pipe */
     color: #ccc;
-}
-
-@media (max-width: 768px) {
-    .top-section {
-        flex-direction: column;
-    }
-
-    .contacts {
-        width: 93%;
-    }
-
-    .middle {
-        margin-top: 500px;
-        flex-direction: column;
-    }
-
-    .plane-box {
-        width: 93%;
-    }
-
-    .form-section {
-        max-width: 95%;
-    }
-
-    .row-1 {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .row-2 {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #message-area {
-        width: 100%;
-    }
-
-    .head-small-text {
-        margin-top: 10px;
-    }
-
-    #text-box {
-        width: 105%;
-    }
-
-    .standard-small-text {
-        bottom: 40px;
-    }
-
-    .head-text {
-        font-size: 70px;
-    }
-
-    @media (max-width: 480px) {
-        .head-text {
-            font-size: 50px;
-        }
-
-        .plane-box {
-            width: 90%;
-        }
-
-        .contacts {
-            width: 90%;
-        }
-
-        .standard-small-text {
-            bottom: 10px;
-        }
-
-        #plane {
-            position: absolute;
-            margin: 20px;
-            top: 230px;
-            font-size: 90px;
-            color: var(--secondary);
-        }
-
-        .standard {
-            bottom: 110px;
-        }
-    }
 }
