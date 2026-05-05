@@ -81,9 +81,17 @@
 
 /*left-header-section*/
 .logo-placeholder {
-    width: 150px;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: auto;
 }
-
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -237,6 +245,7 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border: none;
     text-decoration: none;
+    font-size: 1rem;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
@@ -254,6 +263,7 @@ input:checked+.slider::before {
     font-weight: 400;
     transition: color 0.7s ease;
 }
+
 
 /* list container (<ul>) */
 .nav-list {
@@ -528,7 +538,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 
@@ -1026,18 +1036,18 @@ main {
     min-height: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*    font-weight: 600;*/
+/*    color: var(--primary);*/
 
 
-}
+/*}*/
 
 p {
     color: var(--tertiary);
@@ -1478,7 +1488,7 @@ footer {
 
 .upper-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 }
@@ -1508,7 +1518,7 @@ footer {
 
 .lower-footer-ul li:hover a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--on-black);
+    color: var(--secondary);
     text-decoration: underline;
     font-weight: 400;
 

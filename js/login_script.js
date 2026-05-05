@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let password = document.getElementById("password")?.value.trim();
             let number = document.getElementById("number")?.value.trim();
 
+            let confirmPassword = document.getElementById("confirmPassword")?.value.trim();
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+}
             if (!firstName || !lastName || !email || !password) {
                 alert("Please fill all fields");
                 return;

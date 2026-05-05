@@ -42,7 +42,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Makes any content in the main container to fill it up */
@@ -53,18 +53,18 @@ main {
     min-height: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*    font-weight: 600;*/
+/*    color: var(--primary);*/
 
 
-}
+/*}*/
 
 /*p {*/
 /*    color: var(--tertiary);*/
@@ -134,9 +134,17 @@ h6 {
 
 /*left-header-section*/
 .logo-placeholder {
-    width: 150px;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: auto;
 }
-
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -290,6 +298,7 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border: none;
     text-decoration: none;
+    font-size: 1rem;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
@@ -307,6 +316,7 @@ input:checked+.slider::before {
     font-weight: 400;
     transition: color 0.7s ease;
 }
+
 
 /* list container (<ul>) */
 .nav-list {
@@ -511,6 +521,78 @@ h3 {
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
+/*Normal layout*/
+
+/*.about-section {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    padding: 40px 0;*/
+/*}*/
+
+/*.about-wrapper {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    !* This aligns the heading and video to the left inside the wrapper *!*/
+/*    width: fit-content;*/
+/*    !* This ensures the wrapper is only as wide as its content, letting the parent center it *!*/
+/*}*/
+
+/*.heading-sidebar {*/
+
+/*    border-left: 4px solid var(--secondary);*/
+/*    !* The Orange Bar *!*/
+/*    padding-left: 15px;*/
+/*    !* Space between bar and text *!*/
+/*}*/
+
+/*.heading-sidebar h3 {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    justify-content: flex-start;*/
+/*    font-size: 2rem;*/
+/*    color: var(--off-white);*/
+/*    margin: 0;*/
+
+/*}*/
+
+/*.about-vid {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    !* Centers the whole group horizontally *!*/
+/*    align-items: flex-start;*/
+/*    !* Aligns items vertically *!*/
+/*    flex-direction: row;*/
+/*    flex-wrap: nowrap;*/
+/*    gap: 50px;*/
+/*    !* Equal spacing between video and text *!*/
+/*    padding: 20px 20px 20px 0;*/
+/*    max-width: 1200px;*/
+/*    !* Keeps content from stretching too wide *!*/
+/*    margin: 0;*/
+/*    !* Centers the container on the page *!*/
+/*}*/
+
+/*video {*/
+/*    border-radius: 8px;*/
+/*    !* Adjust the number for more or less roundness *!*/
+/*}*/
+
+/*.about-text-wrapper {*/
+
+/*    flex: 1;*/
+/*    max-width: 400px;*/
+/*}*/
+
+/*.about-text-wrapper p,*/
+/*h2 {*/
+/*    color: var(--off-white);*/
+/*}*/
+
+
+/*New layout*/
 .about-section {
     display: flex;
     flex-direction: column;
@@ -518,21 +600,17 @@ h3 {
     padding: 40px 0;
 }
 
-.about-wrapper {
+.about-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* This aligns the heading and video to the left inside the wrapper */
-    width: fit-content;
-    /* This ensures the wrapper is only as wide as its content, letting the parent center it */
+    align-items: center;
+    width: 100%;
+    gap: 50px;
 }
 
 .heading-sidebar {
-
     border-left: 4px solid var(--secondary);
-    /* The Orange Bar */
     padding-left: 15px;
-    /* Space between bar and text */
 }
 
 .heading-sidebar h3 {
@@ -543,42 +621,59 @@ h3 {
     font-size: 2rem;
     color: var(--off-white);
     margin: 0;
-
 }
 
 .about-vid {
+    position: relative;
     display: flex;
-    justify-content: flex-start;
-    /* Centers the whole group horizontally */
-    align-items: flex-start;
-    /* Aligns items vertically */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 50px;
-    /* Equal spacing between video and text */
-    padding: 20px 20px 20px 0;
-    max-width: 1200px;
-    /* Keeps content from stretching too wide */
-    margin: 0;
-    /* Centers the container on the page */
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    min-height: 500px;
+    padding-right: 80px;
 }
 
 video {
     border-radius: 8px;
-    /* Adjust the number for more or less roundness */
+    width: 75%;
+    max-width: 1000px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: -85%;
+    /* Overlap video over the black shade */
 }
 
 .about-text-wrapper {
-
-    flex: 1;
-    max-width: 400px;
+    position: absolute;
+    left: 80px;
+    /* Left padding from page */
+    top: 0;
+    bottom: 0;
+    width: 65%;
+    padding: 60px 40px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    text-align: left;
+    overflow-y: auto;
 }
 
-.about-text-wrapper p,
-h2 {
+.about-text-wrapper h2 {
     color: var(--off-white);
+    margin: 0 0 20px 0;
 }
 
+.about-text-wrapper p {
+    color: var(--off-white);
+    margin: 0;
+}
+/**/
 .trending-section {
     display: flex;
     flex-direction: column;
@@ -589,57 +684,173 @@ h2 {
     ;
 }
 
+/*Normal layout*/
+/*.trending-wrapper {*/
+/*    width: 100%;*/
+/*    max-width: 1200px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    !* Keeps heading and grid left-aligned *!*/
+/*}*/
+
+/*.trending-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(4, 1fr);*/
+/*    !* 4 columns *!*/
+/*    gap: 10px 20px;*/
+/*    width: 100%;*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.trending-card {*/
+/*    position: relative;*/
+/*    height: 350px;*/
+/*    border-radius: 8px;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    overflow: hidden;*/
+/*    display: flex;*/
+/*    align-items: flex-end;*/
+/*    !* Puts text at the bottom *!*/
+/*    transition: transform 0.3s ease;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.trending-card:hover {*/
+/*    transform: translateY(-5px);*/
+/*    !* Subtle lift on hover *!*/
+/*}*/
+
+/*!* The dark gradient at the bottom for text readability *!*/
+/*.card-overlay {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    height: 60%;*/
+/*    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.card-content {*/
+/*    position: relative;*/
+/*    z-index: 2;*/
+/*    padding: 20px;*/
+/*    color: white;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.card-content h4 {*/
+/*    font-size: 1.6rem;*/
+/*    margin: 0;*/
+/*    font-weight: bold;*/
+/*    color: var(--off-white);*/
+/*}*/
+
+/*.card-content p {*/
+/*    margin: 5px 0;*/
+/*    font-size: 0.9rem;*/
+/*    opacity: 0.9;*/
+/*    color: var(--off-white);*/
+/*}*/
+
+/*.price-box {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+/*    margin-top: 5px;*/
+/*}*/
+
+/*!* The small orange bar next to the price *!*/
+/*.price-bar {*/
+/*    width: 3px;*/
+/*    height: 14px;*/
+/*    background-color: var(--secondary);*/
+/*}*/
+
+/*.view-more-container {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin-top: 40px;*/
+/*}*/
+
+/*.view-more-cta {*/
+/*    background: var(--on-black1);*/
+/*    border: 1px solid var(--off-white);*/
+/*    text-decoration: none;*/
+/*    color: var(--off-white);*/
+/*    padding: 12px 40px;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*.view-more-cta:hover {*/
+/*    background: var(--secondary);*/
+/*    color: var(--primary);*/
+/*}*/
+
+/*NEW LAYOUT*/
+.trending-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 20px 20px;
+    background-color: color-mix(in srgb, var(--on-grey2), black 10%);
+}
+
 .trending-wrapper {
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Keeps heading and grid left-aligned */
 }
 
 .trending-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns */
-    gap: 10px 20px;
+    /* Layout Change: Switched from 4 columns to 2 columns for a wider, prominent look in dark mode */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 100%;
     margin-top: 30px;
 }
 
 .trending-card {
     position: relative;
-    height: 350px;
+    /* Layout Change: Reduced height to 200px to transform the vertical card into a horizontal banner */
+    height: 200px;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
-    /* Puts text at the bottom */
+    /* Layout Change: Changed from flex-end to center to align text horizontally across the wide card */
+    align-items: center;
     transition: transform 0.3s ease;
     z-index: 1;
 }
 
 .trending-card:hover {
     transform: translateY(-5px);
-    /* Subtle lift on hover */
 }
 
-/* The dark gradient at the bottom for text readability */
 .card-overlay {
     position: absolute;
-    bottom: 0;
+    /* Layout Change: Switched from a bottom-up gradient to a left-to-right gradient to suit the horizontal layout */
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 60%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 20%, transparent 100%);
     z-index: 1;
 }
 
 .card-content {
     position: relative;
     z-index: 2;
-    padding: 20px;
+    /* Layout Change: Increased padding to move text further into the darkened left side of the wide card */
+    padding: 0 40px;
     color: white;
     width: 100%;
 }
@@ -665,7 +876,6 @@ h2 {
     margin-top: 5px;
 }
 
-/* The small orange bar next to the price */
 .price-bar {
     width: 3px;
     height: 14px;

@@ -11,6 +11,7 @@
     --tertiary: #4C2D38;
     --secondary: #cbb573;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -21,9 +22,15 @@ body {
     background-color: var(--surface-color);
     overflow-x: hidden;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -38,18 +45,18 @@ main {
     min-height: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    color: var(--primary);
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*    font-weight: 600;*/
+/*    color: var(--primary);*/
 
 
-}
+/*}*/
 
 p {
     color: var(--tertiary);
@@ -119,9 +126,17 @@ p {
 
 /*left-header-section*/
 .logo-placeholder {
-    width: 150px;
+    color: var(--off-white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: auto;
 }
-
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -277,6 +292,7 @@ input:checked+.slider::before {
     text-decoration: none;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
     gap: 3px;
     /*gao between svg and <span>*/
     color: var(--off-white);
@@ -292,6 +308,7 @@ input:checked+.slider::before {
     font-weight: 400;
     transition: color 0.7s ease;
 }
+
 
 /* list container (<ul>) */
 .nav-list {
@@ -594,7 +611,8 @@ section h2 {
     font-size: 10px;
     color: var(--text-color);
 }
-::placeholder{
+
+::placeholder {
     opacity: 0.3;
 }
 

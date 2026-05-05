@@ -19,6 +19,11 @@
 
 
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     display: flex;
@@ -27,10 +32,6 @@ body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--on-grey2);
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -97,12 +98,25 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: flex-end;
     gap: 8px;
 }
-
-/*left-header-section*/
 .logo-placeholder {
-    width: 150px;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
-
+.logo-placeholder h1 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+h1.logo-placeholder {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -255,6 +269,7 @@ input:checked+.slider::before {
     border: none;
     text-decoration: none;
     /*removes the underline*/
+    font-size: 1rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
     /*gao between svg and <span>*/
@@ -271,6 +286,7 @@ input:checked+.slider::before {
     font-weight: 400;
     transition: color 0.7s ease;
 }
+
 
 /* list container (<ul>) */
 .nav-list {
@@ -586,9 +602,11 @@ section h2 {
     font-size: 10px;
     color: var(--off-white);
 }
-::placeholder{
+
+::placeholder {
     opacity: 0.3;
 }
+
 .form-row {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
