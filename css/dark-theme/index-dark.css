@@ -42,7 +42,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Makes any content in the main container to fill it up */
@@ -294,6 +294,7 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border: none;
     text-decoration: none;
+    font-size: 1rem;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
@@ -312,9 +313,6 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
-.logout {
-    font-size: 1rem;
-}
 
 /* list container (<ul>) */
 .nav-list {

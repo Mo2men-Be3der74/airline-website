@@ -263,6 +263,7 @@ input:checked+.slider::before {
     text-decoration: none;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
     gap: 3px;
     /*gao between svg and <span>*/
     color: var(--off-white);
@@ -279,9 +280,6 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
-.logout {
-    font-size: 1rem;
-}
 
 /* list container (<ul>) */
 .nav-list {
@@ -554,7 +552,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 
