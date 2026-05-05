@@ -3,12 +3,12 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
 
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
-    let userName = document.getElementById("userName").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
-    let country = document.getElementById("country").value;
-    let terms = document.getElementById("terms").checked;
+    let num = document.getElementById("number").value; // Matches <input id="number">
+    let country = document.getElementById("country").value; // Matches <select id="country">
+
 
     if(firstName === "" || lastName === "" || userName === "" || email === "" || password === "" || confirmPassword === "") {
         alert("Please fill all fields");
@@ -26,12 +26,13 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     }
 
     let user = {
-        firstName,
-        lastName,
-        userName,
-        email,
-        password,
-        country
+        firstName: firstName,
+        lastName: lastName,
+        userName: userName,
+        email: email,
+        password: password,
+        mobile: num,      // Use "mobile" key to match profile expectations
+        country: country  // Use "country" key
     };
 
     localStorage.setItem("user", JSON.stringify(user));
