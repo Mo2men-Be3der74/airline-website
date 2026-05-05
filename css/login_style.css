@@ -172,7 +172,7 @@ input::placeholder {
     width: auto !important; 
     position: absolute;
     right: 10px;
-    top: 0%;
+    top: 5%;
     transform: translateY(-50%);
     height: 100%;
     display: flex;

@@ -126,7 +126,7 @@ window.addEventListener("DOMContentLoaded", function () {
                             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                             <circle cx="12" cy="7" r="4" />
                         </svg> Welcome, ${user.firstName} ${user.lastName}</span>
-            <button id="logout-btn" class="btn-logout">Logout</button>
+            <button id="logout-btn" class="btn-logout"><span class="logout">Logout</span></button>
         `;
     }
 

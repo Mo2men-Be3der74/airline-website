@@ -289,6 +289,10 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
+.logout {
+    font-size: 1rem;
+}
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
