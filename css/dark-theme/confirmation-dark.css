@@ -28,6 +28,11 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--on-grey2);
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;

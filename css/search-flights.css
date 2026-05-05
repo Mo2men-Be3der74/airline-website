@@ -31,6 +31,10 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Label */
 .search-field-label {
     font-size: 0.72rem;
