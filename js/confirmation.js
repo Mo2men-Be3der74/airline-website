@@ -19,4 +19,15 @@ const savedData = JSON.parse(localStorage.getItem('bookingTotalObj'));
 if (savedData) {
     console.log("السعر النهائي هو: " + savedData.totalAmount);
 }
-
+function Payment() {
+    const holder = document.getElementById("cardholder");
+    const cardNumber = document.getElementById("cardnumber");
+    const expiry = document.getElementById("exipry");
+    const cvv = document.getElementById("cvv");
+    if (holder.value.trim() === "" || cardNumber.value.trim() === "" || expiry.value.trim() === "" || cvv.value.trim() === "") {
+        alert("Please fill in all payment details.");
+        return;
+    } else {
+        alert("Payment successful! Thank you for your purchase.");
+    }
+}

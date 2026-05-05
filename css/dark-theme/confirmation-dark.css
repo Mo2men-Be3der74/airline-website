@@ -28,6 +28,11 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--on-grey2);
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* header container (main/center) */
 .header {
@@ -576,7 +581,9 @@ section h2 {
     font-size: 10px;
     color: var(--off-white);
 }
-
+::placeholder{
+    opacity: 0.3;
+}
 .form-row {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
