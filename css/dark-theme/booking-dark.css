@@ -256,6 +256,10 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
+.logout {
+    font-size: 1rem;
+}
+
 /* list container (<ul>) */
 .nav-list {
     align-items: center;
@@ -530,6 +534,7 @@ body {
     /* 100vh = 100% of the viewport height */
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Makes any content in the main container to fill it up */
@@ -569,6 +574,11 @@ p {
 body {
     margin: 0;
     background-color: var(--on-grey2);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 main {

@@ -18,7 +18,13 @@
 
 body {
     background-color: var(--on-grey2);
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* header container (main/center) */
 .header {
@@ -254,6 +260,10 @@ input:checked+.slider::before {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
+}
+
+.logout {
+    font-size: 1rem;
 }
 
 /* list container (<ul>) */
