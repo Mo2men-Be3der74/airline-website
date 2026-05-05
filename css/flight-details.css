@@ -19,7 +19,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+      display: none;
 }
 
 
@@ -689,6 +689,7 @@ input:checked+.slider::before {
       border: none;
       text-decoration: none;
       /*removes the underline*/
+      font-size: 1rem;
       font-family: 'Plus Jakarta Sans', sans-serif;
       gap: 3px;
       /*gao between svg and <span>*/
@@ -706,9 +707,7 @@ input:checked+.slider::before {
       transition: color 0.7s ease;
 }
 
-.logout {
-      font-size: 1rem;
-}
+
 
 /* list container (<ul>) */
 .nav-list {

@@ -42,7 +42,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 
@@ -291,6 +291,7 @@ input:checked+.slider::before {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     padding: 4px 10px;
     border: none;
+    font-size: 1rem;
     text-decoration: none;
     /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -310,9 +311,7 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
-.logout {
-    font-size: 1rem;
-}
+
 
 /* list container (<ul>) */
 .nav-list {
