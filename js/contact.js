@@ -58,5 +58,12 @@ console.log(userData.lastName);
 console.log(userData.email);
 const fullname = document.getElementsByName('user_name')[0];
 const email = document.getElementsByName('email_address')[0];
+const message = document.getElementsByName('message')[0];
+const booking = document.getElementById('booking');
 fullname.value = userData.firstName + ' ' + userData.lastName;
 email.value = userData.email;
+const button = document.querySelector('.submit-button');
+button.addEventListener('click', () => {
+    const audio = document.getElementById('myAudio');
+    audio.play();
+});
