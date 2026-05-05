@@ -1,6 +1,11 @@
 function bookTicket(ticket) {
       localStorage.setItem('selectedTicket', JSON.stringify(ticket));
-      window.location.href = '../booking/flight-details.html';
+      if (localStorage.getItem("user")) {
+            window.location.href = '../booking/flight-details.html';
+      }
+      else {
+            window.location.href = '../auth/login.html';
+      }
 }
 
 // Only run this code on the flight-details page
