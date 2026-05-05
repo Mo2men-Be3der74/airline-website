@@ -69,28 +69,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     // TOGGLE PASSWORD
-    window.togglePassword = function () {
-        let pass = document.getElementById("password");
-        let icon = document.getElementById("eyeIcon");
+window.togglePassword = function (inputId, iconId) {
+    let passInput = document.getElementById(inputId);
+    let icon = document.getElementById(iconId);
 
-        if (!pass) return;
+    if (!passInput) return;
 
-        if (pass.type === "password") {
-            pass.type = "text";
-
-            if (icon) {
-                icon.classList.remove("fa-eye-slash");
-                icon.classList.add("fa-eye");
-            }
-
-        } else {
-            pass.type = "password";
-
-            if (icon) {
-                icon.classList.remove("fa-eye");
-                icon.classList.add("fa-eye-slash");
-            }
+    if (passInput.type === "password") {
+        passInput.type = "text";
+        if (icon) {
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
         }
-    };
+    } else {
+        passInput.type = "password";
+        if (icon) {
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+        }
+    }
+};
 
 });
