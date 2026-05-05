@@ -24,13 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            let country = document.getElementById("country")?.value.trim();
+
             let user = {
                 firstName,
                 lastName,
                 email,
-                number,
+                mobile: number,
+                country,
                 password
             };
+            //added mobile and country and fixed the profile not showing both problem
 
             localStorage.setItem("user", JSON.stringify(user));
 

@@ -10,7 +10,7 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     let country = document.getElementById("country").value; // Matches <select id="country">
 
 
-    if(firstName === "" || lastName === "" || userName === "" || email === "" || password === "" || confirmPassword === "") {
+    if(firstName === "" || lastName === "" || email === "" || password === "" || confirmPassword === "") {
         alert("Please fill all fields");
         return;
     }
@@ -20,19 +20,14 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
         return;
     }
 
-    if(!terms) {
-        alert("You must agree to terms");
-        return;
-    }
 
     let user = {
         firstName: firstName,
         lastName: lastName,
-        userName: userName,
         email: email,
         password: password,
-        mobile: num,      // Use "mobile" key to match profile expectations
-        country: country  // Use "country" key
+        mobile: num,
+        country: country
     };
 
     localStorage.setItem("user", JSON.stringify(user));

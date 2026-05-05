@@ -1,9 +1,5 @@
 
-/* ========================================
-   PASSWORD TOGGLE
-   ======================================== */
-
-
+//password toggle
 document.addEventListener('DOMContentLoaded', function() {
     const passwordField = document.getElementById('password');
     const passwordToggle = document.querySelector('.password-toggle');
@@ -24,18 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/* ========================================
-   FORM HANDLING
-   ======================================== */
-
+//form handling
 const profileForm = document.getElementById('profileForm');
 const saveBtn = document.getElementById('save-btn');
 const cancelBtn = document.getElementById('cancel-btn');
 
-// Form data object to store original values
 let originalFormData = {};
 
-// Store original form data on page load
 function storeOriginalData() {
     if (profileForm) {
         const inputs = profileForm.querySelectorAll('input, textarea');
@@ -45,7 +36,7 @@ function storeOriginalData() {
     }
 }
 
-// Cancel button - Clear all inputs
+//clearing inputs
 if (cancelBtn) {
     cancelBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -55,7 +46,7 @@ if (cancelBtn) {
             const inputs = profileForm.querySelectorAll('input, textarea');
             inputs.forEach(input => {
                 if (input.type === 'password') {
-                    input.type = 'password'; // Reset password visibility
+                    input.type = 'password'; // resets
                     if (passwordToggleBtn) {
                         passwordToggleBtn.innerHTML = '<i class="fa-solid fa-eye"></i>';
                     }
@@ -66,27 +57,25 @@ if (cancelBtn) {
     });
 }
 
-// Save button - Form submission
+// saves the new info
 if (saveBtn) {
     saveBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        // Get form data
         if (profileForm) {
             const formData = new FormData(profileForm);
             const data = Object.fromEntries(formData);
 
-            // Validation example
+
             if (!data.firstName || !data.lastName) {
                 alert('Please fill in all required fields');
                 return;
             }
 
-            // Here you would normally send data to backend
             console.log('Form Data:', data);
             alert('Profile saved successfully!');
 
-            // Store new data as original
+            // Store new info as original
             storeOriginalData();
         }
     });
@@ -97,19 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
     storeOriginalData();
 });
 
-/* ========================================
-   LOAD DATA FROM LOCALSTORAGE
-   ======================================== */
+
+//load data from localstorage
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get user data from localStorage
+    //get the data from the localstorage
     let user = localStorage.getItem("user");
 
     if (user) {
-        // Parse the stored JSON data
+        // parse the json
         user = JSON.parse(user);
 
-        // Fill form inputs with stored data
+        // fill form inputs with stored data
         document.getElementById("first-name").value = user.firstName || "";
         document.getElementById("last-name").value = user.lastName || "";
         document.getElementById("email").value = user.email || "";
@@ -120,15 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("nationality").value = user.country || "";
         document.getElementById("address").value = user.address || "";
 
-        // Update user info in sidebar
+        // update user info in sidebar
         document.querySelector(".user-info h2").textContent = user.firstName + " " + user.lastName;
         document.querySelector(".user-info p").textContent = user.email;
     }
 });
 
-/* ========================================
-   SAVE FORM DATA TO LOCALSTORAGE ON SUBMIT
-   ======================================== */
+//save form data to localstorage on submitting
 
 document.getElementById("profile-form").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -146,7 +132,6 @@ document.getElementById("profile-form").addEventListener("submit", function(e) {
         return;
     }
 
-    // Get existing user data and update it
     let user = JSON.parse(localStorage.getItem("user")) || {};
 
     user = {
@@ -164,7 +149,7 @@ document.getElementById("profile-form").addEventListener("submit", function(e) {
 
     alert("Profile updated successfully!");
 
-    // Update sidebar
+    // update sidebar
     document.querySelector(".user-info h2").textContent = firstName + " " + lastName;
     document.querySelector(".user-info p").textContent = email;
 });
