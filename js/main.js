@@ -138,3 +138,12 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// 1. Select the elements from your HTML
+const layoutSection = document.getElementById('trending-section');
+const themeBtn = document.getElementById('theme-check'); // Replace with your actual button ID
+
+// 2. Add the click event listener
+themeBtn.addEventListener('click', () => {
+    // This adds 'alt-layout' if it's missing, and removes it if it's there
+    layoutSection.classList.toggle('alt-layout');
+});
