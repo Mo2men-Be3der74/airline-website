@@ -11,6 +11,7 @@
     --tertiary: #4C2D38;
     --secondary: #cbb573;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -20,6 +21,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--surface-color);
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -285,6 +287,10 @@ input:checked+.slider::before {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
+}
+
+.logout {
+    font-size: 1rem;
 }
 
 /* list container (<ul>) */
@@ -588,7 +594,8 @@ section h2 {
     font-size: 10px;
     color: var(--text-color);
 }
-::placeholder{
+
+::placeholder {
     opacity: 0.3;
 }
 
