@@ -102,6 +102,7 @@ main {
     letter-spacing: 0.05em;
     width: auto;
 }
+
 .logo-placeholder h1 a {
     text-decoration: none;
     color: inherit;
@@ -179,7 +180,7 @@ main {
 /* A. Change the Track color when checked */
 input:checked+.slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);
-;
+    ;
     /* Dark Track Color */
 }
 
@@ -194,7 +195,7 @@ input:checked+.slider::before {
 
     /* Color Swap (Dark State) */
     background-color: color-mix(in srgb, var(--primary), black 75%);
-;
+    ;
     /* Black ball */
 
 }
@@ -266,7 +267,6 @@ input:checked+.slider::before {
     gap: 3px;
     /*gao between svg and <span>*/
     color: var(--off-white);
-    font-weight: 500;
     display: flex;
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
@@ -701,7 +701,7 @@ footer {
 .lower-footer-img {
 
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%),
-    url("../assets/index-assets/lower-footer-pattern.png");
+        url("../assets/index-assets/lower-footer-pattern.png");
 
     background-size: contain;
     background-position: bottom center;
