@@ -147,3 +147,15 @@ themeBtn.addEventListener('click', () => {
     // This adds 'alt-layout' if it's missing, and removes it if it's there
     layoutSection.classList.toggle('alt-layout');
 });
+
+document.querySelector(".my-profile-link").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let user = localStorage.getItem("user");
+
+    if(user) {
+        window.location.href = "pages/auth/myprofile.html";
+    } else {
+        window.location.href = "pages/auth/login.html";
+    }
+});
