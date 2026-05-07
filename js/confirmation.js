@@ -39,15 +39,13 @@ function Payment() {
         cvv.value.trim() === ""
     ) {
 
-        // errorSound.currentTime = 0;
         errorSound.play();
 
         alert("Please fill in all payment details.");
         return;
 
     } else {
-
-        // successSound.currentTime = 0;
+        
         successSound.play();
 
         alert("Payment successful! Thank you for your purchase.");

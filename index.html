@@ -20,10 +20,6 @@
 </head>
 
 <body>
-    <audio id="music" loop>
-        <source src="assets/audio-asset/saboteurcomics-airplane-chime-466924.mp3" type="audio/mpeg">
-    </audio>
-
     <header class="header">
         <div class="upper-half">
             <!--        justify-conten:space-between.<it makes the first child to the very left and the last to the very right
@@ -537,18 +533,6 @@
     <script src="js/main.js" defer></script>
     <script src="js/search.js"></script>
     <script src="js/result.js"></script>
-
-    <script>
-        document.addEventListener("click", function () {
-            let audio = document.getElementById("music");
-
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        });
-    </script>
 </body>
 
 </html>
