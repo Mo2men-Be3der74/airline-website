@@ -71,7 +71,7 @@ main {
 .bottom-half {
     /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--on-grey1), black 30%);
-;
+    ;
     /*Color-mix function to mix colors or create new ones depending on the need,
     it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
@@ -109,11 +109,13 @@ main {
     letter-spacing: 0.05em;
     width: auto;
 }
+
 .logo-placeholder h1 a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -185,7 +187,7 @@ main {
 /* A. Change the Track color when checked */
 input:checked+.slider {
     background-color: color-mix(in srgb, var(--on-grey2), black 2%);
-;
+    ;
     /* Dark Track Color */
 }
 
@@ -200,7 +202,7 @@ input:checked+.slider::before {
 
     /* Color Swap (Dark State) */
     background-color: color-mix(in srgb, var(--primary), black 75%);
-;
+    ;
     /* Black ball */
 
 }
@@ -275,6 +277,7 @@ input:checked+.slider::before {
     transition: color 0.7s ease-in-out;
     color: var(--off-white);
     font-weight: 300;
+    cursor: pointer;
     display: flex;
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
@@ -725,7 +728,7 @@ footer {
 .lower-footer-img {
 
     background:
-            url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
+        url("../../assets/index-assets/lower-footer-pattern-dark.jpg");
 
     background-size: contain;
     background-position: bottom center;

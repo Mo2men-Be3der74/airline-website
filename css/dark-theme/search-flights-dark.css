@@ -94,11 +94,13 @@ body {
     letter-spacing: 0.05em;
     width: auto;
 }
+
 .logo-placeholder h1 a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
@@ -261,6 +263,7 @@ input:checked+.slider::before {
     color: var(--off-white);
     font-weight: 300;
     display: flex;
+    cursor: pointer;
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }

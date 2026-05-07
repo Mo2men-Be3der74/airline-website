@@ -255,6 +255,7 @@ input:checked+.slider::before {
     transition: color 0.7s ease-in-out;
     color: var(--off-white);
     font-weight: 300;
+    cursor: pointer;
     display: flex;
     align-items: center;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
