@@ -19,6 +19,7 @@
 
 
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -98,6 +99,7 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: flex-end;
     gap: 8px;
 }
+
 .logo-placeholder {
     color: var(--secondary);
     font-size: 1.4rem;
@@ -107,16 +109,19 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
     padding: 0;
 }
+
 .logo-placeholder h1 a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
+
 h1.logo-placeholder {
     font-size: 1.4rem;
     margin: 0;
     padding: 0;
 }
+
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;

@@ -427,6 +427,8 @@ input:checked+.slider::before {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    border-right: 1px solid var(--on-grey2);
+    padding-right: 40px;
 }
 
 .user-avatar {
