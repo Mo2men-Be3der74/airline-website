@@ -1101,6 +1101,7 @@ video {
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
 
+
 /* Responsiveness: Switch to 2 columns on tablets and 1 on mobile */
 @media (max-width: 1024px) {
     .trending-grid {
