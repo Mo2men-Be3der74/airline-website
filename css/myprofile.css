@@ -269,6 +269,7 @@ input:checked+.slider::before {
     color: var(--off-white);
     display: flex;
     align-items: center;
+    cursor: pointer;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
     transition: color 0.7s ease-in-out;
 }

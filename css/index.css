@@ -139,6 +139,7 @@ p {
     letter-spacing: 0.05em;
     width: auto;
 }
+
 .logo-placeholder h1 a {
     text-decoration: none;
     color: inherit;
@@ -306,6 +307,7 @@ input:checked+.slider::before {
     font-weight: 500;
     display: flex;
     align-items: center;
+    cursor: pointer;
     /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
     transition: color 0.7s ease-in-out;
 }
@@ -1098,6 +1100,7 @@ video {
     background: #d4c080;
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
+
 
 /* Responsiveness: Switch to 2 columns on tablets and 1 on mobile */
 @media (max-width: 1024px) {
