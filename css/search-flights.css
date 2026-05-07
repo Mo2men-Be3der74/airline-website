@@ -827,23 +827,30 @@ footer {
 
 .tickets .ticket-cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 15px;
     width: 100%;
+    justify-content: center;
 }
 
 .tickets .ticket-cards .card {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: white;
-    border-radius: 10px;
-    height: 150px;
-    padding: 15px;
+    border-radius: 15px;
+    height: auto;
+    width: calc(50% - 90px);
+    padding: 30px;
     margin: 30px;
     transition: all 0.3s ease;
     padding-left: 0;
+    gap: 30px;
+    border: var(--primary-color) 1px solid;
+    text-align: center;
 }
 
 .tickets .ticket-cards .card .icon {
@@ -888,11 +895,22 @@ footer {
     color: var(--primary-color);
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+.tickets .ticket-cards .card .class {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .tickets .ticket-cards .card .right .btn-secondary {
     outline: none;
     border: none;
+    justify-self: center;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     padding: 10px 15px;
@@ -900,6 +918,7 @@ footer {
     width: 150px;
     cursor: pointer;
     transition: all 0.3s ease;
+
 }
 
 .tickets .ticket-cards .card .right .btn-secondary:hover {
