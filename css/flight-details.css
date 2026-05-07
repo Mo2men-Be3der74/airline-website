@@ -62,7 +62,7 @@ body {
 .flight-details .left .destination .to {
       color: var(--secondary-color);
       position: relative;
-      left: -30px;
+      left: -5px;
 }
 
 .flight-details .left .card {
