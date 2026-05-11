@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    function checkEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    }
+
+    function checkPassword(password) {
+        const rules = [
+            { test: password.length >= 8,           label: "8+ characters" },
+            { test: /[A-Z]/.test(password),         label: "uppercase letter" },
+            { test: /[0-9]/.test(password),         label: "number" },
+            { test: /[^A-Za-z0-9]/.test(password),  label: "special character" },
+        ];
+        return {
+            score:   rules.filter(r => r.test).length,
+            missing: rules.filter(r => !r.test).map(r => r.label),
+        };
+    }
     // REGISTER
 
     const registerForm = document.getElementById("registerForm");
@@ -15,12 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let confirmPassword = document.getElementById("confirmPassword")?.value.trim();
 
+
+            if (!firstName || !lastName || !email || !password) {
+                alert("Please fill all fields");
+                return;
+            }
+
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
                 return;
-}
-            if (!firstName || !lastName || !email || !password) {
-                alert("Please fill all fields");
+            }
+
+            if (!checkEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            const strength = checkPassword(password);
+            if (strength.score < 3) {
+                alert("Weak password. Add: " + strength.missing.join(", ") + ".");
                 return;
             }
 

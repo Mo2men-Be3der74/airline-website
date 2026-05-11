@@ -965,3 +965,14 @@ footer {
       /* Adds space after the pipe */
       color: #ccc;
 }
+.destination-map {
+      margin-top: 32px;
+      width: 100%;
+}
+
+.destination-map .map-label {
+      font-size: 12px;
+      letter-spacing: 2.4px;
+      color: #665E44;
+      margin-bottom: 12px;
+}

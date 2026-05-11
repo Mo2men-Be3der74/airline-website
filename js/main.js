@@ -1,5 +1,12 @@
 //DOMContentLoaded makes sure the all the html code loads first before any grabbing from the JS
 document.addEventListener('DOMContentLoaded', () => {
+    const savedCountry = localStorage.getItem("selectedCountry");
+    const savedLang = localStorage.getItem("selectedLang");
+
+    if (savedCountry && savedLang) {
+        const headerLink = document.querySelector('#open-lang-modal span');
+        if (headerLink) headerLink.innerText = savedCountry + ' | ' + savedLang;
+    }
     // setting a const to our modal with the #id=lang-modal
     // const (data type) modal (variable name) = document(represents the entire html document (DOM-Document object model-tree), the root of the nods element tree)
     //.(member access operator) getElementById(A method, a function, api function) 'lang-modal' (function's argument)
@@ -26,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // update the header link text
         document.querySelector('#open-lang-modal span').innerText = countryText + ' | ' + langText;
+        localStorage.setItem("selectedCountry", countryText);
+        localStorage.setItem("selectedLang", langText);
 
         modal.close();
     });
@@ -93,16 +102,7 @@ themeCheck.addEventListener('change', () => {
     }
 });
 
-const nav = document.querySelector('.bottom-half');
-const navTop = nav.offsetTop;
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY >= navTop) {
-        nav.classList.add('sticky');
-    } else {
-        nav.classList.remove('sticky');
-    }
-});
+//
 
 document.querySelectorAll('.search-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -110,8 +110,6 @@ document.querySelectorAll('.search-tab').forEach(tab => {
         tab.classList.add('active-tab');
     });
 });
-
-
 
 window.addEventListener("DOMContentLoaded", function () {
     const authContainer = document.getElementById("auth-container");

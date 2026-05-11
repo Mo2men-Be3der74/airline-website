@@ -72,7 +72,7 @@ p {
 
 }
 
-/* header container (main/center) */
+/* header container (main/center/PARENT) */
 .header {
     display: flex;
     flex-direction: column;
@@ -86,16 +86,13 @@ p {
     display: flex;
     /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
-    /* Pushes Logo to left(first child), Links to right(last child) */
+    /* Pushes Logo to left(first child), Links to right(last child) (divs)*/
     padding: 1rem 2rem;
     /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
     the padding will change automatically to fit the padding right. this increases the accessibility for the website
     rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
     align-items: center;
     /* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
 }
 
@@ -127,6 +124,7 @@ p {
 .r-right-sec {
     display: flex;
     flex-direction: column;
+    /*Above each other vertically*/
     align-items: flex-end;
     gap: 8px;
 }
@@ -149,6 +147,8 @@ p {
 /* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
+    /* it does not force a new line. Elements will sit side-by-side as long as there is space in the parent container.
+    Inline + Also controlling the width and height!!!!*/
     position: relative;
     width: 45px;
     /* Adjust this to make the switch wider/narrower */
@@ -165,11 +165,13 @@ p {
 /* 3. The visual track (the base of the slider) */
 .slider {
     position: absolute;
+    /*This allows the slider to stretch and fill the .theme-switch container exactly.*/
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /*This allows the slider to stretch and fill the .theme-switch container exactly.*/
     background-color: var(--off-white);
     /* Default Light Track Color */
     border-radius: 30px;
@@ -182,13 +184,19 @@ p {
 .slider::before {
     position: absolute;
     content: "☀️";
+    /*<!-- How the browser "sees" it because of your CSS -->
+<span class="slider">
+    <::before>☀️</::before> <!-- This is the ball -->
+    <!-- Any other text/content would go here -->
+</span>*/
     /* Default Light Icon (Sun) */
     font-size: 0.8rem;
+    /*Size for the EMOJI*/
     display: flex;
     align-items: center;
     justify-content: center;
     /* Center the icon in the ball */
-
+    /*Standard Flexbox "magic" to keep that Sun emoji perfectly centered inside the circle.*/
     /* Sizing the ball slightly smaller than the track height */
     height: 16px;
     width: 16px;
@@ -219,6 +227,7 @@ input:checked+.slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);
     ;
     /* Dark Track Color */
+/*    This uses the Adjacent Sibling Combinator (+). It says: "Find the slider that immediately follows a checked input and change its background."*/
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
@@ -226,6 +235,7 @@ input:checked+.slider::before {
     /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
     /*45-16-3-3*/
     transform: translateX(23px);
+    /*This moves the ball to the right.The Math: $45\text{px (Total)} - 16\text{px (Ball)} - 3\text{px (Left offset)} - 3\text{px (Desired Right offset)} = 23\text{px}$.*/
 
     /* Content Swap: Change sun to moon */
     content: "🌙";
@@ -262,7 +272,6 @@ input:checked+.slider::before {
 /*auth-bttns*/
 .auth-bttns {
     display: flex;
-    gap: 12px;
     /*   Gap between each button (There's only one for both login & registration right now) */
 }
 
@@ -427,6 +436,7 @@ input:checked+.slider::before {
     right: 20px !important;
     left: auto !important;
     /*fight any left styling that may conflict with the pop up*/
+    /*is a safety measure to ensure it doesn't try to stretch across the whole screen if a left: 0 was set elsewhere.*/
     margin: 0 !important;
     /* ensures no margins are pushing it */
 
@@ -437,11 +447,13 @@ input:checked+.slider::before {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    /*This gives it "lift." It creates a soft shadow below the modal so it looks like it’s floating above the webpage.*/
     border: none;
     background: white;
     z-index: 1000;
 }
 
+/*These handle the layout for the "Apply" or "Close" buttons at the bottom.*/
 .modal-actions {
     display: flex;
     justify-content: center;
@@ -510,6 +522,10 @@ input:checked+.slider::before {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
+
+
+
+
 
 
 footer {
