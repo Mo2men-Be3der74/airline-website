@@ -227,7 +227,7 @@ input:checked+.slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);
     ;
     /* Dark Track Color */
-/*    This uses the Adjacent Sibling Combinator (+). It says: "Find the slider that immediately follows a checked input and change its background."*/
+    /*    This uses the Adjacent Sibling Combinator (+). It says: "Find the slider that immediately follows a checked input and change its background."*/
 }
 
 /* B. The 'Swipe Right' movement and icon/color swap */
@@ -522,10 +522,6 @@ input:checked+.slider::before {
     display: block;
     /*    when show(), change this property to block in the dropdownlist selector*/
 }
-
-
-
-
 
 
 footer {

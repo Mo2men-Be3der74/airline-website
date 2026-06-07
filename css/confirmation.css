@@ -10,25 +10,19 @@
     --primary: #3A1824;
     --tertiary: #4C2D38;
     --secondary: #cbb573;
+    --border-color: #d8cfc9;
+    --input-bg: #ffffff;
+    --card-bg: #ffffff;
+    --label-color: #1F040E;
+    --muted-color: #7a6b71;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* 100vh = 100% of the viewport height */
-    margin: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--surface-color);
-    overflow-x: hidden;
-}
-
+/* ── Reset ── */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -40,70 +34,48 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-/* Makes any content in the main container to fill it up */
-main {
-    flex: 0;
-    min-height: 0;
+/* ── Base ── */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
-
-/*h1,*/
-/*h2,*/
-/*h3,*/
-/*h4,*/
-/*h5,*/
-/*h6 {*/
-/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
-/*    font-weight: 600;*/
-/*    color: var(--primary);*/
-
-
-/*}*/
 
 p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-
+    font-weight: 400;
 }
 
-/* header container (main/center) */
 .header {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 10;
-    /* Two stacked bars   */
 }
 
 .upper-half {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
-    /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
-    /* Pushes Logo to left(first child), Links to right(last child) */
     padding: 1rem 2rem;
-    /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
-    the padding will change automatically to fit the padding right. this increases the accessibility for the website
-    rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
     align-items: center;
-    /* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
 .bottom-half {
-    /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--primary), black 15%);
-    /*Color-mix function to mix colors or create new ones depending on the need,
-    it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
     position: sticky !important;
-    /* default state */
     z-index: 1000 !important;
     top: 0 !important;
 }
@@ -111,11 +83,8 @@ p {
 .right-sec {
     display: flex;
     flex-direction: row;
-    /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
     align-items: flex-end;
-    /* pins them to the right end side of the container's hight */
     gap: 8px;
-    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
 
 .r-right-sec {
@@ -125,7 +94,6 @@ p {
     gap: 8px;
 }
 
-/*left-header-section*/
 .logo-placeholder {
     color: var(--off-white);
     font-size: 1.4rem;
@@ -140,23 +108,20 @@ p {
     cursor: pointer;
 }
 
-/* 1. The main rectangular track */
+/* ── Theme Switch ── */
 .theme-switch {
     display: inline-block;
     position: relative;
     width: 45px;
-    /* Adjust this to make the switch wider/narrower */
     height: 20px;
 }
 
-/* 2. Hide the actual ugly checkbox, but keep it accessible for the script */
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* 3. The visual track (the base of the slider) */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -165,99 +130,59 @@ p {
     right: 0;
     bottom: 0;
     background-color: var(--off-white);
-    /* Default Light Track Color */
     border-radius: 30px;
-    /* This creates the "very rounded" ends */
     transition: background-color 0.3s ease;
-    /* Smooth fade when the track changes color */
 }
 
-/* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
     content: "☀️";
-    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center the icon in the ball */
-
-    /* Sizing the ball slightly smaller than the track height */
     height: 16px;
     width: 16px;
-
-    /* Positioning (initial state = far left) */
     left: 3px;
     bottom: 3px;
-
     border-radius: 50%;
-    /* Make the ball round */
-
-    /* Colors (Light State) */
     background-color: var(--off-white);
-    /* White ball */
     color: #333;
-    /* Black icon */
-
-    /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* -------------------------------------------------------------------------
-   STATE CHANGES: What happens when the checkbox is checked (Dark Mode)
-   ------------------------------------------------------------------------- */
-
-/* A. Change the Track color when checked */
 input:checked+.slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);
-    ;
-    /* Dark Track Color */
 }
 
-/* B. The 'Swipe Right' movement and icon/color swap */
 input:checked+.slider::before {
-    /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
-    /*45-16-3-3*/
     transform: translateX(23px);
-
-    /* Content Swap: Change sun to moon */
     content: "🌙";
-
-    /* Color Swap (Dark State) */
     background-color: color-mix(in srgb, var(--primary), black 75%);
-    ;
-    /* Black ball */
-
 }
 
+/* ── Nav links ── */
 .utility-link {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    /*sets the icon and the text on the same horizontal axis line*/
     gap: 4px;
-    /*breathing room between the icon and the text, its two childern thats why there are two containers*/
     font-size: 0.9rem;
     color: var(--off-white);
     text-decoration: none;
     padding-right: 2px;
     padding-bottom: 2.7pt;
-    /*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
 
 .utility-link:hover {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--secondary);
     font-weight: 400;
 }
 
-/*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
-    /*   Gap between each button (There's only one for both login & registration right now) */
 }
 
 .btn {
@@ -265,12 +190,9 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
-    /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
-    /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
-
 }
 
 .btn-login {
@@ -278,14 +200,12 @@ input:checked+.slider::before {
     font-weight: 300;
     display: flex;
     align-items: center;
-    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
 
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
     transition: color 0.7s ease;
-
 }
 
 .btn-logout {
@@ -293,17 +213,14 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border: none;
     text-decoration: none;
-    /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1rem;
     gap: 3px;
-    /*gao between svg and <span>*/
     color: var(--off-white);
     font-weight: 500;
     display: flex;
     align-items: center;
     cursor: pointer;
-    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
     transition: color 0.7s ease-in-out;
 }
 
@@ -313,63 +230,58 @@ input:checked+.slider::before {
     transition: color 0.7s ease;
 }
 
-
-/* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
-    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
     list-style: none;
-    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
 
-/* individual links  (<a>) */
 .nav-link {
     color: var(--off-white);
     text-decoration: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
-
 }
 
-/* hover */
 .nav-link:hover {
     color: var(--secondary);
     transition: color 0.3s ease;
-    /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
-
 }
 
 .active {
     color: var(--secondary);
     font-weight: 500;
-    /* Make it a bit boldy when active   */
 }
 
+/* =====================================================
+   LANG MODAL
+   ===================================================== */
 #lang-modal {
-    /* positioning */
     position: fixed !important;
-    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
-    /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
-    /* ensures no margins are pushing it */
-
     width: 350px;
-    /* more -> bigger -> wider */
     min-height: 300px;
-    /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border: none;
-    background: white;
+    background: #ffffff;
     z-index: 1000;
+}
+
+#lang-modal h3 {
+    color: var(--primary);
+}
+
+#lang-modal label {
+    color: var(--tertiary);
+    font-weight: 600;
 }
 
 .modal-actions {
@@ -388,59 +300,369 @@ input:checked+.slider::before {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     margin-top: 25px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Container for the dropdown */
 .custom-dropdown {
     position: relative;
-    /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
-    /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
-    background: white;
+    background: #ffffff;
+    color: var(--text-color);
 }
 
-/* The list (hidden by default) */
 .dropdown-list {
     display: none;
-    /*initially making this not visible untill triggered by the JS script to make it :block; (visible)*/
     position: absolute;
-    /*fix its position when opened, not pushing everything down*/
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #ccc;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     list-style: none;
-    /*clear the normal list style*/
     padding: 0;
     z-index: 1001;
-    /*    higher than the dialog and the bottom header*/
 }
 
 .dropdown-list li {
     display: flex;
     align-items: center;
     gap: 10px;
-    /*as usual all 3 props make the text and the image aligned well on a center horizontal axis*/
     padding: 8px;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 .dropdown-list li:hover {
-    background-color: #f0f0f0;
-    /*    Make it grey on the selection on hovering*/
+    background-color: var(--surface-color);
 }
 
-/* Show class for JS */
 .dropdown-list.show {
     display: block;
-    /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
+
+main {
+    flex: 1;
+    min-height: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 60px;
+    margin-bottom: 40px;
+}
+
+/* Left column wrapper */
+.steps-col {
+    flex: 1;
+    max-width: 620px;
+    min-width: 0;
+}
+
+/* ── Progress bar ── */
+.progress-steps {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 24px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-bubble {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-bubble.active {
+    background: var(--primary);
+    color: var(--off-white);
+}
+
+.step-bubble:not(.active) {
+    background: var(--border-color);
+    color: var(--muted-color);
+}
+
+.step-divider {
+    flex: 1;
+    height: 2px;
+    background: var(--border-color);
+    margin: 0 10px;
+}
+
+/* ── Sections ── */
+section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 32px 36px;
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.number {
+    color: var(--secondary-color);
+    font-weight: 300;
+    font-size: 28px;
+}
+
+/* ── Form elements ── */
+.form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+}
+
+.form {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--label-color);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    font-size: 13px;
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    opacity: 1;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(203, 181, 115, 0.15);
+    opacity: 1;
+}
+
+::placeholder {
+    color: var(--muted-color);
+    opacity: 0.55;
+}
+
+/* ── Payment method button ── */
+.method {
+    margin-bottom: 16px;
+}
+
+.visa {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--surface-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.visa:hover {
+    background-color: color-mix(in srgb, var(--primary), black 20%);
+}
+
+.pay-form {
+    margin-top: 4px;
+}
+
+/* ── Security note ── */
+.security-note {
+    font-size: 12px;
+    color: var(--muted-color);
+    margin-top: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+
+.journey {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    border-radius: 12px;
+    height: fit-content;
+    width: 300px;
+    padding: 32px;
+}
+
+.journey-info {
+    font-size: 17px;
+    margin-bottom: 22px;
+    color: var(--secondary-color);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.route-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 16px 0;
+    width: 100%;
+    gap: 8px;
+}
+
+.place {
+    color: var(--secondary-color);
+    min-width: 0;
+}
+
+.code {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.location {
+    font-size: 11px;
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.journey-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.details {
+    flex: 1;
+}
+
+.details .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.65;
+    color: var(--surface-color);
+}
+
+.details .value {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 4px;
+}
+
+.price-tax {
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-top: 1px solid rgba(203, 181, 115, 0.4);
+    padding-top: 12px;
+    color: var(--surface-color);
+}
+
+.confirm {
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: none;
+    color: #1F040E;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.confirm:hover {
+    background-color: #b8a564;
+}
+
+.confirm:active {
+    transform: scale(0.98);
+}
 
 
 footer {
@@ -458,7 +680,6 @@ footer {
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 10px;
-
 }
 
 .upper-footer h1,
@@ -508,6 +729,9 @@ footer {
     align-items: center;
     border-top: 2px solid #EDE9E6;
     height: 60%;
+
+
+
 }
 
 .lower-footer-ul {
@@ -558,161 +782,4 @@ footer {
     margin-left: 12px;
     /* Adds space after the pipe */
     color: #ccc;
-}
-
-.main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-section {
-    margin-bottom: 10px;
-    padding: 40px;
-}
-
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text-color);
-}
-
-.number {
-    color: var(--secondary-color);
-    font-weight: 300;
-}
-
-.form-info {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-}
-
-.form {
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.form label {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--text-color);
-    font-size: 12px;
-    font-weight: 500px;
-    text-transform: uppercase;
-}
-
-.form input {
-    width: 86%;
-    padding: 10px;
-    border: 1px solid var(--tertiary-color);
-    border-radius: 4px;
-    opacity: 0.4;
-    background-color: var(--surface-color);
-    font-size: 10px;
-    color: var(--text-color);
-}
-
-::placeholder {
-    opacity: 0.3;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-}
-
-.visa {
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--surface-color);
-    padding: 10px 20px;
-    border-radius: 3px;
-    font-size: 15px;
-    margin: 5px;
-}
-
-.journey {
-    background-color: var(--primary-color);
-    color: var(--surface-color);
-    border-radius: 5px;
-    height: fit-content;
-    width: 30%;
-    padding: 40px;
-}
-
-.journey-info {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-    letter-spacing: 2px;
-}
-
-.route-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--secondary-color);
-    width: 100%;
-}
-
-.icon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--secondary-color);
-    width: 100%;
-}
-
-.place {
-    color: var(--secondary-color)
-}
-
-.journey-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.price-tax {
-    margin-bottom: 20px;
-}
-
-.price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.total-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.confirm {
-    background-color: var(--secondary-color);
-    border: none;
-    color: var(--surface-color);
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.confirm:hover {
-    background-color: #b8a564;
 }

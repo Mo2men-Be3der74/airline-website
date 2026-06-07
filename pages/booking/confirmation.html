@@ -99,7 +99,7 @@
         <br>
         <div class="open-lang-modal">
             <!--   Country choosing div     -->
-            <label style="color: var(--tertiary); font-weight: bold;">Country*</label>
+            <label style="font-weight: bold; color: var(--text-color);">Country*</label>
             <div class="custom-dropdown" id="country-dropdown">
                 <div class="dropdown-const">
                     <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" width="20" height="15"> Egypt
@@ -151,7 +151,7 @@
                 <!--            The drop down list with its options-->
             </div>
             <!-- language choosing div-->
-            <label style="color: var(--tertiary); font-weight: bold;">Language*</label>
+            <label style="font-weight: bold; color: var(--text-color);">Language*</label>
             <div class="custom-dropdown" id="lang-dropdown">
                 <div class="dropdown-const">English</div>
                 <ul class="dropdown-list">
@@ -180,69 +180,107 @@
     </dialog>
 
     <main class="main">
-        <div>
+        <div class="steps-col">
+
             <section>
                 <h2><span class="number">01</span>Passenger Information</h2>
+
                 <div class="form-info">
-                    <div class="form">
-                        <label for="fristName">First Name</label>
-                        <input type="text" id="fname" placeholder="Evelyn">
+                    <div class="form-row">
+                        <div class="form">
+                            <label for="fristName">First Name</label>
+                            <input type="text" id="fname" placeholder="Evelyn">
+                        </div>
+                        <div class="form">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lname" placeholder="St.James">
+                        </div>
                     </div>
+
                     <div class="form">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lname" placeholder="St.James">
-                    </div>
-                    <div class="form">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" placeholder="evelyn@manor-curated.com">
                     </div>
-                    <div class="form">
-                        <label for="passport">Passport Number</label>
-                        <input type="text" id="passport" placeholder="X1234567">
-                    </div>
-                    <div class="form">
-                        <label for="frequentFlyer">Frequent Flyer Number</label>
-                        <input type="text" id="frequentFlyer" placeholder="Optionl">
+
+                    <div class="form-row">
+                        <div class="form">
+                            <label for="passport">Passport Number</label>
+                            <input type="text" id="passport" placeholder="X1234567">
+                        </div>
+                        <div class="form">
+                            <label for="frequentFlyer">Frequent Flyer <span
+                                    style="font-weight:400;opacity:.7;">(Optional)</span></label>
+                            <input type="text" id="frequentFlyer" placeholder="FF-000000">
+                        </div>
                     </div>
                 </div>
             </section>
+
+
             <section>
                 <h2><span class="number">02</span>Secure Payment</h2>
+
+
                 <div class="method">
                     <button class="visa">
                         <i class="fa-solid fa-credit-card"></i> Credit Card
                     </button>
                 </div>
+
+
+                <div style="display:flex;gap:10px;margin-bottom:18px;align-items:center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+                        style="height:22px;object-fit:contain;opacity:.75;">
+                </div>
+
                 <div class="pay-form">
                     <div class="form">
                         <label for="cardholder">Cardholder Name</label>
                         <input type="text" placeholder="Evelyn St.James" id="cardholder">
                     </div>
+
                     <div class="form">
                         <label for="cardnumber">Card Number</label>
                         <input type="text" placeholder="**** **** **** 4412" maxlength="19" id="cardnumber">
                     </div>
+
                     <div class="form-row">
                         <div class="form">
-                            <label for="exipry">Exipry Date</label>
+                            <label for="exipry">Expiry Date</label>
                             <input type="text" placeholder="MM/YY" maxlength="5" id="exipry">
                         </div>
                         <div class="form">
-                            <label for="cvv">CVV</label>
-                            <input type="text" placeholder="***" maxlength="3" id="cvv">
+                            <label for="cvv">CVV
+                                <i class="fa-solid fa-circle-question" style="font-size:12px;opacity:.6;cursor:help;"
+                                    title="3-digit code on the back of your card"></i>
+                            </label>
+                            <input type="text" placeholder="•••" maxlength="3" id="cvv">
                         </div>
                     </div>
                 </div>
+
+                <p class="security-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Your payment information is encrypted and never stored on our servers.
+                </p>
             </section>
+
         </div>
+
         <aside class="journey">
+
             <div>
-                <h3 class="journey-info">Journey Details</h3>
+                <h3 class="journey-info">
+                    <i class="fa-solid fa-receipt" style="margin-right:8px;"></i>
+                    Order Summary
+                </h3>
             </div>
+
+            <!-- Route -->
             <div class="route-info">
                 <div class="place from">
                     <div class="code" id="depairport">LHR</div>
-                    <div class="location" id="depcity">London,UK</div>
+                    <div class="location" id="depcity">London, UK</div>
                 </div>
                 <div class="icon">
                     <i class="fa-solid fa-plane-departure"></i>
@@ -253,36 +291,51 @@
                     <div class="location" id="arrcity"></div>
                 </div>
             </div>
+
+            <!-- Flight details grid -->
             <div class="journey-details">
                 <div class="details">
-                    <span class="label">Date</span><br>
-                    <span class="value" id="travel">OCT 24 ,2024</span>
+                    <span class="label"><i class="fa-regular fa-calendar" style="margin-right:4px;"></i>Date</span><br>
+                    <span class="value" id="travel">OCT 24, 2024</span>
                 </div>
                 <div class="details">
-                    <span class="label">Class</span><br>
-                    <span class="value" id="class">First class</span>
+                    <span class="label"><i class="fa-solid fa-couch" style="margin-right:4px;"></i>Class</span><br>
+                    <span class="value" id="class">First Class</span>
                 </div>
             </div>
+
             <div class="price-tax">
                 <div class="total-price">
                     <div>Total Price</div>
                     <div id="totalPrice">$14,540.00</div>
                 </div>
             </div>
-            <button class="confirm" onclick="Payment()">Confirm & Pay</button>
+
+            <button class="confirm" onclick="Payment()">
+                <i class="fa-solid fa-lock" style="margin-right:8px;"></i>
+                Confirm &amp; Pay
+            </button>
+
+            <p style="text-align:center;font-size:11px;margin-top:12px;opacity:0.65;">
+                By continuing you agree to our
+                <a href="../../assets/login-asset/Istabraq-Terms.pdf" target="_blank"
+                    style="color:inherit;text-decoration:underline;">Terms &amp; Conditions</a>
+            </p>
+
         </aside>
+
     </main>
 
     <footer>
         <div class="upper-footer">
             <div>
                 <h1 style="text-transform: uppercase">COMPANY'S COPYRIGHTS</h1>
-                <p>This Website is protected by copyright and/or related rights.<br>
+                <p style="font-weight: bold;">This Website is protected by copyright and/or related rights.<br>
                     You are free to use this Item in any way that is permitted<br>
                     by the copyright and related rights legislation<br>
                     that applies to your use. For other uses you need to obtain permission<br>
                     from the rights-holder(s).
-                    <br> © 2026 'Name'
+                    <br> © 2026
                 </p>
 
 

@@ -211,7 +211,6 @@ input:checked+.slider::before {
 .auth-bttns {
     display: flex;
     gap: 12px;
-    /*   Gap between each button (There's only one for both login & registration right now) */
 }
 
 .btn {
@@ -254,7 +253,7 @@ input:checked+.slider::before {
     /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
     color: var(--off-white);
-    font-weight: 300;
+    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;

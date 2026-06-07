@@ -102,14 +102,6 @@ themeCheck.addEventListener('change', () => {
     }
 });
 
-//
-
-document.querySelectorAll('.search-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active-tab'));
-        tab.classList.add('active-tab');
-    });
-});
 
 window.addEventListener("DOMContentLoaded", function () {
     const authContainer = document.getElementById("auth-container");
@@ -136,15 +128,6 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 1. Select the elements from your HTML
-const layoutSection = document.getElementById('trending-section');
-const themeBtn = document.getElementById('theme-check'); // Replace with your actual button ID
-
-// 2. Add the click event listener
-themeBtn.addEventListener('click', () => {
-    // This adds 'alt-layout' if it's missing, and removes it if it's there
-    layoutSection.classList.toggle('alt-layout');
-});
 
 document.querySelector(".my-profile-link").addEventListener("click", function(e) {
     e.preventDefault();
