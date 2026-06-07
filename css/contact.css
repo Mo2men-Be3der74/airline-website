@@ -1,465 +1,3 @@
-* {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary: #3A1824;
-    --tertiart: #4C2D38;
-    --secondary: #cbb573;
-    --off-white: #f2f0ef;
-}
-
-body {
-    background-color: var(--off-white);
-    overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-.sec-form-text {
-    color: var(--tertiart);
-    font-size: 10px;
-}
-
-.top-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 473px;
-}
-
-.heading {
-    margin: 20px;
-    animation: forwards fadeIn 1s ease-in-out;
-
-}
-
-.head-text {
-    font-size: 73px;
-}
-
-.head-details {
-    font-size: 18px;
-    margin: 20px;
-    max-width: 600px;
-    color: var(--primary);
-}
-
-.head-small-text {
-    margin: 10px;
-    margin-top: 60px;
-}
-
-.head-quote {
-    margin: 20px;
-    margin-top: 40px;
-    max-width: 400px;
-}
-
-.middle-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.form-image {
-    position: relative;
-    width: 620px;
-    background-color: var(--secondary);
-    margin-right: 20px;
-}
-
-#form-image {
-    width: 580px;
-    height: 500px;
-    margin: 20px;
-    object-fit: cover;
-    filter: brightness(50%);
-}
-
-.form-image-text {
-    position: absolute;
-    font-size: 30px;
-    font-style: oblique;
-    padding: 20px;
-    bottom: 70px;
-    left: 10px;
-    color: var(--off-white);
-}
-
-.form-image-small-text {
-    position: absolute;
-    font-size: 15px;
-    padding: 20px;
-    bottom: 45px;
-    left: 10px;
-    color: var(--off-white);
-}
-
-.contacts {
-    position: relative;
-    flex-shrink: 0;
-    margin: 20px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 97.5%;
-    height: 273px;
-    background-color: var(--tertiart);
-    color: var(--secondary);
-}
-
-#phone-icon {
-    position: absolute;
-    font-size: 30px;
-    left: 50px;
-    top: 50px;
-    animation: forwards fadeIn 2s ease-in-out;
-}
-
-#priority-support {
-    position: absolute;
-    font-size: 20px;
-    left: 90px;
-    top: 50px;
-    color: var(--off-white);
-    animation: forwards fadeIn 2s ease-in-out;
-}
-
-#priority-support-details {
-    position: absolute;
-    font-size: 15px;
-    left: 90px;
-    top: 80px;
-    opacity: 70%;
-    color: var(--off-white);
-    animation: forwards fadeIn 2s ease-in-out;
-}
-
-#direct-icon {
-    position: absolute;
-    font-size: 30px;
-    left: 82%;
-    top: 50px;
-    animation: forwards fadeIn 2.5s ease-in-out;
-}
-
-#direct-support {
-    position: absolute;
-    font-size: 20px;
-    left: 85%;
-    top: 50px;
-    color: var(--off-white);
-    animation: forwards fadeIn 2.5s ease-in-out;
-}
-
-#direct-support-details {
-    position: absolute;
-    font-size: 15px;
-    left: 85%;
-    top: 80px;
-    opacity: 70%;
-    color: var(--off-white);
-    animation: forwards fadeIn 2.5s ease-in-out;
-}
-
-#facebook-icon {
-    position: absolute;
-    font-size: 30px;
-    left: 50px;
-    top: 150px;
-    animation: forwards fadeIn 3s ease-in-out;
-}
-
-#facebook-support {
-    position: absolute;
-    font-size: 20px;
-    left: 90px;
-    top: 150px;
-    color: var(--off-white);
-    animation: forwards fadeIn 3s ease-in-out;
-}
-
-#facebook-support-details {
-    position: absolute;
-    font-size: 15px;
-    left: 90px;
-    top: 180px;
-    opacity: 70%;
-    color: var(--off-white);
-    animation: forwards fadeIn 3s ease-in-out;
-}
-
-#instagram-icon {
-    position: absolute;
-    font-size: 30px;
-    left: 82%;
-    top: 150px;
-    animation: forwards fadeIn 3.5s ease-in-out;
-}
-
-#instagram-support {
-    position: absolute;
-    font-size: 20px;
-    left: 85%;
-    top: 150px;
-    color: var(--off-white);
-    animation: forwards fadeIn 3.5s ease-in-out;
-}
-
-#instagram-support-details {
-    position: absolute;
-    font-size: 15px;
-    left: 85%;
-    top: 180px;
-    opacity: 70%;
-    color: var(--off-white);
-    animation: forwards fadeIn 3.5s ease-in-out;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.form-container {
-    position: relative;
-    display: flex;
-    background-color: var(--secondary);
-    width: 900px;
-    height: 550px;
-    margin-left: 20px;
-}
-
-.full-name {
-    position: absolute;
-    top: 30px;
-    left: 10%;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.email-address {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-
-.row-1 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.row-2 {
-    display: flex;
-    flex-direction: row;
-    gap: 350px;
-}
-
-.booking-reference {
-    position: absolute;
-    top: 130px;
-    left: 50%;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.nature-of-inquiry {
-    position: absolute;
-    left: 10%;
-    top: 130px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-
-.your-message {
-    position: absolute;
-    left: 10%;
-    top: 230px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-#text-box {
-    width: 150%;
-    height: 49px;
-    opacity: 30%;
-    padding-left: 10px;
-}
-
-#text-box2 {
-    width: 175%;
-    height: 54px;
-    opacity: 30%;
-    padding-left: 10px;
-}
-
-#message-area {
-    width: 345%;
-    height: 122px;
-    opacity: 30%;
-    padding: 10px;
-    resize: none;
-}
-
-.submit-button {
-    position: absolute;
-    left: 10%;
-    top: 400px;
-    width: 247px;
-    height: 52px;
-    margin: 20px;
-    border: none;
-    background-color: var(--tertiary);
-    color: var(--off-white);
-
-}
-
-.plane-box {
-    position: relative;
-    flex-shrink: 0;
-    margin: 20px;
-    width: 750px;
-    height: auto;
-    background-color: var(--tertiart);
-
-}
-
-#plane {
-    position: relative;
-    margin: 20px;
-    top: 80px;
-    font-size: 90px;
-    color: var(--secondary);
-}
-
-.standard {
-    position: absolute;
-    font-size: 30px;
-    font-style: oblique;
-    padding: 20px;
-    bottom: 80px;
-    color: var(--off-white);
-    animation: forwards fadeIn 1.25s ease-in-out;
-}
-
-.standard-small-text {
-    position: absolute;
-    font-size: 16px;
-    font-style: oblique;
-    padding: 20px;
-    bottom: 40px;
-    color: var(--off-white);
-    animation: forwards fadeIn 1.5s ease-in-out;
-}
-
-.faq-section {
-    font-size: 30px;
-    color: var(--primary);
-    background-color: var(--secondary);
-    margin: 20px;
-    padding: 2px 10px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.middle {
-    display: flex;
-    flex-direction: row;
-}
-
-.faq {
-    font-size: 30px;
-    color: var(--primary);
-    background-color: var(--secondary);
-    padding: 20px;
-    padding-bottom: 60px;
-}
-
-.faq-questions {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-    max-width: 250px;
-}
-
-.faq-title {
-    font-size: 25px;
-    padding-top: 60px;
-}
-
-.faq-answer {
-    font-size: 15px;
-    margin-left: 10px;
-}
-
-.faq-title2 {
-    font-size: 25px;
-    padding-top: 40px;
-}
-
-.faq-answer2 {
-    font-size: 15px;
-    margin-left: 10px;
-}
-
-.faq-title3 {
-    font-size: 25px;
-    padding-top: 40px;
-}
-
-.faq-answer3 {
-    font-size: 15px;
-    padding-bottom: 30px;
-    margin-left: 10px;
-}
-
-.activee {
-    padding-left: 50px;
-    transition: padding 0.3s ease;
-}
-
-#booking {
-    margin-left: 20px;
-}
-
-#baggage {
-    margin-left: 20px;
-}
-
-#seats {
-    margin-left: 20px;
-}
-
-.question-title {
-    font-size: 20px;
-    color: var(--primary);
-    margin-bottom: 20px;
-    background-color: var(--secondary);
-    transition: padding 0.3s ease;
-    border: none;
-}
-
-/* Variables */
 :root {
     --primary: #3A1824;
     --tertiary: #4C2D38;
@@ -467,93 +5,76 @@ body {
     --off-white: #f2f0ef;
     --on-black: #000;
     --dark-blue: #001524;
-
-    /*Dark mode Colors*/
-    --off-white: #f2f0ef;
     --on-black1: #000;
     --on-black2: #0f0f0f;
     --on-grey1: #1c1c1d;
     --on-grey2: #252728;
-    --secondary: #cbb573;
+    /* semantic tokens */
+    --surface: #f2f0ef;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --border-color: #ddd5cc;
+    --text-color: #1F040E;
+    --muted-color: #7a6b71;
+}
 
+/* ── Reset ── */
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* 100vh = 100% of the viewport height */
-    margin: 0;
-
+    background-color: var(--surface);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
-
-/* Makes any content in the main container to fill it up */
-main {
-    flex: 0;
-    min-height: 0;
-}
-
-/*h1,*/
-/*h2,*/
-/*h3,*/
-/*h4,*/
-/*h5,*/
-/*h6 {*/
-/*    font-family: 'Plus Jakarta Sans', sans-serif;*/
-/*    font-weight: 600;*/
-/*    color: var(--primary);*/
-
-
-/*}*/
 
 p {
     color: var(--tertiary);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-
+    font-weight: 400;
 }
 
-/* header container (main/center) */
+
 .header {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 10;
-    /* Two stacked bars   */
 }
 
 .upper-half {
     background-color: color-mix(in srgb, var(--primary), black 35%);
     display: flex;
-    /*Turns the element into a flex container, ignoring the usual stubborn stacking behaviour of the normal html rules*/
     justify-content: space-between;
-    /* Pushes Logo to left(first child), Links to right(last child) */
     padding: 1rem 2rem;
-    /*rem -> "Root EM" 1. top bottom, 2. left right. If the user changes their font size for accessibility
-    the padding will change automatically to fit the padding right. this increases the accessibility for the website
-    rem are a dynamic scaling units. This ensures the interface maintains proportional spacing regardless of the user's default browser font settings*/
     align-items: center;
-    /* makes sure the content doesn't just sit at the very top of that "buffer"; it sits perfectly in the middle of it.   */
     position: sticky;
     top: 0;
     z-index: 1000;
-
 }
 
 .bottom-half {
-    /*background-color: var(--off-white); !* Slightly lighter shade *!*/
     background-color: color-mix(in srgb, var(--primary), black 15%);
-    /*Color-mix function to mix colors or create new ones depending on the need,
-    it follows this syntax, color-mix(in <color-space>, <color-1> [percentage], <color-2> [percentage])*/
     display: flex;
     padding: 15px 40px;
     align-items: center;
     justify-content: center;
     position: sticky;
-    /* default state */
     z-index: 1000;
     top: 0;
 }
@@ -561,11 +82,8 @@ p {
 .right-sec {
     display: flex;
     flex-direction: row;
-    /*Row -> side by side on a horiztonal line from right to left, thats why the globe util is the first from the left, column -> Above each other. This is for the auth+utility*/
     align-items: flex-end;
-    /* pins them to the right end side of the container's hight */
     gap: 8px;
-    /* space between bttns and the util if you have 1+ elemetns it does the gap */
 }
 
 .r-right-sec {
@@ -575,7 +93,6 @@ p {
     gap: 8px;
 }
 
-/*left-header-section*/
 .logo-placeholder {
     color: var(--off-white);
     font-size: 1.4rem;
@@ -590,23 +107,19 @@ p {
     cursor: pointer;
 }
 
-/* 1. The main rectangular track */
 .theme-switch {
     display: inline-block;
     position: relative;
     width: 45px;
-    /* Adjust this to make the switch wider/narrower */
     height: 20px;
 }
 
-/* 2. Hide the actual ugly checkbox, but keep it accessible for the script */
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* 3. The visual track (the base of the slider) */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -615,99 +128,58 @@ p {
     right: 0;
     bottom: 0;
     background-color: var(--off-white);
-    /* Default Light Track Color */
     border-radius: 30px;
-    /* This creates the "very rounded" ends */
     transition: background-color 0.3s ease;
-    /* Smooth fade when the track changes color */
 }
 
-/* 4. The Ball (The 'before' pseudo-element of the slider) */
 .slider::before {
     position: absolute;
     content: "☀️";
-    /* Default Light Icon (Sun) */
     font-size: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center the icon in the ball */
-
-    /* Sizing the ball slightly smaller than the track height */
     height: 16px;
     width: 16px;
-
-    /* Positioning (initial state = far left) */
     left: 3px;
     bottom: 3px;
-
     border-radius: 50%;
-    /* Make the ball round */
-
-    /* Colors (Light State) */
     background-color: var(--off-white);
-    /* White ball */
     color: #333;
-    /* Black icon */
-
-    /* SWIPE ANIMATION: Only on the transform property */
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* -------------------------------------------------------------------------
-   STATE CHANGES: What happens when the checkbox is checked (Dark Mode)
-   ------------------------------------------------------------------------- */
-
-/* A. Change the Track color when checked */
 input:checked+.slider {
     background-color: color-mix(in srgb, var(--primary), black 75%);
-    ;
-    /* Dark Track Color */
 }
 
-/* B. The 'Swipe Right' movement and icon/color swap */
 input:checked+.slider::before {
-    /* MATH: width (60px) - ball (24px) - original left offset (3px) - new right offset (3px) = 30px */
-    /*45-16-3-3*/
     transform: translateX(23px);
-
-    /* Content Swap: Change sun to moon */
     content: "🌙";
-
-    /* Color Swap (Dark State) */
     background-color: color-mix(in srgb, var(--primary), black 75%);
-    ;
-    /* Black ball */
-
 }
 
 .utility-link {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    /*sets the icon and the text on the same horizontal axis line*/
     gap: 4px;
-    /*breathing room between the icon and the text, its two childern thats why there are two containers*/
     font-size: 0.9rem;
     color: var(--off-white);
     text-decoration: none;
     padding-right: 2px;
     padding-bottom: 2.7pt;
-    /*    manual teak to optically allign both containers */
     transition: color 0.7s ease-in-out;
 }
 
 .utility-link:hover {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--secondary);
     font-weight: 400;
 }
 
-/*auth-bttns*/
 .auth-bttns {
     display: flex;
     gap: 12px;
-    /*   Gap between each button (There's only one for both login & registration right now) */
 }
 
 .btn {
@@ -715,12 +187,9 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border-radius: 2px;
     text-decoration: none;
-    /*removes the underline*/
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
-    /*gao between svg and <span>*/
     transition: color 0.7s ease-in-out;
-
 }
 
 .btn-login {
@@ -728,14 +197,11 @@ input:checked+.slider::before {
     font-weight: 300;
     display: flex;
     align-items: center;
-    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
 }
 
 .btn-login:hover {
     color: var(--secondary);
     font-weight: 400;
-    transition: color 0.7s ease;
-
 }
 
 .btn-logout {
@@ -743,144 +209,59 @@ input:checked+.slider::before {
     padding: 4px 10px;
     border: none;
     text-decoration: none;
-    /*removes the underline*/
     font-size: 1rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     gap: 3px;
-    /*gao between svg and <span>*/
     color: var(--off-white);
     font-weight: 500;
     display: flex;
-    cursor: pointer;
     align-items: center;
-    /* to align the svg and span on the same horizontal axis line (display flex -> align:center    */
+    cursor: pointer;
     transition: color 0.7s ease-in-out;
 }
 
 .btn-logout:hover {
     color: var(--secondary);
     font-weight: 400;
-    transition: color 0.7s ease;
 }
 
-
-/* list container (<ul>) */
 .nav-list {
     align-items: center;
     display: flex;
     gap: 32px;
-    /*flex container to align them horizontally and puts a gap of 32 px from each <li>*/
     list-style: none;
-    /* removes usual dots from the list element, same likely as text-decoration:none; */
     margin: 0;
     padding: 0;
 }
 
-/* individual links  (<a>) */
 .nav-link {
     color: var(--off-white);
     text-decoration: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
-
 }
 
-/* hover */
 .nav-link:hover {
     color: var(--secondary);
     transition: color 0.3s ease;
-    /* Takes 0.3 sec to make the color tranisitons to just make it more natural */
-
 }
 
 .active {
     color: var(--secondary);
     font-weight: 500;
-    /* Make it a bit boldy when active   */
-}
-
-/*Index-Hero*/
-.hero {
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 70%),
-        url('../assets/index-assets/hero-img.jpg');
-    /*the linear gradiant scrim (function)
-    rgba(red, green ,blue, opacity) -> rgba(0,0,0, 1) 10% means that at 10% from the right of the image its dark
-    rgba(0,0,0,0) 70% of the left is completely transparent, the rest 40% is the fade from dark to transparent*/
-
-    background-size: cover;
-    /*scaling image to fit but not to be stretched or squished the browser may crop it for this point*/
-    background-position: center;
-    /*make the center of the image is the focal point so if its got cut by the upper property it cuts well*/
-    /* Layout */
-    display: flex;
-    /*enabling a flex engine like the usual*/
-    flex-direction: column;
-    /*puts text elemetns on top of each other vertically*/
-    justify-content: center;
-    /*center the text elemetns*/
-    align-items: flex-start;
-    /*pinning the elements to the left*/
-    /* Sizing */
-    min-height: 50vh;
-    /*how much the image should take from the page after the header, vh-> viewport height */
-    /*vh also a dynamic scaling unit, it takes 50% of whatever the user screen's height.
-    contributes to the responsiveness of the website*/
-    padding-left: 80px;
-    /*    bit space from the left before the text starts */
-}
-
-.hero-text-wrapper {
-    max-width: 600px;
-    /*prevents stretching*/
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.hero-bttn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    text-transform: capitalize;
-    /*    starts every word with the first letter capitalized*/
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 30px;
-    transition: color, background-color 0.5s ease-in-out;
-    /*so the ease out works, as it only works this way not just on the state of hovering on the element*/
-
-}
-
-.hero-bttn:hover {
-    background-color: var(--off-white);
-    color: var(--on-black);
-
 }
 
 #lang-modal {
-    /* positioning */
     position: fixed !important;
-    /* pop-ups usually wants to live in the center, this is done to make it fixed at top right */
     top: 70px !important;
     right: 20px !important;
     left: auto !important;
-    /*fight any left styling that may conflict with the pop up*/
     margin: 0 !important;
-    /* ensures no margins are pushing it */
-
     width: 350px;
-    /* more -> bigger -> wider */
     min-height: 300px;
-    /*min height of the pop up*/
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     border: none;
     background: white;
     z-index: 1000;
@@ -902,59 +283,484 @@ input:checked+.slider::before {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     margin-top: 25px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Container for the dropdown */
 .custom-dropdown {
     position: relative;
-    /*rmakes the list open relatively to the container of the pop up, spicifically to the country div*/
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
-    /*turns the arrow into a hand icon for better visual interaction*/
     margin-bottom: 15px;
     background: white;
 }
 
-/* The list (hidden by default) */
 .dropdown-list {
     display: none;
-    /*initially making this not visible untill triggered by the JS script to make it :block; (visible)*/
     position: absolute;
-    /*fix its position when opened, not pushing everything down*/
     top: 100%;
     left: 0;
     width: 100%;
     background: white;
     border: 1px solid #ccc;
     list-style: none;
-    /*clear the normal list style*/
     padding: 0;
     z-index: 1001;
-    /*    higher than the dialog and the bottom header*/
 }
 
 .dropdown-list li {
     display: flex;
     align-items: center;
     gap: 10px;
-    /*as usual all 3 props make the text and the image aligned well on a center horizontal axis*/
     padding: 8px;
     cursor: pointer;
 }
 
 .dropdown-list li:hover {
     background-color: #f0f0f0;
-    /*    Make it grey on the selection on hovering*/
 }
 
-/* Show class for JS */
 .dropdown-list.show {
     display: block;
-    /*    when show(), change this property to block in the dropdownlist selector*/
 }
 
+
+.heading {
+    display: flex;
+    align-items: center;
+    padding: 60px 60px;
+    flex: 1;
+}
+
+.head-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 560px;
+    color: var(--primary);
+}
+
+/* eyebrow label */
+.hero-eyebrow {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary) !important;
+}
+
+.head-text {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.head-small-text {
+    font-size: 15px;
+    color: var(--muted-color) !important;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+}
+
+#bottom {
+    padding: 40px 40px 0;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 24px 20px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-card:hover {
+    box-shadow: 0 4px 18px rgba(58, 24, 36, 0.1);
+    transform: translateY(-2px);
+}
+
+.contact-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--secondary), white 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.contact-card-icon i {
+    color: var(--primary) !important;
+}
+
+.contact-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+#priority-support,
+#direct-support,
+#office-support,
+#chat-support {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: var(--primary) !important;
+}
+
+#priority-support-details,
+#direct-support-details,
+#office-support-details,
+#chat-support-details {
+    font-size: 12px !important;
+    color: var(--muted-color) !important;
+    font-weight: 400 !important;
+    word-break: break-word;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 40px;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    width: 210px;
+    flex-shrink: 0;
+    padding: 24px 0;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--surface);
+    max-width: 210px;
+}
+
+.faq {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-color) !important;
+    padding: 0 20px 14px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 6px;
+    background: transparent;
+    padding-bottom: 14px;
+}
+
+.question-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    text-align: left;
+    padding: 11px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, padding-left 0.25s ease;
+    margin: 0;
+}
+
+.question-title:hover {
+    background-color: color-mix(in srgb, var(--secondary), white 65%);
+    color: var(--primary);
+}
+
+.activee {
+    border-left: 3px solid var(--secondary) !important;
+    background-color: color-mix(in srgb, var(--secondary), white 65%) !important;
+    font-weight: 600 !important;
+    color: var(--primary) !important;
+    padding-left: 26px !important;
+    transition: padding 0.3s ease;
+}
+
+.faq-answers {
+    flex: 1;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item:first-child {
+    padding-top: 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-title,
+.faq-title2,
+.faq-title3 {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: var(--primary) !important;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.faq-answer,
+.faq-answer2,
+.faq-answer3 {
+    font-size: 14px !important;
+    color: var(--muted-color) !important;
+    font-weight: 400 !important;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+}
+
+
+.middle-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 40px 40px 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.form-container {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 40px 44px 40px;
+}
+
+.form-heading {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: var(--primary) !important;
+    margin-bottom: 28px;
+    display: block;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 22px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.row-1,
+.row-2 {
+    display: none;
+}
+
+/* old wrappers hidden, replaced by form-grid-2 */
+
+.full-name,
+.email-address,
+.booking-reference,
+.nature-of-inquiry,
+.your-message {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+}
+
+.sec-form-text {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-color);
+    margin-top: 8px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+#text-box,
+.text-box {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    font-size: 13px;
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 1;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#text-box:focus,
+.text-box:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(203, 181, 115, 0.18);
+}
+
+#text-box2 {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    font-size: 13px;
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 1;
+    cursor: pointer;
+    appearance: auto;
+}
+
+#text-box2:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+#message-area {
+    width: 100%;
+    height: 120px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    font-size: 13px;
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    resize: none;
+    opacity: 1;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#message-area:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(203, 181, 115, 0.18);
+}
+
+::placeholder {
+    color: var(--muted-color);
+    opacity: 0.6;
+}
+
+.submit-button {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--primary);
+    color: var(--off-white);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+    background-color: color-mix(in srgb, var(--primary), black 20%);
+}
+
+
+/* image panel */
+.form-image {
+    position: relative;
+    width: 340px;
+    overflow: hidden;
+    background-color: var(--secondary);
+    margin: 0;
+}
+
+#form-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+    display: block;
+    margin: 0;
+}
+
+.form-image-text {
+    position: absolute;
+    font-size: 24px;
+    font-style: oblique;
+    padding: 20px;
+    bottom: 52px;
+    left: 0;
+    right: 0;
+    color: var(--off-white) !important;
+    font-weight: 600;
+}
+
+.form-image-small-text {
+    position: absolute;
+    font-size: 12px;
+    padding: 0 20px;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    color: var(--off-white) !important;
+    opacity: 0.8;
+    font-weight: 400;
+}
 
 footer {
     margin-top: 0;

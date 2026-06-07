@@ -51,19 +51,31 @@ document.querySelector('#seats').addEventListener('click', () => {
     faqTitle3.innerText = 'Are there specific seating areas for ladies?';
     faqAnswer3.innerText = 'Yes, Istabraq provides specific designated seating areas for ladies in economy class on all domestic flights operated by Saudia, subject to availability to ensure additional comfort. This service allows female passengers to select their seats in advance during the reservation and ticketing process for an additional fee, facilitating the seating arrangement.';
 });
+
 let storedData = localStorage.getItem("user");
-let userData = JSON.parse(storedData);
-console.log(userData.firstName);
-console.log(userData.lastName);
-console.log(userData.email);
 const fullname = document.getElementsByName('user_name')[0];
 const email = document.getElementsByName('email_address')[0];
-const message = document.getElementsByName('message')[0];
-const booking = document.getElementById('booking');
-fullname.value = userData.firstName + ' ' + userData.lastName;
-email.value = userData.email;
-const button = document.querySelector('.submit-button');
-button.addEventListener('click', () => {
-    const audio = document.getElementById('myAudio');
-    audio.play();
+
+if (storedData) {
+    let userData = JSON.parse(storedData);
+    fullname.value = userData.firstName + ' ' + userData.lastName;
+    email.value = userData.email;
+}
+
+const button = document.getElementById('submitBtn');
+const message = document.getElementById('message-area');
+const booking = document.getElementById('bookingForm');
+const audio = document.getElementById('errorAudio');
+const successAudio = document.getElementById('successAudio');
+
+
+button.addEventListener('click', (event) => {
+
+    if (message.value === '' || booking.value === '') {
+        audio.play();
+        alert('Please fill in all fields before submitting your feedback.');
+    } else if (message.value !== '' && booking.value !== '') {
+        alert('Thank you for your feedback!'); 
+        successAudio.play();   
+    }
 });
