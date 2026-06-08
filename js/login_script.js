@@ -111,14 +111,14 @@ window.togglePassword = function (inputId, iconId) {
     if (passInput.type === "password") {
         passInput.type = "text";
         if (icon) {
-            icon.classList.remove("fa-eye-slash");
-            icon.classList.add("fa-eye");
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
         }
     } else {
         passInput.type = "password";
         if (icon) {
-            icon.classList.remove("fa-eye");
-            icon.classList.add("fa-eye-slash");
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
         }
     }
 };

@@ -1112,31 +1112,3 @@ video {
     background: #d4c080;
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
-
-
-/* Responsiveness: Switch to 2 columns on tablets and 1 on mobile */
-@media (max-width: 1024px) {
-    .trending-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .trending-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        /* Stack Heading on top */
-    }
-
-    .about-vid {
-        flex-direction: row;
-        /* Swaps from side-by-side to stacked */
-        text-align: center;
-    }
-}
