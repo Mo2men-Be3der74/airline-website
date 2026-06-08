@@ -1,10 +1,9 @@
-# ✈️ Airline Website
+# Airline Website
 
 A modern airline booking website built using HTML, CSS, and JavaScript. Users can search for flights, view flight details, make bookings, manage their profiles, and contact customer support.
 
----
 
-## 📌 Features
+## Features
 
 - User Authentication (Login & Register)
 - Flight Search System
@@ -18,7 +17,7 @@ A modern airline booking website built using HTML, CSS, and JavaScript. Users ca
 
 
 
-## 📂 Project Structure
+## Project Structure
 
 
 airline-website/
@@ -69,7 +68,7 @@ airline-website/
 
 
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -80,7 +79,7 @@ airline-website/
 
 
 
-## 🎨 Themes
+## Themes
 
 The website supports:
 
@@ -90,7 +89,7 @@ The website supports:
 Theme preferences are saved using Local Storage.
 
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is optimized for:
 
@@ -112,6 +111,6 @@ The website is optimized for:
 
 
 
-## 📄 License
+## License
 
 This project is for educational and portfolio purposes.
