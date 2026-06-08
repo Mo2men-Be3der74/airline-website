@@ -101,25 +101,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    // TOGGLE PASSWORD
-window.togglePassword = function (inputId, iconId) {
-    let passInput = document.getElementById(inputId);
-    let icon = document.getElementById(iconId);
 
-    if (!passInput) return;
+    window.togglePassword = function (inputId, button) {
+        let passInput = document.getElementById(inputId);
+        let icon = button.querySelector("i");
 
-    if (passInput.type === "password") {
-        passInput.type = "text";
-        if (icon) {
+        if (!passInput) return;
+
+        if (passInput.type === "password") {
+            passInput.type = "text";
             icon.classList.remove("fa-eye");
             icon.classList.add("fa-eye-slash");
-        }
-    } else {
-        passInput.type = "password";
-        if (icon) {
+        } else {
+            passInput.type = "password";
             icon.classList.remove("fa-eye-slash");
             icon.classList.add("fa-eye");
-        }
     }
 };
 
