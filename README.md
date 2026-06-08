@@ -16,56 +16,49 @@ A modern airline booking website built using HTML, CSS, and JavaScript. Users ca
 - Responsive Design
 
 
-
 ## Project Structure
 
+- index.html
+- contact.html
 
-airline-website/
-│
-├── index.html                 # Home Page
-├── contact.html               # Contact Page
-├── README.md
-│
-├── pages/
-│   ├── auth/
-│   │   ├── login.html         # Login Page
-│   │   └── register.html      # Register Page
-│   │
-│   ├── booking.html           # Booking Page
-│   ├── profile.html           # User Profile Page
-│   ├── flight-details.html    # Flight Details Page
-│
-├── assets/
-│   ├── index-assets/
-│   ├── login-asset/
-│   ├── booking-asset/
-│   ├── profile-assets/
-│   └── audio-asset/
-│
-├── css/
-│   ├── index.css
-│   ├── login.style.css
-│   ├── booking.css
-│   ├── myprofile.css
-│   ├── contact.css
-│   ├── flight-details.css
-│   ├── search-flights.css
-│   ├── confirmation.css
-│   └── dark-theme.css
-│
-├── js/
-│   ├── main.js
-│   ├── login_script.js
-│   ├── booking.js
-│   ├── myprofile.js
-│   ├── contact.js
-│   ├── details.js
-│   ├── result.js
-│   └── search.js
-│
-└── .vscode/
+### assets
+- audio-asset/
+- booking-asset/
+- index-assets/
+- login-asset/
+- profile-assets/
 
+### css
+- booking.css
+- confirmation.css
+- contact.css
+- dark-theme.css
+- flight-details.css
+- index.css
+- login.style.css
+- myprofile.css
+- search-flights.css
 
+### js
+- booking.js
+- confirmation.js
+- contact.js
+- details.js
+- login_script.js
+- main.js
+- myprofile.js
+- result.js
+- search.js
+
+### pages
+#### auth
+- login.html
+- register.html
+
+#### pages
+- booking.html
+- myprofile.html
+- flight-details.html
 
 
 ## Technologies Used
