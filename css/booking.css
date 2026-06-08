@@ -923,3 +923,192 @@ input:checked+.slider-card:before {
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+@media (max-width: 767px) {
+    .upper-half {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo-placeholder {
+        font-size: 1.1rem;
+    }
+
+    .right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .r-right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-login span {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 6px 8px;
+    }
+
+    /* ── Nav ── */
+    .bottom-half {
+        padding: 10px 16px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+
+    .upper-footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .upper-footer h1 {
+        font-size: 0.95rem;
+    }
+
+    .lower-footer-img {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lower-footer-ul {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #lang-modal {
+        width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        left: 16px !important;
+        top: 60px !important;
+    }
+
+    main {
+        flex-direction: column;
+        width: 95%;
+        gap: 30px;
+        margin: 20px auto;
+    }
+
+    .left-side,
+    .right-side {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .color-h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    header p {
+        text-align: center;
+    }
+
+    .flight-details .left .destination,
+    .destination {
+        font-size: 28px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .seats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .seat {
+        width: 100%;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .aisle {
+        display: none;
+    }
+
+    .main-aisle {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+
+    .services-icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .services-icons .card {
+        width: 100%;
+    }
+
+    .right-side {
+        order: 2;
+    }
+
+    .Flight-Summary {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .checkout-btn {
+        width: 100%;
+    }
+
+    .Trust-Badge {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .upper-half {
+        padding: 0.85rem 1.5rem;
+    }
+
+    .btn-login span {
+        display: inline;
+    }
+
+    .utility-link span {
+        display: inline;
+    }
+
+    .upper-footer {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .upper-footer>div {
+        min-width: 45%;
+    }
+}

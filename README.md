@@ -16,50 +16,6 @@ A modern airline booking website built using HTML, CSS, and JavaScript. Users ca
 - Responsive Design
 
 
-## Project Structure
-
-- index.html
-- contact.html
-
-### assets
-- audio-asset/
-- booking-asset/
-- index-assets/
-- login-asset/
-- profile-assets/
-
-### css
-- booking.css
-- confirmation.css
-- contact.css
-- dark-theme.css
-- flight-details.css
-- index.css
-- login.style.css
-- myprofile.css
-- search-flights.css
-
-### js
-- booking.js
-- confirmation.js
-- contact.js
-- details.js
-- login_script.js
-- main.js
-- myprofile.js
-- result.js
-- search.js
-
-### pages
-#### auth
-- login.html
-- register.html
-
-#### pages
-- booking.html
-- myprofile.html
-- flight-details.html
-
 
 ## Technologies Used
 

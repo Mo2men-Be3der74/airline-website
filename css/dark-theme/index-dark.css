@@ -1328,29 +1328,340 @@ footer {
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
 
-/* Responsiveness: Switch to 2 columns on tablets and 1 on mobile */
-@media (max-width: 1024px) {
-    .trending-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+@media (max-width: 767px) {
+    .upper-half {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
     }
-}
 
-@media (max-width: 600px) {
-    .trending-grid {
-        grid-template-columns: 1fr;
+    .logo-placeholder {
+        font-size: 1.1rem;
     }
-}
 
+    .right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
 
-@media (max-width: 768px) {
-    .about-section {
+    .r-right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-login span {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 6px 8px;
+    }
+
+    /* ── Nav ── */
+    .bottom-half {
+        padding: 10px 16px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        min-height: 45vh;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-position: 70% center;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-bttn {
+        margin-left: 0;
+        margin-top: 14px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* ── Search section ── */
+    .search-section {
+        width: 100%;
+        padding: 20px 16px;
+        margin-bottom: 30px;
+    }
+
+    .search-title {
+        font-size: 2rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .search-first-row {
         flex-direction: column;
-        /* Stack Heading on top */
+        border-bottom: none;
+    }
+
+    .search-field {
+        padding: 16px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(203, 181, 115, 0.1);
+    }
+
+    .search-footer-vr {
+        display: none;
+    }
+
+    .search-form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .search-footer-field--passengers {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-group {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .search-cabin-pill {
+        padding: 6px 14px;
+        font-size: 0.78rem;
+    }
+
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        border-radius: 8px;
+        margin-left: 0;
+    }
+
+    .about-section {
+        padding: 30px 16px;
+    }
+
+    .about-container {
+        gap: 24px;
     }
 
     .about-vid {
-        flex-direction: row;
-        /* Swaps from side-by-side to stacked */
-        text-align: center;
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: unset;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        position: static;
+        z-index: auto;
+    }
+
+    .about-text-wrapper {
+        position: static;
+        width: 100%;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        padding: 20px 0;
+        background: none;
+        border-radius: 0;
+        overflow-y: visible;
+    }
+
+    .about-text-wrapper h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .heading-sidebar h3 {
+        font-size: 1.5rem;
+    }
+
+    .trending-section {
+        padding: 40px 16px 20px;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .trending-card {
+        height: 160px;
+    }
+
+    .card-content {
+        padding: 0 20px;
+    }
+
+    .card-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .upper-footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .upper-footer h1 {
+        font-size: 0.95rem;
+    }
+
+    .lower-footer-img {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lower-footer-ul {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #lang-modal {
+        width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        left: 16px !important;
+        top: 60px !important;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.35rem;
+    }
+
+    .search-title {
+        font-size: 1.6rem;
+    }
+
+    .trending-card {
+        height: 140px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .upper-half {
+        padding: 0.85rem 1.5rem;
+    }
+
+    .btn-login span {
+        display: inline;
+    }
+
+    .utility-link span {
+        display: inline;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        padding-left: 40px;
+        min-height: 48vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-section {
+        width: 100%;
+        padding: 30px 24px;
+    }
+
+    .search-title {
+        font-size: 2.8rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+    }
+
+    .search-first-row {
+        flex-wrap: wrap;
+    }
+
+    .search-field {
+        width: 50%;
+        min-width: 0;
+        padding: 20px 24px;
+    }
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .search-form-footer {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+
+    .about-vid {
+        min-height: 380px;
+        padding-right: 40px;
+    }
+
+    video {
+        width: 80%;
+        margin-left: -70%;
+    }
+
+    .about-text-wrapper {
+        left: 40px;
+        width: 60%;
+        padding: 40px 30px;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .trending-card {
+        height: 180px;
+    }
+
+    /* ── Footer ── */
+    .upper-footer {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .upper-footer>div {
+        min-width: 45%;
     }
 }

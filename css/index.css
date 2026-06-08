@@ -1112,3 +1112,358 @@ video {
     background: #d4c080;
     box-shadow: 0 4px 16px rgba(203, 181, 115, 0.45);
 }
+
+
+/* Responsive Styles */
+
+@media (max-width: 767px) {
+    .upper-half {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo-placeholder {
+        font-size: 1.1rem;
+    }
+
+    .right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .r-right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-login span {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 6px 8px;
+    }
+
+
+    .bottom-half {
+        padding: 10px 16px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+
+    .hero {
+        min-height: 45vh;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-position: 70% center;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-bttn {
+        margin-left: 0;
+        margin-top: 14px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+
+    .search-section {
+        width: 100%;
+        padding: 20px 16px;
+        margin-bottom: 30px;
+    }
+
+    .search-hero {
+        padding: 32px 16px 0;
+    }
+
+    .search-title {
+        font-size: 2rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .search-first-row {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .search-field {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(58, 24, 36, 0.08);
+    }
+
+    .search-footer-vr {
+        display: none;
+    }
+
+    .search-form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .search-footer-field--passengers {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-group {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .search-cabin-pill {
+        padding: 6px 14px;
+        font-size: 0.78rem;
+    }
+
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        border-radius: 8px;
+        margin-left: 0;
+    }
+
+
+    .about-section {
+        padding: 30px 16px;
+    }
+
+    .about-vid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px 0;
+    }
+
+    .about-vid video {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text-wrapper {
+        max-width: 100%;
+    }
+
+    .heading-sidebar h3 {
+        font-size: 1.5rem;
+    }
+
+    .trending-section {
+        padding: 40px 16px 20px;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on mobile */
+        gap: 10px;
+    }
+
+    .trending-card {
+        height: 220px;
+    }
+
+    .card-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+    }
+
+    .upper-footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .upper-footer h1 {
+        font-size: 0.95rem;
+    }
+
+    .lower-footer-img {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lower-footer-ul {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #lang-modal {
+        width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        left: 16px !important;
+        top: 60px !important;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .trending-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on tiny phones */
+    }
+
+    .hero h1 {
+        font-size: 1.35rem;
+    }
+
+    .search-title {
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+    .upper-half {
+        padding: 0.85rem 1.5rem;
+    }
+
+    .btn-login span {
+        display: inline;
+        /* show text again on tablet */
+    }
+
+    .utility-link span {
+        display: inline;
+    }
+
+
+    .hero {
+        padding-left: 40px;
+        min-height: 48vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+
+    .search-section {
+        width: 100%;
+        padding: 30px 24px;
+    }
+
+    .search-title {
+        font-size: 2.8rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+    }
+
+    .search-first-row {
+        flex-wrap: wrap;
+    }
+
+
+    .search-field {
+        width: 50%;
+        min-width: 0;
+        padding: 20px 24px;
+    }
+
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .search-form-footer {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* ── About section ── */
+    .about-vid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-vid video {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+    .about-text-wrapper {
+        max-width: 100%;
+    }
+
+    /* ── Trending grid ── */
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablet */
+        gap: 14px;
+    }
+
+    .trending-card {
+        height: 280px;
+    }
+
+    /* ── Footer ── */
+    .upper-footer {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .upper-footer>div {
+        min-width: 45%;
+        /* 2 columns on tablet */
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+
+    /* ── Search section ── */
+    .search-section {
+        width: 100%;
+        padding: 40px 48px;
+    }
+
+    .search-title {
+        font-size: 3.2rem;
+    }
+
+    /* ── Trending grid ── */
+    .trending-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on laptop */
+    }
+
+    /* ── About video ── */
+    .about-vid video {
+        width: 480px;
+    }
+}

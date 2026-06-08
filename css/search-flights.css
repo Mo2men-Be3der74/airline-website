@@ -926,3 +926,246 @@ footer {
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
+
+
+@media (max-width: 767px) {
+    .upper-half {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo-placeholder {
+        font-size: 1.1rem;
+    }
+
+    .right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .r-right-sec {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-login span {
+        display: none;
+    }
+
+    .btn-login {
+        padding: 6px 8px;
+    }
+
+    /* ── Nav ── */
+    .bottom-half {
+        padding: 10px 16px;
+    }
+
+    .nav-list {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    /* ── Search section ── */
+    .search-section {
+        width: 100%;
+        padding: 20px 16px;
+        margin-bottom: 30px;
+    }
+
+    .search-title {
+        font-size: 2rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .search-first-row {
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .search-field {
+        padding: 16px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(203, 181, 115, 0.1);
+    }
+
+    .search-footer-vr {
+        display: none;
+    }
+
+    .search-form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .search-footer-field--passengers {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-group {
+        padding: 8px 16px;
+    }
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .search-cabin-pill {
+        padding: 6px 14px;
+        font-size: 0.78rem;
+    }
+
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        border-radius: 8px;
+        margin-left: 0;
+    }
+
+    .upper-footer {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
+    }
+
+    .upper-footer h1 {
+        font-size: 0.95rem;
+    }
+
+    .lower-footer-img {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lower-footer-ul {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #lang-modal {
+        width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        left: 16px !important;
+        top: 60px !important;
+    }
+
+    .tickets .ticket-cards {
+        padding: 10px;
+    }
+
+    .tickets .ticket-cards .card {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .tickets .ticket-cards .card .destination,
+    .tickets .ticket-cards .card .time {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tickets .ticket-cards .card .destination .from,
+    .tickets .ticket-cards .card .destination .to,
+    .tickets .ticket-cards .card .time .from,
+    .tickets .ticket-cards .card .time .to {
+        font-size: 16px;
+    }
+
+    .tickets .ticket-cards .card .class,
+    .tickets .ticket-cards .card .right .price {
+        font-size: 18px;
+    }
+
+    .tickets .ticket-cards .card .right .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .upper-half {
+        padding: 0.85rem 1.5rem;
+    }
+
+    .btn-login span {
+        display: inline;
+    }
+
+    .utility-link span {
+        display: inline;
+    }
+
+    .search-section {
+        width: 100%;
+        padding: 30px 24px;
+    }
+
+    .search-title {
+        font-size: 2.8rem;
+    }
+
+    .search-subtitle {
+        width: 100%;
+    }
+
+    .search-first-row {
+        flex-wrap: wrap;
+    }
+
+    .search-field {
+        width: 50%;
+        min-width: 0;
+        padding: 20px 24px;
+    }
+
+    .search-cabin-pills {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .search-form-footer {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* ── Footer ── */
+    .upper-footer {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .upper-footer>div {
+        min-width: 45%;
+    }
+
+    .tickets .ticket-cards .card {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .tickets .ticket-cards .card .destination {
+        gap: 20px;
+    }
+
+}

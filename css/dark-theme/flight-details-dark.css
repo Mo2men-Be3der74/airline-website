@@ -963,3 +963,259 @@ footer {
       color: var(--text-color);
       margin-bottom: 12px;
 }
+
+@media (max-width: 767px) {
+      .upper-half {
+            padding: 0.75rem 1rem;
+            flex-wrap: wrap;
+            gap: 8px;
+      }
+
+      .logo-placeholder {
+            font-size: 1.1rem;
+      }
+
+      .right-sec {
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+      }
+
+      .r-right-sec {
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+      }
+
+      .btn-login span {
+            display: none;
+      }
+
+      .btn-login {
+            padding: 6px 8px;
+      }
+
+      /* ── Nav ── */
+      .bottom-half {
+            padding: 10px 16px;
+      }
+
+      .nav-list {
+            gap: 16px;
+      }
+
+      .nav-link {
+            font-size: 0.85rem;
+      }
+
+      /* ── Search section ── */
+      .search-section {
+            width: 100%;
+            padding: 20px 16px;
+            margin-bottom: 30px;
+      }
+
+      .flight-details {
+            flex-direction: column;
+            padding: 30px 15px;
+            gap: 30px;
+      }
+
+      .flight-details .left,
+      .flight-details .right,
+      .flight-details .right .summary {
+            width: 100%;
+      }
+
+      .flight-details .left .flight-small .class {
+            font-size: 20px !important;
+            text-align: center;
+      }
+
+      .flight-details .left .destination {
+            flex-direction: column;
+            gap: 10px;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+      }
+
+      .flight-details .left .destination .to {
+            left: 0;
+      }
+
+      .flight-details .left .card {
+            flex-direction: column;
+            height: auto;
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+      }
+
+      .flight-details .left .card .end {
+            align-items: center;
+      }
+
+      .flight-details .left .card .dist .time {
+            font-size: 28px;
+      }
+
+      .flight-details .left .card .mid {
+            order: 2;
+      }
+
+      .flight-details .left .features {
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            text-align: center;
+      }
+
+      .flight-details .left .features .right {
+            align-self: center;
+      }
+
+      .flight-details .left .cards {
+            grid-template-columns: 1fr;
+      }
+
+      .flight-details .left .cards .suite {
+            grid-column: auto;
+      }
+
+      .flight-details .rules {
+            grid-template-columns: 1fr;
+            gap: 30px;
+      }
+
+      .flight-details .rules .insurance {
+            grid-column-start: auto;
+      }
+
+      .flight-details .rules .baggage .item {
+            gap: 10px;
+      }
+
+      .flight-details .rules .baggage .item .left,
+      .flight-details .rules .baggage .item .right {
+            font-size: 14px;
+      }
+
+      .flight-details .right .summary {
+            padding: 20px;
+      }
+
+      .flight-details .right .summary .total .amount {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            height: auto;
+      }
+
+      .flight-details .right .summary .total .amount .right {
+            font-size: 24px;
+      }
+
+      .destination-map iframe {
+            height: 250px;
+      }
+
+      .upper-footer {
+            flex-direction: column;
+            gap: 24px;
+            padding: 20px 16px;
+      }
+
+      .upper-footer h1 {
+            font-size: 0.95rem;
+      }
+
+      .lower-footer-img {
+            padding-left: 16px;
+            padding-right: 16px;
+      }
+
+      .lower-footer-ul {
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+            padding-left: 0;
+      }
+
+      #lang-modal {
+            width: calc(100vw - 32px) !important;
+            right: 16px !important;
+            left: 16px !important;
+            top: 60px !important;
+      }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+      .upper-half {
+            padding: 0.85rem 1.5rem;
+      }
+
+      .btn-login span {
+            display: inline;
+      }
+
+      .utility-link span {
+            display: inline;
+      }
+
+      .flight-details {
+            flex-direction: column;
+            padding: 50px 25px;
+      }
+
+      .flight-details .left,
+      .flight-details .right,
+      .flight-details .right .summary {
+            width: 100%;
+      }
+
+      .flight-details .left .destination {
+            font-size: 45px;
+            gap: 15px;
+      }
+
+      .flight-details .left .card {
+            padding: 25px;
+      }
+
+      .flight-details .left .card .dist .time {
+            font-size: 30px;
+      }
+
+      .flight-details .left .cards {
+            grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flight-details .left .cards .suite {
+            grid-column: 1 / span 2;
+      }
+
+      .flight-details .rules {
+            gap: 25px;
+      }
+
+      .flight-details .right .summary {
+            margin-top: 20px;
+      }
+
+      .flight-details .right .summary .total .amount .right {
+            font-size: 28px;
+      }
+
+      .upper-footer {
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+      }
+
+      .upper-footer>div {
+            min-width: 45%;
+      }
+}
