@@ -103,20 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.togglePassword = function (inputId, button) {
-        let passInput = document.getElementById(inputId);
-        let icon = button.querySelector("i");
+        const input = document.getElementById(inputId);
+        const icon = button.querySelector("i");
 
-        if (!passInput) return;
+        if (!input) return;
 
-        if (passInput.type === "password") {
-            passInput.type = "text";
+        if (input.type === "password") {
+            input.type = "text";
             icon.classList.remove("fa-eye");
             icon.classList.add("fa-eye-slash");
         } else {
-            passInput.type = "password";
+            input.type = "password";
             icon.classList.remove("fa-eye-slash");
             icon.classList.add("fa-eye");
-    }
+        }
 };
 
 });
